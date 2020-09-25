@@ -5,6 +5,7 @@
  */
 package Vista;
 
+import Control.AvatarSprite;
 import Control.ControlEnemigos;
 import java.awt.Color;
 import java.awt.event.KeyAdapter;
@@ -20,23 +21,21 @@ public class Mundo1 extends javax.swing.JFrame {
      * Creates new form Mundo1
      */
     Thread contEnemigos;
+    Thread avatarSprite;
     mapa1 jPMapa1 = new mapa1();
     mapa2 jPMapa2 = new mapa2();
     Color colorea = new Color(240, 240, 240);
     public Mundo1() {
         initComponents();
         setVisible(true);
-        ////////////////////////PANELES////////////////////
-        Mapa1.setFocusable(true);
-        Mapa1.setVisible(true);
-        
-        Mapa2.setFocusable(false);
-        Mapa2.setVisible(false);
-        //////////////////////////////////////////////////////
+        decidirMapa();
+
         contEnemigos = new ControlEnemigos(enemigo1); 
         contEnemigos.start();
         contEnemigos = new ControlEnemigos(enemigo2);
         contEnemigos.start();
+//        avatarSprite = new AvatarSprite(enemigo1); 
+//        avatarSprite.start();
     }
     public Mundo1(String nada) {
         
@@ -1010,9 +1009,9 @@ public class Mundo1 extends javax.swing.JFrame {
         j157.setOpaque(true);
         Mapa1.add(j157, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 150, 50, 50));
 
-        enemigo1.setBackground(new java.awt.Color(0, 102, 102));
+        enemigo1.setBackground(new java.awt.Color(204, 204, 204));
         enemigo1.setOpaque(true);
-        Mapa1.add(enemigo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 40, 40));
+        Mapa1.add(enemigo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 50, 40));
 
         enemigo2.setBackground(new java.awt.Color(255, 0, 0));
         enemigo2.setOpaque(true);
@@ -1644,6 +1643,24 @@ public class Mundo1 extends javax.swing.JFrame {
                 break;
         }
     }//GEN-LAST:event_Mapa2KeyPressed
+
+    private void decidirMapa() {
+        int mapa = (int) (Math.random()*2+1);
+        System.out.println("mapa " + mapa);
+        if(mapa == 1){
+            Mapa1.setFocusable(true);
+            Mapa1.setVisible(true);
+            Mapa2.setFocusable(false);
+            Mapa2.setVisible(false);
+        }
+        if(mapa == 2){
+            Mapa1.setFocusable(false);
+            Mapa1.setVisible(false);
+            Mapa2.setFocusable(true);
+            Mapa2.setVisible(true);
+        }
+
+    }
 
     public class mapa1{
         

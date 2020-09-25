@@ -87,7 +87,7 @@ public class ControlEnemigos extends Thread{
                 }
             }
             try {
-                TimeUnit.MILLISECONDS.sleep(300);
+                TimeUnit.MILLISECONDS.sleep(200);
             } catch (InterruptedException ex) {
                 System.out.println("ERRor");
             }
