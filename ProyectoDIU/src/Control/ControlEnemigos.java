@@ -17,17 +17,21 @@ public class ControlEnemigos extends Thread{
     JLabel avatar = null;
     Mundo1 mundo= new Mundo1("Nada");
     Mundo1.mapa1 mapa;
+//    Mundo1.mapa2 mapa2;
+
 
     int posAnterior[] = new int [2];//x,y
-    public ControlEnemigos(JLabel avatar){
+    public ControlEnemigos(JLabel avatar, String mapa){
         this.avatar = avatar;
-        mapa = mundo.getMapa1();
+//        if
+        this.mapa = mundo.getMapa1();
+//        mapa2 = mundo.getMapa2();
     }
     public void run() {
         int x, y, n=0;
         int dir = (int) (Math.random() * 4 + 1);//arriba, derecha, abajo, izquierda
         while (true) {
-            if (n > 10) {
+            if (n > 50) {
                 int aux = dir;
                 dir = (int) (Math.random() * 4 + 1);
                 if(aux == dir){

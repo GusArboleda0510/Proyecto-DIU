@@ -19,11 +19,12 @@ import javax.imageio.ImageIO;
  */
 public class ControlCrearAvatar {
     BufferedImage imagen = new BufferedImage(40, 40, BufferedImage.TYPE_INT_ARGB);
-    File fichero = new File("avatar.png");
+    File fichero;
     String formato = "png";
     Color[][] colores = new Color [2][6];
-    public ControlCrearAvatar(Color[][] colores) {
+    public ControlCrearAvatar(Color[][] colores, String nombreAvatar) {
         this.colores = colores;  
+        fichero = new File("src/Imagenes/Avatars/Usuarios/"+nombreAvatar+".png");
         dibujarImagen();
         crearImagen();
     }

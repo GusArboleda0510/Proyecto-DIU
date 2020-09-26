@@ -10,6 +10,7 @@ import Control.ControlEnemigos;
 import java.awt.Color;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import javax.swing.JPanel;
 
 /**
  *
@@ -23,16 +24,16 @@ public class Mundo1 extends javax.swing.JFrame {
     Thread contEnemigos;
     Thread avatarSprite;
     mapa1 jPMapa1 = new mapa1();
-    mapa2 jPMapa2 = new mapa2();
+    mapa2 jPMapa2 = new mapa2();// y si lo intento cuando instancie esta??, enel constructor??
     Color colorea = new Color(240, 240, 240);
     public Mundo1() {
         initComponents();
         setVisible(true);
-        decidirMapa();
-
-        contEnemigos = new ControlEnemigos(enemigo1); 
+        String nombreMapa = decidirMapa();
+//        llamarEnemigos(nombreMapa);
+        contEnemigos = new ControlEnemigos(enemigo1,"mapa1"); 
         contEnemigos.start();
-        contEnemigos = new ControlEnemigos(enemigo2);
+        contEnemigos = new ControlEnemigos(enemigo2,"mapa1"); 
         contEnemigos.start();
 //        avatarSprite = new AvatarSprite(enemigo1); 
 //        avatarSprite.start();
@@ -1644,7 +1645,7 @@ public class Mundo1 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_Mapa2KeyPressed
 
-    private void decidirMapa() {
+    private String decidirMapa() {
         int mapa = (int) (Math.random()*2+1);
         System.out.println("mapa " + mapa);
         if(mapa == 1){
@@ -1652,14 +1653,38 @@ public class Mundo1 extends javax.swing.JFrame {
             Mapa1.setVisible(true);
             Mapa2.setFocusable(false);
             Mapa2.setVisible(false);
+            return "mapa1";
         }
         if(mapa == 2){
             Mapa1.setFocusable(false);
             Mapa1.setVisible(false);
             Mapa2.setFocusable(true);
             Mapa2.setVisible(true);
-        }
+            return "mapa2";
 
+        }
+        return null;
+    }
+
+    private void llamarEnemigos(String nombreMapa) {
+        int cantEnemigos = buscarCantEnemigos();
+        if(nombreMapa.equals("mapa1")){
+            for (int n = 1; n <= cantEnemigos; n++) {
+                contEnemigos = new ControlEnemigos(enemigo1,"mapa1"); 
+                contEnemigos.start();
+            }
+        if(nombreMapa.equals("mapa2")){
+            for (int n = 1; n <= cantEnemigos; n++) {
+                contEnemigos = new ControlEnemigos(enemigo1,"mapa2"); 
+                contEnemigos.start();
+            }
+        }
+        
+        }
+    }
+
+    private int  buscarCantEnemigos() {
+        return 2;
     }
 
     public class mapa1{
