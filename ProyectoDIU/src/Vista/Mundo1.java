@@ -1012,7 +1012,7 @@ public class Mundo1 extends javax.swing.JFrame {
 
         enemigo1.setBackground(new java.awt.Color(204, 204, 204));
         enemigo1.setOpaque(true);
-        Mapa1.add(enemigo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 50, 40));
+        Mapa1.add(enemigo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 50, 40));
 
         enemigo2.setBackground(new java.awt.Color(255, 0, 0));
         enemigo2.setOpaque(true);
@@ -1554,7 +1554,7 @@ public class Mundo1 extends javax.swing.JFrame {
         Avatar1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Avatar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
         Avatar1.setOpaque(true);
-        Mapa2.add(Avatar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 500, 40, 40));
+        Mapa2.add(Avatar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 510, 40, 40));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoTierra.jpg"))); // NOI18N
         Mapa2.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 600));
