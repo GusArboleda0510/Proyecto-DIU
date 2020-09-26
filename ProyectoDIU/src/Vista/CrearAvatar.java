@@ -936,7 +936,7 @@ public class CrearAvatar extends javax.swing.JFrame {
         jLabel118.setText("8");
         Cuadricula.add(jLabel118, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 40, 40));
 
-        jPanel1.add(Cuadricula, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, 490, 450));
+        jPanel1.add(Cuadricula, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 490, 450));
 
         jLAzul.setBackground(new java.awt.Color(51, 102, 255));
         jLAzul.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
@@ -1055,7 +1055,7 @@ public class CrearAvatar extends javax.swing.JFrame {
                 jLAvatar5MouseReleased(evt);
             }
         });
-        jPanel1.add(jLAvatar5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 40, 40));
+        jPanel1.add(jLAvatar5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 100, 40, 40));
 
         jLAvatar1.setBackground(new java.awt.Color(255, 255, 255));
         jLAvatar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Avatars/Avatar2/1.jpg"))); // NOI18N
@@ -1067,10 +1067,9 @@ public class CrearAvatar extends javax.swing.JFrame {
                 jLAvatar1MouseReleased(evt);
             }
         });
-        jPanel1.add(jLAvatar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 40, 40));
+        jPanel1.add(jLAvatar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 40, 40));
 
         jLAvatar3.setBackground(new java.awt.Color(255, 255, 255));
-        jLAvatar3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Avatars/Avatar3/1.jpg"))); // NOI18N
         jLAvatar3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
         jLAvatar3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLAvatar3.setOpaque(true);
@@ -1079,7 +1078,7 @@ public class CrearAvatar extends javax.swing.JFrame {
                 jLAvatar3MouseReleased(evt);
             }
         });
-        jPanel1.add(jLAvatar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 40, 40));
+        jPanel1.add(jLAvatar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 100, 40, 40));
 
         jLAvatar4.setBackground(new java.awt.Color(255, 255, 255));
         jLAvatar4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
@@ -1090,10 +1089,10 @@ public class CrearAvatar extends javax.swing.JFrame {
                 jLAvatar4MouseReleased(evt);
             }
         });
-        jPanel1.add(jLAvatar4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, 40, 40));
+        jPanel1.add(jLAvatar4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 100, 40, 40));
 
         jLAvatar2.setBackground(new java.awt.Color(255, 255, 255));
-        jLAvatar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Avatars/Avatar1/1.png"))); // NOI18N
+        jLAvatar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Avatars/Avatar3/1.jpg"))); // NOI18N
         jLAvatar2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
         jLAvatar2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLAvatar2.setOpaque(true);
@@ -1102,7 +1101,7 @@ public class CrearAvatar extends javax.swing.JFrame {
                 jLAvatar2MouseReleased(evt);
             }
         });
-        jPanel1.add(jLAvatar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 40, 40));
+        jPanel1.add(jLAvatar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 40, 40));
 
         jLFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondoBlanco.jpg"))); // NOI18N
         jPanel1.add(jLFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 780));
