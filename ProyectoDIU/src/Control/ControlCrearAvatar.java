@@ -5,6 +5,7 @@
  */
 package Control;
 
+import Modelo.CreadordeDocs;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
@@ -12,6 +13,7 @@ import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
+import org.xml.sax.SAXException;
 
 /**
  *
@@ -22,6 +24,9 @@ public class ControlCrearAvatar {
     File fichero;
     String formato = "png";
     Color[][] colores = new Color [2][6];
+    CreadordeDocs cd;
+    File avatars = new File("Avatars.xml");
+
     public ControlCrearAvatar(Color[][] colores, String nombreAvatar) {
         this.colores = colores;  
         fichero = new File("src/Imagenes/Avatars/Usuarios/"+nombreAvatar+".png");
@@ -186,6 +191,7 @@ public class ControlCrearAvatar {
         g.fillRect(35, y, ancho, alto);    
    
     }
+    
     public void crearImagen() {
         try {
             ImageIO.write(imagen, formato, fichero);
@@ -193,4 +199,10 @@ public class ControlCrearAvatar {
             System.out.println("Error de escritura");
         }
     }
+    
+    public void guardarXML() throws Exception{
+        cd = new CreadordeDocs(avatars, "jugadores");
+    }
+    
+    
 }
