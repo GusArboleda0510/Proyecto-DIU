@@ -14,7 +14,7 @@ import javax.swing.JColorChooser;
  *
  * @author ANDRES ARBOLEDA
  */
-public class CrearAvatar extends javax.swing.JFrame {
+public class CrearAvatar extends javax.swing.JDialog {
 
     /**
      * Creates new form PruebaHacerImagen

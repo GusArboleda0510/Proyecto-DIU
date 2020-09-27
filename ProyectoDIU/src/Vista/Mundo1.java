@@ -5,12 +5,9 @@
  */
 package Vista;
 
-import Control.AvatarSprite;
 import Control.ControlEnemigos;
 import java.awt.Color;
-import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import javax.swing.JPanel;
 
 /**
  *
@@ -62,6 +59,15 @@ public class Mundo1 extends javax.swing.JFrame {
         Informacion = new javax.swing.JPanel();
         jtVida = new javax.swing.JLabel();
         jlTiempo = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jlVida1 = new javax.swing.JLabel();
+        jlVida2 = new javax.swing.JLabel();
+        jlVida3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jlPuntraje = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         Mapa1 = new javax.swing.JPanel();
         j3 = new javax.swing.JLabel();
         j13 = new javax.swing.JLabel();
@@ -331,15 +337,69 @@ public class Mundo1 extends javax.swing.JFrame {
         Informacion.setBackground(new java.awt.Color(204, 204, 255));
         Informacion.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jtVida.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
+        jtVida.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        jtVida.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jtVida.setText("Vida");
-        Informacion.add(jtVida, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 90, 40));
+        Informacion.add(jtVida, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 60, 90, 30));
 
-        jlTiempo.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
+        jlTiempo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jlTiempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlTiempo.setText("Tiempo");
-        Informacion.add(jlTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 4, 90, 40));
+        Informacion.add(jlTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 80, 40));
 
-        getContentPane().add(Informacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(-5, 0, 1200, 100));
+        jButton1.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ayuda.png"))); // NOI18N
+        jButton1.setContentAreaFilled(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        Informacion.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 0, 60, 40));
+
+        jButton2.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Atras.png"))); // NOI18N
+        jButton2.setContentAreaFilled(false);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        Informacion.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
+
+        jLabel1.setFont(new java.awt.Font("Tempus Sans ITC", 3, 36)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("NIVEL 1");
+        Informacion.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 0, 240, 50));
+
+        jlVida1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
+        jlVida1.setText("jLabel2");
+        Informacion.add(jlVida1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 60, 40, 30));
+
+        jlVida2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
+        jlVida2.setText("jLabel2");
+        Informacion.add(jlVida2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 60, 40, 30));
+
+        jlVida3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
+        jlVida3.setText("jLabel2");
+        Informacion.add(jlVida3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 60, 40, 30));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("----------");
+        Informacion.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 100, 20));
+
+        jlPuntraje.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jlPuntraje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlPuntraje.setText("Puntaje");
+        Informacion.add(jlPuntraje, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 50, 80, 40));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("----------");
+        Informacion.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 60, 100, 20));
+
+        getContentPane().add(Informacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(-5, 0, 960, 100));
 
         Mapa1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -1044,7 +1104,7 @@ public class Mundo1 extends javax.swing.JFrame {
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoVerde.png"))); // NOI18N
         Mapa1.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 600));
 
-        getContentPane().add(Mapa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, -1, 506));
+        getContentPane().add(Mapa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, -1, 600));
 
         Mapa2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -1580,7 +1640,7 @@ public class Mundo1 extends javax.swing.JFrame {
 
         getContentPane().add(Mapa2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, -1, -1));
 
-        setSize(new java.awt.Dimension(1211, 739));
+        setSize(new java.awt.Dimension(967, 739));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -1646,6 +1706,15 @@ public class Mundo1 extends javax.swing.JFrame {
             break;
         }
     }//GEN-LAST:event_Mapa2KeyPressed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        new GuiaControles(null, true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        dispose();
+        new Menu();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     private String decidirMapa() {
         int mapa = (int) (Math.random()*2+1);
@@ -2118,7 +2187,16 @@ public class Mundo1 extends javax.swing.JFrame {
     private javax.swing.JLabel j97;
     private javax.swing.JLabel j98;
     private javax.swing.JLabel j99;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jlPuntraje;
     private javax.swing.JLabel jlTiempo;
+    private javax.swing.JLabel jlVida1;
+    private javax.swing.JLabel jlVida2;
+    private javax.swing.JLabel jlVida3;
     private javax.swing.JLabel jtVida;
     // End of variables declaration//GEN-END:variables
         
