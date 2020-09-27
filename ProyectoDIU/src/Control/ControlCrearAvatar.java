@@ -13,6 +13,8 @@ import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.xml.sax.SAXException;
 
 /**
@@ -26,12 +28,14 @@ public class ControlCrearAvatar {
     Color[][] colores = new Color [2][6];
     CreadordeDocs cd;
     File avatars = new File("Avatars.xml");
-
-    public ControlCrearAvatar(Color[][] colores, String nombreAvatar) {
+    String nickNameJugador;
+    public ControlCrearAvatar(Color[][] colores, String nombreAvatar) throws Exception {
         this.colores = colores;  
         fichero = new File("src/Imagenes/Avatars/Usuarios/"+nombreAvatar+".png");
+        nickNameJugador = nombreAvatar;      
         dibujarImagen();
         crearImagen();
+        guardarXML();
     }
     
     public void dibujarImagen() {
@@ -202,6 +206,35 @@ public class ControlCrearAvatar {
     
     public void guardarXML() throws Exception{
         cd = new CreadordeDocs(avatars, "jugadores");
+        Document documento = cd.getDocumento();
+        Element raiz = cd.getElementoRaiz();
+        generarContenido(documento, raiz);
+        cd.generarXML(avatars,documento);
+    }
+
+    private void generarContenido(Document documento, Element raiz) {
+        Element avatar = documento.createElement("avatar");
+        raiz.appendChild(avatar);
+        
+        Element nickName = documento.createElement("nickname");
+        nickName.appendChild(documento.createTextNode(nickNameJugador));
+        avatar.appendChild(nickName);
+
+        Element colores = documento.createElement("colores");
+        colores.appendChild(documento.createTextNode(obtenerColores()));
+        avatar.appendChild(colores);
+    }
+
+    private String obtenerColores() {
+        String palabra = "";
+        for (Color[] arrColores : colores) {
+            for (Color color : arrColores) {
+                palabra += color.getRed() + " " + color.getGreen()+ " " + color.getBlue() +
+                        "\n				 "; 
+            }
+            palabra += "\n				 ";
+        }
+        return palabra;
     }
     
     

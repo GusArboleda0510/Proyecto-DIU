@@ -7,6 +7,8 @@ package Vista;
 
 import Control.ControlCrearAvatar;
 import java.awt.Color;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JColorChooser;
 
@@ -1434,7 +1436,11 @@ public class CrearAvatar extends javax.swing.JFrame {
         preLlenarMatriz();
         GuardarNombre nick = new GuardarNombre(null, true);
         nickName = nick.getNickName();
-        cca = new ControlCrearAvatar(colores, nickName);
+        try {
+            cca = new ControlCrearAvatar(colores, nickName);
+        } catch (Exception ex) {
+            System.out.println("error en crearAvatar " + ex);
+        }
         dispose();
     }//GEN-LAST:event_jBGuardarActionPerformed
 
