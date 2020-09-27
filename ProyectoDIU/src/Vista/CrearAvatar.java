@@ -16,7 +16,7 @@ import javax.swing.JColorChooser;
  *
  * @author ANDRES ARBOLEDA
  */
-public class CrearAvatar extends javax.swing.JFrame {
+public class CrearAvatar extends javax.swing.JDialog {
 
     /**
      * Creates new form PruebaHacerImagen
@@ -1038,15 +1038,17 @@ public class CrearAvatar extends javax.swing.JFrame {
         jBGuardar.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jBGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/pluma.png"))); // NOI18N
         jBGuardar.setText("Crear");
+        jBGuardar.setContentAreaFilled(false);
         jBGuardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jBGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBGuardarActionPerformed(evt);
             }
         });
-        jPanel1.add(jBGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 680, 190, 80));
+        jPanel1.add(jBGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 640, 190, 80));
 
         jBMas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/boton.png"))); // NOI18N
+        jBMas.setContentAreaFilled(false);
         jBMas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jBMas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1121,9 +1123,9 @@ public class CrearAvatar extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jPanel1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(0, 0, 620, 650);
+        jScrollPane1.setBounds(0, 0, 620, 630);
 
-        setSize(new java.awt.Dimension(638, 697));
+        setSize(new java.awt.Dimension(638, 669));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
