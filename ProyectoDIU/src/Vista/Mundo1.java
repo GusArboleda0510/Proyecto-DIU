@@ -8,6 +8,7 @@ package Vista;
 import Control.ControlEnemigos;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
+import javax.swing.Timer;
 /**
  *
  * @author Alejandra Becerra
@@ -26,8 +27,10 @@ public class Mundo1 extends javax.swing.JDialog {
     public Mundo1(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        setVisible(true);
         String nombreMapa = decidirMapa();
+//        Timer timer = new Timer();
+//        Tiempo.setText(""+timer);
+//        
 //        llamarEnemigos(nombreMapa);
         contEnemigos = new ControlEnemigos(enemigo1,"mapa1"); 
         contEnemigos.start();
@@ -35,6 +38,8 @@ public class Mundo1 extends javax.swing.JDialog {
         contEnemigos.start();
 //        avatarSprite = new AvatarSprite(enemigo1); 
 //        avatarSprite.start();
+        
+        setVisible(true);
     }
 
     public Mundo1(String nada) {
@@ -322,15 +327,15 @@ public class Mundo1 extends javax.swing.JDialog {
         Informacion = new javax.swing.JPanel();
         jtVida = new javax.swing.JLabel();
         jlTiempo = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jlVida1 = new javax.swing.JLabel();
         jlVida2 = new javax.swing.JLabel();
         jlVida3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        Tiempo = new javax.swing.JLabel();
         jlPuntraje = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jlTiempo1 = new javax.swing.JLabel();
+        jlPuntraje1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -861,7 +866,7 @@ public class Mundo1 extends javax.swing.JDialog {
         Avatar1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Avatar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
         Avatar1.setOpaque(true);
-        Mapa2.add(Avatar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 510, 40, 40));
+        Mapa2.add(Avatar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 560, 40, 40));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoTierra.jpg"))); // NOI18N
         Mapa2.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 600));
@@ -1563,7 +1568,7 @@ public class Mundo1 extends javax.swing.JDialog {
         Avatar.setBackground(new java.awt.Color(153, 255, 204));
         Avatar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
         Avatar.setOpaque(true);
-        Mapa1.add(Avatar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 510, 40, 40));
+        Mapa1.add(Avatar, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 500, 40, 40));
 
         fondo.setBackground(new java.awt.Color(255, 204, 204));
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoVerde.png"))); // NOI18N
@@ -1579,28 +1584,13 @@ public class Mundo1 extends javax.swing.JDialog {
 
         jlTiempo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jlTiempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlTiempo.setText("Tiempo");
-        Informacion.add(jlTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 80, 40));
-
-        jButton1.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ayuda.png"))); // NOI18N
-        jButton1.setContentAreaFilled(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        jlTiempo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Atras.png"))); // NOI18N
+        jlTiempo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                volverMenu(evt);
             }
         });
-        Informacion.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 0, 60, 40));
-
-        jButton2.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Atras.png"))); // NOI18N
-        jButton2.setContentAreaFilled(false);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        Informacion.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
+        Informacion.add(jlTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 80, 40));
 
         jLabel1.setFont(new java.awt.Font("Tempus Sans ITC", 3, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1619,37 +1609,49 @@ public class Mundo1 extends javax.swing.JDialog {
         jlVida3.setText("jLabel2");
         Informacion.add(jlVida3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 60, 40, 30));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("----------");
-        Informacion.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 100, 20));
+        Tiempo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Tiempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Tiempo.setText("----------");
+        Informacion.add(Tiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 170, 30));
 
         jlPuntraje.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jlPuntraje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlPuntraje.setText("Puntaje");
-        Informacion.add(jlPuntraje, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 50, 80, 40));
+        jlPuntraje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ayuda.png"))); // NOI18N
+        jlPuntraje.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                ControlGuia(evt);
+            }
+        });
+        Informacion.add(jlPuntraje, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 0, 80, 40));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("----------");
         Informacion.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 60, 100, 20));
 
+        jlTiempo1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jlTiempo1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlTiempo1.setText("Tiempo");
+        Informacion.add(jlTiempo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 80, 40));
+
+        jlPuntraje1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jlPuntraje1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlPuntraje1.setText("Puntaje");
+        Informacion.add(jlPuntraje1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 50, 80, 40));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 960, Short.MAX_VALUE)
+            .addGap(0, 965, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(5, 12, Short.MAX_VALUE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(Informacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(5, 5, 5)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(Mapa2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(Mapa1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                        .addComponent(Mapa2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Mapa1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(0, 3, Short.MAX_VALUE))
+                .addComponent(Informacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1668,38 +1670,8 @@ public class Mundo1 extends javax.swing.JDialog {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Mapa2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Mapa2KeyPressed
-        mapa2 m2 = new mapa2();
-        int desplazamiento=10,x=Avatar1.getX(),y=Avatar1.getY();
-        System.out.println(Avatar1.getLocation());//Ubicacion del la imagen en el panel
-
-        switch(evt.getExtendedKeyCode()){//getExtendedKeyCode->Captura lo q hace el teclado y lo pasa a la variable X y Y
-
-            case KeyEvent.VK_UP:
-            if(m2.limites(x,y,"up")){
-                Avatar1.setLocation(x, y-desplazamiento);
-            }
-            break;
-
-            case KeyEvent.VK_DOWN:
-            if(m2.limites(x,y,"down")){
-                Avatar1.setLocation(x, y+desplazamiento);
-            }
-            break;
-            case KeyEvent.VK_LEFT:
-            if(m2.limites(x,y,"left")){
-                Avatar1.setLocation(x-desplazamiento, y);
-            }
-            break;
-            case KeyEvent.VK_RIGHT:
-            if(m2.limites(x,y,"right")){
-                Avatar1.setLocation(x+desplazamiento, y);
-            }
-            break;
-        }
-    }//GEN-LAST:event_Mapa2KeyPressed
-
     private void Mapa1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Mapa1KeyPressed
+        
         mapa1 m1 = new mapa1();
         int desplazamiento=10,x=Avatar.getX(),y=Avatar.getY();
         System.out.println(Avatar.getLocation());//Ubicacion del la imagen en el panel
@@ -1726,18 +1698,61 @@ public class Mundo1 extends javax.swing.JDialog {
             case KeyEvent.VK_RIGHT:
             if(m1.limites(x,y,"right")){
                 Avatar.setLocation(x+desplazamiento, y);
+                if (x>= 900 && y >= 500) {
+                    //Guardar XML (Puntaje,Vida,Tiempo)
+                    dispose();
+                    new Mundo2(null, true);
+                }
             }
             break;
         }
     }//GEN-LAST:event_Mapa1KeyPressed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new GuiaControles(null, true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void Mapa2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Mapa2KeyPressed
+        System.out.println("Evento2");
+        mapa2 m2 = new mapa2();
+        int desplazamiento=10,x=Avatar1.getX(),y=Avatar1.getY();
+        System.out.println(Avatar1.getLocation());//Ubicacion del la imagen en el panel
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        switch(evt.getExtendedKeyCode()){//getExtendedKeyCode->Captura lo q hace el teclado y lo pasa a la variable X y Y
+
+            case KeyEvent.VK_UP:
+            if(m2.limites(x,y,"up")){
+                Avatar1.setLocation(x, y-desplazamiento);
+            }
+            break;
+
+            case KeyEvent.VK_DOWN:
+            if(m2.limites(x,y,"down")){
+                Avatar1.setLocation(x, y+desplazamiento);
+                if (x >= 600 && y >=560) {
+                    //Guardar XML (Puntaje,Vida,Tiempo)
+                    dispose();
+                    new Mundo2(null, true);
+                }
+            }
+            break;
+            case KeyEvent.VK_LEFT:
+            if(m2.limites(x,y,"left")){
+                Avatar1.setLocation(x-desplazamiento, y);
+            }
+            break;
+            case KeyEvent.VK_RIGHT:
+            if(m2.limites(x,y,"right")){
+
+                Avatar1.setLocation(x+desplazamiento, y);
+            }
+            break;
+        }
+    }//GEN-LAST:event_Mapa2KeyPressed
+
+    private void volverMenu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverMenu
         dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_volverMenu
+
+    private void ControlGuia(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ControlGuia
+        new GuiaControles(null, true);
+    }//GEN-LAST:event_ControlGuia
 
     private String decidirMapa() {
         int mapa = (int) (Math.random()*2+1);
@@ -1996,6 +2011,7 @@ public class Mundo1 extends javax.swing.JDialog {
     private javax.swing.JPanel Informacion;
     private javax.swing.JPanel Mapa1;
     private javax.swing.JPanel Mapa2;
+    private javax.swing.JLabel Tiempo;
     private javax.swing.JLabel enemigo1;
     private javax.swing.JLabel enemigo2;
     private javax.swing.JLabel fondo;
@@ -2253,13 +2269,12 @@ public class Mundo1 extends javax.swing.JDialog {
     private javax.swing.JLabel j97;
     private javax.swing.JLabel j98;
     private javax.swing.JLabel j99;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jlPuntraje;
+    private javax.swing.JLabel jlPuntraje1;
     private javax.swing.JLabel jlTiempo;
+    private javax.swing.JLabel jlTiempo1;
     private javax.swing.JLabel jlVida1;
     private javax.swing.JLabel jlVida2;
     private javax.swing.JLabel jlVida3;

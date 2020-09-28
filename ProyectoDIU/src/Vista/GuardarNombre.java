@@ -150,12 +150,6 @@ public class GuardarNombre extends javax.swing.JDialog {
         return nickName;
     }
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-       new GuardarNombre(null, true,"");
-    }
 
     public void setMensaje(String msj){
         String[] arr = msj.split("-");

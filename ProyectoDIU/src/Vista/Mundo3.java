@@ -19,12 +19,17 @@ public class Mundo3 extends javax.swing.JDialog {
     public Mundo3(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        
+        //Carga XML (Timepo,Vida,Puntaje)
+        
         ////////////////////////PANELES////////////////////
         Mapa1.setFocusable(true);
         Mapa1.setVisible(true);
         
 //        Mapa2.setFocusable(false);
 //        Mapa2.setVisible(false);
+        
+        setVisible(true);
     }
 
     /**
@@ -157,8 +162,21 @@ public class Mundo3 extends javax.swing.JDialog {
         TransladorEntrada = new javax.swing.JLabel();
         TransladorSalida = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
+        Informacion = new javax.swing.JPanel();
+        jtVida = new javax.swing.JLabel();
+        jlTiempo = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jlVida1 = new javax.swing.JLabel();
+        jlVida2 = new javax.swing.JLabel();
+        jlVida3 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jlPuntraje = new javax.swing.JLabel();
+        jLabel107 = new javax.swing.JLabel();
+        jlTiempo1 = new javax.swing.JLabel();
+        jlPuntraje1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Mapa1.setPreferredSize(new java.awt.Dimension(0, 0));
         Mapa1.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -517,7 +535,7 @@ public class Mundo3 extends javax.swing.JDialog {
         Mapa1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, -1, -1));
 
         Avatar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
-        Mapa1.add(Avatar, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 370, 40, 40));
+        Mapa1.add(Avatar, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 200, 40, 40));
 
         TransladorEntrada.setBackground(new java.awt.Color(0, 0, 0));
         TransladorEntrada.setOpaque(true);
@@ -530,20 +548,74 @@ public class Mundo3 extends javax.swing.JDialog {
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoVerde.png"))); // NOI18N
         Mapa1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Mapa1, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Mapa1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        getContentPane().add(Mapa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1000, 600));
+
+        Informacion.setBackground(new java.awt.Color(204, 204, 255));
+        Informacion.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jtVida.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        jtVida.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jtVida.setText("Vida");
+        Informacion.add(jtVida, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 60, 90, 30));
+
+        jlTiempo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jlTiempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlTiempo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Atras.png"))); // NOI18N
+        jlTiempo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jlTiempovolverMenu(evt);
+            }
+        });
+        Informacion.add(jlTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 80, 40));
+
+        jLabel10.setFont(new java.awt.Font("Tempus Sans ITC", 3, 36)); // NOI18N
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("NIVEL 3");
+        Informacion.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 0, 240, 50));
+
+        jlVida1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
+        jlVida1.setText("jLabel2");
+        Informacion.add(jlVida1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 60, 40, 30));
+
+        jlVida2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
+        jlVida2.setText("jLabel2");
+        Informacion.add(jlVida2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 60, 40, 30));
+
+        jlVida3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
+        jlVida3.setText("jLabel2");
+        Informacion.add(jlVida3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 60, 40, 30));
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel17.setText("----------");
+        Informacion.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 100, 20));
+
+        jlPuntraje.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jlPuntraje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlPuntraje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ayuda.png"))); // NOI18N
+        jlPuntraje.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jlPuntrajeControlGuia(evt);
+            }
+        });
+        Informacion.add(jlPuntraje, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 0, 80, 40));
+
+        jLabel107.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel107.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel107.setText("----------");
+        Informacion.add(jLabel107, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 60, 100, 20));
+
+        jlTiempo1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jlTiempo1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlTiempo1.setText("Tiempo");
+        Informacion.add(jlTiempo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 80, 40));
+
+        jlPuntraje1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jlPuntraje1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlPuntraje1.setText("Puntaje");
+        Informacion.add(jlPuntraje1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 50, 80, 40));
+
+        getContentPane().add(Informacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 100));
 
         pack();
         setLocationRelativeTo(null);
@@ -586,10 +658,23 @@ public class Mundo3 extends javax.swing.JDialog {
             case KeyEvent.VK_RIGHT:
             if(m1.limites(x,y,"right")){
                 Avatar.setLocation(x+desplazamiento, y);
+                if (x>= 950&&y== 200) {
+                    System.out.println("ENTRO EL DESSGRACIADO");
+                    dispose();
+                    new Ganadores(null, true);
+                }
             }
             break;
         }
     }//GEN-LAST:event_Mapa1KeyPressed
+
+    private void jlTiempovolverMenu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlTiempovolverMenu
+        dispose();
+    }//GEN-LAST:event_jlTiempovolverMenu
+
+    private void jlPuntrajeControlGuia(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlPuntrajeControlGuia
+        new GuiaControles(null, true);
+    }//GEN-LAST:event_jlPuntrajeControlGuia
      public class mapa1{
         
         boolean bloqueado = false;
@@ -660,53 +745,17 @@ public class Mundo3 extends javax.swing.JDialog {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Mundo3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Mundo3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Mundo3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Mundo3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the dialog */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                Mundo3 dialog = new Mundo3(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Avatar;
     private javax.swing.JLabel Fondo;
+    private javax.swing.JPanel Informacion;
     private javax.swing.JPanel Mapa1;
     private javax.swing.JLabel TransladorEntrada;
     private javax.swing.JLabel TransladorSalida;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
     private javax.swing.JLabel jLabel101;
     private javax.swing.JLabel jLabel102;
@@ -714,6 +763,7 @@ public class Mundo3 extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel104;
     private javax.swing.JLabel jLabel105;
     private javax.swing.JLabel jLabel106;
+    private javax.swing.JLabel jLabel107;
     private javax.swing.JLabel jLabel109;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel110;
@@ -733,6 +783,7 @@ public class Mundo3 extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
@@ -822,5 +873,13 @@ public class Mundo3 extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel97;
     private javax.swing.JLabel jLabel98;
     private javax.swing.JLabel jLabel99;
+    private javax.swing.JLabel jlPuntraje;
+    private javax.swing.JLabel jlPuntraje1;
+    private javax.swing.JLabel jlTiempo;
+    private javax.swing.JLabel jlTiempo1;
+    private javax.swing.JLabel jlVida1;
+    private javax.swing.JLabel jlVida2;
+    private javax.swing.JLabel jlVida3;
+    private javax.swing.JLabel jtVida;
     // End of variables declaration//GEN-END:variables
 }

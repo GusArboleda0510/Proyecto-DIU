@@ -936,6 +936,7 @@ public class CrearAvatar extends javax.swing.JDialog {
 
         jPanel1.add(Cuadricula, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 490, 450));
 
+        jPanel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel2.setOpaque(false);
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1611,13 +1612,7 @@ public class CrearAvatar extends javax.swing.JDialog {
         colores[fila][6] = jLabel77.getBackground();
         colores[fila][7] = jLabel78.getBackground();
 
-    }
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        new CrearAvatar(null, true);
-    }
+   }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Cuadricula;
