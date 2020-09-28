@@ -9,16 +9,18 @@ import java.awt.event.KeyEvent;
 
 /**
  *
- * @author ANDRES ARBOLEDA
+ * @author Alejandra Becerra
  */
-public class Mundo2 extends javax.swing.JFrame {
+public class Mundo2 extends javax.swing.JDialog {
 
     /**
-     * Creates new form Mundo2
+     * Creates new form Mundo_2
      */
-    public Mundo2() {
+    public Mundo2(java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
         initComponents();
-        ////////////////////////PANELES////////////////////
+        
+         ////////////////////////PANELES////////////////////
         Mapa1.setFocusable(false);
         Mapa1.setVisible(false);
         
@@ -26,6 +28,7 @@ public class Mundo2 extends javax.swing.JFrame {
         Mapa2.setVisible(true);
         //////////////////////////////////////////////////////
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -294,8 +297,7 @@ public class Mundo2 extends javax.swing.JFrame {
         Avatar1 = new javax.swing.JLabel();
         Fondo1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(950, 600));
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Mapa1.setMinimumSize(new java.awt.Dimension(1000, 800));
@@ -973,7 +975,6 @@ public class Mundo2 extends javax.swing.JFrame {
 
         getContentPane().add(Mapa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 660));
 
-        Mapa2.setPreferredSize(new java.awt.Dimension(1000, 600));
         Mapa2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 Mapa2KeyPressed(evt);
@@ -1592,106 +1593,73 @@ public class Mundo2 extends javax.swing.JFrame {
 
         getContentPane().add(Mapa2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 600));
 
-        setSize(new java.awt.Dimension(1016, 639));
+        pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void Mapa1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Mapa1KeyPressed
-         Mundo2.mapa1 m1 = new Mundo2.mapa1();
+        Mundo2.mapa1 m1 = new Mundo2.mapa1();
         int desplazamiento=10,x=Avatar.getX(),y=Avatar.getY();
         System.out.println(Avatar.getLocation());//Ubicacion del la imagen en el panel
-        
-         switch(evt.getExtendedKeyCode()){//getExtendedKeyCode->Captura lo q hace el teclado y lo pasa a la variable X y Y
-             
-            case KeyEvent.VK_UP: 
-                
-                if(m1.limites(x,y,"up")){
-                    Avatar.setLocation(x, y-desplazamiento); 
-                }  
-                break;
-            case KeyEvent.VK_DOWN: 
-                if(m1.limites(x,y,"down")){
-                    Avatar.setLocation(x, y+desplazamiento);
-                }
-                break;
-            case KeyEvent.VK_LEFT: 
-                if(m1.limites(x,y,"left")){
-                    Avatar.setLocation(x-desplazamiento, y);
-                }
-                break;
-            case KeyEvent.VK_RIGHT: 
-                if(m1.limites(x,y,"right")){
-                    Avatar.setLocation(x+desplazamiento, y);
-                }
-                break;
+
+        switch(evt.getExtendedKeyCode()){//getExtendedKeyCode->Captura lo q hace el teclado y lo pasa a la variable X y Y
+
+            case KeyEvent.VK_UP:
+
+            if(m1.limites(x,y,"up")){
+                Avatar.setLocation(x, y-desplazamiento);
+            }
+            break;
+            case KeyEvent.VK_DOWN:
+            if(m1.limites(x,y,"down")){
+                Avatar.setLocation(x, y+desplazamiento);
+            }
+            break;
+            case KeyEvent.VK_LEFT:
+            if(m1.limites(x,y,"left")){
+                Avatar.setLocation(x-desplazamiento, y);
+            }
+            break;
+            case KeyEvent.VK_RIGHT:
+            if(m1.limites(x,y,"right")){
+                Avatar.setLocation(x+desplazamiento, y);
+            }
+            break;
         }
     }//GEN-LAST:event_Mapa1KeyPressed
 
     private void Mapa2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Mapa2KeyPressed
-         Mundo2.mapa2 m2 = new Mundo2.mapa2();
+        Mundo2.mapa2 m2 = new Mundo2.mapa2();
         int desplazamiento=10,x=Avatar1.getX(),y=Avatar1.getY();
         System.out.println(Avatar1.getLocation());//Ubicacion del la imagen en el panel
-        
-         switch(evt.getExtendedKeyCode()){//getExtendedKeyCode->Captura lo q hace el teclado y lo pasa a la variable X y Y
-             
-            case KeyEvent.VK_UP: 
-                if(m2.limites(x,y,"up")){
-                    Avatar1.setLocation(x, y-desplazamiento); 
-                }  
-                break;
-                
-            case KeyEvent.VK_DOWN: 
-                if(m2.limites(x,y,"down")){
-                    Avatar1.setLocation(x, y+desplazamiento);
-                }
-                break;
-            case KeyEvent.VK_LEFT: 
-                if(m2.limites(x,y,"left")){
-                    Avatar1.setLocation(x-desplazamiento, y);
-                }
-                break;
-            case KeyEvent.VK_RIGHT: 
-                if(m2.limites(x,y,"right")){
-                    Avatar1.setLocation(x+desplazamiento, y);
-                }
-                break;
+
+        switch(evt.getExtendedKeyCode()){//getExtendedKeyCode->Captura lo q hace el teclado y lo pasa a la variable X y Y
+
+            case KeyEvent.VK_UP:
+            if(m2.limites(x,y,"up")){
+                Avatar1.setLocation(x, y-desplazamiento);
+            }
+            break;
+
+            case KeyEvent.VK_DOWN:
+            if(m2.limites(x,y,"down")){
+                Avatar1.setLocation(x, y+desplazamiento);
+            }
+            break;
+            case KeyEvent.VK_LEFT:
+            if(m2.limites(x,y,"left")){
+                Avatar1.setLocation(x-desplazamiento, y);
+            }
+            break;
+            case KeyEvent.VK_RIGHT:
+            if(m2.limites(x,y,"right")){
+                Avatar1.setLocation(x+desplazamiento, y);
+            }
+            break;
         }
     }//GEN-LAST:event_Mapa2KeyPressed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Mundo2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Mundo2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Mundo2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Mundo2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Mundo2().setVisible(true);
-            }
-        });
-    }
+    
     public class mapa1{
         int desplazamiento=10;
         
@@ -1797,6 +1765,46 @@ public class Mundo2 extends javax.swing.JFrame {
             return limite;
         }
         
+    }
+    
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Mundo2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Mundo2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Mundo2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Mundo2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the dialog */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                Mundo2 dialog = new Mundo2(new javax.swing.JFrame(), true);
+                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+                    @Override
+                    public void windowClosing(java.awt.event.WindowEvent e) {
+                        System.exit(0);
+                    }
+                });
+                dialog.setVisible(true);
+            }
+        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
