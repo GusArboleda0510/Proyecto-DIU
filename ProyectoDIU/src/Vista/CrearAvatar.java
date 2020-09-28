@@ -1476,7 +1476,7 @@ public class CrearAvatar extends javax.swing.JDialog {
             cca = new ControlCrearAvatar(colores, nickName);
             dispose();
         } catch (Exception ex) {
-            if(ex.getMessage().equals("no reescribir")){
+            if("no reescribir".equals(ex.getMessage())){
                 //nada
             }else{
                 System.out.println("error en crearAvatar " + ex);

@@ -38,11 +38,12 @@ public class ControlCrearAvatar {
     boolean reescribir;
     public ControlCrearAvatar(Color[][] colores, String nombreAvatar) throws Exception {
         this.colores = colores;  
-        nickNameJugador = nombreAvatar;       
+        nickNameJugador = nombreAvatar;  
+        cd = new CreadordeDocs(avatars, "jugadores");
         initImagen();
+        dibujarImagen();
+        crearImagen();
         if(!imagenExisteXML()){
-            dibujarImagen();
-            crearImagen();
             guardarXML();  
         }else{
             if(reescribir){
@@ -217,8 +218,7 @@ public class ControlCrearAvatar {
         }
     }
     
-    public void guardarXML() throws Exception{
-        cd = new CreadordeDocs(avatars, "jugadores");
+    public void guardarXML() throws Exception{     
         Document documento = cd.getDocumento();
         Element raiz = cd.getElementoRaiz();
         generarContenido(documento, raiz);
@@ -288,20 +288,15 @@ public class ControlCrearAvatar {
             Node nodo = lista.item(n);
             if (nodo.getNodeType() == Node.ELEMENT_NODE) {
                 Element avat = (Element) nodo;
-
-                if (avat.getElementsByTagName("nickname").item(0).getTextContent().equals(nickNameJugador)) {
-                    
+                if (avat.getElementsByTagName("nickname").item(0).getTextContent().equals(nickNameJugador)) {                    
                     Node viejo = avat.getElementsByTagName("colores").item(0);
                     Node nuevo = viejo;  
                     nuevo.setTextContent(obtenerColores());
-                    avat.replaceChild(nuevo, viejo);       
+                    avat.replaceChild(nuevo, viejo);        
                 }
             }
         }
-        System.out.println("control 1");
-
         cd.generarXML(avatars,documento);
-                                            System.out.println("control 2");
 
     } 
 }

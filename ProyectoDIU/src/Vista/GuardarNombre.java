@@ -127,7 +127,7 @@ public class GuardarNombre extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        setSize(new java.awt.Dimension(418, 347));
+        setSize(new java.awt.Dimension(418, 399));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
