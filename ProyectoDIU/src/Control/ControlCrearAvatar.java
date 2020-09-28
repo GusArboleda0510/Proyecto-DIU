@@ -240,12 +240,19 @@ public class ControlCrearAvatar {
 
     private String obtenerColores() {
         String palabra = "";
+        int n = colores.length;
+//        if(n != colores.length){
+            palabra += "\n			";          
+//        }
         for (Color[] arrColores : colores) {
             for (Color color : arrColores) {
                 palabra += color.getRed() + " " + color.getGreen()+ " " + color.getBlue() +
-                        "\n				 "; 
+                        "\n			"; 
             }
-            palabra += "\n				 ";
+            if(n > 1){
+                palabra += "\n			";          
+            }
+            n--;
         }
         return palabra;
     }
@@ -271,7 +278,7 @@ public class ControlCrearAvatar {
                 Node nodo = lista.item(n);
                 if (nodo.getNodeType() == Node.ELEMENT_NODE) {
                     Element elemento = (Element) nodo;
-                    if (elemento.getElementsByTagName("nickname").item(0).getTextContent().equals(nickNameJugador)) {
+                    if (elemento.getElementsByTagName("nickname").item(0).getTextContent().equalsIgnoreCase(nickNameJugador)) {
                         return true;
                     }
                 }
@@ -288,9 +295,14 @@ public class ControlCrearAvatar {
             Node nodo = lista.item(n);
             if (nodo.getNodeType() == Node.ELEMENT_NODE) {
                 Element avat = (Element) nodo;
-                if (avat.getElementsByTagName("nickname").item(0).getTextContent().equals(nickNameJugador)) {                    
-                    Node viejo = avat.getElementsByTagName("colores").item(0);
+                if (avat.getElementsByTagName("nickname").item(0).getTextContent().equalsIgnoreCase(nickNameJugador)) {                    
+                    Node viejo = avat.getElementsByTagName("nickname").item(0);
                     Node nuevo = viejo;  
+                    nuevo.setTextContent(nickNameJugador);
+                    avat.replaceChild(nuevo, viejo); 
+                    
+                    viejo = avat.getElementsByTagName("colores").item(0);
+                    nuevo = viejo;  
                     nuevo.setTextContent(obtenerColores());
                     avat.replaceChild(nuevo, viejo);        
                 }
