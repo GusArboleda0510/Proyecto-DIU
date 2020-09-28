@@ -16,13 +16,12 @@ import javax.swing.JColorChooser;
 public class CrearAvatar extends javax.swing.JDialog {
 
     /**
-     * Creates new form Crear_Avatar
+     * Creates new form Crear_Avartar
      */
     String nickName;
     Color colorea = new Color(240, 240, 240);
     Color[][] colores = new Color [8][8];
     ControlCrearAvatar cca;
-    
     public CrearAvatar(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
@@ -1140,7 +1139,6 @@ public class CrearAvatar extends javax.swing.JDialog {
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseReleased
@@ -1496,6 +1494,7 @@ public class CrearAvatar extends javax.swing.JDialog {
         jPanel2.setVisible(true);
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Avatars/ImagenesOriginales/2.jpg")));
     }//GEN-LAST:event_jLAvatar2MouseReleased
+
     public void preLlenarMatriz(){
         for (int j = 0; j < colores.length; j++) {
             for (int n = 0; n < colores[0].length; n++) {
@@ -1612,6 +1611,8 @@ public class CrearAvatar extends javax.swing.JDialog {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(CrearAvatar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
