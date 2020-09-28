@@ -38,11 +38,11 @@ public class ControlCrearAvatar {
     boolean reescribir;
     public ControlCrearAvatar(Color[][] colores, String nombreAvatar) throws Exception {
         this.colores = colores;  
-        nickNameJugador = nombreAvatar;       
+        nickNameJugador = nombreAvatar;  
         initImagen();
+        dibujarImagen();
+        crearImagen();
         if(!imagenExisteXML()){
-            dibujarImagen();
-            crearImagen();
             guardarXML();  
         }else{
             if(reescribir){
@@ -294,14 +294,14 @@ public class ControlCrearAvatar {
                     Node viejo = avat.getElementsByTagName("colores").item(0);
                     Node nuevo = viejo;  
                     nuevo.setTextContent(obtenerColores());
-                    avat.replaceChild(nuevo, viejo);       
+                    avat.replaceChild(nuevo, viejo);   
+                    
                 }
             }
         }
         System.out.println("control 1");
-
-        cd.generarXML(avatars,documento);
-                                            System.out.println("control 2");
+//        cd.generarXML(avatars,documento);
+         System.out.println("control 2");
 
     } 
 }
