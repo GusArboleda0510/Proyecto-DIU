@@ -152,7 +152,7 @@ public class GuiaControles extends javax.swing.JDialog {
         CrearAvatar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/GuiaControl/CrearAvatar.png"))); // NOI18N
-        CrearAvatar.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, -1, 550));
+        CrearAvatar.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, -1, 550));
 
         jLabel19.setFont(new java.awt.Font("Tempus Sans ITC", 1, 60)); // NOI18N
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -162,36 +162,36 @@ public class GuiaControles extends javax.swing.JDialog {
         jLabel20.setFont(new java.awt.Font("Tempus Sans ITC", 3, 14)); // NOI18N
         jLabel20.setText("<html>Puede escoger un avatar predeterminado tan "
             + "solo seleccionando alguna de las imagenes<html>");
-        CrearAvatar.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 160, 100));
+        CrearAvatar.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 160, 100));
 
         jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/GuiaControl/Flecha1.png"))); // NOI18N
-        CrearAvatar.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 190, -1, -1));
+        CrearAvatar.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 220, -1, -1));
 
         jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/GuiaControl/Flecha2.png"))); // NOI18N
-        CrearAvatar.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 90, -1));
+        CrearAvatar.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, 90, -1));
 
         jLabel39.setFont(new java.awt.Font("Tempus Sans ITC", 3, 14)); // NOI18N
         jLabel39.setText("<html>Con este boton puede abrir una paleta "
             + "             de colores para tener más colores si lo desea<html>");
-        CrearAvatar.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 170, 130, 100));
+        CrearAvatar.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 200, 130, 100));
 
         jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/GuiaControl/Flecha1.png"))); // NOI18N
-        CrearAvatar.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 460, -1, -1));
+        CrearAvatar.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 490, -1, -1));
 
         jLabel49.setFont(new java.awt.Font("Tempus Sans ITC", 3, 14)); // NOI18N
         jLabel49.setText("<html>Si desea personalizar tu avatar, tan solo "
             + "debes seleccionar colores de la parte superior "
             + "y dejar volvar tu imaginación.<html>");
-        CrearAvatar.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 420, 130, 180));
+        CrearAvatar.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 450, 130, 180));
 
         jLabel50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/GuiaControl/Flecha2.png"))); // NOI18N
-        CrearAvatar.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 490, 60, -1));
+        CrearAvatar.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 520, 60, -1));
 
         jLabel59.setFont(new java.awt.Font("Tempus Sans ITC", 3, 14)); // NOI18N
         jLabel59.setText("<html>Si deseas escoger un avatar predetermindado "
             + "tan solo al presionar las imagenes de la parte superior te mostrara "
             + "una vista previa del avatar seleccionado.<html>");
-        CrearAvatar.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 170, 160));
+        CrearAvatar.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 460, 170, 160));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Atras.png"))); // NOI18N
         jButton1.setContentAreaFilled(false);
@@ -297,7 +297,7 @@ public class GuiaControles extends javax.swing.JDialog {
 
         jScrollPane1.setViewportView(JPanel1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 965, 700));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 965, 710));
 
         pack();
         setLocationRelativeTo(null);
