@@ -15,7 +15,7 @@ public class GuardarNombre extends javax.swing.JDialog {
      * Creates new form GuardarNombre
      */
     String nickName;
-    public GuardarNombre(java.awt.Frame parent, boolean modal) {
+    public GuardarNombre(java.awt.Frame parent, boolean modal,String espacio ) {
         super(parent, modal);
         initComponents();
         setVisible(true);
@@ -98,7 +98,7 @@ public class GuardarNombre extends javax.swing.JDialog {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-       new GuardarNombre(null, true);
+       new GuardarNombre(null, true,"");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
