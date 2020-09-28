@@ -20,21 +20,21 @@ public class Mundo1 extends javax.swing.JDialog {
     Thread contEnemigos;
     Thread avatarSprite;
     Mundo1.mapa1 jPMapa1 = new Mundo1.mapa1();
-    Mundo1.mapa2 jPMapa2 = new Mundo1.mapa2();// y si lo intento cuando instancie esta??, enel constructor??
+    Mundo1.mapa2 jPMapa2 = new Mundo1.mapa2();
     Color colorea = new Color(240, 240, 240);
     
     public Mundo1(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        setVisible(true);
         String nombreMapa = decidirMapa();
-//        llamarEnemigos(nombreMapa);
-        contEnemigos = new ControlEnemigos(enemigo1,"mapa1"); 
-        contEnemigos.start();
-        contEnemigos = new ControlEnemigos(enemigo2,"mapa1"); 
-        contEnemigos.start();
+////        llamarEnemigos(nombreMapa);
+//        contEnemigos = new ControlEnemigos(enemigo1,"mapa1"); 
+//        contEnemigos.start();
+//        contEnemigos = new ControlEnemigos(enemigo2,"mapa1"); 
+//        contEnemigos.start();
 //        avatarSprite = new AvatarSprite(enemigo1); 
 //        avatarSprite.start();
+        setVisible(true);
     }
 
     public Mundo1(String nada) {
@@ -1701,6 +1701,7 @@ public class Mundo1 extends javax.swing.JDialog {
 
     private void Mapa1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Mapa1KeyPressed
         mapa1 m1 = new mapa1();
+        System.out.println("tal");
         int desplazamiento=10,x=Avatar.getX(),y=Avatar.getY();
         System.out.println(Avatar.getLocation());//Ubicacion del la imagen en el panel
 
