@@ -16,7 +16,7 @@ import javax.swing.JColorChooser;
  *
  * @author ANDRES ARBOLEDA
  */
-public class CrearAvatar extends javax.swing.JDialog {
+public class CrearAvatar extends javax.swing.JFrame {
 
     /**
      * Creates new form PruebaHacerImagen
@@ -133,6 +133,7 @@ public class CrearAvatar extends javax.swing.JDialog {
         jLVerde = new javax.swing.JLabel();
         jLRojo = new javax.swing.JLabel();
         jLNegro = new javax.swing.JLabel();
+        jBCerrar = new javax.swing.JButton();
         jBGuardar = new javax.swing.JButton();
         jBMas = new javax.swing.JButton();
         jLAvatar5 = new javax.swing.JLabel();
@@ -1035,20 +1036,29 @@ public class CrearAvatar extends javax.swing.JDialog {
         });
         jPanel1.add(jLNegro, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, 40, 40));
 
+        jBCerrar.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        jBCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Atras.png"))); // NOI18N
+        jBCerrar.setText("Cerrar");
+        jBCerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBCerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBCerrarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jBCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 680, 180, 60));
+
         jBGuardar.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jBGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/pluma.png"))); // NOI18N
         jBGuardar.setText("Crear");
-        jBGuardar.setContentAreaFilled(false);
         jBGuardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jBGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBGuardarActionPerformed(evt);
             }
         });
-        jPanel1.add(jBGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 640, 190, 80));
+        jPanel1.add(jBGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 680, 190, 60));
 
         jBMas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/boton.png"))); // NOI18N
-        jBMas.setContentAreaFilled(false);
         jBMas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jBMas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1123,9 +1133,9 @@ public class CrearAvatar extends javax.swing.JDialog {
         jScrollPane1.setViewportView(jPanel1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(0, 0, 620, 630);
+        jScrollPane1.setBounds(0, 0, 620, 660);
 
-        setSize(new java.awt.Dimension(638, 669));
+        setSize(new java.awt.Dimension(638, 708));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -1436,14 +1446,18 @@ public class CrearAvatar extends javax.swing.JDialog {
     private void jBGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGuardarActionPerformed
         llenarMatriz();
         preLlenarMatriz();
-        GuardarNombre nick = new GuardarNombre(null, true);
+        GuardarNombre nick = new GuardarNombre(null, true, " - ");
         nickName = nick.getNickName();
         try {
             cca = new ControlCrearAvatar(colores, nickName);
+            dispose();
         } catch (Exception ex) {
-            System.out.println("error en crearAvatar " + ex);
+            if(ex.getMessage().equals("no reescribir")){
+                //nada
+            }else{
+                System.out.println("error en crearAvatar " + ex);   
+            }
         }
-        dispose();
     }//GEN-LAST:event_jBGuardarActionPerformed
 
     private void EscuchaPanel(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EscuchaPanel
@@ -1482,6 +1496,12 @@ public class CrearAvatar extends javax.swing.JDialog {
         jPanel2.setVisible(true);
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Avatars/ImagenesOriginales/2.jpg")));
     }//GEN-LAST:event_jLAvatar2MouseReleased
+
+    private void jBCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCerrarActionPerformed
+        String palabra = "Si no asigna nickName -se perderan los cambios";
+        GuardarNombre gn = new GuardarNombre(null, true, palabra);
+        dispose();
+    }//GEN-LAST:event_jBCerrarActionPerformed
 
     public void preLlenarMatriz(){
         for (int j = 0; j < colores.length; j++) {
@@ -1577,41 +1597,10 @@ public class CrearAvatar extends javax.swing.JDialog {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CrearAvatar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CrearAvatar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CrearAvatar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CrearAvatar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new CrearAvatar().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Cuadricula;
+    private javax.swing.JButton jBCerrar;
     private javax.swing.JButton jBGuardar;
     private javax.swing.JButton jBMas;
     private javax.swing.JLabel jLAguaMarina;
