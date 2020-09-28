@@ -13,16 +13,17 @@ import javax.swing.JColorChooser;
  *
  * @author ANDRES ARBOLEDA
  */
-public class CrearAvatar extends javax.swing.JFrame {
+public class CrearAvatar extends javax.swing.JDialog {
 
     /**
-     * Creates new form PruebaHacerImagen
+     * Creates new form Crear_Avatar
      */
-    String nickName;
+     String nickName;
     Color colorea = new Color(240, 240, 240);
     Color[][] colores = new Color [8][8];
     ControlCrearAvatar cca;
-    public CrearAvatar() {
+    public CrearAvatar(java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
         initComponents();
         setVisible(true);
         
@@ -140,8 +141,7 @@ public class CrearAvatar extends javax.swing.JFrame {
         jLAvatar2 = new javax.swing.JLabel();
         jLFondo = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
@@ -1036,6 +1036,7 @@ public class CrearAvatar extends javax.swing.JFrame {
         jBCerrar.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jBCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Atras.png"))); // NOI18N
         jBCerrar.setText("Cerrar");
+        jBCerrar.setContentAreaFilled(false);
         jBCerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jBCerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1047,6 +1048,7 @@ public class CrearAvatar extends javax.swing.JFrame {
         jBGuardar.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jBGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/pluma.png"))); // NOI18N
         jBGuardar.setText("Crear");
+        jBGuardar.setContentAreaFilled(false);
         jBGuardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jBGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1056,10 +1058,11 @@ public class CrearAvatar extends javax.swing.JFrame {
         jPanel1.add(jBGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 680, 190, 60));
 
         jBMas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/boton.png"))); // NOI18N
+        jBMas.setContentAreaFilled(false);
         jBMas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jBMas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EscuchaPanel(evt);
+                jBMasEscuchaPanel(evt);
             }
         });
         jPanel1.add(jBMas, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 40, 40, 40));
@@ -1129,18 +1132,30 @@ public class CrearAvatar extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jPanel1);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(0, 0, 620, 660);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 620, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 620, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 660, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 660, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
 
-        setSize(new java.awt.Dimension(638, 708));
+        pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jLAzulMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLAzulMouseReleased
-        jPanel2.setVisible(false);
-        Cuadricula.setVisible(true);
-        colorea = jLAzul.getBackground();
-    }//GEN-LAST:event_jLAzulMouseReleased
 
     private void jLabel1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseReleased
         jLabel1.setBackground(colorea);
@@ -1153,48 +1168,6 @@ public class CrearAvatar extends javax.swing.JFrame {
     private void jLabel3MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseReleased
         jLabel3.setBackground(colorea);
     }//GEN-LAST:event_jLabel3MouseReleased
-
-    private void jLBlancoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLBlancoMouseReleased
-        jPanel2.setVisible(false);
-        Cuadricula.setVisible(true);
-        colorea = jLBlanco.getBackground();
-    }//GEN-LAST:event_jLBlancoMouseReleased
-
-    private void jLRojoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLRojoMouseReleased
-        jPanel2.setVisible(false);
-        Cuadricula.setVisible(true);
-        colorea = jLRojo.getBackground();
-    }//GEN-LAST:event_jLRojoMouseReleased
-
-    private void jLAmarilloMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLAmarilloMouseReleased
-        jPanel2.setVisible(false);
-        Cuadricula.setVisible(true);
-        colorea = jLAmarillo.getBackground();
-    }//GEN-LAST:event_jLAmarilloMouseReleased
-
-    private void jLVerdeMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLVerdeMouseReleased
-        jPanel2.setVisible(false);
-        Cuadricula.setVisible(true);
-        colorea = jLVerde.getBackground();
-    }//GEN-LAST:event_jLVerdeMouseReleased
-
-    private void jLPielMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLPielMouseReleased
-        jPanel2.setVisible(false);
-        Cuadricula.setVisible(true);
-        colorea = jLPiel.getBackground();
-    }//GEN-LAST:event_jLPielMouseReleased
-
-    private void jLAguaMarinaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLAguaMarinaMouseReleased
-        jPanel2.setVisible(false);
-        Cuadricula.setVisible(true);
-        colorea = jLAguaMarina.getBackground();
-    }//GEN-LAST:event_jLAguaMarinaMouseReleased
-
-    private void jLNegroMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLNegroMouseReleased
-        jPanel2.setVisible(false);
-        Cuadricula.setVisible(true);
-        colorea = jLNegro.getBackground();
-    }//GEN-LAST:event_jLNegroMouseReleased
 
     private void jLabel4MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseReleased
         jLabel4.setBackground(colorea);
@@ -1220,6 +1193,10 @@ public class CrearAvatar extends javax.swing.JFrame {
         jLabel11.setBackground(colorea);
     }//GEN-LAST:event_jLabel11MouseReleased
 
+    private void jLabel12MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseReleased
+        jLabel12.setBackground(colorea);
+    }//GEN-LAST:event_jLabel12MouseReleased
+
     private void jLabel13MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseReleased
         jLabel13.setBackground(colorea);
     }//GEN-LAST:event_jLabel13MouseReleased
@@ -1227,10 +1204,6 @@ public class CrearAvatar extends javax.swing.JFrame {
     private void jLabel14MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseReleased
         jLabel14.setBackground(colorea);
     }//GEN-LAST:event_jLabel14MouseReleased
-
-    private void jLabel12MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseReleased
-        jLabel12.setBackground(colorea);
-    }//GEN-LAST:event_jLabel12MouseReleased
 
     private void jLabel15MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseReleased
         jLabel15.setBackground(colorea);
@@ -1440,6 +1413,60 @@ public class CrearAvatar extends javax.swing.JFrame {
         jLabel78.setBackground(colorea);
     }//GEN-LAST:event_jLabel78MouseReleased
 
+    private void jLAzulMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLAzulMouseReleased
+        jPanel2.setVisible(false);
+        Cuadricula.setVisible(true);
+        colorea = jLAzul.getBackground();
+    }//GEN-LAST:event_jLAzulMouseReleased
+
+    private void jLBlancoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLBlancoMouseReleased
+        jPanel2.setVisible(false);
+        Cuadricula.setVisible(true);
+        colorea = jLBlanco.getBackground();
+    }//GEN-LAST:event_jLBlancoMouseReleased
+
+    private void jLAmarilloMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLAmarilloMouseReleased
+        jPanel2.setVisible(false);
+        Cuadricula.setVisible(true);
+        colorea = jLAmarillo.getBackground();
+    }//GEN-LAST:event_jLAmarilloMouseReleased
+
+    private void jLAguaMarinaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLAguaMarinaMouseReleased
+        jPanel2.setVisible(false);
+        Cuadricula.setVisible(true);
+        colorea = jLAguaMarina.getBackground();
+    }//GEN-LAST:event_jLAguaMarinaMouseReleased
+
+    private void jLPielMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLPielMouseReleased
+        jPanel2.setVisible(false);
+        Cuadricula.setVisible(true);
+        colorea = jLPiel.getBackground();
+    }//GEN-LAST:event_jLPielMouseReleased
+
+    private void jLVerdeMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLVerdeMouseReleased
+        jPanel2.setVisible(false);
+        Cuadricula.setVisible(true);
+        colorea = jLVerde.getBackground();
+    }//GEN-LAST:event_jLVerdeMouseReleased
+
+    private void jLRojoMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLRojoMouseReleased
+        jPanel2.setVisible(false);
+        Cuadricula.setVisible(true);
+        colorea = jLRojo.getBackground();
+    }//GEN-LAST:event_jLRojoMouseReleased
+
+    private void jLNegroMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLNegroMouseReleased
+        jPanel2.setVisible(false);
+        Cuadricula.setVisible(true);
+        colorea = jLNegro.getBackground();
+    }//GEN-LAST:event_jLNegroMouseReleased
+
+    private void jBCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCerrarActionPerformed
+        String palabra = "Si no asigna nickName -se perderan los cambios";
+        GuardarNombre gn = new GuardarNombre(null, true, palabra);
+        dispose();
+    }//GEN-LAST:event_jBCerrarActionPerformed
+
     private void jBGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGuardarActionPerformed
         llenarMatriz();
         preLlenarMatriz();
@@ -1452,17 +1479,17 @@ public class CrearAvatar extends javax.swing.JFrame {
             if(ex.getMessage().equals("no reescribir")){
                 //nada
             }else{
-                System.out.println("error en crearAvatar " + ex);   
+                System.out.println("error en crearAvatar " + ex);
             }
         }
     }//GEN-LAST:event_jBGuardarActionPerformed
 
-    private void EscuchaPanel(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EscuchaPanel
+    private void jBMasEscuchaPanel(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMasEscuchaPanel
         jPanel2.setVisible(false);
         Cuadricula.setVisible(true);
         JColorChooser panel = new JColorChooser();
         colorea=panel.showDialog(null, "PALETA DE COLORES", Color.RED);
-    }//GEN-LAST:event_EscuchaPanel
+    }//GEN-LAST:event_jBMasEscuchaPanel
 
     private void jLAvatar5MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLAvatar5MouseReleased
         Cuadricula.setVisible(false);
@@ -1493,12 +1520,6 @@ public class CrearAvatar extends javax.swing.JFrame {
         jPanel2.setVisible(true);
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Avatars/ImagenesOriginales/2.jpg")));
     }//GEN-LAST:event_jLAvatar2MouseReleased
-
-    private void jBCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCerrarActionPerformed
-        String palabra = "Si no asigna nickName -se perderan los cambios";
-        GuardarNombre gn = new GuardarNombre(null, true, palabra);
-        dispose();
-    }//GEN-LAST:event_jBCerrarActionPerformed
 
     public void preLlenarMatriz(){
         for (int j = 0; j < colores.length; j++) {
@@ -1594,6 +1615,9 @@ public class CrearAvatar extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    public static void main(String args[]) {
+        new CrearAvatar(null, true);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Cuadricula;
@@ -1699,5 +1723,4 @@ public class CrearAvatar extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
-
 }
