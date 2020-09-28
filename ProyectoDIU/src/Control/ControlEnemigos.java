@@ -15,7 +15,7 @@ import javax.swing.JLabel;
  */
 public class ControlEnemigos extends Thread{
     JLabel avatar = null;
-    Mundo1 mundo= new Mundo1("Nada");
+    Mundo1 mundo= new Mundo1("nada");
     Mundo1.mapa1 mapa;
 //    Mundo1.mapa2 mapa2;
 

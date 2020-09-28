@@ -8,22 +8,23 @@ package Vista;
 import Control.ControlEnemigos;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
-
 /**
  *
- * @author ANDRES ARBOLEDA
+ * @author Alejandra Becerra
  */
-public class Mundo1 extends javax.swing.JFrame {
+public class Mundo1 extends javax.swing.JDialog {
 
     /**
-     * Creates new form Mundo1
+     * Creates new form Mundo_1
      */
     Thread contEnemigos;
     Thread avatarSprite;
-    mapa1 jPMapa1 = new mapa1();
-    mapa2 jPMapa2 = new mapa2();// y si lo intento cuando instancie esta??, enel constructor??
+    Mundo1.mapa1 jPMapa1 = new Mundo1.mapa1();
+    Mundo1.mapa2 jPMapa2 = new Mundo1.mapa2();// y si lo intento cuando instancie esta??, enel constructor??
     Color colorea = new Color(240, 240, 240);
-    public Mundo1() {
+    
+    public Mundo1(java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
         initComponents();
         setVisible(true);
         String nombreMapa = decidirMapa();
@@ -35,15 +36,15 @@ public class Mundo1 extends javax.swing.JFrame {
 //        avatarSprite = new AvatarSprite(enemigo1); 
 //        avatarSprite.start();
     }
-    public Mundo1(String nada) {
-        
-    }
 
-    public mapa1 getMapa1(){
+    public Mundo1(String nada) {
+    }
+    
+     public Mundo1.mapa1 getMapa1(){
        
         return jPMapa1;
     }
-    public mapa2 getMapa2(){
+    public Mundo1.mapa2 getMapa2(){
        
         return jPMapa2;
     }
@@ -56,18 +57,128 @@ public class Mundo1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Informacion = new javax.swing.JPanel();
-        jtVida = new javax.swing.JLabel();
-        jlTiempo = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jlVida1 = new javax.swing.JLabel();
-        jlVida2 = new javax.swing.JLabel();
-        jlVida3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jlPuntraje = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        Mapa2 = new javax.swing.JPanel();
+        j17 = new javax.swing.JLabel();
+        j23 = new javax.swing.JLabel();
+        j26 = new javax.swing.JLabel();
+        j9 = new javax.swing.JLabel();
+        j40 = new javax.swing.JLabel();
+        h2 = new javax.swing.JLabel();
+        j116 = new javax.swing.JLabel();
+        j158 = new javax.swing.JLabel();
+        j160 = new javax.swing.JLabel();
+        j161 = new javax.swing.JLabel();
+        j162 = new javax.swing.JLabel();
+        j163 = new javax.swing.JLabel();
+        j164 = new javax.swing.JLabel();
+        j165 = new javax.swing.JLabel();
+        j166 = new javax.swing.JLabel();
+        j167 = new javax.swing.JLabel();
+        j168 = new javax.swing.JLabel();
+        j169 = new javax.swing.JLabel();
+        j170 = new javax.swing.JLabel();
+        j171 = new javax.swing.JLabel();
+        j172 = new javax.swing.JLabel();
+        j173 = new javax.swing.JLabel();
+        j174 = new javax.swing.JLabel();
+        j50 = new javax.swing.JLabel();
+        j51 = new javax.swing.JLabel();
+        j175 = new javax.swing.JLabel();
+        j176 = new javax.swing.JLabel();
+        j177 = new javax.swing.JLabel();
+        j178 = new javax.swing.JLabel();
+        j181 = new javax.swing.JLabel();
+        j182 = new javax.swing.JLabel();
+        j183 = new javax.swing.JLabel();
+        j184 = new javax.swing.JLabel();
+        j185 = new javax.swing.JLabel();
+        j186 = new javax.swing.JLabel();
+        j187 = new javax.swing.JLabel();
+        j188 = new javax.swing.JLabel();
+        j189 = new javax.swing.JLabel();
+        j190 = new javax.swing.JLabel();
+        j191 = new javax.swing.JLabel();
+        j192 = new javax.swing.JLabel();
+        j193 = new javax.swing.JLabel();
+        j194 = new javax.swing.JLabel();
+        j196 = new javax.swing.JLabel();
+        j197 = new javax.swing.JLabel();
+        j198 = new javax.swing.JLabel();
+        j199 = new javax.swing.JLabel();
+        j200 = new javax.swing.JLabel();
+        j201 = new javax.swing.JLabel();
+        j202 = new javax.swing.JLabel();
+        j203 = new javax.swing.JLabel();
+        j204 = new javax.swing.JLabel();
+        j205 = new javax.swing.JLabel();
+        j206 = new javax.swing.JLabel();
+        j207 = new javax.swing.JLabel();
+        j208 = new javax.swing.JLabel();
+        j209 = new javax.swing.JLabel();
+        j210 = new javax.swing.JLabel();
+        j211 = new javax.swing.JLabel();
+        j212 = new javax.swing.JLabel();
+        j213 = new javax.swing.JLabel();
+        j214 = new javax.swing.JLabel();
+        j215 = new javax.swing.JLabel();
+        j216 = new javax.swing.JLabel();
+        j217 = new javax.swing.JLabel();
+        j218 = new javax.swing.JLabel();
+        j219 = new javax.swing.JLabel();
+        j220 = new javax.swing.JLabel();
+        j221 = new javax.swing.JLabel();
+        j224 = new javax.swing.JLabel();
+        j225 = new javax.swing.JLabel();
+        j226 = new javax.swing.JLabel();
+        j227 = new javax.swing.JLabel();
+        j228 = new javax.swing.JLabel();
+        j229 = new javax.swing.JLabel();
+        j232 = new javax.swing.JLabel();
+        j233 = new javax.swing.JLabel();
+        j234 = new javax.swing.JLabel();
+        j235 = new javax.swing.JLabel();
+        j236 = new javax.swing.JLabel();
+        j237 = new javax.swing.JLabel();
+        j238 = new javax.swing.JLabel();
+        j239 = new javax.swing.JLabel();
+        j240 = new javax.swing.JLabel();
+        j241 = new javax.swing.JLabel();
+        j242 = new javax.swing.JLabel();
+        j243 = new javax.swing.JLabel();
+        j244 = new javax.swing.JLabel();
+        j245 = new javax.swing.JLabel();
+        j247 = new javax.swing.JLabel();
+        j250 = new javax.swing.JLabel();
+        j251 = new javax.swing.JLabel();
+        j255 = new javax.swing.JLabel();
+        j256 = new javax.swing.JLabel();
+        j259 = new javax.swing.JLabel();
+        j260 = new javax.swing.JLabel();
+        j261 = new javax.swing.JLabel();
+        j263 = new javax.swing.JLabel();
+        j264 = new javax.swing.JLabel();
+        j265 = new javax.swing.JLabel();
+        j266 = new javax.swing.JLabel();
+        j267 = new javax.swing.JLabel();
+        j269 = new javax.swing.JLabel();
+        j271 = new javax.swing.JLabel();
+        j272 = new javax.swing.JLabel();
+        j273 = new javax.swing.JLabel();
+        j274 = new javax.swing.JLabel();
+        j275 = new javax.swing.JLabel();
+        j276 = new javax.swing.JLabel();
+        j277 = new javax.swing.JLabel();
+        j278 = new javax.swing.JLabel();
+        j279 = new javax.swing.JLabel();
+        j280 = new javax.swing.JLabel();
+        j281 = new javax.swing.JLabel();
+        j282 = new javax.swing.JLabel();
+        j283 = new javax.swing.JLabel();
+        j284 = new javax.swing.JLabel();
+        j286 = new javax.swing.JLabel();
+        j24 = new javax.swing.JLabel();
+        Avatar1 = new javax.swing.JLabel();
+        Fondo = new javax.swing.JLabel();
         Mapa1 = new javax.swing.JPanel();
         j3 = new javax.swing.JLabel();
         j13 = new javax.swing.JLabel();
@@ -208,198 +319,552 @@ public class Mundo1 extends javax.swing.JFrame {
         enemigo2 = new javax.swing.JLabel();
         Avatar = new javax.swing.JLabel();
         fondo = new javax.swing.JLabel();
-        Mapa2 = new javax.swing.JPanel();
-        j17 = new javax.swing.JLabel();
-        j23 = new javax.swing.JLabel();
-        j26 = new javax.swing.JLabel();
-        j9 = new javax.swing.JLabel();
-        j40 = new javax.swing.JLabel();
-        h2 = new javax.swing.JLabel();
-        j116 = new javax.swing.JLabel();
-        j158 = new javax.swing.JLabel();
-        j160 = new javax.swing.JLabel();
-        j161 = new javax.swing.JLabel();
-        j162 = new javax.swing.JLabel();
-        j163 = new javax.swing.JLabel();
-        j164 = new javax.swing.JLabel();
-        j165 = new javax.swing.JLabel();
-        j166 = new javax.swing.JLabel();
-        j167 = new javax.swing.JLabel();
-        j168 = new javax.swing.JLabel();
-        j169 = new javax.swing.JLabel();
-        j170 = new javax.swing.JLabel();
-        j171 = new javax.swing.JLabel();
-        j172 = new javax.swing.JLabel();
-        j173 = new javax.swing.JLabel();
-        j174 = new javax.swing.JLabel();
-        j50 = new javax.swing.JLabel();
-        j51 = new javax.swing.JLabel();
-        j175 = new javax.swing.JLabel();
-        j176 = new javax.swing.JLabel();
-        j177 = new javax.swing.JLabel();
-        j178 = new javax.swing.JLabel();
-        j181 = new javax.swing.JLabel();
-        j182 = new javax.swing.JLabel();
-        j183 = new javax.swing.JLabel();
-        j184 = new javax.swing.JLabel();
-        j185 = new javax.swing.JLabel();
-        j186 = new javax.swing.JLabel();
-        j187 = new javax.swing.JLabel();
-        j188 = new javax.swing.JLabel();
-        j189 = new javax.swing.JLabel();
-        j190 = new javax.swing.JLabel();
-        j191 = new javax.swing.JLabel();
-        j192 = new javax.swing.JLabel();
-        j193 = new javax.swing.JLabel();
-        j194 = new javax.swing.JLabel();
-        j196 = new javax.swing.JLabel();
-        j197 = new javax.swing.JLabel();
-        j198 = new javax.swing.JLabel();
-        j199 = new javax.swing.JLabel();
-        j200 = new javax.swing.JLabel();
-        j201 = new javax.swing.JLabel();
-        j202 = new javax.swing.JLabel();
-        j203 = new javax.swing.JLabel();
-        j204 = new javax.swing.JLabel();
-        j205 = new javax.swing.JLabel();
-        j206 = new javax.swing.JLabel();
-        j207 = new javax.swing.JLabel();
-        j208 = new javax.swing.JLabel();
-        j209 = new javax.swing.JLabel();
-        j210 = new javax.swing.JLabel();
-        j211 = new javax.swing.JLabel();
-        j212 = new javax.swing.JLabel();
-        j213 = new javax.swing.JLabel();
-        j214 = new javax.swing.JLabel();
-        j215 = new javax.swing.JLabel();
-        j216 = new javax.swing.JLabel();
-        j217 = new javax.swing.JLabel();
-        j218 = new javax.swing.JLabel();
-        j219 = new javax.swing.JLabel();
-        j220 = new javax.swing.JLabel();
-        j221 = new javax.swing.JLabel();
-        j224 = new javax.swing.JLabel();
-        j225 = new javax.swing.JLabel();
-        j226 = new javax.swing.JLabel();
-        j227 = new javax.swing.JLabel();
-        j228 = new javax.swing.JLabel();
-        j229 = new javax.swing.JLabel();
-        j232 = new javax.swing.JLabel();
-        j233 = new javax.swing.JLabel();
-        j234 = new javax.swing.JLabel();
-        j235 = new javax.swing.JLabel();
-        j236 = new javax.swing.JLabel();
-        j237 = new javax.swing.JLabel();
-        j238 = new javax.swing.JLabel();
-        j239 = new javax.swing.JLabel();
-        j240 = new javax.swing.JLabel();
-        j241 = new javax.swing.JLabel();
-        j242 = new javax.swing.JLabel();
-        j243 = new javax.swing.JLabel();
-        j244 = new javax.swing.JLabel();
-        j245 = new javax.swing.JLabel();
-        j247 = new javax.swing.JLabel();
-        j250 = new javax.swing.JLabel();
-        j251 = new javax.swing.JLabel();
-        j255 = new javax.swing.JLabel();
-        j256 = new javax.swing.JLabel();
-        j259 = new javax.swing.JLabel();
-        j260 = new javax.swing.JLabel();
-        j261 = new javax.swing.JLabel();
-        j263 = new javax.swing.JLabel();
-        j264 = new javax.swing.JLabel();
-        j265 = new javax.swing.JLabel();
-        j266 = new javax.swing.JLabel();
-        j267 = new javax.swing.JLabel();
-        j269 = new javax.swing.JLabel();
-        j271 = new javax.swing.JLabel();
-        j272 = new javax.swing.JLabel();
-        j273 = new javax.swing.JLabel();
-        j274 = new javax.swing.JLabel();
-        j275 = new javax.swing.JLabel();
-        j276 = new javax.swing.JLabel();
-        j277 = new javax.swing.JLabel();
-        j278 = new javax.swing.JLabel();
-        j279 = new javax.swing.JLabel();
-        j280 = new javax.swing.JLabel();
-        j281 = new javax.swing.JLabel();
-        j282 = new javax.swing.JLabel();
-        j283 = new javax.swing.JLabel();
-        j284 = new javax.swing.JLabel();
-        j286 = new javax.swing.JLabel();
-        j24 = new javax.swing.JLabel();
-        Avatar1 = new javax.swing.JLabel();
-        Fondo = new javax.swing.JLabel();
+        Informacion = new javax.swing.JPanel();
+        jtVida = new javax.swing.JLabel();
+        jlTiempo = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jlVida1 = new javax.swing.JLabel();
+        jlVida2 = new javax.swing.JLabel();
+        jlVida3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jlPuntraje = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        Informacion.setBackground(new java.awt.Color(204, 204, 255));
-        Informacion.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jtVida.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
-        jtVida.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jtVida.setText("Vida");
-        Informacion.add(jtVida, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 60, 90, 30));
-
-        jlTiempo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jlTiempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlTiempo.setText("Tiempo");
-        Informacion.add(jlTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 80, 40));
-
-        jButton1.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ayuda.png"))); // NOI18N
-        jButton1.setContentAreaFilled(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        Mapa2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                Mapa2KeyPressed(evt);
             }
         });
-        Informacion.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 0, 60, 40));
+        Mapa2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton2.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Atras.png"))); // NOI18N
-        jButton2.setContentAreaFilled(false);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        Informacion.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
+        j17.setBackground(new java.awt.Color(255, 204, 204));
+        j17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j17, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 100, 50, 50));
 
-        jLabel1.setFont(new java.awt.Font("Tempus Sans ITC", 3, 36)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("NIVEL 1");
-        Informacion.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 0, 240, 50));
+        j23.setBackground(new java.awt.Color(255, 204, 204));
+        j23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j23, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 100, 50, 50));
 
-        jlVida1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
-        jlVida1.setText("jLabel2");
-        Informacion.add(jlVida1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 60, 40, 30));
+        j26.setBackground(new java.awt.Color(255, 204, 204));
+        j26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j26, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 350, 50, 50));
 
-        jlVida2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
-        jlVida2.setText("jLabel2");
-        Informacion.add(jlVida2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 60, 40, 30));
+        j9.setBackground(new java.awt.Color(255, 204, 204));
+        j9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j9, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 350, 50, 50));
 
-        jlVida3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
-        jlVida3.setText("jLabel2");
-        Informacion.add(jlVida3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 60, 40, 30));
+        j40.setBackground(new java.awt.Color(255, 204, 204));
+        j40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j40, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 50));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("----------");
-        Informacion.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 100, 20));
+        h2.setBackground(new java.awt.Color(255, 204, 204));
+        h2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(h2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 50, 50));
 
-        jlPuntraje.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jlPuntraje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlPuntraje.setText("Puntaje");
-        Informacion.add(jlPuntraje, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 50, 80, 40));
+        j116.setBackground(new java.awt.Color(255, 204, 204));
+        j116.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j116, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 0, 50, 50));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("----------");
-        Informacion.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 60, 100, 20));
+        j158.setBackground(new java.awt.Color(255, 204, 204));
+        j158.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j158, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 50, 50));
 
-        getContentPane().add(Informacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(-5, 0, 960, 100));
+        j160.setBackground(new java.awt.Color(255, 204, 204));
+        j160.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j160, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 50, 50));
+
+        j161.setBackground(new java.awt.Color(255, 204, 204));
+        j161.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j161, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 0, 50, 50));
+
+        j162.setBackground(new java.awt.Color(255, 204, 204));
+        j162.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j162, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 50, 50));
+
+        j163.setBackground(new java.awt.Color(255, 204, 204));
+        j163.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j163, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 50, 50));
+
+        j164.setBackground(new java.awt.Color(255, 204, 204));
+        j164.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j164, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 0, 50, 50));
+
+        j165.setBackground(new java.awt.Color(255, 204, 204));
+        j165.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j165, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 0, 50, 50));
+
+        j166.setBackground(new java.awt.Color(255, 204, 204));
+        j166.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j166, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 0, 50, 50));
+
+        j167.setBackground(new java.awt.Color(255, 204, 204));
+        j167.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j167, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, 50, 50));
+
+        j168.setBackground(new java.awt.Color(255, 204, 204));
+        j168.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j168, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 50, 50));
+
+        j169.setBackground(new java.awt.Color(255, 204, 204));
+        j169.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j169, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, 50, 50));
+
+        j170.setBackground(new java.awt.Color(255, 204, 204));
+        j170.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j170, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 0, 50, 50));
+
+        j171.setBackground(new java.awt.Color(255, 204, 204));
+        j171.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j171, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 0, 50, 50));
+
+        j172.setBackground(new java.awt.Color(255, 204, 204));
+        j172.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j172, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 0, 50, 50));
+
+        j173.setBackground(new java.awt.Color(255, 204, 204));
+        j173.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j173, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 0, 50, 50));
+
+        j174.setBackground(new java.awt.Color(255, 204, 204));
+        j174.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j174, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 0, 50, 50));
+
+        j50.setBackground(new java.awt.Color(255, 204, 204));
+        j50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j50.setOpaque(true);
+        Mapa2.add(j50, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 50, 50));
+
+        j51.setBackground(new java.awt.Color(255, 204, 204));
+        j51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j51.setOpaque(true);
+        Mapa2.add(j51, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 50, 50));
+
+        j175.setBackground(new java.awt.Color(255, 204, 204));
+        j175.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j175.setOpaque(true);
+        Mapa2.add(j175, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 50, 50));
+
+        j176.setBackground(new java.awt.Color(255, 204, 204));
+        j176.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j176.setOpaque(true);
+        Mapa2.add(j176, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 50, 50));
+
+        j177.setBackground(new java.awt.Color(255, 204, 204));
+        j177.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j177.setOpaque(true);
+        Mapa2.add(j177, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 50, 50));
+
+        j178.setBackground(new java.awt.Color(255, 204, 204));
+        j178.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j178.setOpaque(true);
+        Mapa2.add(j178, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 50, 50));
+
+        j181.setBackground(new java.awt.Color(255, 204, 204));
+        j181.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j181.setOpaque(true);
+        Mapa2.add(j181, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 50, 50));
+
+        j182.setBackground(new java.awt.Color(255, 204, 204));
+        j182.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j182.setOpaque(true);
+        Mapa2.add(j182, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 50, 50));
+
+        j183.setBackground(new java.awt.Color(255, 204, 204));
+        j183.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j183.setOpaque(true);
+        Mapa2.add(j183, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 50, 50));
+
+        j184.setBackground(new java.awt.Color(255, 204, 204));
+        j184.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j184, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 550, 50, 50));
+
+        j185.setBackground(new java.awt.Color(255, 204, 204));
+        j185.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j185, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 550, 50, 50));
+
+        j186.setBackground(new java.awt.Color(255, 204, 204));
+        j186.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j186, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 550, 50, 50));
+
+        j187.setBackground(new java.awt.Color(255, 204, 204));
+        j187.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j187, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 550, 50, 50));
+
+        j188.setBackground(new java.awt.Color(255, 204, 204));
+        j188.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j188, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 550, 50, 50));
+
+        j189.setBackground(new java.awt.Color(255, 204, 204));
+        j189.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j189, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 550, 50, 50));
+
+        j190.setBackground(new java.awt.Color(255, 204, 204));
+        j190.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j190, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 550, 50, 50));
+
+        j191.setBackground(new java.awt.Color(255, 204, 204));
+        j191.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j191, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 550, 50, 50));
+
+        j192.setBackground(new java.awt.Color(255, 204, 204));
+        j192.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j192, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 550, 50, 50));
+
+        j193.setBackground(new java.awt.Color(255, 204, 204));
+        j193.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j193, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 550, 50, 50));
+
+        j194.setBackground(new java.awt.Color(255, 204, 204));
+        j194.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j194, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 550, 50, 50));
+
+        j196.setBackground(new java.awt.Color(255, 204, 204));
+        j196.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j196, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 550, 50, 50));
+
+        j197.setBackground(new java.awt.Color(255, 204, 204));
+        j197.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j197, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 550, 50, 50));
+
+        j198.setBackground(new java.awt.Color(255, 204, 204));
+        j198.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j198, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 550, 50, 50));
+
+        j199.setBackground(new java.awt.Color(255, 204, 204));
+        j199.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j199, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 550, 50, 50));
+
+        j200.setBackground(new java.awt.Color(255, 204, 204));
+        j200.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j200, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 550, 50, 50));
+
+        j201.setBackground(new java.awt.Color(255, 204, 204));
+        j201.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j201, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 550, 50, 50));
+
+        j202.setBackground(new java.awt.Color(255, 204, 204));
+        j202.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j202, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 550, 50, 50));
+
+        j203.setBackground(new java.awt.Color(255, 204, 204));
+        j203.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j203.setOpaque(true);
+        Mapa2.add(j203, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 350, 50, 50));
+
+        j204.setBackground(new java.awt.Color(255, 204, 204));
+        j204.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j204.setOpaque(true);
+        Mapa2.add(j204, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 500, 50, 50));
+
+        j205.setBackground(new java.awt.Color(255, 204, 204));
+        j205.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j205.setOpaque(true);
+        Mapa2.add(j205, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 300, 50, 50));
+
+        j206.setBackground(new java.awt.Color(255, 204, 204));
+        j206.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j206.setOpaque(true);
+        Mapa2.add(j206, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 250, 50, 50));
+
+        j207.setBackground(new java.awt.Color(255, 204, 204));
+        j207.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j207.setOpaque(true);
+        Mapa2.add(j207, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 150, 50, 50));
+
+        j208.setBackground(new java.awt.Color(255, 204, 204));
+        j208.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j208.setOpaque(true);
+        Mapa2.add(j208, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 200, 50, 50));
+
+        j209.setBackground(new java.awt.Color(255, 204, 204));
+        j209.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j209.setOpaque(true);
+        Mapa2.add(j209, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 100, 50, 50));
+
+        j210.setBackground(new java.awt.Color(255, 204, 204));
+        j210.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j210.setOpaque(true);
+        Mapa2.add(j210, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 50, 50, 50));
+
+        j211.setBackground(new java.awt.Color(255, 204, 204));
+        j211.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j211.setOpaque(true);
+        Mapa2.add(j211, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 400, 50, 50));
+
+        j212.setBackground(new java.awt.Color(255, 204, 204));
+        j212.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j212.setOpaque(true);
+        Mapa2.add(j212, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 100, 50, 50));
+
+        j213.setBackground(new java.awt.Color(255, 204, 204));
+        j213.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j213.setOpaque(true);
+        Mapa2.add(j213, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 50, 50));
+
+        j214.setBackground(new java.awt.Color(255, 204, 204));
+        j214.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j214.setOpaque(true);
+        Mapa2.add(j214, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 200, 50, 50));
+
+        j215.setBackground(new java.awt.Color(255, 204, 204));
+        j215.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j215.setOpaque(true);
+        Mapa2.add(j215, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 250, 50, 50));
+
+        j216.setBackground(new java.awt.Color(255, 204, 204));
+        j216.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j216.setOpaque(true);
+        Mapa2.add(j216, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 300, 50, 50));
+
+        j217.setBackground(new java.awt.Color(255, 204, 204));
+        j217.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j217.setOpaque(true);
+        Mapa2.add(j217, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 350, 50, 50));
+
+        j218.setBackground(new java.awt.Color(255, 204, 204));
+        j218.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j218.setOpaque(true);
+        Mapa2.add(j218, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 400, 50, 50));
+
+        j219.setBackground(new java.awt.Color(255, 204, 204));
+        j219.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j219.setOpaque(true);
+        Mapa2.add(j219, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 450, 50, 50));
+
+        j220.setBackground(new java.awt.Color(255, 204, 204));
+        j220.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j220.setOpaque(true);
+        Mapa2.add(j220, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 500, 50, 50));
+
+        j221.setBackground(new java.awt.Color(255, 204, 204));
+        j221.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j221, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 450, 50, 50));
+
+        j224.setBackground(new java.awt.Color(255, 204, 204));
+        j224.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j224, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 450, 50, 50));
+
+        j225.setBackground(new java.awt.Color(255, 204, 204));
+        j225.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j225, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, 50, 50));
+
+        j226.setBackground(new java.awt.Color(255, 204, 204));
+        j226.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j226, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 450, 50, 50));
+
+        j227.setBackground(new java.awt.Color(255, 204, 204));
+        j227.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j227, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 500, 50, 50));
+
+        j228.setBackground(new java.awt.Color(255, 204, 204));
+        j228.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j228, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, 50, 50));
+
+        j229.setBackground(new java.awt.Color(255, 204, 204));
+        j229.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j229, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, 50, 50));
+
+        j232.setBackground(new java.awt.Color(255, 204, 204));
+        j232.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j232, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 50, 50));
+
+        j233.setBackground(new java.awt.Color(255, 204, 204));
+        j233.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j233, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, 50, 50));
+
+        j234.setBackground(new java.awt.Color(255, 204, 204));
+        j234.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j234, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, 50, 50));
+
+        j235.setBackground(new java.awt.Color(255, 204, 204));
+        j235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j235, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 100, 50, 50));
+
+        j236.setBackground(new java.awt.Color(255, 204, 204));
+        j236.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j236, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 250, 50, 50));
+
+        j237.setBackground(new java.awt.Color(255, 204, 204));
+        j237.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j237, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 250, 50, 50));
+
+        j238.setBackground(new java.awt.Color(255, 204, 204));
+        j238.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j238, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 50, 50));
+
+        j239.setBackground(new java.awt.Color(255, 204, 204));
+        j239.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j239, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 50, 50));
+
+        j240.setBackground(new java.awt.Color(255, 204, 204));
+        j240.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j240, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 100, 50, 50));
+
+        j241.setBackground(new java.awt.Color(255, 204, 204));
+        j241.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j241, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 100, 50, 50));
+
+        j242.setBackground(new java.awt.Color(255, 204, 204));
+        j242.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j242, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 250, 50, 50));
+
+        j243.setBackground(new java.awt.Color(255, 204, 204));
+        j243.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j243, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 250, 50, 50));
+
+        j244.setBackground(new java.awt.Color(255, 204, 204));
+        j244.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j244, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 250, 50, 50));
+
+        j245.setBackground(new java.awt.Color(255, 204, 204));
+        j245.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j245, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 250, 50, 50));
+
+        j247.setBackground(new java.awt.Color(255, 204, 204));
+        j247.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j247, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 250, 50, 50));
+
+        j250.setBackground(new java.awt.Color(255, 204, 204));
+        j250.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j250, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 350, 50, 50));
+
+        j251.setBackground(new java.awt.Color(255, 204, 204));
+        j251.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j251, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, 50, 50));
+
+        j255.setBackground(new java.awt.Color(255, 204, 204));
+        j255.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j255, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, 50, 50));
+
+        j256.setBackground(new java.awt.Color(255, 204, 204));
+        j256.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j256, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 400, 50, 50));
+
+        j259.setBackground(new java.awt.Color(255, 204, 204));
+        j259.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j259, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 450, 50, 50));
+
+        j260.setBackground(new java.awt.Color(255, 204, 204));
+        j260.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j260, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 450, 50, 50));
+
+        j261.setBackground(new java.awt.Color(255, 204, 204));
+        j261.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j261, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 350, 50, 50));
+
+        j263.setBackground(new java.awt.Color(255, 204, 204));
+        j263.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j263, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 450, 50, 50));
+
+        j264.setBackground(new java.awt.Color(255, 204, 204));
+        j264.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j264, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 450, 50, 50));
+
+        j265.setBackground(new java.awt.Color(255, 204, 204));
+        j265.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j265, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 450, 50, 50));
+
+        j266.setBackground(new java.awt.Color(255, 204, 204));
+        j266.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j266, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 350, 50, 50));
+
+        j267.setBackground(new java.awt.Color(255, 204, 204));
+        j267.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j267, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 350, 50, 50));
+
+        j269.setBackground(new java.awt.Color(255, 204, 204));
+        j269.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j269, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 350, 50, 50));
+
+        j271.setBackground(new java.awt.Color(255, 204, 204));
+        j271.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j271.setOpaque(true);
+        Mapa2.add(j271, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 50, 50));
+
+        j272.setBackground(new java.awt.Color(255, 204, 204));
+        j272.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j272.setOpaque(true);
+        Mapa2.add(j272, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 50, 50));
+
+        j273.setBackground(new java.awt.Color(255, 204, 204));
+        j273.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j273.setOpaque(true);
+        Mapa2.add(j273, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 50, 50));
+
+        j274.setBackground(new java.awt.Color(255, 204, 204));
+        j274.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j274.setOpaque(true);
+        Mapa2.add(j274, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, 50, 50));
+
+        j275.setBackground(new java.awt.Color(255, 204, 204));
+        j275.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j275.setOpaque(true);
+        Mapa2.add(j275, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 100, 50, 50));
+
+        j276.setBackground(new java.awt.Color(255, 204, 204));
+        j276.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j276.setOpaque(true);
+        Mapa2.add(j276, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 50, 50));
+
+        j277.setBackground(new java.awt.Color(255, 204, 204));
+        j277.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j277.setOpaque(true);
+        Mapa2.add(j277, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 100, 50, 50));
+
+        j278.setBackground(new java.awt.Color(255, 204, 204));
+        j278.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j278.setOpaque(true);
+        Mapa2.add(j278, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 200, 50, 50));
+
+        j279.setBackground(new java.awt.Color(255, 204, 204));
+        j279.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j279.setOpaque(true);
+        Mapa2.add(j279, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 150, 50, 50));
+
+        j280.setBackground(new java.awt.Color(255, 204, 204));
+        j280.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j280.setOpaque(true);
+        Mapa2.add(j280, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 150, 50, 50));
+
+        j281.setBackground(new java.awt.Color(255, 204, 204));
+        j281.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j281.setOpaque(true);
+        Mapa2.add(j281, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 150, 50, 50));
+
+        j282.setBackground(new java.awt.Color(255, 204, 204));
+        j282.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j282.setOpaque(true);
+        Mapa2.add(j282, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 450, 50, 50));
+
+        j283.setBackground(new java.awt.Color(255, 204, 204));
+        j283.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j283, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 450, 50, 50));
+
+        j284.setBackground(new java.awt.Color(255, 204, 204));
+        j284.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j284, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 350, 50, 50));
+
+        j286.setBackground(new java.awt.Color(255, 204, 204));
+        j286.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        j286.setOpaque(true);
+        Mapa2.add(j286, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 150, 50, 50));
+
+        j24.setBackground(new java.awt.Color(255, 204, 204));
+        j24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
+        Mapa2.add(j24, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 100, 50, 50));
+
+        Avatar1.setBackground(new java.awt.Color(153, 255, 204));
+        Avatar1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Avatar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
+        Avatar1.setOpaque(true);
+        Mapa2.add(Avatar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 510, 40, 40));
+
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoTierra.jpg"))); // NOI18N
+        Mapa2.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 600));
 
         Mapa1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -1104,545 +1569,135 @@ public class Mundo1 extends javax.swing.JFrame {
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoVerde.png"))); // NOI18N
         Mapa1.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 600));
 
-        getContentPane().add(Mapa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, -1, 600));
+        Informacion.setBackground(new java.awt.Color(204, 204, 255));
+        Informacion.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Mapa2.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                Mapa2KeyPressed(evt);
+        jtVida.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        jtVida.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jtVida.setText("Vida");
+        Informacion.add(jtVida, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 60, 90, 30));
+
+        jlTiempo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jlTiempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlTiempo.setText("Tiempo");
+        Informacion.add(jlTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 80, 40));
+
+        jButton1.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ayuda.png"))); // NOI18N
+        jButton1.setContentAreaFilled(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
-        Mapa2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        j17.setBackground(new java.awt.Color(255, 204, 204));
-        j17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j17, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 100, 50, 50));
-
-        j23.setBackground(new java.awt.Color(255, 204, 204));
-        j23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j23, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 100, 50, 50));
-
-        j26.setBackground(new java.awt.Color(255, 204, 204));
-        j26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j26, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 350, 50, 50));
-
-        j9.setBackground(new java.awt.Color(255, 204, 204));
-        j9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j9, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 350, 50, 50));
-
-        j40.setBackground(new java.awt.Color(255, 204, 204));
-        j40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j40, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 50));
-
-        h2.setBackground(new java.awt.Color(255, 204, 204));
-        h2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(h2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 50, 50));
-
-        j116.setBackground(new java.awt.Color(255, 204, 204));
-        j116.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j116, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 0, 50, 50));
-
-        j158.setBackground(new java.awt.Color(255, 204, 204));
-        j158.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j158, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 50, 50));
-
-        j160.setBackground(new java.awt.Color(255, 204, 204));
-        j160.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j160, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 50, 50));
-
-        j161.setBackground(new java.awt.Color(255, 204, 204));
-        j161.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j161, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 0, 50, 50));
-
-        j162.setBackground(new java.awt.Color(255, 204, 204));
-        j162.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j162, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 50, 50));
-
-        j163.setBackground(new java.awt.Color(255, 204, 204));
-        j163.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j163, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 50, 50));
-
-        j164.setBackground(new java.awt.Color(255, 204, 204));
-        j164.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j164, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 0, 50, 50));
-
-        j165.setBackground(new java.awt.Color(255, 204, 204));
-        j165.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j165, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 0, 50, 50));
-
-        j166.setBackground(new java.awt.Color(255, 204, 204));
-        j166.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j166, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 0, 50, 50));
-
-        j167.setBackground(new java.awt.Color(255, 204, 204));
-        j167.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j167, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, 50, 50));
-
-        j168.setBackground(new java.awt.Color(255, 204, 204));
-        j168.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j168, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 50, 50));
-
-        j169.setBackground(new java.awt.Color(255, 204, 204));
-        j169.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j169, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, 50, 50));
-
-        j170.setBackground(new java.awt.Color(255, 204, 204));
-        j170.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j170, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 0, 50, 50));
-
-        j171.setBackground(new java.awt.Color(255, 204, 204));
-        j171.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j171, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 0, 50, 50));
-
-        j172.setBackground(new java.awt.Color(255, 204, 204));
-        j172.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j172, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 0, 50, 50));
-
-        j173.setBackground(new java.awt.Color(255, 204, 204));
-        j173.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j173, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 0, 50, 50));
-
-        j174.setBackground(new java.awt.Color(255, 204, 204));
-        j174.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j174, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 0, 50, 50));
-
-        j50.setBackground(new java.awt.Color(255, 204, 204));
-        j50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j50.setOpaque(true);
-        Mapa2.add(j50, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 50, 50));
-
-        j51.setBackground(new java.awt.Color(255, 204, 204));
-        j51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j51.setOpaque(true);
-        Mapa2.add(j51, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 50, 50));
-
-        j175.setBackground(new java.awt.Color(255, 204, 204));
-        j175.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j175.setOpaque(true);
-        Mapa2.add(j175, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 50, 50));
-
-        j176.setBackground(new java.awt.Color(255, 204, 204));
-        j176.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j176.setOpaque(true);
-        Mapa2.add(j176, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 50, 50));
-
-        j177.setBackground(new java.awt.Color(255, 204, 204));
-        j177.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j177.setOpaque(true);
-        Mapa2.add(j177, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 50, 50));
-
-        j178.setBackground(new java.awt.Color(255, 204, 204));
-        j178.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j178.setOpaque(true);
-        Mapa2.add(j178, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 50, 50));
-
-        j181.setBackground(new java.awt.Color(255, 204, 204));
-        j181.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j181.setOpaque(true);
-        Mapa2.add(j181, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 50, 50));
-
-        j182.setBackground(new java.awt.Color(255, 204, 204));
-        j182.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j182.setOpaque(true);
-        Mapa2.add(j182, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 50, 50));
-
-        j183.setBackground(new java.awt.Color(255, 204, 204));
-        j183.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j183.setOpaque(true);
-        Mapa2.add(j183, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 50, 50));
-
-        j184.setBackground(new java.awt.Color(255, 204, 204));
-        j184.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j184, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 550, 50, 50));
-
-        j185.setBackground(new java.awt.Color(255, 204, 204));
-        j185.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j185, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 550, 50, 50));
-
-        j186.setBackground(new java.awt.Color(255, 204, 204));
-        j186.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j186, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 550, 50, 50));
-
-        j187.setBackground(new java.awt.Color(255, 204, 204));
-        j187.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j187, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 550, 50, 50));
-
-        j188.setBackground(new java.awt.Color(255, 204, 204));
-        j188.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j188, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 550, 50, 50));
-
-        j189.setBackground(new java.awt.Color(255, 204, 204));
-        j189.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j189, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 550, 50, 50));
-
-        j190.setBackground(new java.awt.Color(255, 204, 204));
-        j190.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j190, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 550, 50, 50));
-
-        j191.setBackground(new java.awt.Color(255, 204, 204));
-        j191.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j191, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 550, 50, 50));
-
-        j192.setBackground(new java.awt.Color(255, 204, 204));
-        j192.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j192, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 550, 50, 50));
-
-        j193.setBackground(new java.awt.Color(255, 204, 204));
-        j193.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j193, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 550, 50, 50));
-
-        j194.setBackground(new java.awt.Color(255, 204, 204));
-        j194.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j194, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 550, 50, 50));
-
-        j196.setBackground(new java.awt.Color(255, 204, 204));
-        j196.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j196, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 550, 50, 50));
-
-        j197.setBackground(new java.awt.Color(255, 204, 204));
-        j197.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j197, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 550, 50, 50));
-
-        j198.setBackground(new java.awt.Color(255, 204, 204));
-        j198.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j198, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 550, 50, 50));
-
-        j199.setBackground(new java.awt.Color(255, 204, 204));
-        j199.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j199, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 550, 50, 50));
-
-        j200.setBackground(new java.awt.Color(255, 204, 204));
-        j200.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j200, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 550, 50, 50));
-
-        j201.setBackground(new java.awt.Color(255, 204, 204));
-        j201.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j201, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 550, 50, 50));
-
-        j202.setBackground(new java.awt.Color(255, 204, 204));
-        j202.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j202, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 550, 50, 50));
-
-        j203.setBackground(new java.awt.Color(255, 204, 204));
-        j203.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j203.setOpaque(true);
-        Mapa2.add(j203, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 350, 50, 50));
-
-        j204.setBackground(new java.awt.Color(255, 204, 204));
-        j204.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j204.setOpaque(true);
-        Mapa2.add(j204, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 500, 50, 50));
-
-        j205.setBackground(new java.awt.Color(255, 204, 204));
-        j205.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j205.setOpaque(true);
-        Mapa2.add(j205, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 300, 50, 50));
-
-        j206.setBackground(new java.awt.Color(255, 204, 204));
-        j206.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j206.setOpaque(true);
-        Mapa2.add(j206, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 250, 50, 50));
-
-        j207.setBackground(new java.awt.Color(255, 204, 204));
-        j207.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j207.setOpaque(true);
-        Mapa2.add(j207, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 150, 50, 50));
-
-        j208.setBackground(new java.awt.Color(255, 204, 204));
-        j208.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j208.setOpaque(true);
-        Mapa2.add(j208, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 200, 50, 50));
-
-        j209.setBackground(new java.awt.Color(255, 204, 204));
-        j209.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j209.setOpaque(true);
-        Mapa2.add(j209, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 100, 50, 50));
-
-        j210.setBackground(new java.awt.Color(255, 204, 204));
-        j210.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j210.setOpaque(true);
-        Mapa2.add(j210, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 50, 50, 50));
-
-        j211.setBackground(new java.awt.Color(255, 204, 204));
-        j211.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j211.setOpaque(true);
-        Mapa2.add(j211, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 400, 50, 50));
-
-        j212.setBackground(new java.awt.Color(255, 204, 204));
-        j212.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j212.setOpaque(true);
-        Mapa2.add(j212, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 100, 50, 50));
-
-        j213.setBackground(new java.awt.Color(255, 204, 204));
-        j213.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j213.setOpaque(true);
-        Mapa2.add(j213, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 50, 50));
-
-        j214.setBackground(new java.awt.Color(255, 204, 204));
-        j214.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j214.setOpaque(true);
-        Mapa2.add(j214, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 200, 50, 50));
-
-        j215.setBackground(new java.awt.Color(255, 204, 204));
-        j215.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j215.setOpaque(true);
-        Mapa2.add(j215, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 250, 50, 50));
-
-        j216.setBackground(new java.awt.Color(255, 204, 204));
-        j216.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j216.setOpaque(true);
-        Mapa2.add(j216, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 300, 50, 50));
-
-        j217.setBackground(new java.awt.Color(255, 204, 204));
-        j217.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j217.setOpaque(true);
-        Mapa2.add(j217, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 350, 50, 50));
-
-        j218.setBackground(new java.awt.Color(255, 204, 204));
-        j218.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j218.setOpaque(true);
-        Mapa2.add(j218, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 400, 50, 50));
-
-        j219.setBackground(new java.awt.Color(255, 204, 204));
-        j219.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j219.setOpaque(true);
-        Mapa2.add(j219, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 450, 50, 50));
-
-        j220.setBackground(new java.awt.Color(255, 204, 204));
-        j220.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j220.setOpaque(true);
-        Mapa2.add(j220, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 500, 50, 50));
-
-        j221.setBackground(new java.awt.Color(255, 204, 204));
-        j221.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j221, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 450, 50, 50));
-
-        j224.setBackground(new java.awt.Color(255, 204, 204));
-        j224.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j224, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 450, 50, 50));
-
-        j225.setBackground(new java.awt.Color(255, 204, 204));
-        j225.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j225, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, 50, 50));
-
-        j226.setBackground(new java.awt.Color(255, 204, 204));
-        j226.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j226, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 450, 50, 50));
-
-        j227.setBackground(new java.awt.Color(255, 204, 204));
-        j227.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j227, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 500, 50, 50));
-
-        j228.setBackground(new java.awt.Color(255, 204, 204));
-        j228.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j228, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, 50, 50));
-
-        j229.setBackground(new java.awt.Color(255, 204, 204));
-        j229.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j229, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, 50, 50));
-
-        j232.setBackground(new java.awt.Color(255, 204, 204));
-        j232.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j232, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 50, 50));
-
-        j233.setBackground(new java.awt.Color(255, 204, 204));
-        j233.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j233, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, 50, 50));
-
-        j234.setBackground(new java.awt.Color(255, 204, 204));
-        j234.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j234, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, 50, 50));
-
-        j235.setBackground(new java.awt.Color(255, 204, 204));
-        j235.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j235, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 100, 50, 50));
-
-        j236.setBackground(new java.awt.Color(255, 204, 204));
-        j236.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j236, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 250, 50, 50));
-
-        j237.setBackground(new java.awt.Color(255, 204, 204));
-        j237.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j237, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 250, 50, 50));
-
-        j238.setBackground(new java.awt.Color(255, 204, 204));
-        j238.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j238, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 50, 50));
-
-        j239.setBackground(new java.awt.Color(255, 204, 204));
-        j239.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j239, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 50, 50));
-
-        j240.setBackground(new java.awt.Color(255, 204, 204));
-        j240.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j240, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 100, 50, 50));
-
-        j241.setBackground(new java.awt.Color(255, 204, 204));
-        j241.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j241, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 100, 50, 50));
-
-        j242.setBackground(new java.awt.Color(255, 204, 204));
-        j242.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j242, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 250, 50, 50));
-
-        j243.setBackground(new java.awt.Color(255, 204, 204));
-        j243.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j243, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 250, 50, 50));
-
-        j244.setBackground(new java.awt.Color(255, 204, 204));
-        j244.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j244, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 250, 50, 50));
-
-        j245.setBackground(new java.awt.Color(255, 204, 204));
-        j245.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j245, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 250, 50, 50));
-
-        j247.setBackground(new java.awt.Color(255, 204, 204));
-        j247.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j247, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 250, 50, 50));
-
-        j250.setBackground(new java.awt.Color(255, 204, 204));
-        j250.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j250, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 350, 50, 50));
-
-        j251.setBackground(new java.awt.Color(255, 204, 204));
-        j251.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j251, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, 50, 50));
-
-        j255.setBackground(new java.awt.Color(255, 204, 204));
-        j255.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j255, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, 50, 50));
-
-        j256.setBackground(new java.awt.Color(255, 204, 204));
-        j256.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j256, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 400, 50, 50));
-
-        j259.setBackground(new java.awt.Color(255, 204, 204));
-        j259.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j259, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 450, 50, 50));
-
-        j260.setBackground(new java.awt.Color(255, 204, 204));
-        j260.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j260, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 450, 50, 50));
-
-        j261.setBackground(new java.awt.Color(255, 204, 204));
-        j261.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j261, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 350, 50, 50));
-
-        j263.setBackground(new java.awt.Color(255, 204, 204));
-        j263.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j263, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 450, 50, 50));
-
-        j264.setBackground(new java.awt.Color(255, 204, 204));
-        j264.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j264, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 450, 50, 50));
-
-        j265.setBackground(new java.awt.Color(255, 204, 204));
-        j265.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j265, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 450, 50, 50));
-
-        j266.setBackground(new java.awt.Color(255, 204, 204));
-        j266.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j266, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 350, 50, 50));
-
-        j267.setBackground(new java.awt.Color(255, 204, 204));
-        j267.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j267, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 350, 50, 50));
-
-        j269.setBackground(new java.awt.Color(255, 204, 204));
-        j269.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j269, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 350, 50, 50));
-
-        j271.setBackground(new java.awt.Color(255, 204, 204));
-        j271.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j271.setOpaque(true);
-        Mapa2.add(j271, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 50, 50));
-
-        j272.setBackground(new java.awt.Color(255, 204, 204));
-        j272.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j272.setOpaque(true);
-        Mapa2.add(j272, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 50, 50));
-
-        j273.setBackground(new java.awt.Color(255, 204, 204));
-        j273.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j273.setOpaque(true);
-        Mapa2.add(j273, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 50, 50));
-
-        j274.setBackground(new java.awt.Color(255, 204, 204));
-        j274.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j274.setOpaque(true);
-        Mapa2.add(j274, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, 50, 50));
-
-        j275.setBackground(new java.awt.Color(255, 204, 204));
-        j275.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j275.setOpaque(true);
-        Mapa2.add(j275, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 100, 50, 50));
-
-        j276.setBackground(new java.awt.Color(255, 204, 204));
-        j276.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j276.setOpaque(true);
-        Mapa2.add(j276, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 50, 50));
-
-        j277.setBackground(new java.awt.Color(255, 204, 204));
-        j277.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j277.setOpaque(true);
-        Mapa2.add(j277, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 100, 50, 50));
-
-        j278.setBackground(new java.awt.Color(255, 204, 204));
-        j278.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j278.setOpaque(true);
-        Mapa2.add(j278, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 200, 50, 50));
-
-        j279.setBackground(new java.awt.Color(255, 204, 204));
-        j279.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j279.setOpaque(true);
-        Mapa2.add(j279, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 150, 50, 50));
-
-        j280.setBackground(new java.awt.Color(255, 204, 204));
-        j280.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j280.setOpaque(true);
-        Mapa2.add(j280, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 150, 50, 50));
-
-        j281.setBackground(new java.awt.Color(255, 204, 204));
-        j281.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j281.setOpaque(true);
-        Mapa2.add(j281, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 150, 50, 50));
-
-        j282.setBackground(new java.awt.Color(255, 204, 204));
-        j282.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j282.setOpaque(true);
-        Mapa2.add(j282, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 450, 50, 50));
-
-        j283.setBackground(new java.awt.Color(255, 204, 204));
-        j283.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j283, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 450, 50, 50));
-
-        j284.setBackground(new java.awt.Color(255, 204, 204));
-        j284.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j284, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 350, 50, 50));
-
-        j286.setBackground(new java.awt.Color(255, 204, 204));
-        j286.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        j286.setOpaque(true);
-        Mapa2.add(j286, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 150, 50, 50));
-
-        j24.setBackground(new java.awt.Color(255, 204, 204));
-        j24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoAgua.png"))); // NOI18N
-        Mapa2.add(j24, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 100, 50, 50));
-
-        Avatar1.setBackground(new java.awt.Color(153, 255, 204));
-        Avatar1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Avatar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
-        Avatar1.setOpaque(true);
-        Mapa2.add(Avatar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 510, 40, 40));
-
-        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoTierra.jpg"))); // NOI18N
-        Mapa2.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 600));
-
-        getContentPane().add(Mapa2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, -1, -1));
-
-        setSize(new java.awt.Dimension(967, 739));
+        Informacion.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 0, 60, 40));
+
+        jButton2.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Atras.png"))); // NOI18N
+        jButton2.setContentAreaFilled(false);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        Informacion.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 50));
+
+        jLabel1.setFont(new java.awt.Font("Tempus Sans ITC", 3, 36)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("NIVEL 1");
+        Informacion.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 0, 240, 50));
+
+        jlVida1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
+        jlVida1.setText("jLabel2");
+        Informacion.add(jlVida1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 60, 40, 30));
+
+        jlVida2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
+        jlVida2.setText("jLabel2");
+        Informacion.add(jlVida2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 60, 40, 30));
+
+        jlVida3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
+        jlVida3.setText("jLabel2");
+        Informacion.add(jlVida3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 60, 40, 30));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("----------");
+        Informacion.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 100, 20));
+
+        jlPuntraje.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jlPuntraje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlPuntraje.setText("Puntaje");
+        Informacion.add(jlPuntraje, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 50, 80, 40));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("----------");
+        Informacion.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 60, 100, 20));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 960, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Informacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(5, 5, 5)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(Mapa2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Mapa1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 700, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(Informacion, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Mapa2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Mapa1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Mapa2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Mapa2KeyPressed
+        mapa2 m2 = new mapa2();
+        int desplazamiento=10,x=Avatar1.getX(),y=Avatar1.getY();
+        System.out.println(Avatar1.getLocation());//Ubicacion del la imagen en el panel
+
+        switch(evt.getExtendedKeyCode()){//getExtendedKeyCode->Captura lo q hace el teclado y lo pasa a la variable X y Y
+
+            case KeyEvent.VK_UP:
+            if(m2.limites(x,y,"up")){
+                Avatar1.setLocation(x, y-desplazamiento);
+            }
+            break;
+
+            case KeyEvent.VK_DOWN:
+            if(m2.limites(x,y,"down")){
+                Avatar1.setLocation(x, y+desplazamiento);
+            }
+            break;
+            case KeyEvent.VK_LEFT:
+            if(m2.limites(x,y,"left")){
+                Avatar1.setLocation(x-desplazamiento, y);
+            }
+            break;
+            case KeyEvent.VK_RIGHT:
+            if(m2.limites(x,y,"right")){
+                Avatar1.setLocation(x+desplazamiento, y);
+            }
+            break;
+        }
+    }//GEN-LAST:event_Mapa2KeyPressed
 
     private void Mapa1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Mapa1KeyPressed
         mapa1 m1 = new mapa1();
@@ -1676,44 +1731,12 @@ public class Mundo1 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_Mapa1KeyPressed
 
-    private void Mapa2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Mapa2KeyPressed
-        mapa2 m2 = new mapa2();
-        int desplazamiento=10,x=Avatar1.getX(),y=Avatar1.getY();
-        System.out.println(Avatar1.getLocation());//Ubicacion del la imagen en el panel
-
-        switch(evt.getExtendedKeyCode()){//getExtendedKeyCode->Captura lo q hace el teclado y lo pasa a la variable X y Y
-
-            case KeyEvent.VK_UP:
-            if(m2.limites(x,y,"up")){
-                Avatar1.setLocation(x, y-desplazamiento);
-            }
-            break;
-
-            case KeyEvent.VK_DOWN:
-            if(m2.limites(x,y,"down")){
-                Avatar1.setLocation(x, y+desplazamiento);
-            }
-            break;
-            case KeyEvent.VK_LEFT:
-            if(m2.limites(x,y,"left")){
-                Avatar1.setLocation(x-desplazamiento, y);
-            }
-            break;
-            case KeyEvent.VK_RIGHT:
-            if(m2.limites(x,y,"right")){
-                Avatar1.setLocation(x+desplazamiento, y);
-            }
-            break;
-        }
-    }//GEN-LAST:event_Mapa2KeyPressed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         new GuiaControles(null, true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         dispose();
-        new Menu();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private String decidirMapa() {
@@ -1922,7 +1945,50 @@ public class Mundo1 extends javax.swing.JFrame {
             return limite;
         }
     }
+    /**
+     * @param args the command line arguments
+     */
     
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(Mundo1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(Mundo1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(Mundo1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(Mundo1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//        //</editor-fold>
+//
+//        /* Create and display the dialog */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                Mundo1 dialog = new Mundo1(new javax.swing.JFrame(), true);
+//                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+//                    @Override
+//                    public void windowClosing(java.awt.event.WindowEvent e) {
+//                        System.exit(0);
+//                    }
+//                });
+//                dialog.setVisible(true);
+//            }
+//        });
+//    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Avatar;
     private javax.swing.JLabel Avatar1;
@@ -2199,8 +2265,4 @@ public class Mundo1 extends javax.swing.JFrame {
     private javax.swing.JLabel jlVida3;
     private javax.swing.JLabel jtVida;
     // End of variables declaration//GEN-END:variables
-        
 }
-
-
-

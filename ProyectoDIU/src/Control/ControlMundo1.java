@@ -26,7 +26,7 @@ public class ControlMundo1 {
 //        cantEnemigos = modelo.getCantEnemigos();
 //        horaDia = modelo.getHoraDia();
 //        avatar = modelo.getAvatar();
-        mundo = new Mundo1();
+        mundo = new Mundo1(null, true);
         map = mundo.getMapa1();
         
 //        System.out.println("Tal2 " + map.prueba(1));
