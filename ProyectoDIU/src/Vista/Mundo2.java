@@ -6,6 +6,7 @@
 package Vista;
 
 import Control.ControlTXT;
+import Control.Sonido;
 import java.awt.event.KeyEvent;
 
 /**
@@ -1735,6 +1736,7 @@ public class Mundo2 extends javax.swing.JDialog implements Runnable{
                     vida="3";
                     puntaje="100";
                     txt.crearTXT(timepo, vida, puntaje);
+                    Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
                     new Mundo3(null, true);
                     dispose();
@@ -1748,7 +1750,7 @@ public class Mundo2 extends javax.swing.JDialog implements Runnable{
     private void Mapa2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Mapa2KeyPressed
         Mundo2.mapa2 m2 = new Mundo2.mapa2();
         int desplazamiento=10,x=Avatar1.getX(),y=Avatar1.getY();
-        System.out.println(Avatar1.getLocation());//Ubicacion del la imagen en el panel
+//        System.out.println(Avatar1.getLocation());//Ubicacion del la imagen en el panel
 
         switch(evt.getExtendedKeyCode()){//getExtendedKeyCode->Captura lo q hace el teclado y lo pasa a la variable X y Y
 
@@ -1768,6 +1770,7 @@ public class Mundo2 extends javax.swing.JDialog implements Runnable{
                     vida="3";
                     puntaje="100";
                     txt.crearTXT(timepo, vida, puntaje);
+                    Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
                     new Mundo3(null, true);
                 }

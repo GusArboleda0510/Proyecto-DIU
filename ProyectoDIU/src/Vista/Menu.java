@@ -5,6 +5,8 @@
  */
 package Vista;
 
+import Control.Sonido;
+
 /**
  *
  * @author ANDRES ARBOLEDA
@@ -14,6 +16,7 @@ public class Menu extends javax.swing.JFrame {
     /**
      * Creates new form Menu
      */
+    Sonido s;
     public Menu() {
         initComponents();
         setVisible(true);
@@ -124,6 +127,7 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBJugarActionPerformed
+        s = new Sonido("click.wav");
         new CrearAvatar(null, true);
     }//GEN-LAST:event_jBJugarActionPerformed
 
@@ -132,10 +136,12 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jBCerrarActionPerformed
 
     private void jbGanadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGanadoresActionPerformed
+        s = new Sonido("click.wav");
         new Ganadores(null, true);
     }//GEN-LAST:event_jbGanadoresActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        s = new Sonido("click.wav");
         new GuiaControles(null, true);
     }//GEN-LAST:event_jButton1ActionPerformed
 

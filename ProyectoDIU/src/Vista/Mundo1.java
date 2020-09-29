@@ -7,6 +7,7 @@ package Vista;
 
 import Control.ControlEnemigos;
 import Control.ControlTXT;
+import Control.Sonido;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
 /**
@@ -1678,7 +1679,7 @@ public class Mundo1 extends javax.swing.JDialog implements Runnable{
     private void Mapa2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Mapa2KeyPressed
         mapa2 m2 = new mapa2();
         int desplazamiento=10,x=Avatar1.getX(),y=Avatar1.getY();
-        System.out.println(Avatar1.getLocation());//Ubicacion del la imagen en el panel
+//        System.out.println(Avatar1.getLocation());//Ubicacion del la imagen en el panel
 
         switch(evt.getExtendedKeyCode()){//getExtendedKeyCode->Captura lo q hace el teclado y lo pasa a la variable X y Y
 
@@ -1698,6 +1699,7 @@ public class Mundo1 extends javax.swing.JDialog implements Runnable{
                     vida="3";
                     puntaje="100";
                     txt.crearTXT(tiemp, vida, puntaje);
+                    Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
                     new Mundo2(null, true);
                 }
@@ -1720,7 +1722,7 @@ public class Mundo1 extends javax.swing.JDialog implements Runnable{
         mapa1 m1 = new mapa1();
         System.out.println("tal");
         int desplazamiento=10,x=Avatar.getX(),y=Avatar.getY();
-        System.out.println(Avatar.getLocation());//Ubicacion del la imagen en el panel
+//        System.out.println(Avatar.getLocation());//Ubicacion del la imagen en el panel
 
         switch(evt.getExtendedKeyCode()){//getExtendedKeyCode->Captura lo q hace el teclado y lo pasa a la variable X y Y
 
@@ -1751,6 +1753,7 @@ public class Mundo1 extends javax.swing.JDialog implements Runnable{
                     puntaje="100";
                     tiemp=Tiempo.getText();
                     txt.crearTXT(tiemp, vida, puntaje);
+                    Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
                     new Mundo2(null, true);
                 }

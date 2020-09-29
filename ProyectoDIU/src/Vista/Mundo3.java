@@ -6,6 +6,7 @@
 package Vista;
 
 import Control.ControlTXT;
+import Control.Sonido;
 import java.awt.event.KeyEvent;
 
 /**
@@ -671,7 +672,7 @@ public class Mundo3 extends javax.swing.JDialog implements Runnable{
                     vida="3";
                     puntaje="300";
                     txt.crearTXT(timepo, vida, puntaje);
-                    
+                    Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
                     //Leer el TXT-> y crear el XML(NickName,Puntaje,Tiempo)
                     new Ganadores(null, true);
