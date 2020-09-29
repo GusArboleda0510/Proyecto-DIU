@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jugadores>
+    <avatar>
+        <nickname>tales</nickname>
+        <colores> </colores>
+        <imgjuego>/Imagenes/Avatars/Avatar2/1.jpg</imgjuego>
+        <imgVista>file:/C:/Users/user/NetBeans-workspace/Proyecto-DIU/ProyectoDIU/build/classes/Imagenes/Avatars/ImagenesOriginales/1.jpg</imgVista>
+    </avatar>
+</jugadores>

@@ -1,11 +1,12 @@
 		FASE 1 {funcionalidad del proyecto}
 ---------------------------------------------------------------
 
-GUS añadir funcion de seleccionar avatar del XML
+EN PROGRESO -- GUS añadir funcion de seleccionar avatar del XML
 	- consulta por nickName
-	- con el evento de jugar abro crearAvatar y 
-	desde alli cargar avatar de XML (solo podria 
-	visualizarse mediante una lista de nickNames)
+HECHO	- con el evento de jugar abro crearAvatar y 
+	desde alli cargar avatar de XML
+HECHO -- ALE implementar en crearAvatar cargar imagen del XML (vista) (implementar el panel)
+GUS implementar en crearAvatar cargar imagen del XML (Control)(leer matrices de XML y cargar en cuadricula de la vista)
 
 GUS para la solucion de la lectura de XML para los mundos
 volver los limites de los mapas, metodos de la clase mundo
@@ -14,13 +15,11 @@ ALE(IDEA GUS) implementar colisiones para los enemigos con el avatar
 
 
 
-ALE implementar el cambio de mundo cuando llegue al final
+HECHO -- ALE implementar el cambio de mundo cuando llegue al final
 
 ALE terminar limites
 
-ALE implementar en crearAvatar cargar imagen del XML (vista)
-GUS implementar en crearAvatar cargar imagen del XML (Control)(leer matrices de XML y cargar en cuadricula de la vista)
-GUS implementar en XMLAvatar cargar y leer imagenes predeterminadas por ruta
+HECHO -- GUS implementar en XMLAvatar cargar y leer imagenes predeterminadas por ruta
 
 
 		FASE 2 {logica de jugabilidad}
@@ -53,4 +52,4 @@ TODO UNIFORME
 
 ALE - GUS (para el final) guia de controles para el usuario
 
-
+hacer sprites para los botones y agregar sonido, sonido y puntero
