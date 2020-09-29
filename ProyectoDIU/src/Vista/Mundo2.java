@@ -5,22 +5,30 @@
  */
 package Vista;
 
+import Control.ControlTXT;
 import java.awt.event.KeyEvent;
 
 /**
  *
  * @author Alejandra Becerra
  */
-public class Mundo2 extends javax.swing.JDialog {
+public class Mundo2 extends javax.swing.JDialog implements Runnable{
 
     /**
      * Creates new form Mundo_2
      */
+    ControlTXT txt = new ControlTXT();
+    Thread tiempo = new Thread();
+    int hora,minuto,segundo;
+    String timepo, puntaje,vida;
+    String[] dato;
     public Mundo2(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         
         //Carga XML (Timepo,Vida,Puntaje)
+        dato =txt.leerTXT();
+        Puntaje.setText(dato[2]);
         
          ////////////////////////PANELES////////////////////
         Mapa1.setFocusable(true);
@@ -29,6 +37,7 @@ public class Mundo2 extends javax.swing.JDialog {
         Mapa2.setFocusable(false);
         Mapa2.setVisible(false);
         //////////////////////////////////////////////////////}
+        tiempo.start();
         setVisible(true);
     }
     
@@ -308,9 +317,9 @@ public class Mundo2 extends javax.swing.JDialog {
         jlVolver = new javax.swing.JLabel();
         jlControlGuia = new javax.swing.JLabel();
         jlTiempo = new javax.swing.JLabel();
-        jLabel64 = new javax.swing.JLabel();
-        Tiempo = new javax.swing.JLabel();
         jlPuntraje = new javax.swing.JLabel();
+        Tiempo = new javax.swing.JLabel();
+        Puntaje = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -1660,20 +1669,20 @@ public class Mundo2 extends javax.swing.JDialog {
         jlTiempo.setText("Tiempo");
         Informacion1.add(jlTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 80, 40));
 
-        jLabel64.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel64.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel64.setText("----------");
-        Informacion1.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 60, 100, 20));
+        jlPuntraje.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jlPuntraje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlPuntraje.setText("Puntaje");
+        Informacion1.add(jlPuntraje, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 50, 80, 40));
 
         Tiempo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         Tiempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Tiempo.setText("----------");
         Informacion1.add(Tiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 170, 30));
 
-        jlPuntraje.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jlPuntraje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlPuntraje.setText("Puntaje");
-        Informacion1.add(jlPuntraje, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 50, 80, 40));
+        Puntaje.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Puntaje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Puntaje.setText("----------");
+        Informacion1.add(Puntaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 60, 100, 20));
 
         getContentPane().add(Informacion1);
         Informacion1.setBounds(0, 0, 1000, 100);
@@ -1705,6 +1714,11 @@ public class Mundo2 extends javax.swing.JDialog {
                 Avatar.setLocation(x-desplazamiento, y);
                 if ((x>= 440 && y >= 228)&& (x<=510  && y<=290 )) {
                     //Guardar XML (Puntaje,Vida,Tiempo)
+                    tiempo.stop();
+                    timepo= Tiempo.getText();
+                    vida="3";
+                    puntaje="100";
+                    txt.crearTXT(timepo, vida, puntaje);
                     dispose();
                     new Mundo3(null, true);
                 }
@@ -1741,6 +1755,13 @@ public class Mundo2 extends javax.swing.JDialog {
                 Avatar1.setLocation(x, y+desplazamiento);
                 if ((x>= 350 && y >= 200)&&(x<= 350 && y <= 360)) {
                     //Guardar XML (Puntaje,Vida,Tiempo)
+                    tiempo.stop();
+                    timepo= Tiempo.getText();
+                    vida="3";
+                    puntaje="100";
+                    txt.crearTXT(timepo, vida, puntaje);
+                    dispose();
+                    new Mundo3(null, true);
                     dispose();
                     new Mundo3(null, true);
                 }
@@ -1779,6 +1800,8 @@ public class Mundo2 extends javax.swing.JDialog {
     private void jlControlGuiaControlGuia(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlControlGuiaControlGuia
         new GuiaControles(null, true);
     }//GEN-LAST:event_jlControlGuiaControlGuia
+
+    
 
     
     public class mapa1{
@@ -1897,6 +1920,7 @@ public class Mundo2 extends javax.swing.JDialog {
     private javax.swing.JPanel Informacion1;
     private javax.swing.JPanel Mapa1;
     private javax.swing.JPanel Mapa2;
+    private javax.swing.JLabel Puntaje;
     private javax.swing.JLabel Salida;
     private javax.swing.JLabel Tiempo;
     private javax.swing.JLabel jLabel1;
@@ -2112,7 +2136,6 @@ public class Mundo2 extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
-    private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel67;
@@ -2160,4 +2183,30 @@ public class Mundo2 extends javax.swing.JDialog {
     private javax.swing.JLabel jlVolver;
     private javax.swing.JLabel jtVida1;
     // End of variables declaration//GEN-END:variables
+@Override
+    public void run() {
+        try {
+            String[] aux = dato[0].split(":");
+            hora=Integer.parseInt(aux[0]);
+            minuto=Integer.parseInt(aux[1]);
+            segundo=Integer.parseInt(aux[2]);
+            while (true) {
+                segundo++;
+                if (segundo > 59) {
+                    segundo = 0;
+                    minuto++;
+                }
+                if (minuto > 59) {
+                    segundo = 0;
+                    minuto = 0;
+                    hora++;
+                }
+                Tiempo.setText(hora + ":" + minuto + ":" + segundo);
+                System.out.println(hora + ":" + minuto + ":" + segundo);
+                Thread.sleep(999);
+            }
+        } catch (Exception e) {
+            System.out.println("Error RUN: " + e);
+        }
+    }
 }

@@ -1500,6 +1500,7 @@ public class CrearAvatar extends javax.swing.JDialog {
         }        
         try {
             cca = new ControlCrearAvatar(colores, nickName, ruta, imagenGrande);
+            new Mundo1(null, true);
             dispose();
         } catch (Exception ex) {
             if("no reescribir".equals(ex.getMessage())){
@@ -1508,7 +1509,6 @@ public class CrearAvatar extends javax.swing.JDialog {
                 System.out.println("error en crearAvatar " + ex);
             }
         }
-        new Mundo1(null, true);
     }//GEN-LAST:event_jbCargarActionPerformed
 
     private void jbVistaPreviaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbVistaPreviaActionPerformed
