@@ -23,11 +23,11 @@ public class Mundo1 extends javax.swing.JDialog {
     Mundo1.mapa2 jPMapa2 = new Mundo1.mapa2();
     Color colorea = new Color(240, 240, 240);
     
-    public Mundo1(java.awt.Frame parent, boolean modal) {
+    public Mundo1(java.awt.Frame parent, boolean modal)  {
         super(parent, modal);
         initComponents();
         String nombreMapa = decidirMapa();
-        
+        tiempo();
         
 ////        llamarEnemigos(nombreMapa);
         contEnemigos = new ControlEnemigos(enemigo1,"mapa1"); 
@@ -38,7 +38,6 @@ public class Mundo1 extends javax.swing.JDialog {
 //        avatarSprite.start();
         setVisible(true);
     }
-
     public Mundo1(String nada) {
     }
     
@@ -1789,6 +1788,31 @@ public class Mundo1 extends javax.swing.JDialog {
 
     private int  buscarCantEnemigos() {
         return 2;
+    }
+
+    private void tiempo()  {
+        for (int hora = 0; hora < 60; hora++) {
+        for (int minuto = 0; minuto < 60; minuto++) {
+            for (int segundo = 0; segundo < 60; segundo++) {
+                if(segundo<9 && minuto<9){
+//                    System.out.println(hora+":0"+minuto +":"+"0"+segundo);
+                    Tiempo.setText(hora+":0"+minuto +":"+"0"+segundo);
+                }
+                
+                Tiempo.setText(hora+":"+minuto +":"+ segundo);
+                
+                metodoSleep();
+            }
+    }
+        
+            
+        }
+    }
+    private  static void metodoSleep(){
+        try {
+            Thread.sleep(100);
+        } catch (Exception e) {
+        }
     }
 
     public class mapa1{
