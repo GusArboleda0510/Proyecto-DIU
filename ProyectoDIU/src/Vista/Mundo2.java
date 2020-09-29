@@ -18,7 +18,7 @@ public class Mundo2 extends javax.swing.JDialog implements Runnable{
      * Creates new form Mundo_2
      */
     ControlTXT txt = new ControlTXT();
-    Thread tiempo = new Thread();
+    Thread tiempo ;
     int hora,minuto,segundo;
     String timepo, puntaje,vida;
     String[] dato;
@@ -37,6 +37,7 @@ public class Mundo2 extends javax.swing.JDialog implements Runnable{
         Mapa2.setFocusable(false);
         Mapa2.setVisible(false);
         //////////////////////////////////////////////////////}
+        tiempo = new Thread(this);
         tiempo.start();
         setVisible(true);
     }
@@ -1694,7 +1695,7 @@ public class Mundo2 extends javax.swing.JDialog implements Runnable{
     private void Mapa1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Mapa1KeyPressed
         Mundo2.mapa1 m1 = new Mundo2.mapa1();
         int desplazamiento=10,x=Avatar.getX(),y=Avatar.getY();
-        System.out.println(Avatar.getLocation());//Ubicacion del la imagen en el panel
+//        System.out.println(Avatar.getLocation());//Ubicacion del la imagen en el panel
 
         switch(evt.getExtendedKeyCode()){//getExtendedKeyCode->Captura lo q hace el teclado y lo pasa a la variable X y Y
 
@@ -1729,6 +1730,13 @@ public class Mundo2 extends javax.swing.JDialog implements Runnable{
                 Avatar.setLocation(x+desplazamiento, y);
                 if ((x>= 440 && y >= 228)&& (x<=510  && y<=290 )) {
                     //Guardar XML (Puntaje,Vida,Tiempo)
+                    tiempo.stop();
+                    timepo= Tiempo.getText();
+                    vida="3";
+                    puntaje="100";
+                    txt.crearTXT(timepo, vida, puntaje);
+                    dispose();
+                    new Mundo3(null, true);
                     dispose();
                     new Mundo3(null, true);
                 }
@@ -1760,8 +1768,6 @@ public class Mundo2 extends javax.swing.JDialog implements Runnable{
                     vida="3";
                     puntaje="100";
                     txt.crearTXT(timepo, vida, puntaje);
-                    dispose();
-                    new Mundo3(null, true);
                     dispose();
                     new Mundo3(null, true);
                 }
@@ -2202,7 +2208,7 @@ public class Mundo2 extends javax.swing.JDialog implements Runnable{
                     hora++;
                 }
                 Tiempo.setText(hora + ":" + minuto + ":" + segundo);
-                System.out.println(hora + ":" + minuto + ":" + segundo);
+//                System.out.println(hora + ":" + minuto + ":" + segundo);
                 Thread.sleep(999);
             }
         } catch (Exception e) {

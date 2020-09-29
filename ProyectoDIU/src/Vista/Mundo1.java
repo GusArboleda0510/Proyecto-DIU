@@ -25,14 +25,16 @@ public class Mundo1 extends javax.swing.JDialog implements Runnable{
     Color colorea = new Color(240, 240, 240);
     
     ControlTXT txt = new ControlTXT();
-    Thread tiempo = new Thread();
-    int hora,minuto,segundo;
+    Thread tiempo;
+    int hora=0,minuto=0,segundo=0;
     String tiemp, puntaje,vida;
     
     public Mundo1(java.awt.Frame parent, boolean modal)  {
         super(parent, modal);
         initComponents();
         String nombreMapa = decidirMapa();
+        
+        Puntaje.setText("0");
         
 ////        llamarEnemigos(nombreMapa);
         contEnemigos = new ControlEnemigos(enemigo1,"mapa1"); 
@@ -41,10 +43,8 @@ public class Mundo1 extends javax.swing.JDialog implements Runnable{
         contEnemigos.start();
 //        avatarSprite = new AvatarSprite(enemigo1); 
 //        avatarSprite.start();
-        System.out.println("-------------------------------");
-        
+        tiempo = new Thread(this);
         tiempo.start();
-        Puntaje.setText("0");
         setVisible(true);
     }
     public Mundo1(String nada) {
@@ -871,7 +871,7 @@ public class Mundo1 extends javax.swing.JDialog implements Runnable{
         Avatar1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Avatar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
         Avatar1.setOpaque(true);
-        Mapa2.add(Avatar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 560, 40, 40));
+        Mapa2.add(Avatar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 560, 40, 40));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoTierra.jpg"))); // NOI18N
         Mapa2.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 600));
@@ -1691,7 +1691,7 @@ public class Mundo1 extends javax.swing.JDialog implements Runnable{
             case KeyEvent.VK_DOWN:
             if(m2.limites(x,y,"down")){
                 Avatar1.setLocation(x, y+desplazamiento);
-                if (x >= 600 && y >=560) {
+                if (x == 600 && y >=570) {
                     //Guardar XML (Puntaje,Vida,Tiempo)
                     tiempo.stop();
                     tiemp= Tiempo.getText();
@@ -1744,7 +1744,7 @@ public class Mundo1 extends javax.swing.JDialog implements Runnable{
             case KeyEvent.VK_RIGHT:
              if(m1.limites(x,y,"right")){
                 Avatar.setLocation(x+desplazamiento, y);
-                if (x>= 900 && y >= 500) {
+                if (x>= 900 && y == 500) {
                     //Guardar XML (Puntaje,Vida,Tiempo)
                     tiempo.stop();
                     vida="3";
@@ -2252,10 +2252,9 @@ public class Mundo1 extends javax.swing.JDialog implements Runnable{
     // End of variables declaration//GEN-END:variables
 @Override
     public void run() {
+            
         try {
-            System.out.println("1");
-            while (true) {
-            System.out.println("2");
+            for (;;) {
                 segundo++;
                 if (segundo > 59) {
                     segundo = 0;
@@ -2267,7 +2266,7 @@ public class Mundo1 extends javax.swing.JDialog implements Runnable{
                     hora++;
                 }
                 Tiempo.setText(hora + ":" + minuto + ":" + segundo);
-                System.out.println(hora + ":" + minuto + ":" + segundo);
+//                System.out.println(hora + ":" + minuto + ":" + segundo);
                 Thread.sleep(999);
             }
         } catch (Exception e) {

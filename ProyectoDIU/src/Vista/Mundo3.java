@@ -18,7 +18,7 @@ public class Mundo3 extends javax.swing.JDialog implements Runnable{
      * Creates new form Mundo_3
      */
     ControlTXT txt = new ControlTXT();
-    Thread tiempo = new Thread();
+    Thread tiempo ;
     int hora,minuto,segundo;
     String timepo, puntaje,vida;
     String[] dato;
@@ -36,6 +36,7 @@ public class Mundo3 extends javax.swing.JDialog implements Runnable{
 //        Mapa2.setFocusable(false);
 //        Mapa2.setVisible(false);
         
+        tiempo = new Thread(this);
         tiempo.start();
         setVisible(true);
     }
@@ -632,9 +633,7 @@ public class Mundo3 extends javax.swing.JDialog implements Runnable{
     private void Mapa1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Mapa1KeyPressed
         Mundo3.mapa1 m1 = new Mundo3.mapa1();
         int desplazamiento=10,x=Avatar.getX(),y=Avatar.getY();
-        System.out.println(Avatar.getLocation());//Ubicacion del la imagen en el panel
-
-        ////////////////////////////////REUBICACION/////////////////////////////////////////////////
+//        System.out.println(Avatar.getLocation());//Ubicacion del la imagen en el panel
 
         switch(evt.getExtendedKeyCode()){//getExtendedKeyCode->Captura lo q hace el teclado y lo pasa a la variable X y Y
 
@@ -667,12 +666,14 @@ public class Mundo3 extends javax.swing.JDialog implements Runnable{
             if(m1.limites(x,y,"right")){
                 Avatar.setLocation(x+desplazamiento, y);
                 if (x>= 950&&y== 200) {
-                    dispose();
                     tiempo.stop();
                     timepo=Tiempo.getText();
                     vida="3";
                     puntaje="300";
                     txt.crearTXT(timepo, vida, puntaje);
+                    
+                    dispose();
+                    //Leer el TXT-> y crear el XML(NickName,Puntaje,Tiempo)
                     new Ganadores(null, true);
                 }
             }
@@ -755,10 +756,6 @@ public class Mundo3 extends javax.swing.JDialog implements Runnable{
         }        
         
     }
-    /**
-     * @param args the command line arguments
-     */
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Avatar;
@@ -914,7 +911,7 @@ public class Mundo3 extends javax.swing.JDialog implements Runnable{
                     hora++;
                 }
                 Tiempo.setText(hora + ":" + minuto + ":" + segundo);
-                System.out.println(hora + ":" + minuto + ":" + segundo);
+//                System.out.println(hora + ":" + minuto + ":" + segundo);
                 Thread.sleep(999);
             }
         } catch (Exception e) {

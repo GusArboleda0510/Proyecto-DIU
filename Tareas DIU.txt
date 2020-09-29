@@ -24,6 +24,8 @@ ALE cargar Label de avatar en los mundos
 
 ALE hacer sprites para los botones y agregar sonido, sonido y puntero
 
+Ale Verificar los Limites (Estan haciendo cosas raras->Esta dandome una posicion predeterminada)
+
 ALE Y GUS implementar sonidos en el juego
 
 		FASE 2 {logica de jugabilidad}
