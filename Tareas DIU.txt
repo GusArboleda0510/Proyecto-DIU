@@ -9,11 +9,11 @@ HECHO -- ALE implementar el cambio de mundo cuando llegue al final
 
 HECHO -- GUS implementar en XMLAvatar cargar y leer imagenes predeterminadas por ruta
 
-EN PROGRESO -- GUS implementar en crearAvatar cargar imagen del XML (Control)(leer matrices de XML y cargar en cuadricula de la vista)
+HECHO -- GUS implementar en crearAvatar cargar imagen del XML (Control)(leer matrices de XML y cargar en cuadricula de la vista)
+
+HECHO -- ALE tiempo de juego (total de mundos recorridos) 
 
 EN PROGRESO -- (IDEA GUS) implementar colisiones para los enemigos con el avatar
-
-EN PROGRESO -- ALE tiempo de juego (total de mundos recorridos) 
 
 GUS para la solucion de la lectura de XML para los mundos
 volver los limites de los mapas, metodos de la clase mundo

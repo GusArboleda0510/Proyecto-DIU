@@ -109,10 +109,11 @@ public class ControlCrearAvatar {
     private String obtenerColores() {
         String palabra = "";
         int n = colores.length;
-        palabra += "\n			";          
+        palabra += " \n			";          
         for (Color[] arrColores : colores) {
             for (Color color : arrColores) {
-                palabra += color.getRed() + " " + color.getGreen()+ " " + color.getBlue() +
+                palabra += formato(color.getRed()) + " " + formato(color.getGreen())+ " " + 
+                        formato(color.getBlue()) +
                         "\n			"; 
             }
             if(n > 1){
@@ -122,7 +123,26 @@ public class ControlCrearAvatar {
         }
         return palabra;
     }
-
+    private String formato(int num) {
+        String numero = "";
+        if(num == 0){
+            numero += num+"00";
+        }else{
+            String aux = num+"";
+            if(aux.length() == 2){
+                numero += "0"+num;
+            }else{
+                if(aux.length() == 1){
+                    numero += "00"+num;
+                }else{
+                    numero = num+"";            
+                }            
+            }
+        }
+        return numero;
+    }
+    
+    
     private void initImagen() throws Exception {
         archivoImagen = new File("src/Imagenes/Avatars/Usuarios/"+nickNameJugador+".png");
         if(archivoImagen.exists()){
@@ -410,7 +430,24 @@ public class ControlCrearAvatar {
     }
 
     private Color[][] obtenerColoresDeXML(String palabra) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Color[][] colors= new Color [8][8];
+        int r=0, g=0, b=0;
+        String[] aux0 = palabra.split("\n");
+        int cols = 0;
+        for (int j = 0; j < colors.length; j++) {
+            cols++;
+
+            for (int n = 0; n < colors[0].length; n++) {
+                String[] aux1 = aux0[cols].split(" ");
+                String pal = aux1[aux1.length-3];
+                r = Integer.parseInt(pal.substring(pal.length()-3, pal.length()));
+                g = Integer.parseInt(aux1[aux1.length-2]);
+                b = Integer.parseInt(aux1[aux1.length-1]);
+                colors[j][n] = new Color(formatoFondo(r), formatoFondo(g), formatoFondo(b));
+                cols++;
+            } 
+        }
+        return colors;
     }
     
     public Color[][] getColores() {
@@ -424,5 +461,12 @@ public class ControlCrearAvatar {
     public String getPredGrande() {
         return predGrande;
     }
-    
+
+    private int formatoFondo(int r) {
+        if(r == 233){
+            r = 253;
+        }
+        return r;
+    }
+ 
 }
