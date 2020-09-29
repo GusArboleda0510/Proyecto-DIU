@@ -1,30 +1,33 @@
 		FASE 1 {funcionalidad del proyecto}
 ---------------------------------------------------------------
 
-EN PROGRESO -- GUS añadir funcion de seleccionar avatar del XML
-	- consulta por nickName
 HECHO	- con el evento de jugar abro crearAvatar y 
 	desde alli cargar avatar de XML
 HECHO -- ALE implementar en crearAvatar cargar imagen del XML (vista) (implementar el panel)
-GUS implementar en crearAvatar cargar imagen del XML (Control)(leer matrices de XML y cargar en cuadricula de la vista)
+
+HECHO -- ALE implementar el cambio de mundo cuando llegue al final
+
+HECHO -- GUS implementar en XMLAvatar cargar y leer imagenes predeterminadas por ruta
+
+EN PROGRESO -- GUS implementar en crearAvatar cargar imagen del XML (Control)(leer matrices de XML y cargar en cuadricula de la vista)
+
+EN PROGRESO -- (IDEA GUS) implementar colisiones para los enemigos con el avatar
+
+EN PROGRESO -- ALE tiempo de juego (total de mundos recorridos) 
 
 GUS para la solucion de la lectura de XML para los mundos
 volver los limites de los mapas, metodos de la clase mundo
 
-ALE(IDEA GUS) implementar colisiones para los enemigos con el avatar
-
-
-
-HECHO -- ALE implementar el cambio de mundo cuando llegue al final
-
 ALE terminar limites
 
-HECHO -- GUS implementar en XMLAvatar cargar y leer imagenes predeterminadas por ruta
+ALE cargar Label de avatar en los mundos 
 
+ALE hacer sprites para los botones y agregar sonido, sonido y puntero
+
+ALE implementar sonidos en el juego
 
 		FASE 2 {logica de jugabilidad}
 ---------------------------------------------------------------
-ALE tiempo de juego (total de mundos recorridos) 
  
 GUS - ALE (SIN DEFINIR)  vidas (3; dependiente de 
 las colisiones; hacer que se vuelva al inicio del mapa;
@@ -41,8 +44,6 @@ GUS - ALE (SIN DEFINIR) XML de Score donde se guarde el historial de ganadores
 donde se almacene el nickName, el tiempo jugado, 
 el puntaje de cada jugador 
 
-implementar sonidos en el juego
-
 
 modificar las vistas 
 	- acomodar fondos 
@@ -52,4 +53,3 @@ TODO UNIFORME
 
 ALE - GUS (para el final) guia de controles para el usuario
 
-hacer sprites para los botones y agregar sonido, sonido y puntero

@@ -61,7 +61,9 @@ public class ControlCrearAvatar {
             }
         }
     }
-    
+    public ControlCrearAvatar(){
+        
+    }
     
     public void crearImagen() {
         try {
@@ -362,5 +364,65 @@ public class ControlCrearAvatar {
    
     }
 
+    public String[] obtenerNickNames() throws Exception {
+        String[] nombres;
+        ld = new LectordeDocs(avatars);
+        Document documento = ld.getDocumento();
+        NodeList lista = documento.getElementsByTagName("avatar");
+        nombres = new String[lista.getLength()];
+        for (int n = 0; n < lista.getLength(); n++) {
+            Node nodo = lista.item(n);
+            if (nodo.getNodeType() == Node.ELEMENT_NODE) {
+                Element avat = (Element) nodo;
+                nombres[n] = avat.getElementsByTagName("nickname").item(0).getTextContent();
+            }
+        }
+        return nombres;
+    }
 
+    
+    public String consultarXML(String nombre) throws Exception {
+        String dondeBuscar = "";
+        ld = new LectordeDocs(avatars);
+        Document documento = ld.getDocumento();
+        NodeList lista = documento.getElementsByTagName("avatar");
+        for (int n = 0; n < lista.getLength(); n++) {
+            Node nodo = lista.item(n);
+            if (nodo.getNodeType() == Node.ELEMENT_NODE) {
+                Element avat = (Element) nodo;
+                if (avat.getElementsByTagName("nickname").item(0).getTextContent().equalsIgnoreCase(nombre)) {
+                    String palabra = avat.getElementsByTagName("colores").item(0).getTextContent();
+                    if(!palabra.equals(" ")){
+                        dondeBuscar = "colores";
+                        colores = obtenerColoresDeXML(palabra);
+                    }else{
+                        if(!avat.getElementsByTagName("imgjuego").item(0).getTextContent().equals(" ")){
+                            dondeBuscar = "rutas";
+                            predPequenia = avat.getElementsByTagName("imgjuego").item(0).getTextContent();
+                            predGrande = avat.getElementsByTagName("imgVista").item(0).getTextContent();
+                        }
+                        
+                    }
+                }
+            }
+        }
+        return dondeBuscar;
+    }
+
+    private Color[][] obtenerColoresDeXML(String palabra) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    public Color[][] getColores() {
+        return colores;
+    }
+
+    public String getPredPequenia() {
+        return predPequenia;
+    }
+
+    public String getPredGrande() {
+        return predGrande;
+    }
+    
 }
