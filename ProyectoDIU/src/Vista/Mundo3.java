@@ -659,7 +659,6 @@ public class Mundo3 extends javax.swing.JDialog {
             if(m1.limites(x,y,"right")){
                 Avatar.setLocation(x+desplazamiento, y);
                 if (x>= 950&&y== 200) {
-                    System.out.println("ENTRO EL DESSGRACIADO");
                     dispose();
                     new Ganadores(null, true);
                 }

@@ -32,7 +32,7 @@ public class Menu extends javax.swing.JFrame {
         jBJugar = new javax.swing.JButton();
         jBCerrar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jbAvatar = new javax.swing.JButton();
+        jbGanadores = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -57,11 +57,11 @@ public class Menu extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Menu");
 
-        jbAvatar.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jbAvatar.setText("Elegir Avatar");
-        jbAvatar.addActionListener(new java.awt.event.ActionListener() {
+        jbGanadores.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jbGanadores.setText("Ganadores");
+        jbGanadores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbAvatarActionPerformed(evt);
+                jbGanadoresActionPerformed(evt);
             }
         });
 
@@ -81,7 +81,7 @@ public class Menu extends javax.swing.JFrame {
                 .addGap(58, 58, 58)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jbAvatar, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jbGanadores, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jBJugar, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -102,7 +102,7 @@ public class Menu extends javax.swing.JFrame {
                 .addGap(37, 37, 37)
                 .addComponent(jBJugar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
-                .addComponent(jbAvatar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbGanadores, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jBCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(63, 63, 63))
@@ -124,16 +124,16 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBJugarActionPerformed
-        new Mundo1(null, true);
+        new CrearAvatar(null, true);
     }//GEN-LAST:event_jBJugarActionPerformed
 
     private void jBCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCerrarActionPerformed
         dispose();
     }//GEN-LAST:event_jBCerrarActionPerformed
 
-    private void jbAvatarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAvatarActionPerformed
-        new CrearAvatar(null, true);
-    }//GEN-LAST:event_jbAvatarActionPerformed
+    private void jbGanadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGanadoresActionPerformed
+        new Ganadores(null, true);
+    }//GEN-LAST:event_jbGanadoresActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         new GuiaControles(null, true);
@@ -180,6 +180,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton jbAvatar;
+    private javax.swing.JButton jbGanadores;
     // End of variables declaration//GEN-END:variables
 }
