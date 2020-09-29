@@ -164,16 +164,16 @@ public class Mundo3 extends javax.swing.JDialog {
         Fondo = new javax.swing.JLabel();
         Informacion = new javax.swing.JPanel();
         jtVida = new javax.swing.JLabel();
-        jlTiempo = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jlVida1 = new javax.swing.JLabel();
         jlVida2 = new javax.swing.JLabel();
         jlVida3 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
+        jlVolver = new javax.swing.JLabel();
+        jlControlGuia = new javax.swing.JLabel();
+        jlTiempo = new javax.swing.JLabel();
+        jLabel96 = new javax.swing.JLabel();
+        Tiempo = new javax.swing.JLabel();
         jlPuntraje = new javax.swing.JLabel();
-        jLabel107 = new javax.swing.JLabel();
-        jlTiempo1 = new javax.swing.JLabel();
-        jlPuntraje1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -558,16 +558,6 @@ public class Mundo3 extends javax.swing.JDialog {
         jtVida.setText("Vida");
         Informacion.add(jtVida, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 60, 90, 30));
 
-        jlTiempo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jlTiempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlTiempo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Atras.png"))); // NOI18N
-        jlTiempo.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jlTiempovolverMenu(evt);
-            }
-        });
-        Informacion.add(jlTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 80, 40));
-
         jLabel10.setFont(new java.awt.Font("Tempus Sans ITC", 3, 36)); // NOI18N
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("NIVEL 3");
@@ -585,35 +575,45 @@ public class Mundo3 extends javax.swing.JDialog {
         jlVida3.setText("jLabel2");
         Informacion.add(jlVida3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 60, 40, 30));
 
-        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("----------");
-        Informacion.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 100, 20));
+        jlVolver.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jlVolver.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Atras.png"))); // NOI18N
+        jlVolver.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jlVolverVolverMenu(evt);
+            }
+        });
+        Informacion.add(jlVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 80, 40));
+
+        jlControlGuia.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jlControlGuia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlControlGuia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ayuda.png"))); // NOI18N
+        jlControlGuia.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jlControlGuiaControlGuia(evt);
+            }
+        });
+        Informacion.add(jlControlGuia, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 0, 80, 40));
+
+        jlTiempo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jlTiempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlTiempo.setText("Tiempo");
+        Informacion.add(jlTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 80, 40));
+
+        jLabel96.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel96.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel96.setText("----------");
+        Informacion.add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 60, 100, 20));
+
+        Tiempo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Tiempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Tiempo.setText("----------");
+        Informacion.add(Tiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 170, 30));
 
         jlPuntraje.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jlPuntraje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlPuntraje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ayuda.png"))); // NOI18N
-        jlPuntraje.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jlPuntrajeControlGuia(evt);
-            }
-        });
-        Informacion.add(jlPuntraje, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 0, 80, 40));
-
-        jLabel107.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel107.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel107.setText("----------");
-        Informacion.add(jLabel107, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 60, 100, 20));
-
-        jlTiempo1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jlTiempo1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlTiempo1.setText("Tiempo");
-        Informacion.add(jlTiempo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 80, 40));
-
-        jlPuntraje1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jlPuntraje1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlPuntraje1.setText("Puntaje");
-        Informacion.add(jlPuntraje1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 50, 80, 40));
+        jlPuntraje.setText("Puntaje");
+        Informacion.add(jlPuntraje, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 50, 80, 40));
 
         getContentPane().add(Informacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 100));
 
@@ -667,13 +667,13 @@ public class Mundo3 extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_Mapa1KeyPressed
 
-    private void jlTiempovolverMenu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlTiempovolverMenu
+    private void jlVolverVolverMenu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlVolverVolverMenu
         dispose();
-    }//GEN-LAST:event_jlTiempovolverMenu
+    }//GEN-LAST:event_jlVolverVolverMenu
 
-    private void jlPuntrajeControlGuia(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlPuntrajeControlGuia
+    private void jlControlGuiaControlGuia(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlControlGuiaControlGuia
         new GuiaControles(null, true);
-    }//GEN-LAST:event_jlPuntrajeControlGuia
+    }//GEN-LAST:event_jlControlGuiaControlGuia
      public class mapa1{
         
         boolean bloqueado = false;
@@ -751,6 +751,7 @@ public class Mundo3 extends javax.swing.JDialog {
     private javax.swing.JLabel Fondo;
     private javax.swing.JPanel Informacion;
     private javax.swing.JPanel Mapa1;
+    private javax.swing.JLabel Tiempo;
     private javax.swing.JLabel TransladorEntrada;
     private javax.swing.JLabel TransladorSalida;
     private javax.swing.JLabel jLabel1;
@@ -762,7 +763,6 @@ public class Mundo3 extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel104;
     private javax.swing.JLabel jLabel105;
     private javax.swing.JLabel jLabel106;
-    private javax.swing.JLabel jLabel107;
     private javax.swing.JLabel jLabel109;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel110;
@@ -782,7 +782,6 @@ public class Mundo3 extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
@@ -869,16 +868,17 @@ public class Mundo3 extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel93;
     private javax.swing.JLabel jLabel94;
     private javax.swing.JLabel jLabel95;
+    private javax.swing.JLabel jLabel96;
     private javax.swing.JLabel jLabel97;
     private javax.swing.JLabel jLabel98;
     private javax.swing.JLabel jLabel99;
+    private javax.swing.JLabel jlControlGuia;
     private javax.swing.JLabel jlPuntraje;
-    private javax.swing.JLabel jlPuntraje1;
     private javax.swing.JLabel jlTiempo;
-    private javax.swing.JLabel jlTiempo1;
     private javax.swing.JLabel jlVida1;
     private javax.swing.JLabel jlVida2;
     private javax.swing.JLabel jlVida3;
+    private javax.swing.JLabel jlVolver;
     private javax.swing.JLabel jtVida;
     // End of variables declaration//GEN-END:variables
 }
