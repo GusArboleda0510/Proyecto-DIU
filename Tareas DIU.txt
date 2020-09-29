@@ -24,7 +24,7 @@ ALE cargar Label de avatar en los mundos
 
 ALE hacer sprites para los botones y agregar sonido, sonido y puntero
 
-ALE implementar sonidos en el juego
+ALE Y GUS implementar sonidos en el juego
 
 		FASE 2 {logica de jugabilidad}
 ---------------------------------------------------------------
@@ -33,7 +33,7 @@ GUS - ALE (SIN DEFINIR)  vidas (3; dependiente de
 las colisiones; hacer que se vuelva al inicio del mapa;
 cuando son 3 --> GAME OVER)
 
-GUS - ALE (SIN DEFINIR) puntaje (dependiente de colisiones y cambio de mundos)
+ALE - GUS (SIN DEFINIR) puntaje (dependiente de colisiones y cambio de mundos)
 	- sumariamos 100 por pasar un mundo
 	- al pasar un mundo --> bonus de 50 x cada vida
 	-  
