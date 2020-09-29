@@ -7,13 +7,14 @@ package Vista;
 
 import Control.ControlTXT;
 import Control.Sonido;
+import Control.Tiempo;
 import java.awt.event.KeyEvent;
 
 /**
  *
  * @author Alejandra Becerra
  */
-public class Mundo2 extends javax.swing.JDialog implements Runnable{
+public class Mundo2 extends javax.swing.JDialog{
 
     /**
      * Creates new form Mundo_2
@@ -32,14 +33,15 @@ public class Mundo2 extends javax.swing.JDialog implements Runnable{
         Puntaje.setText(dato[2]);
         
          ////////////////////////PANELES////////////////////
-        Mapa1.setFocusable(true);
-        Mapa1.setVisible(true);
+        Mapa1.setFocusable(false);
+        Mapa1.setVisible(false);
         
-        Mapa2.setFocusable(false);
-        Mapa2.setVisible(false);
+        Mapa2.setFocusable(true);
+        Mapa2.setVisible(true);
         //////////////////////////////////////////////////////}
-        tiempo = new Thread(this);
-        tiempo.start();
+        String[] aux = dato[0].split(":");
+//        tiempo = new Tiempo(Tiempo, aux);
+//        tiempo.start();
         setVisible(true);
     }
     
@@ -1611,7 +1613,7 @@ public class Mundo2 extends javax.swing.JDialog implements Runnable{
         Avatar1.setBackground(new java.awt.Color(204, 51, 255));
         Avatar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
         Avatar1.setOpaque(true);
-        Mapa2.add(Avatar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 360, 40, 40));
+        Mapa2.add(Avatar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 40, 40));
 
         Fondo1.setBackground(new java.awt.Color(204, 51, 255));
         Fondo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoVerde.png"))); // NOI18N
@@ -1739,8 +1741,6 @@ public class Mundo2 extends javax.swing.JDialog implements Runnable{
                     Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
                     new Mundo3(null, true);
-                    dispose();
-                    new Mundo3(null, true);
                 }
             }
             break;
@@ -1750,7 +1750,7 @@ public class Mundo2 extends javax.swing.JDialog implements Runnable{
     private void Mapa2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Mapa2KeyPressed
         Mundo2.mapa2 m2 = new Mundo2.mapa2();
         int desplazamiento=10,x=Avatar1.getX(),y=Avatar1.getY();
-//        System.out.println(Avatar1.getLocation());//Ubicacion del la imagen en el panel
+        System.out.println(Avatar1.getLocation());//Ubicacion del la imagen en el panel
 
         switch(evt.getExtendedKeyCode()){//getExtendedKeyCode->Captura lo q hace el teclado y lo pasa a la variable X y Y
 
@@ -1781,6 +1781,12 @@ public class Mundo2 extends javax.swing.JDialog implements Runnable{
                 Avatar1.setLocation(x-desplazamiento, y);
                 if ((x>= 350 && y >= 360)&&(x<= 390 && y <= 360)) {
                     //Guardar XML (Puntaje,Vida,Tiempo)
+                    tiempo.stop();
+                    timepo= Tiempo.getText();
+                    vida="3";
+                    puntaje="100";
+                    txt.crearTXT(timepo, vida, puntaje);
+                    Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
                     new Mundo3(null, true);
                 }
@@ -1886,7 +1892,15 @@ public class Mundo2 extends javax.swing.JDialog implements Runnable{
         public boolean limites(int x, int y, String direccion){
             boolean limite=true;
             if(direccion.equals("up")){
-                    if (((x>=40 && x<= 920) && y == 60)
+                    if (((x>=40 && x<= 920) && y <= 50)
+                    ||(((x>=170 && x<= 240)||(x>=570 && x<= 640))&&y<= 100)
+                    ||((x<=90 || (x>=210 && x<=760)||x>=870)&&(y>=140 && y<=200))
+                            //////////////////////////
+//                    ||((x>=350 && x<=690)||(x>=850  && x<=890 )&&(y>=250 && y<310))
+//                    ||((x>=60 && x<=100)&&(y>=310 && y<340))
+//                    ||(x>=870&&(y>=350 && y<=390))
+//                    ||((x>=270 && x<=850)&&(y>=400 && y<=450))
+//                    ||((x<=90 ||(x>=200 && x<=240)||(x>=570 && x<=640)) && (y>=460 && y<=500))
                     ) 
                     {
                         return limite = false;
@@ -1919,7 +1933,9 @@ public class Mundo2 extends javax.swing.JDialog implements Runnable{
         }
         
     }
-    
+    public static void main(String[] args) {
+        new Mundo2(null, true);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Avatar;
@@ -2192,30 +2208,5 @@ public class Mundo2 extends javax.swing.JDialog implements Runnable{
     private javax.swing.JLabel jlVolver;
     private javax.swing.JLabel jtVida1;
     // End of variables declaration//GEN-END:variables
-@Override
-    public void run() {
-        try {
-            String[] aux = dato[0].split(":");
-            hora=Integer.parseInt(aux[0]);
-            minuto=Integer.parseInt(aux[1]);
-            segundo=Integer.parseInt(aux[2]);
-            while (true) {
-                segundo++;
-                if (segundo > 59) {
-                    segundo = 0;
-                    minuto++;
-                }
-                if (minuto > 59) {
-                    segundo = 0;
-                    minuto = 0;
-                    hora++;
-                }
-                Tiempo.setText(hora + ":" + minuto + ":" + segundo);
-//                System.out.println(hora + ":" + minuto + ":" + segundo);
-                Thread.sleep(999);
-            }
-        } catch (Exception e) {
-            System.out.println("Error RUN: " + e);
-        }
-    }
+
 }

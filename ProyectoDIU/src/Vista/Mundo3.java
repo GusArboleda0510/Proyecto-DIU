@@ -7,13 +7,14 @@ package Vista;
 
 import Control.ControlTXT;
 import Control.Sonido;
+import Control.Tiempo;
 import java.awt.event.KeyEvent;
 
 /**
  *
  * @author Alejandra Becerra
  */
-public class Mundo3 extends javax.swing.JDialog implements Runnable{
+public class Mundo3 extends javax.swing.JDialog {
 
     /**
      * Creates new form Mundo_3
@@ -36,8 +37,8 @@ public class Mundo3 extends javax.swing.JDialog implements Runnable{
         
 //        Mapa2.setFocusable(false);
 //        Mapa2.setVisible(false);
-        
-        tiempo = new Thread(this);
+        String[] aux = dato[0].split(":");
+        tiempo = new Tiempo(Tiempo, aux);
         tiempo.start();
         setVisible(true);
     }
@@ -666,11 +667,11 @@ public class Mundo3 extends javax.swing.JDialog implements Runnable{
             case KeyEvent.VK_RIGHT:
             if(m1.limites(x,y,"right")){
                 Avatar.setLocation(x+desplazamiento, y);
-                if (x>= 950&&y== 200) {
+                if (x>= 950 && y>= 200) {
                     tiempo.stop();
                     timepo=Tiempo.getText();
                     vida="3";
-                    puntaje="300";
+                    puntaje="200";
                     txt.crearTXT(timepo, vida, puntaje);
                     Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
@@ -893,31 +894,5 @@ public class Mundo3 extends javax.swing.JDialog implements Runnable{
     private javax.swing.JLabel jlVolver;
     private javax.swing.JLabel jtVida;
     // End of variables declaration//GEN-END:variables
-@Override
-    public void run() {
-        try {
-            String[] aux = dato[0].split(":");
-            hora=Integer.parseInt(aux[0]);
-            minuto=Integer.parseInt(aux[1]);
-            segundo=Integer.parseInt(aux[2]);
-            while (true) {
-                segundo++;
-                if (segundo > 59) {
-                    segundo = 0;
-                    minuto++;
-                }
-                if (minuto > 59) {
-                    segundo = 0;
-                    minuto = 0;
-                    hora++;
-                }
-                Tiempo.setText(hora + ":" + minuto + ":" + segundo);
-//                System.out.println(hora + ":" + minuto + ":" + segundo);
-                Thread.sleep(999);
-            }
-        } catch (Exception e) {
-            System.out.println("Error RUN: " + e);
-        }
-    
-    }
+
 }

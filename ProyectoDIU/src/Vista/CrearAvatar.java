@@ -1621,6 +1621,8 @@ public class CrearAvatar extends javax.swing.JDialog {
         }        
         try {
             cca = new ControlCrearAvatar(colores, nickName, ruta, imagenGrande);
+            Sonido s = new Sonido("PacmanIniciar.wav");
+             Thread.sleep(4500);
             new Mundo1(null, true);
             dispose();
         } catch (Exception ex) {
@@ -1891,9 +1893,7 @@ public class CrearAvatar extends javax.swing.JDialog {
     private void jbJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbJugarActionPerformed
          try {
              Sonido s = new Sonido("PacmanIniciar.wav");
-             System.out.println("1");
              Thread.sleep(4500);
-             System.out.println("2");
              new Mundo1(null, true);
          } catch (InterruptedException ex) {
              Logger.getLogger(CrearAvatar.class.getName()).log(Level.SEVERE, null, ex);
