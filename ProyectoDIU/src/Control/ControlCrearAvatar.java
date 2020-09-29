@@ -36,7 +36,7 @@ public class ControlCrearAvatar {
     Color[][] colores = new Color [2][6];
     CreadordeDocs cd;
     LectordeDocs ld;
-    File avatars = new File("Avatars.xml");
+    File avatars = new File("persistencia/Avatars.xml");
     String nickNameJugador;
     boolean reescribir;
     String predPequenia = null, predGrande = null;
