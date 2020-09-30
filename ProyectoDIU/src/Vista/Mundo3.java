@@ -5,6 +5,9 @@
  */
 package Vista;
 
+import Control.ControlTXT;
+import Control.Sonido;
+import Control.Tiempo;
 import java.awt.event.KeyEvent;
 
 /**
@@ -16,19 +19,27 @@ public class Mundo3 extends javax.swing.JDialog {
     /**
      * Creates new form Mundo_3
      */
+    ControlTXT txt = new ControlTXT();
+    Thread tiempo ;
+    int hora,minuto,segundo;
+    String timepo, puntaje,vida;
+    String[] dato;
     public Mundo3(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         
         //Carga XML (Timepo,Vida,Puntaje)
-        
+        dato =txt.leerTXT();
+        Puntaje.setText(dato[2]);
         ////////////////////////PANELES////////////////////
         Mapa1.setFocusable(true);
         Mapa1.setVisible(true);
         
 //        Mapa2.setFocusable(false);
 //        Mapa2.setVisible(false);
-        
+        String[] aux = dato[0].split(":");
+//        tiempo = new Tiempo(Tiempo, aux);
+//        tiempo.start();
         setVisible(true);
     }
 
@@ -171,9 +182,9 @@ public class Mundo3 extends javax.swing.JDialog {
         jlVolver = new javax.swing.JLabel();
         jlControlGuia = new javax.swing.JLabel();
         jlTiempo = new javax.swing.JLabel();
-        jLabel96 = new javax.swing.JLabel();
-        Tiempo = new javax.swing.JLabel();
         jlPuntraje = new javax.swing.JLabel();
+        Tiempo = new javax.swing.JLabel();
+        Puntaje = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -600,20 +611,20 @@ public class Mundo3 extends javax.swing.JDialog {
         jlTiempo.setText("Tiempo");
         Informacion.add(jlTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 80, 40));
 
-        jLabel96.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel96.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel96.setText("----------");
-        Informacion.add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 60, 100, 20));
+        jlPuntraje.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jlPuntraje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlPuntraje.setText("Puntaje");
+        Informacion.add(jlPuntraje, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 50, 80, 40));
 
         Tiempo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         Tiempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Tiempo.setText("----------");
         Informacion.add(Tiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 170, 30));
 
-        jlPuntraje.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jlPuntraje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlPuntraje.setText("Puntaje");
-        Informacion.add(jlPuntraje, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 50, 80, 40));
+        Puntaje.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Puntaje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Puntaje.setText("----------");
+        Informacion.add(Puntaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 60, 100, 20));
 
         getContentPane().add(Informacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 100));
 
@@ -624,9 +635,7 @@ public class Mundo3 extends javax.swing.JDialog {
     private void Mapa1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Mapa1KeyPressed
         Mundo3.mapa1 m1 = new Mundo3.mapa1();
         int desplazamiento=10,x=Avatar.getX(),y=Avatar.getY();
-        System.out.println(Avatar.getLocation());//Ubicacion del la imagen en el panel
-
-        ////////////////////////////////REUBICACION/////////////////////////////////////////////////
+//        System.out.println(Avatar.getLocation());//Ubicacion del la imagen en el panel
 
         switch(evt.getExtendedKeyCode()){//getExtendedKeyCode->Captura lo q hace el teclado y lo pasa a la variable X y Y
 
@@ -658,8 +667,14 @@ public class Mundo3 extends javax.swing.JDialog {
             case KeyEvent.VK_RIGHT:
             if(m1.limites(x,y,"right")){
                 Avatar.setLocation(x+desplazamiento, y);
-                if (x>= 950&&y== 200) {
+                if (x>= 950 && y>= 200) {
+                    timepo=Tiempo.getText();
+                    vida="3";
+                    puntaje="200";
+                    txt.crearTXT(timepo, vida, puntaje);
+                    Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
+                    //Leer el TXT-> y crear el XML(NickName,Puntaje,Tiempo)
                     new Ganadores(null, true);
                 }
             }
@@ -674,6 +689,7 @@ public class Mundo3 extends javax.swing.JDialog {
     private void jlControlGuiaControlGuia(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlControlGuiaControlGuia
         new GuiaControles(null, true);
     }//GEN-LAST:event_jlControlGuiaControlGuia
+
      public class mapa1{
         
         boolean bloqueado = false;
@@ -741,16 +757,13 @@ public class Mundo3 extends javax.swing.JDialog {
         }        
         
     }
-    /**
-     * @param args the command line arguments
-     */
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Avatar;
     private javax.swing.JLabel Fondo;
     private javax.swing.JPanel Informacion;
     private javax.swing.JPanel Mapa1;
+    private javax.swing.JLabel Puntaje;
     private javax.swing.JLabel Tiempo;
     private javax.swing.JLabel TransladorEntrada;
     private javax.swing.JLabel TransladorSalida;
@@ -868,7 +881,6 @@ public class Mundo3 extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel93;
     private javax.swing.JLabel jLabel94;
     private javax.swing.JLabel jLabel95;
-    private javax.swing.JLabel jLabel96;
     private javax.swing.JLabel jLabel97;
     private javax.swing.JLabel jLabel98;
     private javax.swing.JLabel jLabel99;
@@ -881,4 +893,5 @@ public class Mundo3 extends javax.swing.JDialog {
     private javax.swing.JLabel jlVolver;
     private javax.swing.JLabel jtVida;
     // End of variables declaration//GEN-END:variables
+
 }

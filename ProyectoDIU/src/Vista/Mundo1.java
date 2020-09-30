@@ -6,6 +6,9 @@
 package Vista;
 
 import Control.ControlEnemigos;
+import Control.ControlTXT;
+import Control.Sonido;
+import Control.Tiempo;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
 /**
@@ -23,11 +26,15 @@ public class Mundo1 extends javax.swing.JDialog {
     Mundo1.mapa2 jPMapa2 = new Mundo1.mapa2();
     Color colorea = new Color(240, 240, 240);
     
+    ControlTXT txt = new ControlTXT();
+    Thread tiempo;
+    String tiemp, puntaje,vida;
+    
     public Mundo1(java.awt.Frame parent, boolean modal)  {
         super(parent, modal);
         initComponents();
         String nombreMapa = decidirMapa();
-        tiempo();
+        Puntaje.setText("0");
         
 ////        llamarEnemigos(nombreMapa);
         contEnemigos = new ControlEnemigos(enemigo1,"mapa1"); 
@@ -36,6 +43,9 @@ public class Mundo1 extends javax.swing.JDialog {
         contEnemigos.start();
 //        avatarSprite = new AvatarSprite(enemigo1); 
 //        avatarSprite.start();
+        
+//        tiempo = new Tiempo(Tiempo,null);
+//        tiempo.start();
         setVisible(true);
     }
     public Mundo1(String nada) {
@@ -329,7 +339,7 @@ public class Mundo1 extends javax.swing.JDialog {
         jlVida3 = new javax.swing.JLabel();
         Tiempo = new javax.swing.JLabel();
         jlControlGuia = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        Puntaje = new javax.swing.JLabel();
         jlTiempo = new javax.swing.JLabel();
         jlPuntraje = new javax.swing.JLabel();
 
@@ -862,7 +872,7 @@ public class Mundo1 extends javax.swing.JDialog {
         Avatar1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Avatar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
         Avatar1.setOpaque(true);
-        Mapa2.add(Avatar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 560, 40, 40));
+        Mapa2.add(Avatar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 550, 40, 40));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoTierra.jpg"))); // NOI18N
         Mapa2.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 600));
@@ -1620,10 +1630,10 @@ public class Mundo1 extends javax.swing.JDialog {
         });
         Informacion.add(jlControlGuia, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 0, 80, 40));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("----------");
-        Informacion.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 60, 100, 20));
+        Puntaje.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Puntaje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Puntaje.setText("----------");
+        Informacion.add(Puntaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 60, 100, 20));
 
         jlTiempo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jlTiempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1669,7 +1679,7 @@ public class Mundo1 extends javax.swing.JDialog {
     private void Mapa2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Mapa2KeyPressed
         mapa2 m2 = new mapa2();
         int desplazamiento=10,x=Avatar1.getX(),y=Avatar1.getY();
-        System.out.println(Avatar1.getLocation());//Ubicacion del la imagen en el panel
+//        System.out.println(Avatar1.getLocation());//Ubicacion del la imagen en el panel
 
         switch(evt.getExtendedKeyCode()){//getExtendedKeyCode->Captura lo q hace el teclado y lo pasa a la variable X y Y
 
@@ -1682,8 +1692,14 @@ public class Mundo1 extends javax.swing.JDialog {
             case KeyEvent.VK_DOWN:
             if(m2.limites(x,y,"down")){
                 Avatar1.setLocation(x, y+desplazamiento);
-                if (x >= 600 && y >=560) {
+                if (x >= 600 && y >=570) {
                     //Guardar XML (Puntaje,Vida,Tiempo)
+//                    tiempo.stop();
+                    tiemp= Tiempo.getText();
+                    vida="3";
+                    puntaje="100";
+                    txt.crearTXT(tiemp, vida, puntaje);
+                    Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
                     new Mundo2(null, true);
                 }
@@ -1706,7 +1722,7 @@ public class Mundo1 extends javax.swing.JDialog {
         mapa1 m1 = new mapa1();
         System.out.println("tal");
         int desplazamiento=10,x=Avatar.getX(),y=Avatar.getY();
-        System.out.println(Avatar.getLocation());//Ubicacion del la imagen en el panel
+//        System.out.println(Avatar.getLocation());//Ubicacion del la imagen en el panel
 
         switch(evt.getExtendedKeyCode()){//getExtendedKeyCode->Captura lo q hace el teclado y lo pasa a la variable X y Y
 
@@ -1732,6 +1748,12 @@ public class Mundo1 extends javax.swing.JDialog {
                 Avatar.setLocation(x+desplazamiento, y);
                 if (x>= 900 && y >= 500) {
                     //Guardar XML (Puntaje,Vida,Tiempo)
+//                    tiempo.stop();
+                    vida="3";
+                    puntaje="100";
+                    tiemp=Tiempo.getText();
+                    txt.crearTXT(tiemp, vida, puntaje);
+                    Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
                     new Mundo2(null, true);
                 }
@@ -1785,36 +1807,10 @@ public class Mundo1 extends javax.swing.JDialog {
         
         }
     }
-
+   
     private int  buscarCantEnemigos() {
         return 2;
     }
-
-    private void tiempo()  {
-        for (int hora = 0; hora < 60; hora++) {
-        for (int minuto = 0; minuto < 60; minuto++) {
-            for (int segundo = 0; segundo < 60; segundo++) {
-                if(segundo<9 && minuto<9){
-//                    System.out.println(hora+":0"+minuto +":"+"0"+segundo);
-                    Tiempo.setText(hora+":0"+minuto +":"+"0"+segundo);
-                }
-                
-                Tiempo.setText(hora+":"+minuto +":"+ segundo);
-                
-                metodoSleep();
-            }
-    }
-        
-            
-        }
-    }
-    private  static void metodoSleep(){
-        try {
-            Thread.sleep(100);
-        } catch (Exception e) {
-        }
-    }
-
     public class mapa1{
         
         boolean bloqueado = false;
@@ -1979,9 +1975,6 @@ public class Mundo1 extends javax.swing.JDialog {
             return limite;
         }
     }
-    /**
-     * @param args the command line arguments
-     */
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1991,6 +1984,7 @@ public class Mundo1 extends javax.swing.JDialog {
     private javax.swing.JPanel Informacion;
     private javax.swing.JPanel Mapa1;
     private javax.swing.JPanel Mapa2;
+    private javax.swing.JLabel Puntaje;
     private javax.swing.JLabel Tiempo;
     private javax.swing.JLabel enemigo1;
     private javax.swing.JLabel enemigo2;
@@ -2250,7 +2244,6 @@ public class Mundo1 extends javax.swing.JDialog {
     private javax.swing.JLabel j98;
     private javax.swing.JLabel j99;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jlControlGuia;
     private javax.swing.JLabel jlPuntraje;
     private javax.swing.JLabel jlTiempo;
@@ -2260,4 +2253,5 @@ public class Mundo1 extends javax.swing.JDialog {
     private javax.swing.JLabel jlVolver;
     private javax.swing.JLabel jtVida;
     // End of variables declaration//GEN-END:variables
+
 }
