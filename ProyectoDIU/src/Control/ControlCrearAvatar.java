@@ -86,16 +86,21 @@ public class ControlCrearAvatar {
         
         Element nickName = documento.createElement("nickname");
         nickName.appendChild(documento.createTextNode(nickNameJugador));
-        avatar.appendChild(nickName);
+        avatar.appendChild(nickName);       
         
-        Element colores = documento.createElement("colores");
-        colores.appendChild(documento.createTextNode(obtenerColores()));
-        avatar.appendChild(colores);           
-        
+        String palabraColores;
         if(predPequenia == null){
             predPequenia = " ";
             predGrande = " ";
-        }
+            palabraColores = obtenerColores();
+        }else{
+            palabraColores = " ";
+        }  
+                
+        Element colores = documento.createElement("colores");
+        colores.appendChild(documento.createTextNode(palabraColores));
+        avatar.appendChild(colores);             
+        
         Element rutapeq = documento.createElement("imgjuego");
         rutapeq.appendChild(documento.createTextNode(predPequenia));
         avatar.appendChild(rutapeq);
@@ -222,9 +227,6 @@ public class ControlCrearAvatar {
         ImageIcon pequenia = new ImageIcon(new ImageIcon(getClass().getResource(predPequenia)).getImage());
         g.drawImage(pequenia.getImage(), 0, 0, null);
     }
-        
-        
-        
         
     public void dibujarImagen() {
         Graphics g = imagen.getGraphics();

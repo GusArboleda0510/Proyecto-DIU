@@ -11,9 +11,15 @@ HECHO -- GUS implementar en XMLAvatar cargar y leer imagenes predeterminadas por
 
 HECHO -- GUS implementar en crearAvatar cargar imagen del XML (Control)(leer matrices de XML y cargar en cuadricula de la vista)
 
-HECHO -- ALE tiempo de juego (total de mundos recorridos) 
+HECHO -- GUS - ALE (SIN DEFINIR) PARA EL PASO DE INFORMACION ENTRE MUNDOS (xml O txt):tiempo-vidas-puntaje
+
+EN PROGRESO -- ALE tiempo de juego (total de mundos recorridos) 
 
 EN PROGRESO -- (IDEA GUS) implementar colisiones para los enemigos con el avatar
+
+EN PROGRESO -- AL - GUS implementar sonidos en el juego
+
+EN PROGRESO -- ALE hacer sprites para los botones y agregar sonido  y puntero
 
 GUS para la solucion de la lectura de XML para los mundos
 volver los limites de los mapas, metodos de la clase mundo
@@ -22,11 +28,8 @@ ALE terminar limites
 
 ALE cargar Label de avatar en los mundos 
 
-HECHO -- ALE hacer sprites para los botones y agregar sonido, sonido y puntero
-
 Ale Verificar los Limites (Estan haciendo cosas raras->Esta dandome una posicion predeterminada)
 
-ALE Y GUS implementar sonidos en el juego
 
 		FASE 2 {logica de jugabilidad}
 ---------------------------------------------------------------
@@ -37,10 +40,7 @@ cuando son 3 --> GAME OVER)
 
 ALE - GUS (SIN DEFINIR) puntaje (dependiente de colisiones y cambio de mundos)
 	- sumariamos 100 por pasar un mundo
-	- al pasar un mundo --> bonus de 50 x cada vida
-	-  
-
-GUS - ALE (SIN DEFINIR) PARA EL PASO DE INFORMACION ENTRE MUNDOS (xml O txt):tiempo-vidas-puntaje
+	- al pasar un mundo --> bonus de 50 x cada vida 
 
 GUS - ALE (SIN DEFINIR) XML de Score donde se guarde el historial de ganadores
 donde se almacene el nickName, el tiempo jugado, 
