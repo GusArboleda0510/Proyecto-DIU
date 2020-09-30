@@ -38,8 +38,8 @@ public class Mundo3 extends javax.swing.JDialog {
 //        Mapa2.setFocusable(false);
 //        Mapa2.setVisible(false);
         String[] aux = dato[0].split(":");
-        tiempo = new Tiempo(Tiempo, aux);
-        tiempo.start();
+//        tiempo = new Tiempo(Tiempo, aux);
+//        tiempo.start();
         setVisible(true);
     }
 
@@ -668,7 +668,6 @@ public class Mundo3 extends javax.swing.JDialog {
             if(m1.limites(x,y,"right")){
                 Avatar.setLocation(x+desplazamiento, y);
                 if (x>= 950 && y>= 200) {
-                    tiempo.stop();
                     timepo=Tiempo.getText();
                     vida="3";
                     puntaje="200";

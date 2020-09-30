@@ -47,7 +47,7 @@ public class Tiempo extends Thread{
                 }
                 Tiempo.setText(hora + ":" + minuto + ":" + segundo);
                 System.out.println(hora + ":" + minuto + ":" + segundo);
-                TimeUnit.MILLISECONDS.sleep(999);
+                TimeUnit.SECONDS.sleep(1);
             }
         } catch (Exception e) {
             System.out.println("Error RUN: " + e);

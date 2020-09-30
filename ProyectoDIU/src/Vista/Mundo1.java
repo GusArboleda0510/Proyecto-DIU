@@ -34,7 +34,6 @@ public class Mundo1 extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         String nombreMapa = decidirMapa();
-        
         Puntaje.setText("0");
         
 ////        llamarEnemigos(nombreMapa);
@@ -45,8 +44,8 @@ public class Mundo1 extends javax.swing.JDialog {
 //        avatarSprite = new AvatarSprite(enemigo1); 
 //        avatarSprite.start();
         
-        tiempo = new Tiempo(Tiempo,null);
-        tiempo.start();
+//        tiempo = new Tiempo(Tiempo,null);
+//        tiempo.start();
         setVisible(true);
     }
     public Mundo1(String nada) {
@@ -1695,7 +1694,7 @@ public class Mundo1 extends javax.swing.JDialog {
                 Avatar1.setLocation(x, y+desplazamiento);
                 if (x >= 600 && y >=570) {
                     //Guardar XML (Puntaje,Vida,Tiempo)
-                    tiempo.stop();
+//                    tiempo.stop();
                     tiemp= Tiempo.getText();
                     vida="3";
                     puntaje="100";
@@ -1749,7 +1748,7 @@ public class Mundo1 extends javax.swing.JDialog {
                 Avatar.setLocation(x+desplazamiento, y);
                 if (x>= 900 && y >= 500) {
                     //Guardar XML (Puntaje,Vida,Tiempo)
-                    tiempo.stop();
+//                    tiempo.stop();
                     vida="3";
                     puntaje="100";
                     tiemp=Tiempo.getText();

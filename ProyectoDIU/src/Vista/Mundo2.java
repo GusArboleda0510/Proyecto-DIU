@@ -1613,7 +1613,7 @@ public class Mundo2 extends javax.swing.JDialog{
         Avatar1.setBackground(new java.awt.Color(204, 51, 255));
         Avatar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
         Avatar1.setOpaque(true);
-        Mapa2.add(Avatar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 40, 40));
+        Mapa2.add(Avatar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 450, 40, 40));
 
         Fondo1.setBackground(new java.awt.Color(204, 51, 255));
         Fondo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoVerde.png"))); // NOI18N
@@ -1718,7 +1718,7 @@ public class Mundo2 extends javax.swing.JDialog{
                 Avatar.setLocation(x-desplazamiento, y);
                 if ((x>= 440 && y >= 228)&& (x<=510  && y<=290 )) {
                     //Guardar XML (Puntaje,Vida,Tiempo)
-                    tiempo.stop();
+
                     timepo= Tiempo.getText();
                     vida="3";
                     puntaje="100";
@@ -1733,7 +1733,7 @@ public class Mundo2 extends javax.swing.JDialog{
                 Avatar.setLocation(x+desplazamiento, y);
                 if ((x>= 440 && y >= 228)&& (x<=510  && y<=290 )) {
                     //Guardar XML (Puntaje,Vida,Tiempo)
-                    tiempo.stop();
+//                    tiempo.stop();
                     timepo= Tiempo.getText();
                     vida="3";
                     puntaje="100";
@@ -1765,14 +1765,14 @@ public class Mundo2 extends javax.swing.JDialog{
                 Avatar1.setLocation(x, y+desplazamiento);
                 if ((x>= 350 && y >= 200)&&(x<= 350 && y <= 360)) {
                     //Guardar XML (Puntaje,Vida,Tiempo)
-                    tiempo.stop();
+//                    tiempo.stop();
                     timepo= Tiempo.getText();
                     vida="3";
                     puntaje="100";
                     txt.crearTXT(timepo, vida, puntaje);
-                    Sonido s = new Sonido("cambioMundo.wav");
-                    dispose();
-                    new Mundo3(null, true);
+//                    Sonido s = new Sonido("cambioMundo.wav");
+//                    dispose();
+//                    new Mundo3(null, true);
                 }
             }
             break;
@@ -1781,7 +1781,7 @@ public class Mundo2 extends javax.swing.JDialog{
                 Avatar1.setLocation(x-desplazamiento, y);
                 if ((x>= 350 && y >= 360)&&(x<= 390 && y <= 360)) {
                     //Guardar XML (Puntaje,Vida,Tiempo)
-                    tiempo.stop();
+//                    tiempo.stsop();
                     timepo= Tiempo.getText();
                     vida="3";
                     puntaje="100";
@@ -1894,41 +1894,42 @@ public class Mundo2 extends javax.swing.JDialog{
             if(direccion.equals("up")){
                     if (((x>=40 && x<= 920) && y <= 50)
                     ||(((x>=170 && x<= 240)||(x>=570 && x<= 640))&&y<= 100)
-                    ||((x<=90 || (x>=210 && x<=760)||x>=870)&&(y>=140 && y<=200))
-                            //////////////////////////
-//                    ||((x>=350 && x<=690)||(x>=850  && x<=890 )&&(y>=250 && y<310))
-//                    ||((x>=60 && x<=100)&&(y>=310 && y<340))
-//                    ||(x>=870&&(y>=350 && y<=390))
-//                    ||((x>=270 && x<=850)&&(y>=400 && y<=450))
-//                    ||((x<=90 ||(x>=200 && x<=240)||(x>=570 && x<=640)) && (y>=460 && y<=500))
+                    ||((x<=90 || (x>=200 && x<=760)||x>=870)&&(y>=140 && y<=200))
+                    ||(((x>=350 && x<=690)||(x>=850  && x<=890 ))&&(y>=250 && y<310))
+                    ||(x>=70 && x<=120)&&(y>=310 && y<=360)
+                    ||(x>=870&&(y>=350 && y<=400))
+                    ||((x>=270 && x<=840)&& (y>400 && y<=450))
+                    ||((x<=90 ||(x>=200 && x<=240)||(x>=570 && x<=640)) && (y>=460 && y<=500))   
                     ) 
                     {
                         return limite = false;
                     }
                 }
             if(direccion.equals("down")){
-                if(((x>=-40 && x<=900)) && y==510
-                    )
-                    {
-                        return limite = false;
-                    }
-            }
-            if(direccion.equals("right")){
-                if(((y>=420 && y<= 490)||(y>=70 && y<=190)||(y>=220 &&y<=290)) && x==60
                 
+                if(((x<=90 || (x>=120 && x<=760)) && (y>=100 && y<140))
+//                || ()
                     )
                     {
                         return limite = false;
                     }
             }
-            if(direccion.equals("left")){
-                if((y>=0 && y<=490) && x==50
-                )
-                    
-                    {
-                        return limite = false;
-                    }
-            }
+//            if(direccion.equals("right")){
+//                if(((y>=420 && y<= 490)||(y>=70 && y<=190)||(y>=220 &&y<=290)) && x==60
+//                
+//                    )
+//                    {
+//                        return limite = false;
+//                    }
+//            }
+//            if(direccion.equals("left")){
+//                if((y>=0 && y<=490) && x==50
+//                )
+//                    
+//                    {
+//                        return limite = false;
+//                    }
+//            }
             return limite;
         }
         
