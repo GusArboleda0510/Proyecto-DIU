@@ -39,9 +39,12 @@ public class Mundo2 extends javax.swing.JDialog{
         Mapa2.setFocusable(true);
         Mapa2.setVisible(true);
         //////////////////////////////////////////////////////}
+        System.out.println("\nMUNDO2\n");
         String[] aux = dato[0].split(":");
-//        tiempo = new Tiempo(Tiempo, aux);
-//        tiempo.start();
+        tiempo = new Tiempo(Tiempo, aux);
+        System.out.println("... " + tiempo.interrupted());
+        tiempo.start();
+        
         setVisible(true);
     }
     
@@ -322,8 +325,8 @@ public class Mundo2 extends javax.swing.JDialog{
         jlControlGuia = new javax.swing.JLabel();
         jlTiempo = new javax.swing.JLabel();
         jlPuntraje = new javax.swing.JLabel();
-        Tiempo = new javax.swing.JLabel();
         Puntaje = new javax.swing.JLabel();
+        Tiempo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -1613,7 +1616,7 @@ public class Mundo2 extends javax.swing.JDialog{
         Avatar1.setBackground(new java.awt.Color(204, 51, 255));
         Avatar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
         Avatar1.setOpaque(true);
-        Mapa2.add(Avatar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 450, 40, 40));
+        Mapa2.add(Avatar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 500, 40, 40));
 
         Fondo1.setBackground(new java.awt.Color(204, 51, 255));
         Fondo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoVerde.png"))); // NOI18N
@@ -1678,15 +1681,15 @@ public class Mundo2 extends javax.swing.JDialog{
         jlPuntraje.setText("Puntaje");
         Informacion1.add(jlPuntraje, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 50, 80, 40));
 
-        Tiempo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        Tiempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Tiempo.setText("----------");
-        Informacion1.add(Tiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 170, 30));
-
         Puntaje.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         Puntaje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Puntaje.setText("----------");
         Informacion1.add(Puntaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 60, 100, 20));
+
+        Tiempo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Tiempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Tiempo.setText("00:00:01");
+        Informacion1.add(Tiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 170, 30));
 
         getContentPane().add(Informacion1);
         Informacion1.setBounds(0, 0, 1000, 100);
@@ -1723,6 +1726,7 @@ public class Mundo2 extends javax.swing.JDialog{
                     vida="3";
                     puntaje="100";
                     txt.crearTXT(timepo, vida, puntaje);
+                    tiempo.interrupt();
                     dispose();
                     new Mundo3(null, true);
                 }
@@ -1750,7 +1754,7 @@ public class Mundo2 extends javax.swing.JDialog{
     private void Mapa2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Mapa2KeyPressed
         Mundo2.mapa2 m2 = new Mundo2.mapa2();
         int desplazamiento=10,x=Avatar1.getX(),y=Avatar1.getY();
-        System.out.println(Avatar1.getLocation());//Ubicacion del la imagen en el panel
+//        System.out.println(Avatar1.getLocation());//Ubicacion del la imagen en el panel
 
         switch(evt.getExtendedKeyCode()){//getExtendedKeyCode->Captura lo q hace el teclado y lo pasa a la variable X y Y
 
@@ -1770,9 +1774,9 @@ public class Mundo2 extends javax.swing.JDialog{
                     vida="3";
                     puntaje="100";
                     txt.crearTXT(timepo, vida, puntaje);
-//                    Sonido s = new Sonido("cambioMundo.wav");
-//                    dispose();
-//                    new Mundo3(null, true);
+                    Sonido s = new Sonido("cambioMundo.wav");
+                    dispose();
+                    new Mundo3(null, true);
                 }
             }
             break;
@@ -1780,7 +1784,7 @@ public class Mundo2 extends javax.swing.JDialog{
             if(m2.limites(x,y,"left")){
                 Avatar1.setLocation(x-desplazamiento, y);
                 if ((x>= 350 && y >= 360)&&(x<= 390 && y <= 360)) {
-                    //Guardar XML (Puntaje,Vida,Tiempo)
+//                    Guardar XML (Puntaje,Vida,Tiempo)
 //                    tiempo.stsop();
                     timepo= Tiempo.getText();
                     vida="3";
@@ -1896,7 +1900,7 @@ public class Mundo2 extends javax.swing.JDialog{
                     ||(((x>=170 && x<= 240)||(x>=570 && x<= 640))&&y<= 100)
                     ||((x<=90 || (x>=200 && x<=760)||x>=870)&&(y>=140 && y<=200))
                     ||(((x>=350 && x<=690)||(x>=850  && x<=890 ))&&(y>=250 && y<310))
-                    ||(x>=70 && x<=120)&&(y>=310 && y<=360)
+                    ||(x>=70 && x<=120)&&(y>=310 && y<=350)
                     ||(x>=870&&(y>=350 && y<=400))
                     ||((x>=270 && x<=840)&& (y>400 && y<=450))
                     ||((x<=90 ||(x>=200 && x<=240)||(x>=570 && x<=640)) && (y>=460 && y<=500))   
@@ -1907,29 +1911,57 @@ public class Mundo2 extends javax.swing.JDialog{
                 }
             if(direccion.equals("down")){
                 
-                if(((x<=90 || (x>=120 && x<=760)) && (y>=100 && y<140))
-//                || ()
+                if(((x<=90 || (x>=120 && x<=760) || (x> 860 && x<920)) && (y>=110 && y<140))
+                || ((x>=370 && x< 450)&&(y>=60 && y<100))
+                || (((x>=270 && x<= 690)||(x>=850 && x<= 890))&&(y>=210 && y<300))
+                || ((x>=350 && x< 770)&&(y>=360 && y<400))
+                || ((x>=70 && x< 120)&&(y>=260 && y<300))
+                || (((x>=50 && x< 90) || (x>=200 && x< 250))&&(y>=410 && y<460))
+                || (((x>=370 && x< 450) || (x>=770 && x< 850))&&(y>=460 && y<500))
+                || ((x>=10 && x<=910 )&& y>=510)
+                || ((x>=870 && x<=910 )&& (y>=310 && y<350))
+                || ((x>=770 && x<=840 )&& (y>=60 && y< 110))
                     )
                     {
                         return limite = false;
                     }
             }
-//            if(direccion.equals("right")){
-//                if(((y>=420 && y<= 490)||(y>=70 && y<=190)||(y>=220 &&y<=290)) && x==60
-//                
-//                    )
-//                    {
-//                        return limite = false;
-//                    }
-//            }
-//            if(direccion.equals("left")){
-//                if((y>=0 && y<=490) && x==50
-//                )
-//                    
-//                    {
-//                        return limite = false;
-//                    }
-//            }
+            if(direccion.equals("right")){
+                if((y <= 90 && (x >=160 && x <210))
+                ||((y>=120 &&y <= 510) && (x >=110 && x <150))
+                ||((y>=270 &&y <= 340) && (x >=60 && x <100))
+                ||((y>=220 &&y <= 440) && (x >=260 && x <300))
+                ||(((y>=70 &&y <= 110)||(y>=470 &&y <= 510)) && (x >=360 && x <410))
+                ||(((y>=50 &&y <= 90)||(y>=450 &&y <= 490)) && (x >=560 && x <610))
+                ||(((y>=70 &&y <= 110)||(y>=470 &&y <= 510)|| (y>=200 &&y <= 360)) && (x >=760 && x <810))
+                        
+                ||(((y>=120 &&y <= 190)||(y>=320 &&y <= 390)) && x>=860)
+                ||((y>=50 &&y <= 510) && x>=910)
+                
+                
+                    )
+                    {
+                        return limite = false;
+                    }
+            }
+            if(direccion.equals("left")){
+                if((y>=50 && y<=410) && x<=50
+                ||((y>=120 && y<=190)||(y>=420 && y<=490)) && (x>50 && x<=100)
+                ||((y>=50 && y<=90)||(y>=420 && y<=490)) && (x>210 && x<=250)
+                ||(y>=200 && y<=510) && (x>180 && x<=200)
+                ||((y>=70 && y<=110)||(y>=470 && y<=510)) && (x>400 && x<=450)
+                ||((y>=50 && y<=90)||(y>=450 && y<=490)) && (x>600 && x<=650)
+                ||(y>=300 && y<=360) && (x>300 && x<=350)
+                ||(y>=220 && y<=290) && (x>590 && x<=700)
+                ||(y>=70 && y<=440) && (x>800 && x<=850)
+                ||((y>=70 && y<=440)||(y>=470 && y<=510)) && (x>800 && x<=850)
+                ||(y>=220 && y<=300) && (x>860 && x<=900)
+                )
+                    
+                    {
+                        return limite = false;
+                    }
+            }
             return limite;
         }
         

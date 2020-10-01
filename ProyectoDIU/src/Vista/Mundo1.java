@@ -10,6 +10,7 @@ import Control.ControlTXT;
 import Control.Sonido;
 import Control.Tiempo;
 import java.awt.Color;
+import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 /**
  *
@@ -27,7 +28,7 @@ public class Mundo1 extends javax.swing.JDialog {
     Color colorea = new Color(240, 240, 240);
     
     ControlTXT txt = new ControlTXT();
-    Thread tiempo;
+     Tiempo t; 
     String tiemp, puntaje,vida;
     
     public Mundo1(java.awt.Frame parent, boolean modal)  {
@@ -37,15 +38,15 @@ public class Mundo1 extends javax.swing.JDialog {
         Puntaje.setText("0");
         
 ////        llamarEnemigos(nombreMapa);
-        contEnemigos = new ControlEnemigos(enemigo1,"mapa1"); 
+        contEnemigos = new ControlEnemigos(enemigo1,"mapa1","tiempo",Tiempo); 
         contEnemigos.start();
-        contEnemigos = new ControlEnemigos(enemigo2,"mapa1"); 
+        contEnemigos = new ControlEnemigos(enemigo2,"mapa1","",null); 
         contEnemigos.start();
 //        avatarSprite = new AvatarSprite(enemigo1); 
 //        avatarSprite.start();
+        t= new Tiempo(Tiempo, null);
+         t.start();
         
-//        tiempo = new Tiempo(Tiempo,null);
-//        tiempo.start();
         setVisible(true);
     }
     public Mundo1(String nada) {
@@ -1617,7 +1618,7 @@ public class Mundo1 extends javax.swing.JDialog {
 
         Tiempo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         Tiempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Tiempo.setText("----------");
+        Tiempo.setText("00:00:01");
         Informacion.add(Tiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 170, 30));
 
         jlControlGuia.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -1698,6 +1699,7 @@ public class Mundo1 extends javax.swing.JDialog {
                     tiemp= Tiempo.getText();
                     vida="3";
                     puntaje="100";
+                    t.interrupt();
                     txt.crearTXT(tiemp, vida, puntaje);
                     Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
@@ -1752,6 +1754,7 @@ public class Mundo1 extends javax.swing.JDialog {
                     vida="3";
                     puntaje="100";
                     tiemp=Tiempo.getText();
+                    t.interrupt();
                     txt.crearTXT(tiemp, vida, puntaje);
                     Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
@@ -1763,6 +1766,7 @@ public class Mundo1 extends javax.swing.JDialog {
     }//GEN-LAST:event_Mapa1KeyPressed
 
     private void VolverMenu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VolverMenu
+        
         dispose();
     }//GEN-LAST:event_VolverMenu
 
@@ -1795,12 +1799,12 @@ public class Mundo1 extends javax.swing.JDialog {
         int cantEnemigos = buscarCantEnemigos();
         if(nombreMapa.equals("mapa1")){
             for (int n = 1; n <= cantEnemigos; n++) {
-                contEnemigos = new ControlEnemigos(enemigo1,"mapa1"); 
+                contEnemigos = new ControlEnemigos(enemigo1,"mapa1","",null); 
                 contEnemigos.start();
             }
         if(nombreMapa.equals("mapa2")){
             for (int n = 1; n <= cantEnemigos; n++) {
-                contEnemigos = new ControlEnemigos(enemigo1,"mapa2"); 
+                contEnemigos = new ControlEnemigos(enemigo1,"mapa2","",null); 
                 contEnemigos.start();
             }
         }
@@ -1817,7 +1821,6 @@ public class Mundo1 extends javax.swing.JDialog {
         int desplazamiento=10;
         
         public mapa1(){
-
         }
         
         public boolean limites(int x, int y, String direccion){
@@ -1906,7 +1909,8 @@ public class Mundo1 extends javax.swing.JDialog {
     
     public class mapa2{
 
-        public mapa2() {    
+        public mapa2() {   
+            
         }
         public boolean limites(int x, int y, String direccion){
             boolean limite=true;
@@ -2254,4 +2258,9 @@ public class Mundo1 extends javax.swing.JDialog {
     private javax.swing.JLabel jtVida;
     // End of variables declaration//GEN-END:variables
 
+
+    
+    
+    
+    
 }

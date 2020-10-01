@@ -29,6 +29,8 @@ public class CrearAvatar extends javax.swing.JDialog {
     String imgPeque = null;
     String imgGrande = null;
     Sonido s;
+    
+    
     public CrearAvatar(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();

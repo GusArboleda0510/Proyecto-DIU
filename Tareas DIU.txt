@@ -24,7 +24,7 @@ EN PROGRESO -- ALE hacer sprites para los botones y agregar sonido  y puntero
 GUS para la solucion de la lectura de XML para los mundos
 volver los limites de los mapas, metodos de la clase mundo
 
-ALE terminar limites
+HECHO ALE terminar limites
 
 ALE cargar Label de avatar en los mundos 
 

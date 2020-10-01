@@ -5,14 +5,18 @@
  */
 package Control;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.concurrent.TimeUnit;
 import javax.swing.JLabel;
+import javax.swing.Timer;
 
 /**
  *
  * @author Alejandra Becerra
  */
-public class Tiempo extends Thread{
+
+   public class Tiempo extends Thread{
     int hora,minuto,segundo;
     JLabel Tiempo;
     String[] dato;
@@ -45,7 +49,7 @@ public class Tiempo extends Thread{
                     minuto = 0;
                     hora++;
                 }
-                Tiempo.setText(hora + ":" + minuto + ":" + segundo);
+//                Tiempo.setText(hora + ":" + minuto + ":" + segundo);
                 System.out.println(hora + ":" + minuto + ":" + segundo);
                 TimeUnit.SECONDS.sleep(1);
             }

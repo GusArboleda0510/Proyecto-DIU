@@ -35,11 +35,10 @@ public class Mundo3 extends javax.swing.JDialog {
         Mapa1.setFocusable(true);
         Mapa1.setVisible(true);
         
-//        Mapa2.setFocusable(false);
-//        Mapa2.setVisible(false);
+        System.out.println("\nMUNDO3\n");       
         String[] aux = dato[0].split(":");
-//        tiempo = new Tiempo(Tiempo, aux);
-//        tiempo.start();
+        tiempo = new Tiempo(Tiempo, aux);
+        tiempo.start();
         setVisible(true);
     }
 
@@ -183,8 +182,8 @@ public class Mundo3 extends javax.swing.JDialog {
         jlControlGuia = new javax.swing.JLabel();
         jlTiempo = new javax.swing.JLabel();
         jlPuntraje = new javax.swing.JLabel();
-        Tiempo = new javax.swing.JLabel();
         Puntaje = new javax.swing.JLabel();
+        Tiempo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -616,15 +615,15 @@ public class Mundo3 extends javax.swing.JDialog {
         jlPuntraje.setText("Puntaje");
         Informacion.add(jlPuntraje, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 50, 80, 40));
 
-        Tiempo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        Tiempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Tiempo.setText("----------");
-        Informacion.add(Tiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 170, 30));
-
         Puntaje.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         Puntaje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Puntaje.setText("----------");
         Informacion.add(Puntaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 60, 100, 20));
+
+        Tiempo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        Tiempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Tiempo.setText("00:00:01");
+        Informacion.add(Tiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 170, 30));
 
         getContentPane().add(Informacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 100));
 
@@ -673,6 +672,7 @@ public class Mundo3 extends javax.swing.JDialog {
                     puntaje="200";
                     txt.crearTXT(timepo, vida, puntaje);
                     Sonido s = new Sonido("cambioMundo.wav");
+                    tiempo.interrupt();
                     dispose();
                     //Leer el TXT-> y crear el XML(NickName,Puntaje,Tiempo)
                     new Ganadores(null, true);
