@@ -45,4 +45,9 @@
         <puntaje>200</puntaje>
         <timepo>00:00:01</timepo>
     </puestos>
+<puestos>
+        <jugadores>ALEJANDRA</jugadores>
+        <puntaje>200</puntaje>
+        <timepo>00:00:01</timepo>
+    </puestos>
 </ganadores>

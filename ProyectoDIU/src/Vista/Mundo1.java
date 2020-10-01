@@ -10,7 +10,6 @@ import Control.ControlTXT;
 import Control.Sonido;
 import Control.Tiempo;
 import java.awt.Color;
-import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 /**
  *
@@ -45,8 +44,8 @@ public class Mundo1 extends javax.swing.JDialog {
 //        avatarSprite = new AvatarSprite(enemigo1); 
 //        avatarSprite.start();
         t= new Tiempo(Tiempo, null);
-         t.start();
-        
+        t.start();
+         
         setVisible(true);
     }
     public Mundo1(String nada) {
@@ -1694,13 +1693,14 @@ public class Mundo1 extends javax.swing.JDialog {
             if(m2.limites(x,y,"down")){
                 Avatar1.setLocation(x, y+desplazamiento);
                 if (x >= 600 && y >=570) {
-                    //Guardar XML (Puntaje,Vida,Tiempo)
-//                    tiempo.stop();
+                    
                     tiemp= Tiempo.getText();
                     vida="3";
                     puntaje="100";
                     t.interrupt();
                     txt.crearTXT(tiemp, vida, puntaje);
+                    
+                    
                     Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
                     new Mundo2(null, true);
@@ -1749,13 +1749,13 @@ public class Mundo1 extends javax.swing.JDialog {
              if(m1.limites(x,y,"right")){
                 Avatar.setLocation(x+desplazamiento, y);
                 if (x>= 900 && y >= 500) {
-                    //Guardar XML (Puntaje,Vida,Tiempo)
-//                    tiempo.stop();
+                    
                     vida="3";
                     puntaje="100";
                     tiemp=Tiempo.getText();
                     t.interrupt();
                     txt.crearTXT(tiemp, vida, puntaje);
+                    
                     Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
                     new Mundo2(null, true);
@@ -1766,7 +1766,6 @@ public class Mundo1 extends javax.swing.JDialog {
     }//GEN-LAST:event_Mapa1KeyPressed
 
     private void VolverMenu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VolverMenu
-        
         dispose();
     }//GEN-LAST:event_VolverMenu
 
@@ -1815,6 +1814,8 @@ public class Mundo1 extends javax.swing.JDialog {
     private int  buscarCantEnemigos() {
         return 2;
     }
+
+   
     public class mapa1{
         
         boolean bloqueado = false;

@@ -28,7 +28,6 @@ public class Mundo2 extends javax.swing.JDialog{
         super(parent, modal);
         initComponents();
         
-        //Carga XML (Timepo,Vida,Puntaje)
         dato =txt.leerTXT();
         Puntaje.setText(dato[2]);
         
@@ -1720,13 +1719,14 @@ public class Mundo2 extends javax.swing.JDialog{
             if(m1.limites(x,y,"left")){
                 Avatar.setLocation(x-desplazamiento, y);
                 if ((x>= 440 && y >= 228)&& (x<=510  && y<=290 )) {
-                    //Guardar XML (Puntaje,Vida,Tiempo)
-
+                    
                     timepo= Tiempo.getText();
                     vida="3";
                     puntaje="100";
                     txt.crearTXT(timepo, vida, puntaje);
                     tiempo.interrupt();
+                    
+                    Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
                     new Mundo3(null, true);
                 }
@@ -1768,12 +1768,11 @@ public class Mundo2 extends javax.swing.JDialog{
             if(m2.limites(x,y,"down")){
                 Avatar1.setLocation(x, y+desplazamiento);
                 if ((x>= 350 && y >= 200)&&(x<= 350 && y <= 360)) {
-                    //Guardar XML (Puntaje,Vida,Tiempo)
-//                    tiempo.stop();
                     timepo= Tiempo.getText();
                     vida="3";
                     puntaje="100";
                     txt.crearTXT(timepo, vida, puntaje);
+                    
                     Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
                     new Mundo3(null, true);
@@ -1784,12 +1783,12 @@ public class Mundo2 extends javax.swing.JDialog{
             if(m2.limites(x,y,"left")){
                 Avatar1.setLocation(x-desplazamiento, y);
                 if ((x>= 350 && y >= 360)&&(x<= 390 && y <= 360)) {
-//                    Guardar XML (Puntaje,Vida,Tiempo)
-//                    tiempo.stsop();
+                    
                     timepo= Tiempo.getText();
                     vida="3";
                     puntaje="100";
                     txt.crearTXT(timepo, vida, puntaje);
+                    
                     Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
                     new Mundo3(null, true);

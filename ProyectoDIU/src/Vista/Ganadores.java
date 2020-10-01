@@ -47,7 +47,7 @@ public class Ganadores extends javax.swing.JDialog {
         puntaje=dato[2];
 //        nickName=dato[3];
         generarContenido(doc.getDocumento(),doc.getElementoRaiz());
-        obtenerContenido();
+        obtenerContenido();//Falta obtener contenido para mostrarlo por la interfaz
         System.out.println("FINAL");
     }
     
@@ -80,9 +80,9 @@ public class Ganadores extends javax.swing.JDialog {
         for (int n = 0; n < lista.getLength(); n++) {
             Node nodo = lista.item(n);
             if (nodo.getNodeType() == Node.ELEMENT_NODE) {
-                System.out.println(nodo.hashCode());
+                System.out.println(nodo.getNodeName());
                 Element ganadores = (Element) nodo;
-                System.out.println("ganadores "+ ganadores.getElementsByTagName("puntaje").item(0).getTextContent());
+//                System.out.println("ganadores "+ ganadores.getElementsByTagName("puntaje").item(0).getTextContent());
             }
         }
         return nombres;

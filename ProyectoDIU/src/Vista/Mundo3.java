@@ -677,7 +677,6 @@ public class Mundo3 extends javax.swing.JDialog {
                         Sonido s = new Sonido("cambioMundo.wav");
                         tiempo.interrupt();
                         dispose();
-                        //Leer el TXT-> y crear el XML(NickName,Puntaje,Tiempo)
                         new Ganadores(null, true);
                     } catch (Exception ex) {
                         System.out.println("Error " +ex.getMessage());
