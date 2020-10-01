@@ -6,6 +6,8 @@
 package Vista;
 
 import Control.Sonido;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -136,8 +138,12 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jBCerrarActionPerformed
 
     private void jbGanadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGanadoresActionPerformed
-        s = new Sonido("click.wav");
-        new Ganadores(null, true);
+        try {
+            s = new Sonido("click.wav");
+            new Ganadores(null, true);
+        } catch (Exception ex) {
+            System.out.println("Error abrir Ganadores "+ ex);
+        }
     }//GEN-LAST:event_jbGanadoresActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

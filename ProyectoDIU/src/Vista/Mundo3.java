@@ -9,6 +9,8 @@ import Control.ControlTXT;
 import Control.Sonido;
 import Control.Tiempo;
 import java.awt.event.KeyEvent;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -667,15 +669,20 @@ public class Mundo3 extends javax.swing.JDialog {
             if(m1.limites(x,y,"right")){
                 Avatar.setLocation(x+desplazamiento, y);
                 if (x>= 950 && y>= 200) {
-                    timepo=Tiempo.getText();
-                    vida="3";
-                    puntaje="200";
-                    txt.crearTXT(timepo, vida, puntaje);
-                    Sonido s = new Sonido("cambioMundo.wav");
-                    tiempo.interrupt();
-                    dispose();
-                    //Leer el TXT-> y crear el XML(NickName,Puntaje,Tiempo)
-                    new Ganadores(null, true);
+                    try {
+                        timepo=Tiempo.getText();
+                        vida="3";
+                        puntaje="200";
+                        txt.crearTXT(timepo, vida, puntaje);
+                        Sonido s = new Sonido("cambioMundo.wav");
+                        tiempo.interrupt();
+                        dispose();
+                        //Leer el TXT-> y crear el XML(NickName,Puntaje,Tiempo)
+                        new Ganadores(null, true);
+                    } catch (Exception ex) {
+                        System.out.println("Error " +ex.getMessage());
+                        Logger.getLogger(Mundo3.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                 }
             }
             break;
