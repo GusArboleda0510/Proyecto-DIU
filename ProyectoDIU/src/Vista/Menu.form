@@ -79,7 +79,6 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Jugar"/>
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
-                <Property name="opaque" type="boolean" value="false"/>
               </Properties>
               <Events>
                 <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jBJugarMouseExited"/>
@@ -87,7 +86,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="120" y="150" width="290" height="100"/>
+                  <AbsoluteConstraints x="120" y="130" width="290" height="130"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -121,7 +120,6 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Cerrar"/>
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
-                <Property name="opaque" type="boolean" value="false"/>
               </Properties>
               <Events>
                 <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jBCerrarMouseExited"/>
@@ -129,7 +127,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="100" y="420" width="340" height="70"/>
+                  <AbsoluteConstraints x="100" y="410" width="340" height="90"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -177,7 +175,6 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ganadores"/>
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
-                <Property name="opaque" type="boolean" value="false"/>
               </Properties>
               <Events>
                 <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jbGanadoresMouseExited"/>

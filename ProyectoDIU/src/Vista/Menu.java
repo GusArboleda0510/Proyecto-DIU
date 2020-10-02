@@ -62,7 +62,6 @@ public class Menu extends javax.swing.JFrame {
         jBJugar.setForeground(new java.awt.Color(153, 204, 255));
         jBJugar.setText("Jugar");
         jBJugar.setContentAreaFilled(false);
-        jBJugar.setOpaque(false);
         jBJugar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jBJugarMouseExited(evt);
@@ -73,7 +72,7 @@ public class Menu extends javax.swing.JFrame {
                 jBJugarActionPerformed(evt);
             }
         });
-        jPanel2.add(jBJugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 290, 100));
+        jPanel2.add(jBJugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, 290, 130));
 
         jBJugar1.setFont(new java.awt.Font("Times New Roman", 1, 60)); // NOI18N
         jBJugar1.setForeground(new java.awt.Color(153, 204, 255));
@@ -90,7 +89,6 @@ public class Menu extends javax.swing.JFrame {
         jBCerrar.setForeground(new java.awt.Color(153, 204, 255));
         jBCerrar.setText("Cerrar");
         jBCerrar.setContentAreaFilled(false);
-        jBCerrar.setOpaque(false);
         jBCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jBCerrarMouseExited(evt);
@@ -101,7 +99,7 @@ public class Menu extends javax.swing.JFrame {
                 jBCerrarActionPerformed(evt);
             }
         });
-        jPanel2.add(jBCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 420, 340, 70));
+        jPanel2.add(jBCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, 340, 90));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 80)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -123,7 +121,6 @@ public class Menu extends javax.swing.JFrame {
         jbGanadores.setForeground(new java.awt.Color(153, 204, 255));
         jbGanadores.setText("Ganadores");
         jbGanadores.setContentAreaFilled(false);
-        jbGanadores.setOpaque(false);
         jbGanadores.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jbGanadoresMouseExited(evt);

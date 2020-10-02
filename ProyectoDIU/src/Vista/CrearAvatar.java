@@ -1625,9 +1625,12 @@ public class CrearAvatar extends javax.swing.JDialog {
         GuardarNombre nick = new GuardarNombre(null, true, " - ");
         nickName = nick.getNickName(); 
         JLabel jLAvatar = new JLabel(); 
-        jLAvatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));
-        if(null != jLVistaPrevia.getIcon()){
-        }        
+        System.out.println("TAL1");
+        if(imgPeque != null){
+            jLAvatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));  
+        }else{
+            
+        }  
         try {
 //            cca = new ControlCrearAvatar(colores, nickName, imgPeque, imagenGrande);
 //            Sonido s = new Sonido("PacmanIniciar.wav");
@@ -1838,13 +1841,17 @@ public class CrearAvatar extends javax.swing.JDialog {
         preLlenarMatriz();
         GuardarNombre nick = new GuardarNombre(null, true, " - ");
         JLabel jLAvatar = new JLabel(); 
-        jLAvatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));
+        if(imgPeque != null){
+            jLAvatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));  
+        }
         try {
             nickName = nick.getNickName(); 
             if(nickName == null){
                 throw new Exception("TAL");
             }       
             cca = new ControlCrearAvatar(colores, nickName, imgPeque, imgGrande);
+            imgPeque = "/Imagenes/Avatars/Usuarios/"+nickName+".png";
+            jLAvatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));  
             new Mundo1(null, true, jLAvatar);
             dispose();
         } catch (Exception ex) {
@@ -1919,7 +1926,9 @@ public class CrearAvatar extends javax.swing.JDialog {
     private void jbJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbJugarActionPerformed
          try {
             JLabel jLAvatar = new JLabel(); 
-            jLAvatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));
+            if(imgPeque != null){
+                jLAvatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));  
+            }
              Sonido s = new Sonido("PacmanIniciar.wav");
              Thread.sleep(4500);
              new Mundo1(null, true, jLAvatar);
