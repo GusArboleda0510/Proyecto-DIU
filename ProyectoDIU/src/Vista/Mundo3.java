@@ -26,6 +26,7 @@ public class Mundo3 extends javax.swing.JDialog {
     int hora,minuto,segundo;
     String timepo, puntaje,vida;
     String[] dato;
+    Sonido s;
     public Mundo3(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
@@ -671,14 +672,62 @@ public class Mundo3 extends javax.swing.JDialog {
                 Avatar.setLocation(x+desplazamiento, y);
                 if (x>= 950 && y>= 200) {
                     try {
+                        
                         timepo=Tiempo.getText();
                         vida="3";
                         puntaje="200";
                         txt.crearTXT(timepo, vida, puntaje);
-                        Sonido s = new Sonido("cambioMundo.wav");
+                        s = new Sonido("cambioMundo.wav");
                         tiempo.interrupt();
                         dispose();
                         new Ganadores(null, true);
+                        
+                    } catch (Exception ex) {
+                        System.out.println("Error " +ex.getMessage());
+                        Logger.getLogger(Mundo3.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+            }
+            break;
+            case KeyEvent.VK_W:
+            if(m1.limites(x, y, "up")) {
+                Avatar.setLocation(x, y - desplazamiento);
+
+                if ((x > 900 && x <= 950)&&(y>=350 && y<=360)) {
+                    Avatar.setLocation(50, 50);
+                }
+                if ((x > 0 && x <= 50)&&(y>=50 && y<=90)) {
+                    Avatar.setLocation(910, 370);
+                }
+            }
+            break;
+            case KeyEvent.VK_S:
+            if(m1.limites(x,y,"down")){
+                Avatar.setLocation(x, y+desplazamiento);
+            }
+            break;
+            case KeyEvent.VK_A:
+
+            if(m1.limites(x,y,"left")){
+                Avatar.setLocation(x-desplazamiento, y);
+
+            }
+            break;
+            case KeyEvent.VK_D:
+            if(m1.limites(x,y,"right")){
+                Avatar.setLocation(x+desplazamiento, y);
+                if (x>= 950 && y>= 200) {
+                    try {
+                        
+                        timepo=Tiempo.getText();
+                        vida="3";
+                        puntaje="200";
+                        txt.crearTXT(timepo, vida, puntaje);
+                        s = new Sonido("cambioMundo.wav");
+                        tiempo.interrupt();
+                        dispose();
+                        new Ganadores(null, true);
+                        
                     } catch (Exception ex) {
                         System.out.println("Error " +ex.getMessage());
                         Logger.getLogger(Mundo3.class.getName()).log(Level.SEVERE, null, ex);
@@ -690,10 +739,12 @@ public class Mundo3 extends javax.swing.JDialog {
     }//GEN-LAST:event_Mapa1KeyPressed
 
     private void jlVolverVolverMenu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlVolverVolverMenu
+         s = new Sonido("click.wav");
         dispose();
     }//GEN-LAST:event_jlVolverVolverMenu
 
     private void jlControlGuiaControlGuia(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlControlGuiaControlGuia
+         s = new Sonido("click.wav");
         tiempo.interrupt();
         new GuiaControles(null, true);
     }//GEN-LAST:event_jlControlGuiaControlGuia

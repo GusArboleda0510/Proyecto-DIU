@@ -24,6 +24,7 @@ public class Mundo2 extends javax.swing.JDialog{
     int hora,minuto,segundo;
     String timepo, puntaje,vida;
     String[] dato;
+    Sonido s;
     public Mundo2(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
@@ -1748,6 +1749,50 @@ public class Mundo2 extends javax.swing.JDialog{
                 }
             }
             break;
+            case KeyEvent.VK_W:
+
+            if(m1.limites(x,y,"up")){
+                Avatar.setLocation(x, y-desplazamiento);
+            }
+            break;
+            case KeyEvent.VK_S:
+            if(m1.limites(x,y,"down")){
+                Avatar.setLocation(x, y+desplazamiento);
+            }
+            break;
+            case KeyEvent.VK_A:
+            if(m1.limites(x,y,"left")){
+                Avatar.setLocation(x-desplazamiento, y);
+                if ((x>= 440 && y >= 228)&& (x<=510  && y<=290 )) {
+                    
+                    timepo= Tiempo.getText();
+                    vida="3";
+                    puntaje="100";
+                    txt.crearTXT(timepo, vida, puntaje);
+                    tiempo.interrupt();
+                    
+                    Sonido s = new Sonido("cambioMundo.wav");
+                    dispose();
+                    new Mundo3(null, true);
+                }
+            }
+            break;
+            case KeyEvent.VK_D:
+            if(m1.limites(x,y,"right")){
+                Avatar.setLocation(x+desplazamiento, y);
+                if ((x>= 440 && y >= 228)&& (x<=510  && y<=290 )) {
+                    //Guardar XML (Puntaje,Vida,Tiempo)
+//                    tiempo.stop();
+                    timepo= Tiempo.getText();
+                    vida="3";
+                    puntaje="100";
+                    txt.crearTXT(timepo, vida, puntaje);
+                    Sonido s = new Sonido("cambioMundo.wav");
+                    dispose();
+                    new Mundo3(null, true);
+                }
+            }
+            break;
         }
     }//GEN-LAST:event_Mapa1KeyPressed
 
@@ -1800,22 +1845,68 @@ public class Mundo2 extends javax.swing.JDialog{
                 Avatar1.setLocation(x+desplazamiento, y);
             }
             break;
+            case KeyEvent.VK_W:
+            if(m2.limites(x,y,"up")){
+                Avatar1.setLocation(x, y-desplazamiento);
+            }
+            break;
+
+            case KeyEvent.VK_S:
+            if(m2.limites(x,y,"down")){
+                Avatar1.setLocation(x, y+desplazamiento);
+                if ((x>= 350 && y >= 200)&&(x<= 350 && y <= 360)) {
+                    timepo= Tiempo.getText();
+                    vida="3";
+                    puntaje="100";
+                    txt.crearTXT(timepo, vida, puntaje);
+                    
+                    Sonido s = new Sonido("cambioMundo.wav");
+                    dispose();
+                    new Mundo3(null, true);
+                }
+            }
+            break;
+            case KeyEvent.VK_A:
+            if(m2.limites(x,y,"left")){
+                Avatar1.setLocation(x-desplazamiento, y);
+                if ((x>= 350 && y >= 360)&&(x<= 390 && y <= 360)) {
+                    
+                    timepo= Tiempo.getText();
+                    vida="3";
+                    puntaje="100";
+                    txt.crearTXT(timepo, vida, puntaje);
+                    
+                    Sonido s = new Sonido("cambioMundo.wav");
+                    dispose();
+                    new Mundo3(null, true);
+                }
+            }
+            break;
+            case KeyEvent.VK_D:
+            if(m2.limites(x,y,"right")){
+                Avatar1.setLocation(x+desplazamiento, y);
+            }
+            break;
         }
     }//GEN-LAST:event_Mapa2KeyPressed
 
     private void jlTiempovolverMenu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlTiempovolverMenu
+        s = new Sonido("click.wav");
         dispose();
     }//GEN-LAST:event_jlTiempovolverMenu
 
     private void jlPuntrajeControlGuia(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlPuntrajeControlGuia
+        s = new Sonido("click.wav");
         new GuiaControles(null, true);
     }//GEN-LAST:event_jlPuntrajeControlGuia
 
     private void jlVolverVolverMenu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlVolverVolverMenu
+        s = new Sonido("click.wav");
         dispose();
     }//GEN-LAST:event_jlVolverVolverMenu
 
     private void jlControlGuiaControlGuia(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlControlGuiaControlGuia
+        s = new Sonido("click.wav");
         new GuiaControles(null, true);
     }//GEN-LAST:event_jlControlGuiaControlGuia
 

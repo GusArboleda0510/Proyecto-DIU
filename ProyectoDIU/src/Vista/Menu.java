@@ -115,6 +115,11 @@ public class Menu extends javax.swing.JFrame {
                 jbGanadores1MouseEntered(evt);
             }
         });
+        jbGanadores1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbGanadores1ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jbGanadores1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, 330, 100));
 
         jbGanadores.setFont(new java.awt.Font("Times New Roman", 1, 90)); // NOI18N
@@ -202,6 +207,7 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCerrarActionPerformed
+         s = new Sonido("click.wav");
         dispose();
     }//GEN-LAST:event_jBCerrarActionPerformed
 
@@ -271,6 +277,10 @@ public class Menu extends javax.swing.JFrame {
     private void jbAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAyudaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jbAyudaActionPerformed
+
+    private void jbGanadores1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGanadores1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbGanadores1ActionPerformed
 
     /**
      * @param args the command line arguments

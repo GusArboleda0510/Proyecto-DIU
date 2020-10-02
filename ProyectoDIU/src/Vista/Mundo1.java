@@ -30,7 +30,7 @@ public class Mundo1 extends javax.swing.JDialog {
     ControlTXT txt = new ControlTXT();
      Tiempo t; 
     String tiemp, puntaje,vida;
-    
+    Sonido s;
     public Mundo1(java.awt.Frame parent, boolean modal, JLabel jLAvatar)  {
         super(parent, modal);
         initComponents();
@@ -1685,12 +1685,18 @@ public class Mundo1 extends javax.swing.JDialog {
 
         switch(evt.getExtendedKeyCode()){//getExtendedKeyCode->Captura lo q hace el teclado y lo pasa a la variable X y Y
 
-            case KeyEvent.VK_UP:
+            case KeyEvent.VK_UP :
             if(m2.limites(x,y,"up")){
                 jLAvatarMapa2.setLocation(x, y-desplazamiento);
             }
             break;
-
+            
+            case KeyEvent.VK_W:
+            if(m2.limites(x,y,"up")){
+                jLAvatarMapa2.setLocation(x, y-desplazamiento);
+            }
+            break;
+            
             case KeyEvent.VK_DOWN:
             if(m2.limites(x,y,"down")){
                 jLAvatarMapa2.setLocation(x, y+desplazamiento);
@@ -1709,12 +1715,44 @@ public class Mundo1 extends javax.swing.JDialog {
                 }
             }
             break;
+            
+            case KeyEvent.VK_S:
+            if(m2.limites(x,y,"down")){
+                jLAvatarMapa2.setLocation(x, y+desplazamiento);
+                if (x >= 600 && y >=570) {
+                    
+                    tiemp= Tiempo.getText();
+                    vida="3";
+                    puntaje="100";
+                    t.interrupt();
+                    txt.crearTXT(tiemp, vida, puntaje);
+                    
+                    
+                    Sonido s = new Sonido("cambioMundo.wav");
+                    dispose();
+                    new Mundo2(null, true);
+                }
+            }
+            break;
+            
             case KeyEvent.VK_LEFT:
             if(m2.limites(x,y,"left")){
                 jLAvatarMapa2.setLocation(x-desplazamiento, y);
             }
             break;
+            case KeyEvent.VK_A:
+            if(m2.limites(x,y,"left")){
+                jLAvatarMapa2.setLocation(x-desplazamiento, y);
+            }
+            break;
+            
             case KeyEvent.VK_RIGHT:
+            if(m2.limites(x,y,"right")){
+                jLAvatarMapa2.setLocation(x+desplazamiento, y);
+            }
+            break;
+            
+            case KeyEvent.VK_D:
             if(m2.limites(x,y,"right")){
                 jLAvatarMapa2.setLocation(x+desplazamiento, y);
             }
@@ -1764,15 +1802,52 @@ public class Mundo1 extends javax.swing.JDialog {
                 }
              }
             break;
+            
+            case KeyEvent.VK_W:
+
+            if(m1.limites(x,y,"up")){
+                jLAvatarMapa1.setLocation(x, y-desplazamiento);
+            }
+            break;
+            case KeyEvent.VK_S:
+            if(m1.limites(x,y,"down")){
+                jLAvatarMapa1.setLocation(x, y+desplazamiento);
+            }
+            break;
+            case KeyEvent.VK_A:
+
+            if(m1.limites(x,y,"left")){
+                jLAvatarMapa1.setLocation(x-desplazamiento, y);
+            }
+            break;
+            case KeyEvent.VK_D:
+             if(m1.limites(x,y,"right")){
+                jLAvatarMapa1.setLocation(x+desplazamiento, y);
+                if (x>= 900 && y >= 500) {
+                    
+                    vida="3";
+                    puntaje="100";
+                    tiemp=Tiempo.getText();
+                    t.interrupt();
+                    txt.crearTXT(tiemp, vida, puntaje);
+                    
+                    Sonido s = new Sonido("cambioMundo.wav");
+                    dispose();
+                    new Mundo2(null, true);
+                }
+             }
+            break;
         }
     }//GEN-LAST:event_Mapa1KeyPressed
 
     private void VolverMenu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VolverMenu
+        s = new Sonido("click.wav");
         t.interrupt();
         dispose();
     }//GEN-LAST:event_VolverMenu
 
     private void ControlGuia(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ControlGuia
+        s = new Sonido("click.wav");
         new GuiaControles(null, true);
     }//GEN-LAST:event_ControlGuia
 

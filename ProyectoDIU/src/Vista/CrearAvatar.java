@@ -1745,6 +1745,7 @@ public class CrearAvatar extends javax.swing.JDialog {
     }//GEN-LAST:event_jLAvatar5MouseReleased
 
     private void jBMasEscuchaPanel(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMasEscuchaPanel
+         s = new Sonido("click.wav");
         jPImgPredeterminada.setVisible(false);
         jPCuadricula.setVisible(true);
         imgPeque = null;

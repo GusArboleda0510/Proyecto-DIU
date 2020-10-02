@@ -5,6 +5,8 @@
  */
 package Vista;
 
+import Control.Sonido;
+
 /**
  *
  * @author ANDRES ARBOLEDA
@@ -15,6 +17,7 @@ public class GuardarNombre extends javax.swing.JDialog {
      * Creates new form GuardarNombre
      */
     String nickName;
+    Sonido s;
     public GuardarNombre(java.awt.Frame parent, boolean modal, String mensaje) {
         super(parent, modal);
         initComponents();
@@ -75,34 +78,39 @@ public class GuardarNombre extends javax.swing.JDialog {
         });
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 194, 58));
 
-        jBGuardar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jBGuardar.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
+        jBGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/guardar.png"))); // NOI18N
         jBGuardar.setText("Guardar");
+        jBGuardar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jBGuardar.setContentAreaFilled(false);
         jBGuardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jBGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBGuardarActionPerformed(evt);
             }
         });
-        jPanel1.add(jBGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 140, 46));
+        jPanel1.add(jBGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 180, 50));
 
-        jBCerrar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jBCerrar.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
+        jBCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salir.png"))); // NOI18N
         jBCerrar.setText("Cerrar");
+        jBCerrar.setContentAreaFilled(false);
         jBCerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jBCerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBCerrarActionPerformed(evt);
             }
         });
-        jPanel1.add(jBCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 140, 46));
+        jPanel1.add(jBCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 130, 46));
 
         Fondo.setFont(new java.awt.Font("Tempus Sans ITC", 3, 26)); // NOI18N
         Fondo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondoBlanco.jpg"))); // NOI18N
-        jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 330));
+        jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 350));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 404, -1));
 
-        setSize(new java.awt.Dimension(418, 366));
+        setSize(new java.awt.Dimension(418, 377));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -111,6 +119,7 @@ public class GuardarNombre extends javax.swing.JDialog {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jBGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGuardarActionPerformed
+        s = new Sonido("click.wav");
         if(!jTextField1.getText().equals("")){
             nickName = jTextField1.getText();
             setVisible(false);
@@ -118,6 +127,7 @@ public class GuardarNombre extends javax.swing.JDialog {
     }//GEN-LAST:event_jBGuardarActionPerformed
 
     private void jBCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCerrarActionPerformed
+        s = new Sonido("click.wav");
         dispose();
     }//GEN-LAST:event_jBCerrarActionPerformed
 
