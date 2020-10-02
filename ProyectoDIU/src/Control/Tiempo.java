@@ -18,12 +18,11 @@ import javax.swing.Timer;
 
    public class Tiempo extends Thread{
     int hora,minuto,segundo;
-    JLabel Tiempo;
     String[] dato;
-    
-    
-    public Tiempo(JLabel Tiempo,String dato[]) {
-        this.Tiempo=Tiempo;
+    String tiempo;
+    ControlTXT txt = new ControlTXT();
+    controlJugabilidad jug = new controlJugabilidad();
+    public Tiempo(String dato[]) {
         this.dato=dato;
         
     }
@@ -49,12 +48,24 @@ import javax.swing.Timer;
                     minuto = 0;
                     hora++;
                 }
-//                Tiempo.setText(hora + ":" + minuto + ":" + segundo);
+                tiempo=hora + ":" + minuto + ":" + segundo;
+//                txt.setTiempo(tiempo);
                 System.out.println(hora + ":" + minuto + ":" + segundo);
                 TimeUnit.SECONDS.sleep(1);
             }
-        } catch (Exception e) {
+        }
+        catch (InterruptedException es) {
+            System.out.println("TIEMPO= " + tiempo);
+            
+            System.out.println("RETORNA PUNTAJE: " + jug.getPuntaje());
+            System.out.println("RETORNA VIDA: " + jug.getVida());
+            txt.crearTXT(tiempo,Integer.toString(jug.getVida()),Integer.toString(jug.getPuntaje()));
+        }
+        catch (Exception e) {
             System.out.println("Error RUN: " + e);
         }
+    }
+    public String getTiempo(){
+        return tiempo;
     }
 }

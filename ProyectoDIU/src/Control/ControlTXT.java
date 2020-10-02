@@ -17,22 +17,28 @@ import java.io.FileWriter;
  */
 public class ControlTXT {
     File jugabilidad = new File("persistencia/jugabilidad.txt");
-    public void crearTXT(String tiempo, String vida, String puntaje) {
-
+    
+    
+    public void crearTXT(String tiempo,String vida, String puntaje) {
+        
         try {
             if (!jugabilidad.exists()) {
                 jugabilidad.createNewFile();
             }
-            FileWriter fw = new FileWriter(jugabilidad, false);
+            
+            FileWriter fw = new FileWriter(jugabilidad,false);
             BufferedWriter bw = new BufferedWriter(fw);
+            
             bw.write(tiempo);
             bw.write("\n"+vida);
             bw.write("\n"+puntaje);
             bw.close();
+            
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Error crear TXT -> "+ e );
         }
     }
+    
     public String[] leerTXT() {
             String[] dato = new String[3];
         try {

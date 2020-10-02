@@ -53,7 +53,9 @@ public class ControlCrearAvatar {
         }else{
             insertarImagen();
         }
-        crearImagen();
+        
+//        crearImagen();
+
         cd = new CreadordeDocs(avatars, "jugadores");
         if(!imagenExisteXML()){
             guardarXML();  
@@ -488,6 +490,6 @@ public class ControlCrearAvatar {
         imagen = new BufferedImage(40, 40, BufferedImage.TYPE_INT_ARGB);
         dibujarImagen();
         archivoImagen = new File("src/Imagenes/Avatars/Usuarios/"+nickNameJugador+".png");
-        crearImagen();
+//        crearImagen();
     }
 }

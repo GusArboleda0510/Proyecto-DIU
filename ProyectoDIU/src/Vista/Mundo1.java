@@ -9,8 +9,11 @@ import Control.ControlEnemigos;
 import Control.ControlTXT;
 import Control.Sonido;
 import Control.Tiempo;
+import Control.controlJugabilidad;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JLabel;
 /**
  *
@@ -31,6 +34,7 @@ public class Mundo1 extends javax.swing.JDialog {
      Tiempo t; 
     String tiemp, puntaje,vida;
     Sonido s;
+    controlJugabilidad jug;
     public Mundo1(java.awt.Frame parent, boolean modal, JLabel jLAvatar)  {
         super(parent, modal);
         initComponents();
@@ -39,15 +43,18 @@ public class Mundo1 extends javax.swing.JDialog {
         jLAvatarMapa1.setIcon(jLAvatar.getIcon());
         jLAvatarMapa2.setIcon(jLAvatar.getIcon());
 ////        llamarEnemigos(nombreMapa);
-        contEnemigos = new ControlEnemigos(enemigo1,"mapa1","tiempo",Tiempo); 
+        contEnemigos = new ControlEnemigos(enemigo1,"mapa1"); 
         contEnemigos.start();
-        contEnemigos = new ControlEnemigos(enemigo2,"mapa1","",null); 
+        contEnemigos = new ControlEnemigos(enemigo2,"mapa1"); 
         contEnemigos.start();
 //        avatarSprite = new AvatarSprite(enemigo1); 
 //        avatarSprite.start();
-        t= new Tiempo(Tiempo, null);
+
+
+
+        t= new Tiempo(null);
         t.start();
-         
+        jug= new controlJugabilidad(jlVida1, jlVida2, jlVida3, Puntaje);
         setVisible(true);
     }
     public Mundo1(String nada) {
@@ -339,10 +346,8 @@ public class Mundo1 extends javax.swing.JDialog {
         jlVida1 = new javax.swing.JLabel();
         jlVida2 = new javax.swing.JLabel();
         jlVida3 = new javax.swing.JLabel();
-        Tiempo = new javax.swing.JLabel();
         jlControlGuia = new javax.swing.JLabel();
         Puntaje = new javax.swing.JLabel();
-        jlTiempo = new javax.swing.JLabel();
         jlPuntraje = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -1588,7 +1593,7 @@ public class Mundo1 extends javax.swing.JDialog {
         jtVida.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jtVida.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jtVida.setText("Vida");
-        Informacion.add(jtVida, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 60, 90, 30));
+        Informacion.add(jtVida, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 60, 90, 30));
 
         jlVolver.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jlVolver.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1607,20 +1612,15 @@ public class Mundo1 extends javax.swing.JDialog {
 
         jlVida1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
         jlVida1.setText("jLabel2");
-        Informacion.add(jlVida1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 60, 40, 30));
+        Informacion.add(jlVida1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 60, 40, 30));
 
         jlVida2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
         jlVida2.setText("jLabel2");
-        Informacion.add(jlVida2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 60, 40, 30));
+        Informacion.add(jlVida2, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 60, 40, 30));
 
         jlVida3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
         jlVida3.setText("jLabel2");
-        Informacion.add(jlVida3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 60, 40, 30));
-
-        Tiempo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        Tiempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Tiempo.setText("00:00:01");
-        Informacion.add(Tiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 170, 30));
+        Informacion.add(jlVida3, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 60, 40, 30));
 
         jlControlGuia.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jlControlGuia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1630,22 +1630,17 @@ public class Mundo1 extends javax.swing.JDialog {
                 ControlGuia(evt);
             }
         });
-        Informacion.add(jlControlGuia, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 0, 60, 50));
+        Informacion.add(jlControlGuia, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 20, 70, 60));
 
         Puntaje.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         Puntaje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Puntaje.setText("----------");
-        Informacion.add(Puntaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 60, 100, 20));
-
-        jlTiempo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jlTiempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlTiempo.setText("Tiempo");
-        Informacion.add(jlTiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 80, 40));
+        Puntaje.setText("150");
+        Informacion.add(Puntaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, 100, 30));
 
         jlPuntraje.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jlPuntraje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlPuntraje.setText("Puntaje");
-        Informacion.add(jlPuntraje, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 50, 80, 40));
+        Informacion.add(jlPuntraje, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, 80, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1688,6 +1683,8 @@ public class Mundo1 extends javax.swing.JDialog {
             case KeyEvent.VK_UP :
             if(m2.limites(x,y,"up")){
                 jLAvatarMapa2.setLocation(x, y-desplazamiento);
+                    
+                    jug.vida(2);//Colision
             }
             break;
             
@@ -1701,12 +1698,10 @@ public class Mundo1 extends javax.swing.JDialog {
             if(m2.limites(x,y,"down")){
                 jLAvatarMapa2.setLocation(x, y+desplazamiento);
                 if (x >= 600 && y >=570) {
-                    
-                    tiemp= Tiempo.getText();
                     vida="3";
                     puntaje="100";
+                    
                     t.interrupt();
-                    txt.crearTXT(tiemp, vida, puntaje);
                     
                     
                     Sonido s = new Sonido("cambioMundo.wav");
@@ -1721,11 +1716,10 @@ public class Mundo1 extends javax.swing.JDialog {
                 jLAvatarMapa2.setLocation(x, y+desplazamiento);
                 if (x >= 600 && y >=570) {
                     
-                    tiemp= Tiempo.getText();
                     vida="3";
                     puntaje="100";
+                    
                     t.interrupt();
-                    txt.crearTXT(tiemp, vida, puntaje);
                     
                     
                     Sonido s = new Sonido("cambioMundo.wav");
@@ -1772,6 +1766,7 @@ public class Mundo1 extends javax.swing.JDialog {
 
             if(m1.limites(x,y,"up")){
                 jLAvatarMapa1.setLocation(x, y-desplazamiento);
+                jug.vida(2);//Colision
             }
             break;
             case KeyEvent.VK_DOWN:
@@ -1792,9 +1787,9 @@ public class Mundo1 extends javax.swing.JDialog {
                     
                     vida="3";
                     puntaje="100";
-                    tiemp=Tiempo.getText();
+                   
                     t.interrupt();
-                    txt.crearTXT(tiemp, vida, puntaje);
+//                    txt.crearTXT(tiemp, vida, puntaje);
                     
                     Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
@@ -1827,9 +1822,9 @@ public class Mundo1 extends javax.swing.JDialog {
                     
                     vida="3";
                     puntaje="100";
-                    tiemp=Tiempo.getText();
+                    
                     t.interrupt();
-                    txt.crearTXT(tiemp, vida, puntaje);
+//                    txt.crearTXT(tiemp, vida, puntaje);
                     
                     Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
@@ -1876,12 +1871,12 @@ public class Mundo1 extends javax.swing.JDialog {
         int cantEnemigos = buscarCantEnemigos();
         if(nombreMapa.equals("mapa1")){
             for (int n = 1; n <= cantEnemigos; n++) {
-                contEnemigos = new ControlEnemigos(enemigo1,"mapa1","",null); 
+                contEnemigos = new ControlEnemigos(enemigo1,"mapa1"); 
                 contEnemigos.start();
             }
         if(nombreMapa.equals("mapa2")){
             for (int n = 1; n <= cantEnemigos; n++) {
-                contEnemigos = new ControlEnemigos(enemigo1,"mapa2","",null); 
+                contEnemigos = new ControlEnemigos(enemigo1,"mapa2"); 
                 contEnemigos.start();
             }
         }
@@ -1892,7 +1887,8 @@ public class Mundo1 extends javax.swing.JDialog {
     private int  buscarCantEnemigos() {
         return 2;
     }
-
+    
+    
    
     public class mapa1{
         
@@ -2066,7 +2062,6 @@ public class Mundo1 extends javax.swing.JDialog {
     private javax.swing.JPanel Mapa1;
     private javax.swing.JPanel Mapa2;
     private javax.swing.JLabel Puntaje;
-    private javax.swing.JLabel Tiempo;
     private javax.swing.JLabel enemigo1;
     private javax.swing.JLabel enemigo2;
     private javax.swing.JLabel fondo;
@@ -2329,7 +2324,6 @@ public class Mundo1 extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jlControlGuia;
     private javax.swing.JLabel jlPuntraje;
-    private javax.swing.JLabel jlTiempo;
     private javax.swing.JLabel jlVida1;
     private javax.swing.JLabel jlVida2;
     private javax.swing.JLabel jlVida3;

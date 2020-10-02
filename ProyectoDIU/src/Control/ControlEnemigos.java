@@ -6,8 +6,6 @@
 package Control;
 
 import Vista.Mundo1;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.concurrent.TimeUnit;
 import javax.swing.JLabel;
 
@@ -17,20 +15,15 @@ import javax.swing.JLabel;
  */
 public class ControlEnemigos extends Thread{
     JLabel avatar = null;
-    JLabel tiemp ;
     Mundo1 mundo= new Mundo1("nada");
     Mundo1.mapa1 mapa;
-    String tiempo="";
     int contador=0;
-    int hora,minuto,segundo;
 //    Mundo1.mapa2 mapa2;
 
 
     int posAnterior[] = new int [2];//x,y
-    public ControlEnemigos(JLabel avatar, String mapa,String tiempo,JLabel tiemp){
+    public ControlEnemigos(JLabel avatar, String mapa){
         this.avatar = avatar;
-        this.tiemp = tiemp;
-        this.tiempo = tiempo;
 //        if
         this.mapa = mundo.getMapa1();
 //        mapa2 = mundo.getMapa2();
@@ -101,26 +94,6 @@ public class ControlEnemigos extends Thread{
                 }
             }
             try {
-                ////////////////////////////////////////////
-
-                if (tiempo.equals("tiempo")) {
-//                    if (contador % 5 == 0) {
-//                        segundo++;
-//                        if (segundo > 59) {
-//                            segundo = 0;
-//                            minuto++;
-//                        }
-//                        if (minuto > 59) {
-//                            segundo = 0;
-//                            minuto = 0;
-//                            hora++;
-//                        }
-//                        System.out.println(hora + ":" + minuto + ":" + segundo);
-////                        tiempo(hora + ":" + minuto + ":" + segundo);
-//                    }
-
-                }
-                //////////////////////////////////////////
                 TimeUnit.MILLISECONDS.sleep(200);
 
             } catch (InterruptedException ex) {
