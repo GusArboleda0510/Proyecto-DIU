@@ -1351,7 +1351,7 @@ public class CrearAvatar extends javax.swing.JDialog {
 
         jScrollPane1.setViewportView(jPanel1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 750));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 670));
 
         pack();
         setLocationRelativeTo(null);

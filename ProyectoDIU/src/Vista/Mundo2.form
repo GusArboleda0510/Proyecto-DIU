@@ -51,7 +51,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -67,7 +67,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -83,7 +83,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -99,7 +99,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -115,7 +115,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -131,7 +131,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -147,7 +147,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -163,7 +163,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -179,7 +179,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -195,7 +195,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -211,7 +211,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -227,7 +227,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -243,7 +243,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -259,7 +259,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -275,7 +275,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -291,7 +291,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -307,7 +307,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -323,7 +323,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -339,7 +339,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -355,7 +355,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -371,7 +371,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -387,7 +387,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -403,7 +403,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -419,7 +419,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -435,7 +435,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -451,7 +451,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -467,7 +467,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -483,7 +483,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -499,7 +499,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -515,7 +515,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -531,7 +531,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -547,7 +547,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -563,7 +563,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -579,7 +579,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -595,7 +595,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -611,7 +611,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -627,7 +627,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -643,7 +643,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -659,7 +659,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -675,7 +675,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -691,7 +691,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -707,7 +707,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -723,7 +723,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -739,7 +739,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -755,7 +755,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -771,7 +771,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -787,7 +787,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -803,7 +803,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -819,7 +819,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -835,7 +835,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -851,7 +851,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -867,7 +867,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -883,7 +883,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -899,7 +899,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -915,7 +915,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -931,7 +931,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -947,7 +947,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -963,7 +963,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -979,7 +979,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -995,7 +995,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1011,7 +1011,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1027,7 +1027,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1043,7 +1043,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1059,7 +1059,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1075,7 +1075,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1091,7 +1091,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1107,7 +1107,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1123,7 +1123,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1139,7 +1139,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1155,7 +1155,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1171,7 +1171,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1187,7 +1187,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1203,7 +1203,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1219,7 +1219,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1235,7 +1235,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1251,7 +1251,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1267,7 +1267,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1283,7 +1283,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1299,7 +1299,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1315,7 +1315,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1331,7 +1331,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1347,7 +1347,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1363,7 +1363,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1379,7 +1379,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1395,7 +1395,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1411,7 +1411,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1427,7 +1427,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1443,7 +1443,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1459,7 +1459,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1475,7 +1475,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1491,7 +1491,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1507,7 +1507,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1523,7 +1523,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1539,7 +1539,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1555,7 +1555,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1571,7 +1571,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1587,7 +1587,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1603,7 +1603,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1619,7 +1619,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1635,7 +1635,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1651,7 +1651,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1667,7 +1667,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1683,7 +1683,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1699,7 +1699,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1715,7 +1715,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1731,7 +1731,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1747,7 +1747,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1763,7 +1763,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1779,7 +1779,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1795,7 +1795,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1811,7 +1811,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1827,7 +1827,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1843,7 +1843,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1859,7 +1859,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1875,7 +1875,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1891,7 +1891,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1907,7 +1907,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1923,7 +1923,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1939,7 +1939,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1955,7 +1955,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1971,7 +1971,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -1987,7 +1987,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2003,7 +2003,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2019,7 +2019,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2035,7 +2035,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2051,7 +2051,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2067,7 +2067,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2083,7 +2083,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2099,7 +2099,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2115,7 +2115,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2161,7 +2161,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/FondoTierra.jpg"/>
+              <Image iconType="3" name="/Imagenes/FondoVerde.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2193,7 +2193,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2209,7 +2209,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2225,7 +2225,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2241,7 +2241,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2257,7 +2257,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2273,7 +2273,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2289,7 +2289,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2305,7 +2305,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2321,7 +2321,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2337,7 +2337,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2353,7 +2353,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2369,7 +2369,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2385,7 +2385,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2401,7 +2401,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2417,7 +2417,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2433,7 +2433,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2449,7 +2449,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2465,7 +2465,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2481,7 +2481,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2497,7 +2497,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2513,7 +2513,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2529,7 +2529,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2545,7 +2545,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2561,7 +2561,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2577,7 +2577,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2593,7 +2593,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2609,7 +2609,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2625,7 +2625,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2641,7 +2641,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2657,7 +2657,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2673,7 +2673,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2689,7 +2689,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2705,7 +2705,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2721,7 +2721,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2737,7 +2737,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2753,7 +2753,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2769,7 +2769,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2785,7 +2785,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2801,7 +2801,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2817,7 +2817,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2833,7 +2833,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2849,7 +2849,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2865,7 +2865,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2881,7 +2881,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2897,7 +2897,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2913,7 +2913,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2929,7 +2929,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2945,7 +2945,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2961,7 +2961,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2977,7 +2977,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -2993,7 +2993,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3009,7 +3009,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3025,7 +3025,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3041,7 +3041,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3057,7 +3057,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3073,7 +3073,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3089,7 +3089,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3105,7 +3105,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3121,7 +3121,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3137,7 +3137,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3153,7 +3153,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3169,7 +3169,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3185,7 +3185,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3201,7 +3201,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3217,7 +3217,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3233,7 +3233,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3249,7 +3249,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3265,7 +3265,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3281,7 +3281,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3297,7 +3297,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3313,7 +3313,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3329,7 +3329,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3345,7 +3345,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3361,7 +3361,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3377,7 +3377,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3393,7 +3393,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3409,7 +3409,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3425,7 +3425,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3441,7 +3441,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3457,7 +3457,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3473,7 +3473,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3489,7 +3489,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3505,7 +3505,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3521,7 +3521,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3537,7 +3537,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3553,7 +3553,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3569,7 +3569,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3585,7 +3585,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3601,7 +3601,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3617,7 +3617,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3633,7 +3633,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3649,7 +3649,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3665,7 +3665,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3681,7 +3681,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3697,7 +3697,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3713,7 +3713,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3729,7 +3729,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3745,7 +3745,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3761,7 +3761,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3777,7 +3777,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3793,7 +3793,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3809,7 +3809,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3825,7 +3825,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3841,7 +3841,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3857,7 +3857,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3873,7 +3873,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3889,7 +3889,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3905,7 +3905,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3921,7 +3921,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3937,7 +3937,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3966,7 +3966,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3982,7 +3982,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -3998,7 +3998,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -4014,7 +4014,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -4030,7 +4030,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -4046,7 +4046,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -4062,7 +4062,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -4078,7 +4078,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -4094,7 +4094,7 @@
               <Color blue="33" green="33" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/LaberintoLadrillo.png"/>
+              <Image iconType="3" name="/Imagenes/LaberintoArbusto.png"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -4116,7 +4116,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="850" y="500" width="40" height="40"/>
+              <AbsoluteConstraints x="520" y="330" width="40" height="40"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -4126,7 +4126,7 @@
               <Color blue="ff" green="33" red="cc" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/FondoVerde.png"/>
+              <Image iconType="3" name="/Imagenes/FondoTierra.jpg"/>
             </Property>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
@@ -4255,7 +4255,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="870" y="0" width="80" height="40"/>
+              <AbsoluteConstraints x="920" y="0" width="80" height="60"/>
             </Constraint>
           </Constraints>
         </Component>

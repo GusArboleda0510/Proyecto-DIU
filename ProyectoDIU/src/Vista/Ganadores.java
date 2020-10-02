@@ -29,6 +29,7 @@ public class Ganadores extends javax.swing.JDialog {
     String tiempo, puntaje,nickName="ALEJANDRA";
     File ganadores = new File("persistencia/Ganadores.xml");
     NodeList lista;
+    Thread imagenes;
     
     public Ganadores(java.awt.Frame parent, boolean modal) throws Exception {
         super(parent, modal);
@@ -44,9 +45,10 @@ public class Ganadores extends javax.swing.JDialog {
         String[] dato=txt.leerTXT();
         tiempo=dato[0];
         puntaje=dato[2];
-//        nickName=dato[3];
-//        generarContenido(doc.getDocumento(),doc.getElementoRaiz());
-        obtenerContenido();//Falta obtener contenido para mostrarlo por la interfaz
+//        nickName=dato[3];//Agregar al TXT(NickName)
+
+//        generarContenido(doc.getDocumento(),doc.getElementoRaiz());&//Añade al XML
+        obtenerContenido();
         
     }
     
@@ -73,28 +75,18 @@ public class Ganadores extends javax.swing.JDialog {
         ld = new LectordeDocs(ganadores);
         Document documento = ld.getDocumento();
         lista = documento.getElementsByTagName("puestos");
-        System.out.println(lista.getLength()+"....");
+        
         String[] datos= new String[lista.getLength()];
-//        datos = new String[lista.getLength()];
-        System.out.println("Ganadanores");
+        
         for (int n = 0; n < lista.getLength(); n++) {
             Node nodo = lista.item(n);
             if (nodo.getNodeType() == Node.ELEMENT_NODE) {
                 Element element = (Element) nodo;
-//                System.out.println(element.getElementsByTagName("jugadores").item(0).getTextContent());
-//                System.out.println(element.getElementsByTagName("puntaje").item(0).getTextContent());
-//                System.out.println(element.getElementsByTagName("timepo").item(0).getTextContent());
                 datos[n]=element.getElementsByTagName("jugadores").item(0).getTextContent()
                         +"-"+element.getElementsByTagName("puntaje").item(0).getTextContent()
-                        +"-"+element.getElementsByTagName("timepo").item(0).getTextContent();
-//                
+                        +"-"+element.getElementsByTagName("timepo").item(0).getTextContent();         
             }
-            
         }
-        for (int i = 0; i < datos.length; i++) {
-//                System.out.println(datos[i]);
-                
-            }
         ordenarXML(datos);
     }
     public void ordenarXML(String[] datos){
@@ -103,7 +95,6 @@ public class Ganadores extends javax.swing.JDialog {
         int[] temporal=new int[datos.length];
         
         for (int i = 0; i < datos.length; i++) {
-            System.out.println(datos[i]);
             aux=datos[i].split("-");
             puntaje[i]=Integer.parseInt(aux[1]);
             temporal[i]=Integer.parseInt(aux[1]);
@@ -122,16 +113,10 @@ public class Ganadores extends javax.swing.JDialog {
         }
     }
     public int[] ordenamiento (int[] p , int[]ordendado){
-        System.out.println(" ");
         int[]posiciones = new int[p.length];
                 for (int i = 0; i < p.length; i++) {
-//            System.out.print(p[i]+" -- ");
-
             for (int j = 0; j < p.length; j++) {
-                    System.out.println("preuba  "+ ordendado[i] + "== " +"p " + p[j]);
                 if(ordendado[i] == p[j]){
-//                    System.out.println("-- " + datos[i]+"--");
-                    System.out.println(j);
                     posiciones[i]=j;
                     break;
                 }
@@ -151,11 +136,6 @@ public class Ganadores extends javax.swing.JDialog {
             }
         }
     }
-    System.out.println("ORDENADO");
-    for (int i = 0; i < a.length; i++) {
-            System.out.print(a[i]+"-");
-//            
-        }
     return aux=a;
 }
     
@@ -168,16 +148,21 @@ public class Ganadores extends javax.swing.JDialog {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
+        Trofeo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Tempus Sans ITC", 1, 60)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("GANADORES");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Tempus Sans ITC", 3, 14)); // NOI18N
+        jTextArea1.setBackground(new java.awt.Color(204, 204, 204));
+        jTextArea1.setColumns(5);
+        jTextArea1.setFont(new java.awt.Font("Tempus Sans ITC", 3, 18)); // NOI18N
         jTextArea1.setRows(5);
+        jTextArea1.setBorder(null);
         jScrollPane1.setViewportView(jTextArea1);
 
         jButton1.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
@@ -187,6 +172,8 @@ public class Ganadores extends javax.swing.JDialog {
                 jButton1ActionPerformed(evt);
             }
         });
+
+        Trofeo.setIcon(new javax.swing.ImageIcon("D:\\Alejandra\\Documentos\\NetBeansProjects1\\DIU\\Proyecto-DIU\\ProyectoDIU\\src\\Imagenes\\trofeo-girando-16777.gif")); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -198,7 +185,9 @@ public class Ganadores extends javax.swing.JDialog {
                         .addGap(291, 291, 291)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(237, 237, 237)
+                        .addGap(24, 24, 24)
+                        .addComponent(Trofeo, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(51, 51, 51)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(332, 332, 332)
@@ -210,8 +199,13 @@ public class Ganadores extends javax.swing.JDialog {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(Trofeo, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(28, 28, 28)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -241,6 +235,7 @@ public class Ganadores extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Trofeo;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;

@@ -199,352 +199,352 @@ public class Mundo3 extends javax.swing.JDialog {
         Mapa1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        Mapa1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 50));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, -1, -1));
+        Mapa1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 50, 50));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, -1, -1));
+        Mapa1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 50, 50));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, -1, -1));
+        Mapa1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 50, 50));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, -1, -1));
+        Mapa1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 50, 50));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, -1, -1));
+        Mapa1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 50, 50));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, -1, -1));
+        Mapa1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 50, 50));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, -1, -1));
+        Mapa1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 50, 50));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, -1, -1));
+        Mapa1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 50, 50));
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 550, -1, -1));
+        Mapa1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 550, 50, 50));
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 0, -1, -1));
+        Mapa1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 0, 50, 50));
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 50, -1, -1));
+        Mapa1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 50, 50, 50));
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 100, -1, -1));
+        Mapa1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 100, 50, 50));
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 150, -1, -1));
+        Mapa1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 150, 50, 50));
 
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 250, -1, -1));
+        Mapa1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 250, 50, 50));
 
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 300, -1, -1));
+        Mapa1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 300, 50, 50));
 
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 350, -1, -1));
+        Mapa1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 350, 50, 50));
 
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 400, -1, -1));
+        Mapa1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 400, 50, 50));
 
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 450, -1, -1));
+        Mapa1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 450, 50, 50));
 
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 500, -1, -1));
+        Mapa1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 500, 50, 50));
 
         jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 550, -1, -1));
+        Mapa1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 550, 50, 50));
 
         jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, -1, -1));
+        Mapa1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 50, 50));
 
         jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 0, -1, -1));
+        Mapa1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 0, 50, 50));
 
         jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, -1, -1));
+        Mapa1.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 50, 50));
 
         jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 0, -1, -1));
+        Mapa1.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 0, 50, 50));
 
         jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 0, -1, -1));
+        Mapa1.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 0, 50, 50));
 
         jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, -1, -1));
+        Mapa1.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 50, 50));
 
         jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 0, -1, -1));
+        Mapa1.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 0, 50, 50));
 
         jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, -1, -1));
+        Mapa1.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 50, 50));
 
         jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, -1, -1));
+        Mapa1.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 50, 50));
 
         jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, -1, -1));
+        Mapa1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 50, 50));
 
         jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, -1, -1));
+        Mapa1.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, 50, 50));
 
         jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, -480, -1, -1));
+        Mapa1.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, -480, 50, 50));
 
         jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, -450, -1, -1));
+        Mapa1.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, -450, 50, 50));
 
         jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, -400, -1, -1));
+        Mapa1.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, -400, 50, 50));
 
         jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, -360, -1, -1));
+        Mapa1.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, -360, 50, 50));
 
         jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, -310, -1, -1));
+        Mapa1.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, -310, 50, 50));
 
         jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, -270, -1, -1));
+        Mapa1.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, -270, 50, 50));
 
         jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 0, -1, -1));
+        Mapa1.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 0, 50, 50));
 
         jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 0, -1, -1));
+        Mapa1.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 0, 50, 50));
 
         jLabel44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 0, -1, -1));
+        Mapa1.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 0, 50, 50));
 
         jLabel45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, -1, -1));
+        Mapa1.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, 50, 50));
 
         jLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 0, -1, -1));
+        Mapa1.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 0, 50, 50));
 
         jLabel47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 0, -1, -1));
+        Mapa1.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 0, 50, 50));
 
         jLabel48.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 0, -1, -1));
+        Mapa1.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 0, 50, 50));
 
         jLabel49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 550, -1, -1));
+        Mapa1.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 550, 50, 50));
 
         jLabel50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 550, -1, -1));
+        Mapa1.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 550, 50, 50));
 
         jLabel51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 550, -1, -1));
+        Mapa1.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 550, 50, 50));
 
         jLabel52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 550, -1, -1));
+        Mapa1.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 550, 50, 50));
 
         jLabel53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 550, -1, -1));
+        Mapa1.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 550, 50, 50));
 
         jLabel54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 550, -1, -1));
+        Mapa1.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 550, 50, 50));
 
         jLabel55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 550, -1, -1));
+        Mapa1.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 550, 50, 50));
 
         jLabel56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 550, -1, -1));
+        Mapa1.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 550, 50, 50));
 
         jLabel57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 550, -1, -1));
+        Mapa1.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 550, 50, 50));
 
         jLabel58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 550, -1, -1));
+        Mapa1.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 550, 50, 50));
 
         jLabel59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 550, -1, -1));
+        Mapa1.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 550, 50, 50));
 
         jLabel60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 550, -1, -1));
+        Mapa1.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 550, 50, 50));
 
         jLabel61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 550, -1, -1));
+        Mapa1.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 550, 50, 50));
 
         jLabel62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 550, -1, -1));
+        Mapa1.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 550, 50, 50));
 
         jLabel63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 550, -1, -1));
+        Mapa1.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 550, 50, 50));
 
         jLabel64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 550, -1, -1));
+        Mapa1.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 550, 50, 50));
 
         jLabel65.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 550, -1, -1));
+        Mapa1.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 550, 50, 50));
 
         jLabel66.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 550, -1, -1));
+        Mapa1.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 550, 50, 50));
 
         jLabel67.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, -1, -1));
+        Mapa1.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 50, 50));
 
         jLabel68.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, -1, -1));
+        Mapa1.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 50, 50));
 
         jLabel69.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, -1, -1));
+        Mapa1.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 50, 50));
 
         jLabel70.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, -1, -1));
+        Mapa1.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, 50, 50));
 
         jLabel71.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, -1, -1));
+        Mapa1.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, 50, 50));
 
         jLabel72.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, -1, -1));
+        Mapa1.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 50, 50));
 
         jLabel73.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, -1, -1));
+        Mapa1.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, 50, 50));
 
         jLabel74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 250, -1, -1));
+        Mapa1.add(jLabel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 250, 50, 50));
 
         jLabel75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel75, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 250, -1, -1));
+        Mapa1.add(jLabel75, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 250, 50, 50));
 
         jLabel76.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel76, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 250, -1, -1));
+        Mapa1.add(jLabel76, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 250, 50, 50));
 
         jLabel77.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel77, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 250, -1, -1));
+        Mapa1.add(jLabel77, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 250, 50, 50));
 
         jLabel78.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 250, -1, -1));
+        Mapa1.add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 250, 50, 50));
 
         jLabel79.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 250, -1, -1));
+        Mapa1.add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 250, 50, 50));
 
         jLabel80.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 250, -1, -1));
+        Mapa1.add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 250, 50, 50));
 
         jLabel81.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 250, -1, -1));
+        Mapa1.add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 250, 50, 50));
 
         jLabel82.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 250, -1, -1));
+        Mapa1.add(jLabel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 250, 50, 50));
 
         jLabel83.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 250, -1, -1));
+        Mapa1.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 250, 50, 50));
 
         jLabel84.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, -1, -1));
+        Mapa1.add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 50, 50));
 
         jLabel85.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, -1, -1));
+        Mapa1.add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, 50, 50));
 
         jLabel86.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 300, -1, -1));
+        Mapa1.add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 300, 50, 50));
 
         jLabel87.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, -1, -1));
+        Mapa1.add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, 50, 50));
 
         jLabel88.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 300, -1, -1));
+        Mapa1.add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 300, 50, 50));
 
         jLabel89.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, -1, -1));
+        Mapa1.add(jLabel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, 50, 50));
 
         jLabel90.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 300, -1, -1));
+        Mapa1.add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 300, 50, 50));
 
         jLabel91.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, -1, -1));
+        Mapa1.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, 50, 50));
 
         jLabel92.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 300, -1, -1));
+        Mapa1.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 300, 50, 50));
 
         jLabel93.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 300, -1, -1));
+        Mapa1.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 300, 50, 50));
 
         jLabel94.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, -1, -1));
+        Mapa1.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, 50, 50));
 
         jLabel95.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 300, -1, -1));
+        Mapa1.add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 300, 50, 50));
 
         jLabel97.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel97, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 300, -1, -1));
+        Mapa1.add(jLabel97, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 300, 50, 50));
 
         jLabel98.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel98, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 300, -1, -1));
+        Mapa1.add(jLabel98, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 300, 50, 50));
 
         jLabel99.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel99, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 300, -1, -1));
+        Mapa1.add(jLabel99, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 300, 50, 50));
 
         jLabel100.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel100, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 350, -1, -1));
+        Mapa1.add(jLabel100, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 350, 50, 50));
 
         jLabel101.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel101, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 300, -1, -1));
+        Mapa1.add(jLabel101, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 300, 50, 50));
 
         jLabel102.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel102, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 250, -1, -1));
+        Mapa1.add(jLabel102, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 250, 50, 50));
 
         jLabel103.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel103, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 300, -1, -1));
+        Mapa1.add(jLabel103, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 300, 50, 50));
 
         jLabel104.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 250, -1, -1));
+        Mapa1.add(jLabel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 250, 50, 50));
 
         jLabel105.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel105, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 450, -1, -1));
+        Mapa1.add(jLabel105, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 450, 50, 50));
 
         jLabel106.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel106, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 500, -1, -1));
+        Mapa1.add(jLabel106, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 500, 50, 50));
 
         jLabel109.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel109, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 400, -1, -1));
+        Mapa1.add(jLabel109, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 400, 50, 50));
 
         jLabel110.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel110, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 350, -1, -1));
+        Mapa1.add(jLabel110, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 350, 50, 50));
 
         jLabel111.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel111, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 450, -1, -1));
+        Mapa1.add(jLabel111, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 450, 50, 50));
 
         jLabel112.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel112, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 500, -1, -1));
+        Mapa1.add(jLabel112, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 500, 50, 50));
 
         jLabel113.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel113, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, -1, -1));
+        Mapa1.add(jLabel113, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 50, 50));
 
         jLabel114.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel114, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, -1, -1));
+        Mapa1.add(jLabel114, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 50, 50));
 
         jLabel115.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel115, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 400, -1, -1));
+        Mapa1.add(jLabel115, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 400, 50, 50));
 
         jLabel117.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel117, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, -1, -1));
+        Mapa1.add(jLabel117, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 50, 50));
 
         jLabel118.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel118, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 200, -1, -1));
+        Mapa1.add(jLabel118, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 200, 50, 50));
 
         jLabel120.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel120, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 50, -1, -1));
+        Mapa1.add(jLabel120, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 50, 50, 50));
 
         jLabel122.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel122, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 100, -1, -1));
+        Mapa1.add(jLabel122, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 100, 50, 50));
 
         jLabel125.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel125, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 50, -1, -1));
+        Mapa1.add(jLabel125, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 50, 50, 50));
 
         jLabel127.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel127, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 100, -1, -1));
+        Mapa1.add(jLabel127, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 100, 50, 50));
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LaberintoLadrillo.png"))); // NOI18N
-        Mapa1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, -1, -1));
+        Mapa1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 50, 50));
 
         Avatar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
         Mapa1.add(Avatar, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 200, 40, 40));
@@ -554,6 +554,7 @@ public class Mundo3 extends javax.swing.JDialog {
         Mapa1.add(TransladorEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 350, 50, 50));
 
         TransladorSalida.setBackground(new java.awt.Color(0, 0, 0));
+        TransladorSalida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/hoyo.gif"))); // NOI18N
         TransladorSalida.setOpaque(true);
         Mapa1.add(TransladorSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 50, 50));
 
@@ -605,7 +606,7 @@ public class Mundo3 extends javax.swing.JDialog {
                 jlControlGuiaControlGuia(evt);
             }
         });
-        Informacion.add(jlControlGuia, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 0, 80, 40));
+        Informacion.add(jlControlGuia, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 0, 70, 50));
 
         jlTiempo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jlTiempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -693,6 +694,7 @@ public class Mundo3 extends javax.swing.JDialog {
     }//GEN-LAST:event_jlVolverVolverMenu
 
     private void jlControlGuiaControlGuia(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlControlGuiaControlGuia
+        tiempo.interrupt();
         new GuiaControles(null, true);
     }//GEN-LAST:event_jlControlGuiaControlGuia
 
