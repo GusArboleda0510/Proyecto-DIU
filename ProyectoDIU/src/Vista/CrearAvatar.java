@@ -1171,7 +1171,7 @@ public class CrearAvatar extends javax.swing.JDialog {
         jPCargarAv.add(jComboNames, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, 210, 40));
 
         jbVistaPrevia.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
-        jbVistaPrevia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ojo1.png"))); // NOI18N
+        jbVistaPrevia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ojo (2).png"))); // NOI18N
         jbVistaPrevia.setContentAreaFilled(false);
         jbVistaPrevia.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbVistaPrevia.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1184,10 +1184,10 @@ public class CrearAvatar extends javax.swing.JDialog {
                 jbVistaPreviaActionPerformed(evt);
             }
         });
-        jPCargarAv.add(jbVistaPrevia, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 40, 80, 80));
+        jPCargarAv.add(jbVistaPrevia, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, 80, 90));
 
         jbVistaPrevia1.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
-        jbVistaPrevia1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ojo.png"))); // NOI18N
+        jbVistaPrevia1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ojo1.png"))); // NOI18N
         jbVistaPrevia1.setContentAreaFilled(false);
         jbVistaPrevia1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbVistaPrevia1.addMouseListener(new java.awt.event.MouseAdapter() {
