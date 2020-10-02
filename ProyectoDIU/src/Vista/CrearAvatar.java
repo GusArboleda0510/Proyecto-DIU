@@ -12,6 +12,7 @@ import java.io.FileNotFoundException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JColorChooser;
+import javax.swing.JLabel;
 
 /**
  *
@@ -37,7 +38,7 @@ public class CrearAvatar extends javax.swing.JDialog {
         cca = new ControlCrearAvatar();
         jbCargar2.setVisible(false);
         jBCerrar1.setVisible(false);
-        jBGuardar1.setVisible(false);
+        jBCrear1.setVisible(false);
         jBMas.setVisible(false);
         jbVistaPrevia.setVisible(false);
         jLVolver.setVisible(false);
@@ -170,8 +171,8 @@ public class CrearAvatar extends javax.swing.JDialog {
         jBCerrar = new javax.swing.JButton();
         jbCargar2 = new javax.swing.JButton();
         jbCargar = new javax.swing.JButton();
-        jBGuardar1 = new javax.swing.JButton();
-        jBGuardar = new javax.swing.JButton();
+        jBCrear1 = new javax.swing.JButton();
+        jBCrear = new javax.swing.JButton();
         jbJugar = new javax.swing.JButton();
         jbJugar1 = new javax.swing.JButton();
         Fondo = new javax.swing.JLabel();
@@ -1086,7 +1087,7 @@ public class CrearAvatar extends javax.swing.JDialog {
                 jBMasEscuchaPanel(evt);
             }
         });
-        jPColores.add(jBMas, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, 70, 80));
+        jPColores.add(jBMas, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, 60, 80));
 
         jBMas1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/boton.png"))); // NOI18N
         jBMas1.setContentAreaFilled(false);
@@ -1288,34 +1289,39 @@ public class CrearAvatar extends javax.swing.JDialog {
         });
         jPanel1.add(jbCargar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 650, 210, 60));
 
-        jBGuardar1.setFont(new java.awt.Font("Tempus Sans ITC", 1, 30)); // NOI18N
-        jBGuardar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/pluma.png"))); // NOI18N
-        jBGuardar1.setText("Crear");
-        jBGuardar1.setContentAreaFilled(false);
-        jBGuardar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jBGuardar1.addMouseListener(new java.awt.event.MouseAdapter() {
+        jBCrear1.setFont(new java.awt.Font("Tempus Sans ITC", 1, 30)); // NOI18N
+        jBCrear1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/pluma.png"))); // NOI18N
+        jBCrear1.setText("Crear");
+        jBCrear1.setContentAreaFilled(false);
+        jBCrear1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBCrear1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBGuardar1MouseExited(evt);
+                jBCrear1MouseExited(evt);
             }
         });
-        jBGuardar1.addActionListener(new java.awt.event.ActionListener() {
+        jBCrear1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBGuardar1ActionPerformed(evt);
+                jBCrear1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jBGuardar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 630, 200, 80));
+        jPanel1.add(jBCrear1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 630, 200, 80));
 
-        jBGuardar.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
-        jBGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/pluma.png"))); // NOI18N
-        jBGuardar.setText("Crear");
-        jBGuardar.setContentAreaFilled(false);
-        jBGuardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jBGuardar.addMouseListener(new java.awt.event.MouseAdapter() {
+        jBCrear.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        jBCrear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/pluma.png"))); // NOI18N
+        jBCrear.setText("Crear");
+        jBCrear.setContentAreaFilled(false);
+        jBCrear.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jBCrear.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBGuardarMouseEntered(evt);
+                jBCrearMouseEntered(evt);
             }
         });
-        jPanel1.add(jBGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 650, 160, 60));
+        jBCrear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBCrearActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jBCrear, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 650, 160, 60));
 
         jbJugar.setFont(new java.awt.Font("Tempus Sans ITC", 1, 28)); // NOI18N
         jbJugar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/juego1.png"))); // NOI18N
@@ -1618,15 +1624,15 @@ public class CrearAvatar extends javax.swing.JDialog {
         preLlenarMatriz();
         GuardarNombre nick = new GuardarNombre(null, true, " - ");
         nickName = nick.getNickName(); 
-        String imagenGrande =null;
+        JLabel jLAvatar = new JLabel(); 
+        jLAvatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));
         if(null != jLVistaPrevia.getIcon()){
-            imagenGrande = jLVistaPrevia.getIcon()+"";
         }        
         try {
-            cca = new ControlCrearAvatar(colores, nickName, imgPeque, imagenGrande);
-            Sonido s = new Sonido("PacmanIniciar.wav");
+//            cca = new ControlCrearAvatar(colores, nickName, imgPeque, imagenGrande);
+//            Sonido s = new Sonido("PacmanIniciar.wav");
              Thread.sleep(4500);
-            new Mundo1(null, true);
+            new Mundo1(null, true, jLAvatar);
             dispose();
         } catch (Exception ex) {
             if("no reescribir".equals(ex.getMessage())){
@@ -1639,8 +1645,8 @@ public class CrearAvatar extends javax.swing.JDialog {
 
     private void jbVistaPreviaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbVistaPreviaActionPerformed
         jbJugar1.setVisible(true);
-        jBGuardar.setVisible(false);
-        jBGuardar1.setVisible(false);
+        jBCrear.setVisible(false);
+        jBCrear1.setVisible(false);
          try {
              cargarXML();
          } catch (Exception ex) {
@@ -1681,7 +1687,7 @@ public class CrearAvatar extends javax.swing.JDialog {
         jPCargarAv.setVisible(false);
         jbJugar.setVisible(false);
         jbJugar1.setVisible(false);
-        jBGuardar.setVisible(true);
+        jBCrear.setVisible(true);
     }//GEN-LAST:event_jLVolverVolverMenu
 
     private void jLAvatar1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLAvatar1MouseReleased
@@ -1827,17 +1833,19 @@ public class CrearAvatar extends javax.swing.JDialog {
         jBCerrar1.setVisible(true);
     }//GEN-LAST:event_jBCerrarMouseEntered
 
-    private void jBGuardar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGuardar1ActionPerformed
+    private void jBCrear1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCrear1ActionPerformed
         llenarMatriz();
         preLlenarMatriz();
         GuardarNombre nick = new GuardarNombre(null, true, " - ");
+        JLabel jLAvatar = new JLabel(); 
+        jLAvatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));
         try {
             nickName = nick.getNickName(); 
             if(nickName == null){
                 throw new Exception("TAL");
             }       
             cca = new ControlCrearAvatar(colores, nickName, imgPeque, imgGrande);
-            new Mundo1(null, true);
+            new Mundo1(null, true, jLAvatar);
             dispose();
         } catch (Exception ex) {
             if("TAL".equals(ex.getMessage())){
@@ -1850,17 +1858,17 @@ public class CrearAvatar extends javax.swing.JDialog {
             }
         }
         
-    }//GEN-LAST:event_jBGuardar1ActionPerformed
+    }//GEN-LAST:event_jBCrear1ActionPerformed
 
-    private void jBGuardar1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBGuardar1MouseExited
-        jBGuardar1.setVisible(false);
-        jBGuardar.setVisible(true);
-    }//GEN-LAST:event_jBGuardar1MouseExited
+    private void jBCrear1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBCrear1MouseExited
+        jBCrear1.setVisible(false);
+        jBCrear.setVisible(true);
+    }//GEN-LAST:event_jBCrear1MouseExited
 
-    private void jBGuardarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBGuardarMouseEntered
-       jBGuardar.setVisible(false);
-       jBGuardar1.setVisible(true);
-    }//GEN-LAST:event_jBGuardarMouseEntered
+    private void jBCrearMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBCrearMouseEntered
+       jBCrear.setVisible(false);
+       jBCrear1.setVisible(true);
+    }//GEN-LAST:event_jBCrearMouseEntered
 
     private void jBMasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBMasMouseExited
         jBMas.setVisible(false);
@@ -1876,6 +1884,7 @@ public class CrearAvatar extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_jLVolver1VolverMenu
 
+    
     private void jLVolverMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLVolverMouseExited
         jLVolver.setVisible(false);
         jLVolver1.setVisible(true);
@@ -1909,13 +1918,19 @@ public class CrearAvatar extends javax.swing.JDialog {
 
     private void jbJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbJugarActionPerformed
          try {
+            JLabel jLAvatar = new JLabel(); 
+            jLAvatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));
              Sonido s = new Sonido("PacmanIniciar.wav");
              Thread.sleep(4500);
-             new Mundo1(null, true);
+             new Mundo1(null, true, jLAvatar);
          } catch (InterruptedException ex) {
              Logger.getLogger(CrearAvatar.class.getName()).log(Level.SEVERE, null, ex);
          }
     }//GEN-LAST:event_jbJugarActionPerformed
+
+    private void jBCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCrearActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBCrearActionPerformed
 
     public void preLlenarMatriz(){
         for (int j = 0; j < colores.length; j++) {
@@ -2013,8 +2028,8 @@ public class CrearAvatar extends javax.swing.JDialog {
     private javax.swing.JLabel Fondo;
     private javax.swing.JButton jBCerrar;
     private javax.swing.JButton jBCerrar1;
-    private javax.swing.JButton jBGuardar;
-    private javax.swing.JButton jBGuardar1;
+    private javax.swing.JButton jBCrear;
+    private javax.swing.JButton jBCrear1;
     private javax.swing.JButton jBMas;
     private javax.swing.JButton jBMas1;
     private javax.swing.JComboBox jComboNames;
@@ -2137,7 +2152,8 @@ public class CrearAvatar extends javax.swing.JDialog {
             jPCuadricula.setVisible(true);
 
             Color[][] mat = cca.getColores();
-            asignarColores(cca.getColores());   
+            asignarColores(cca.getColores());  
+            imgPeque = cca.obtenerRutaImgPeque();
         }else{
             if(buscar.equals("rutas")){
                 jPCuadricula.setVisible(false);
@@ -2231,4 +2247,5 @@ public class CrearAvatar extends javax.swing.JDialog {
         jLabel77.setBackground(colores[fila][6]);
         jLabel78.setBackground(colores[fila][7]);
     }
+    
 }

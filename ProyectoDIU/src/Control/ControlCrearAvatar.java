@@ -39,11 +39,14 @@ public class ControlCrearAvatar {
     public ControlCrearAvatar(Color[][] colores, String nombreAvatar, String ruta, String imagenGrande) throws Exception {
         this.colores = colores;  
         predPequenia = ruta;
+        if(predPequenia == null){
+           predPequenia = "/Imagenes/Avatars/Usuarios/"+nickNameJugador+".png"; 
+        }
         predGrande = imagenGrande;
         nickNameJugador = nombreAvatar;  
         cd = new CreadordeDocs(avatars, "jugadores");
         initImagen();
-        if(predPequenia == null){
+        if(predGrande == null){
             dibujarImagen();       
         }else{
             insertarImagen();
@@ -85,7 +88,7 @@ public class ControlCrearAvatar {
         avatar.appendChild(nickName);       
         
         String palabraColores;
-        if(predPequenia == null){
+        if(predGrande == null){
             predPequenia = " ";
             predGrande = " ";
             palabraColores = obtenerColores();
@@ -188,7 +191,7 @@ public class ControlCrearAvatar {
                     nuevo.setTextContent(nickNameJugador);
                     avat.replaceChild(nuevo, viejo); 
                     String palabraColores;
-                    if(predPequenia == null){
+                    if(predGrande == null){
                         predPequenia = " ";
                         predGrande = " ";
                         palabraColores = obtenerColores();
@@ -465,6 +468,10 @@ public class ControlCrearAvatar {
             r = 253;
         }
         return r;
+    }
+
+    public String obtenerRutaImgPeque() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
  
 }
