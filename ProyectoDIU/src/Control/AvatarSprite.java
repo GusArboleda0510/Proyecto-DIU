@@ -17,14 +17,14 @@ import javax.swing.JLabel;
 public class AvatarSprite extends Thread{
 
     JLabel avatar = null;
-    Mundo1 mundo= new Mundo1(null, true);
+//    Mundo1 mundo= new Mundo1(null, true);
     Mundo1.mapa1 mapa;
     JLabel sprite1 = null, sprite2 = null;
     int posAnterior[] = new int[2];//x,y
 
     public AvatarSprite(JLabel avatar) {
         this.avatar = avatar;
-        mapa = mundo.getMapa1();
+//        mapa = mundo.getMapa1();
         sprite1 = new JLabel();
         sprite2 = new JLabel();
 

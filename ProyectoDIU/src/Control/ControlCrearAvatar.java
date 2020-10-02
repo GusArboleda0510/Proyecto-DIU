@@ -26,7 +26,7 @@ import org.w3c.dom.NodeList;
  * @author ANDRES ARBOLEDA
  */
 public class ControlCrearAvatar {
-    BufferedImage imagen = new BufferedImage(40, 40, BufferedImage.TYPE_INT_ARGB);
+    BufferedImage imagen;
     File archivoImagen;
     String formato = "png";
     Color[][] colores = new Color [2][6];
@@ -36,19 +36,25 @@ public class ControlCrearAvatar {
     String nickNameJugador;
     boolean reescribir;
     String predPequenia = null, predGrande = null;
+    String rutaImgPeque;
     public ControlCrearAvatar(Color[][] colores, String nombreAvatar, String ruta, String imagenGrande) throws Exception {
         this.colores = colores;  
         predPequenia = ruta;
-        predGrande = imagenGrande;
         nickNameJugador = nombreAvatar;  
-        cd = new CreadordeDocs(avatars, "jugadores");
-        initImagen();
+        imagen = new BufferedImage(40, 40, BufferedImage.TYPE_INT_ARGB);
         if(predPequenia == null){
+           predPequenia = "/Imagenes/Avatars/Usuarios/"+nickNameJugador+".png"; 
+        }
+        rutaImgPeque = "/Imagenes/Avatars/Usuarios/"+nickNameJugador+".png"; 
+        predGrande = imagenGrande;
+        initImagen();
+        if(predGrande == null){
             dibujarImagen();       
         }else{
             insertarImagen();
         }
         crearImagen();
+        cd = new CreadordeDocs(avatars, "jugadores");
         if(!imagenExisteXML()){
             guardarXML();  
         }else{
@@ -66,7 +72,7 @@ public class ControlCrearAvatar {
             ImageIO.write(imagen, formato, archivoImagen);
         } catch (IOException e) {
             System.out.println("Error de escritura");
-        }
+        }  
     }
     
     public void guardarXML() throws Exception{     
@@ -85,7 +91,7 @@ public class ControlCrearAvatar {
         avatar.appendChild(nickName);       
         
         String palabraColores;
-        if(predPequenia == null){
+        if(predGrande == null){
             predPequenia = " ";
             predGrande = " ";
             palabraColores = obtenerColores();
@@ -156,6 +162,8 @@ public class ControlCrearAvatar {
         }
     }
 
+
+
     private boolean imagenExisteXML() throws Exception {
         if(avatars.exists()){
             ld = new LectordeDocs(avatars);
@@ -188,7 +196,7 @@ public class ControlCrearAvatar {
                     nuevo.setTextContent(nickNameJugador);
                     avat.replaceChild(nuevo, viejo); 
                     String palabraColores;
-                    if(predPequenia == null){
+                    if(predGrande == null){
                         predPequenia = " ";
                         predGrande = " ";
                         palabraColores = obtenerColores();
@@ -413,6 +421,7 @@ public class ControlCrearAvatar {
                     if(!palabra.equals(" ")){
                         dondeBuscar = "colores";
                         colores = obtenerColoresDeXML(palabra);
+                        nickNameJugador = avat.getElementsByTagName("nickname").item(0).getTextContent();
                     }else{
                         if(!avat.getElementsByTagName("imgjuego").item(0).getTextContent().equals(" ")){
                             dondeBuscar = "rutas";
@@ -466,5 +475,19 @@ public class ControlCrearAvatar {
         }
         return r;
     }
- 
+
+    public String getRutaImgPeque() {
+        return rutaImgPeque;
+    }
+    
+    public String obtenerRutaImgPeque() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void hacerImgAgain() {
+        imagen = new BufferedImage(40, 40, BufferedImage.TYPE_INT_ARGB);
+        dibujarImagen();
+        archivoImagen = new File("src/Imagenes/Avatars/Usuarios/"+nickNameJugador+".png");
+        crearImagen();
+    }
 }

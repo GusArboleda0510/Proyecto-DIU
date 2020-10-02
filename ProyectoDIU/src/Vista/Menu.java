@@ -62,7 +62,6 @@ public class Menu extends javax.swing.JFrame {
         jBJugar.setForeground(new java.awt.Color(153, 204, 255));
         jBJugar.setText("Jugar");
         jBJugar.setContentAreaFilled(false);
-        jBJugar.setOpaque(false);
         jBJugar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jBJugarMouseExited(evt);
@@ -73,7 +72,7 @@ public class Menu extends javax.swing.JFrame {
                 jBJugarActionPerformed(evt);
             }
         });
-        jPanel2.add(jBJugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 290, 100));
+        jPanel2.add(jBJugar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, 290, 130));
 
         jBJugar1.setFont(new java.awt.Font("Times New Roman", 1, 60)); // NOI18N
         jBJugar1.setForeground(new java.awt.Color(153, 204, 255));
@@ -90,7 +89,6 @@ public class Menu extends javax.swing.JFrame {
         jBCerrar.setForeground(new java.awt.Color(153, 204, 255));
         jBCerrar.setText("Cerrar");
         jBCerrar.setContentAreaFilled(false);
-        jBCerrar.setOpaque(false);
         jBCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jBCerrarMouseExited(evt);
@@ -101,7 +99,7 @@ public class Menu extends javax.swing.JFrame {
                 jBCerrarActionPerformed(evt);
             }
         });
-        jPanel2.add(jBCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 420, 340, 70));
+        jPanel2.add(jBCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, 340, 90));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 80)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -123,7 +121,6 @@ public class Menu extends javax.swing.JFrame {
         jbGanadores.setForeground(new java.awt.Color(153, 204, 255));
         jbGanadores.setText("Ganadores");
         jbGanadores.setContentAreaFilled(false);
-        jbGanadores.setOpaque(false);
         jbGanadores.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jbGanadoresMouseExited(evt);
@@ -155,6 +152,11 @@ public class Menu extends javax.swing.JFrame {
         jbAyuda.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jbAyudaMouseEntered(evt);
+            }
+        });
+        jbAyuda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbAyudaActionPerformed(evt);
             }
         });
         jPanel2.add(jbAyuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 30, 70, 60));
@@ -265,6 +267,10 @@ public class Menu extends javax.swing.JFrame {
         s = new Sonido("click.wav");
         new CrearAvatar(null, true);
     }//GEN-LAST:event_jBJugarActionPerformed
+
+    private void jbAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAyudaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbAyudaActionPerformed
 
     /**
      * @param args the command line arguments
