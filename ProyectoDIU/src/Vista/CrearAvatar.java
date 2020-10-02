@@ -1168,6 +1168,7 @@ public class CrearAvatar extends javax.swing.JDialog {
         jPCargarAv.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 140, 40));
 
         jComboNames.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
+        jComboNames.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPCargarAv.add(jComboNames, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, 210, 40));
 
         jbVistaPrevia.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
@@ -1200,6 +1201,7 @@ public class CrearAvatar extends javax.swing.JDialog {
         jLVolver.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLVolver.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Atras1.png"))); // NOI18N
+        jLVolver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLVolver.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 jLVolverMouseExited(evt);

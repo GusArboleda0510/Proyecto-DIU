@@ -215,9 +215,9 @@ public class GuiaControles extends javax.swing.JDialog {
                 volverCrearAvatar(evt);
             }
         });
-        CrearAvatar.add(jbVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1240, -1, -1));
+        CrearAvatar.add(jbVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 2960, -1, -1));
 
-        PersonalizaAvatars.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Cargar Avatars", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 2, 36))); // NOI18N
+        PersonalizaAvatars.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Cargar Avatars", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 2, 36))); // NOI18N
 
         jbCrear.setToolTipText("<html>Luego de escoger o personalizar tu avatar<p>"
             + "Presiona este boton para crear tu avatars<html>");
@@ -317,7 +317,7 @@ public class GuiaControles extends javax.swing.JDialog {
 
         CrearAvatar.add(PersonalizaAvatars, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 810, 830, 640));
 
-        CargarAvatars.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Personaliza Avatars", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 2, 36))); // NOI18N
+        CargarAvatars.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Personaliza Avatars", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 2, 36))); // NOI18N
 
         jbCrear1.setToolTipText("<html>Luego de escoger o personalizar tu avatar<p>"
             + "Presiona este boton para crear tu avatars<html>");
