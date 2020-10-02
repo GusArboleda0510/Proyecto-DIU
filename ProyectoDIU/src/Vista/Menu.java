@@ -154,6 +154,11 @@ public class Menu extends javax.swing.JFrame {
                 jbAyudaMouseEntered(evt);
             }
         });
+        jbAyuda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbAyudaActionPerformed(evt);
+            }
+        });
         jPanel2.add(jbAyuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 30, 70, 60));
 
         jBCerrar1.setFont(new java.awt.Font("Times New Roman", 1, 60)); // NOI18N
@@ -262,6 +267,10 @@ public class Menu extends javax.swing.JFrame {
         s = new Sonido("click.wav");
         new CrearAvatar(null, true);
     }//GEN-LAST:event_jBJugarActionPerformed
+
+    private void jbAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAyudaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbAyudaActionPerformed
 
     /**
      * @param args the command line arguments

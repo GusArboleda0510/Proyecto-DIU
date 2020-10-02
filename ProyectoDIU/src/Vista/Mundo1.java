@@ -36,7 +36,7 @@ public class Mundo1 extends javax.swing.JDialog {
         initComponents();
         String nombreMapa = decidirMapa();
         Puntaje.setText("0");
-        jLAvatarMapa2.setIcon(jLAvatar.getIcon());
+        jLAvatarMapa1.setIcon(jLAvatar.getIcon());
         jLAvatarMapa2.setIcon(jLAvatar.getIcon());
 ////        llamarEnemigos(nombreMapa);
         contEnemigos = new ControlEnemigos(enemigo1,"mapa1","tiempo",Tiempo); 

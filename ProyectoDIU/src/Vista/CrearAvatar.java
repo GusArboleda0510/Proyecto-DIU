@@ -1352,6 +1352,11 @@ public class CrearAvatar extends javax.swing.JDialog {
                 jbJugar1MouseEntered(evt);
             }
         });
+        jbJugar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbJugar1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jbJugar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 650, 170, 60));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondoBlanco.jpg"))); // NOI18N
@@ -1627,7 +1632,7 @@ public class CrearAvatar extends javax.swing.JDialog {
         GuardarNombre nick = new GuardarNombre(null, true, " - ");
         nickName = nick.getNickName(); 
         JLabel jLAvatar = new JLabel(); 
-        System.out.println("TAL1");
+        System.out.println("TAL1 FALTAN vALIDACIONES AQUI");
         if(imgPeque != null){
             jLAvatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));  
         }else{
@@ -1842,17 +1847,19 @@ public class CrearAvatar extends javax.swing.JDialog {
         llenarMatriz();
         preLlenarMatriz();
         GuardarNombre nick = new GuardarNombre(null, true, " - ");
-        JLabel jLAvatar = new JLabel(); 
-        if(imgPeque != null){
-            jLAvatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));  
-        }
         try {
             nickName = nick.getNickName(); 
             if(nickName == null){
                 throw new Exception("TAL");
             }       
             cca = new ControlCrearAvatar(colores, nickName, imgPeque, imgGrande);
-            imgPeque = "/Imagenes/Avatars/Usuarios/"+nickName+".png";
+            cca.hacerImgAgain();
+            if(imgPeque == null){
+                imgPeque  = cca.getRutaImgPeque();
+            }  
+            JLabel jLAvatar = new JLabel();   
+            imgPeque = "/Imagenes/Avatars/Avatar4/1.jpg";
+
             jLAvatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));  
             new Mundo1(null, true, jLAvatar);
             dispose();
@@ -1928,9 +1935,12 @@ public class CrearAvatar extends javax.swing.JDialog {
     private void jbJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbJugarActionPerformed
          try {
             JLabel jLAvatar = new JLabel(); 
-            if(imgPeque != null){
-                jLAvatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));  
+            cca.hacerImgAgain();
+            if(imgPeque == null){
+                imgPeque  = cca.getRutaImgPeque();
             }
+            imgPeque = "/Imagenes/Avatars/Avatar4/1.jpg";
+            jLAvatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));  
              Sonido s = new Sonido("PacmanIniciar.wav");
              Thread.sleep(4500);
              new Mundo1(null, true, jLAvatar);
@@ -1942,6 +1952,10 @@ public class CrearAvatar extends javax.swing.JDialog {
     private void jBCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCrearActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jBCrearActionPerformed
+
+    private void jbJugar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbJugar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbJugar1ActionPerformed
 
     public void preLlenarMatriz(){
         for (int j = 0; j < colores.length; j++) {
@@ -2171,6 +2185,7 @@ public class CrearAvatar extends javax.swing.JDialog {
                 jPCargarAv.setVisible(true);
                 jLVistaPrevia.setIcon(new javax.swing.ImageIcon(getClass().getResource(cca.getPredGrande())));
             }
+            
         }
     }
 
