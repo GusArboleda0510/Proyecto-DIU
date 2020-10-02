@@ -2,52 +2,22 @@
 <ganadores>
     <puestos>
         <jugadores>ALEJANDRA</jugadores>
+        <puntaje>300</puntaje>
+        <timepo>00:00:01</timepo>
+    </puestos>
+<puestos>
+        <jugadores>DANIEL</jugadores>
+        <puntaje>50</puntaje>
+        <timepo>00:00:01</timepo>
+    </puestos>
+<puestos>
+        <jugadores>OTRO</jugadores>
         <puntaje>200</puntaje>
         <timepo>00:00:01</timepo>
     </puestos>
 <puestos>
-        <jugadores>ALEJANDRA</jugadores>
-        <puntaje>200</puntaje>
-        <timepo>00:00:01</timepo>
-    </puestos>
-<puestos>
-        <jugadores>ALEJANDRA</jugadores>
+        <jugadores>HOLA</jugadores>
         <puntaje>100</puntaje>
-        <timepo>00:00:01</timepo>
-    </puestos>
-<puestos>
-        <jugadores>ALEJANDRA</jugadores>
-        <puntaje>100</puntaje>
-        <timepo>00:00:01</timepo>
-    </puestos>
-<puestos>
-        <jugadores>ALEJANDRA</jugadores>
-        <puntaje>200</puntaje>
-        <timepo>00:00:01</timepo>
-    </puestos>
-<puestos>
-        <jugadores>ALEJANDRA</jugadores>
-        <puntaje>200</puntaje>
-        <timepo>00:00:01</timepo>
-    </puestos>
-<puestos>
-        <jugadores>ALEJANDRA</jugadores>
-        <puntaje>200</puntaje>
-        <timepo>00:00:01</timepo>
-    </puestos>
-<puestos>
-        <jugadores>ALEJANDRA</jugadores>
-        <puntaje>200</puntaje>
-        <timepo>00:00:01</timepo>
-    </puestos>
-<puestos>
-        <jugadores>ALEJANDRA</jugadores>
-        <puntaje>200</puntaje>
-        <timepo>00:00:01</timepo>
-    </puestos>
-<puestos>
-        <jugadores>ALEJANDRA</jugadores>
-        <puntaje>200</puntaje>
         <timepo>00:00:01</timepo>
     </puestos>
 </ganadores>

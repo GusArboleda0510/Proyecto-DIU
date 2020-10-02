@@ -28,9 +28,6 @@ HECHO ALE terminar limites
 
 ALE cargar Label de avatar en los mundos 
 
-Ale Verificar los Limites (Estan haciendo cosas raras->Esta dandome una posicion predeterminada)
-
-
 		FASE 2 {logica de jugabilidad}
 ---------------------------------------------------------------
  
@@ -42,7 +39,7 @@ ALE - GUS (SIN DEFINIR) puntaje (dependiente de colisiones y cambio de mundos)
 	- sumariamos 100 por pasar un mundo
 	- al pasar un mundo --> bonus de 50 x cada vida 
 
-GUS - ALE (SIN DEFINIR) XML de Score donde se guarde el historial de ganadores
+HECHO GUS - ALE (SIN DEFINIR) XML de Score donde se guarde el historial de ganadores
 donde se almacene el nickName, el tiempo jugado, 
 el puntaje de cada jugador 
 
