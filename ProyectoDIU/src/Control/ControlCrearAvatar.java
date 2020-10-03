@@ -36,7 +36,7 @@ public class ControlCrearAvatar {
     String nickNameJugador;
     boolean reescribir;
     String predPequenia = null, predGrande = null;
-    String rutaImgPeque;
+    String insertarODibujar;
     public ControlCrearAvatar(Color[][] colores, String nombreAvatar, String ruta, String imagenGrande) throws Exception {
         this.colores = colores;  
         predPequenia = ruta;
@@ -45,16 +45,17 @@ public class ControlCrearAvatar {
         if(predPequenia == null){
            predPequenia = "/Imagenes/Avatars/Usuarios/"+nickNameJugador+".png"; 
         }
-        rutaImgPeque = "/Imagenes/Avatars/Usuarios/"+nickNameJugador+".png"; 
+//        rutaImgPeque = "/Imagenes/Avatars/Usuarios/"+nickNameJugador+".png"; 
         predGrande = imagenGrande;
         initImagen();
         if(predGrande == null){
             dibujarImagen();       
         }else{
+            System.out.println("t1 " + predGrande);
             insertarImagen();
         }
         
-//        crearImagen();
+        crearImagen();
 
         cd = new CreadordeDocs(avatars, "jugadores");
         if(!imagenExisteXML()){
@@ -419,14 +420,16 @@ public class ControlCrearAvatar {
             if (nodo.getNodeType() == Node.ELEMENT_NODE) {
                 Element avat = (Element) nodo;
                 if (avat.getElementsByTagName("nickname").item(0).getTextContent().equalsIgnoreCase(nombre)) {
+                    nickNameJugador = avat.getElementsByTagName("nickname").item(0).getTextContent();
                     String palabra = avat.getElementsByTagName("colores").item(0).getTextContent();
                     if(!palabra.equals(" ")){
                         dondeBuscar = "colores";
+                        insertarODibujar = "dibujar";
                         colores = obtenerColoresDeXML(palabra);
-                        nickNameJugador = avat.getElementsByTagName("nickname").item(0).getTextContent();
                     }else{
                         if(!avat.getElementsByTagName("imgjuego").item(0).getTextContent().equals(" ")){
                             dondeBuscar = "rutas";
+                            insertarODibujar = "insertar";
                             predPequenia = avat.getElementsByTagName("imgjuego").item(0).getTextContent();
                             predGrande = avat.getElementsByTagName("imgVista").item(0).getTextContent();
                         }
@@ -479,17 +482,27 @@ public class ControlCrearAvatar {
     }
 
     public String getRutaImgPeque() {
-        return rutaImgPeque;
+        if(predPequenia != null){
+            return predPequenia;
+        }else{
+            return "/Imagenes/Avatars/Usuarios/"+nickNameJugador+".png";
+        }
     }
     
-    public String obtenerRutaImgPeque() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String getNickName() {
+        return nickNameJugador;
     }
 
     public void hacerImgAgain() {
         imagen = new BufferedImage(40, 40, BufferedImage.TYPE_INT_ARGB);
-        dibujarImagen();
+        if(insertarODibujar.equals("dibujar")){
+            dibujarImagen();     
+        }else{
+          if(insertarODibujar.equals("insertar")){
+            insertarImagen(); 
+            } 
+        }
         archivoImagen = new File("src/Imagenes/Avatars/Usuarios/"+nickNameJugador+".png");
-//        crearImagen();
+        crearImagen();
     }
 }

@@ -10,4 +10,14 @@
         <puntaje>50</puntaje>
         <timepo/>
     </puestos>
+<puestos>
+        <jugadores>ALEJANDRA</jugadores>
+        <puntaje>-50</puntaje>
+        <timepo/>
+    </puestos>
+<puestos>
+        <jugadores>ALEJANDRA</jugadores>
+        <puntaje>-50</puntaje>
+        <timepo/>
+    </puestos>
 </ganadores>

@@ -37,13 +37,22 @@ public class Mundo1 extends javax.swing.JDialog {
     controlJugabilidad jug;
     
     String[] infoVida_Puntaje;
-    public Mundo1(java.awt.Frame parent, boolean modal, JLabel jLAvatar)  {
+    public Mundo1(java.awt.Frame parent, boolean modal, String nickNameJugador, String imgPeque)  {
         super(parent, modal);
         initComponents();
         String nombreMapa = decidirMapa();
         Puntaje.setText("0");
-        jLAvatarMapa1.setIcon(jLAvatar.getIcon());
-        jLAvatarMapa2.setIcon(jLAvatar.getIcon());
+        if(imgPeque != null){
+            jLAvatarMapa1.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));
+            jLAvatarMapa2.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));
+        }else{
+            if(nickNameJugador != null){
+                String predPequenia = "/Imagenes/Avatars/Usuarios/"+nickNameJugador+".png"; 
+                jLAvatarMapa1.setIcon(new javax.swing.ImageIcon(getClass().getResource(predPequenia)));
+                jLAvatarMapa2.setIcon(new javax.swing.ImageIcon(getClass().getResource(predPequenia)));
+            }
+            
+        }
 ////        llamarEnemigos(nombreMapa);
         contEnemigos = new ControlEnemigos(enemigo1,"mapa1"); 
         contEnemigos.start();
@@ -1584,7 +1593,7 @@ public class Mundo1 extends javax.swing.JDialog {
         jLAvatarMapa2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLAvatarMapa2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
         jLAvatarMapa2.setOpaque(true);
-        Mapa2.add(jLAvatarMapa2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 550, 40, 40));
+        Mapa2.add(jLAvatarMapa2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 510, 40, 40));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoTierra.jpg"))); // NOI18N
         Mapa2.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 600));

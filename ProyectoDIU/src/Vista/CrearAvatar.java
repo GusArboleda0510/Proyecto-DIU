@@ -1642,7 +1642,7 @@ public class CrearAvatar extends javax.swing.JDialog {
 //            cca = new ControlCrearAvatar(colores, nickName, imgPeque, imagenGrande);
 //            Sonido s = new Sonido("PacmanIniciar.wav");
              Thread.sleep(4500);
-            new Mundo1(null, true, jLAvatar);
+            new Mundo1(null, true, nickName, imgPeque);
             dispose();
         } catch (Exception ex) {
             if("no reescribir".equals(ex.getMessage())){
@@ -1849,20 +1849,20 @@ public class CrearAvatar extends javax.swing.JDialog {
         preLlenarMatriz();
         GuardarNombre nick = new GuardarNombre(null, true, " - ");
         try {
+//            imgPeque = "/Imagenes/Avatars/Avatar4/1.jpg";
             nickName = nick.getNickName(); 
             if(nickName == null){
                 throw new Exception("TAL");
-            }       
+            } 
             cca = new ControlCrearAvatar(colores, nickName, imgPeque, imgGrande);
-            cca.hacerImgAgain();
+            
             if(imgPeque == null){
                 imgPeque  = cca.getRutaImgPeque();
             }  
-            JLabel jLAvatar = new JLabel();   
-            imgPeque = "/Imagenes/Avatars/Avatar4/1.jpg";
+//            JLabel jLAvatar = new JLabel();   
 
-            jLAvatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));  
-            new Mundo1(null, true, jLAvatar);
+//            jLAvatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));  
+            new Mundo1(null, true, nickName, imgPeque);
             dispose();
         } catch (Exception ex) {
             if("TAL".equals(ex.getMessage())){
@@ -1940,11 +1940,12 @@ public class CrearAvatar extends javax.swing.JDialog {
             if(imgPeque == null){
                 imgPeque  = cca.getRutaImgPeque();
             }
-            imgPeque = "/Imagenes/Avatars/Avatar4/1.jpg";
-            jLAvatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));  
+             System.out.println("img1 " +imgPeque);
+//            imgPeque = "/Imagenes/Avatars/Avatar4/1.jpg";
+//            jLAvatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));  
              Sonido s = new Sonido("PacmanIniciar.wav");
-             Thread.sleep(4500);
-             new Mundo1(null, true, jLAvatar);
+             Thread.sleep(3100);
+             new Mundo1(null, true, nickName, imgPeque);
          } catch (InterruptedException ex) {
              Logger.getLogger(CrearAvatar.class.getName()).log(Level.SEVERE, null, ex);
          }
@@ -2179,7 +2180,8 @@ public class CrearAvatar extends javax.swing.JDialog {
 
             Color[][] mat = cca.getColores();
             asignarColores(cca.getColores());  
-            imgPeque = cca.obtenerRutaImgPeque();
+            nickName = cca.getNickName();
+
         }else{
             if(buscar.equals("rutas")){
                 jPCuadricula.setVisible(false);
