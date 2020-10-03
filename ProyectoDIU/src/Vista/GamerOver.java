@@ -5,6 +5,7 @@
  */
 package Vista;
 
+import Control.ControlTXT;
 import java.awt.Frame;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
@@ -16,9 +17,17 @@ import java.util.logging.Logger;
  */
 public class GamerOver extends javax.swing.JDialog { 
 
-    public GamerOver(Frame owner, boolean modal){
+    String nickname;
+    ControlTXT txt =new ControlTXT();
+    public GamerOver(Frame owner, boolean modal,String puntaje){
         super(owner, modal);
         initComponents();
+        
+        nickname=txt.leerNickName();
+        jlPuntaje.setText(puntaje);
+        jlNickName.setText(nickname);
+        
+        
         setVisible(true);
         
     }
@@ -74,13 +83,13 @@ public class GamerOver extends javax.swing.JDialog {
         Puntaje.setText("PUNTAJE");
         jPanel1.add(Puntaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 510, 200, 40));
 
-        flechaDerch1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/continuar.png"))); // NOI18N
+        flechaDerch1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/continuarDerecha.png"))); // NOI18N
         jPanel1.add(flechaDerch1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 580, 50, 50));
 
-        flechaDerch2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/continuar.png"))); // NOI18N
+        flechaDerch2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/continuarDerecha.png"))); // NOI18N
         jPanel1.add(flechaDerch2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 580, 50, 50));
 
-        flechaDerch3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/continuar.png"))); // NOI18N
+        flechaDerch3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/continuarDerecha.png"))); // NOI18N
         jPanel1.add(flechaDerch3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 580, 50, 50));
 
         flechaIzq1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/continuarIzquierda.png"))); // NOI18N
@@ -125,7 +134,7 @@ public class GamerOver extends javax.swing.JDialog {
 
     public static void main(String[] args) throws Exception {
         
-        new GamerOver(null, true);
+        new GamerOver(null, true,"");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

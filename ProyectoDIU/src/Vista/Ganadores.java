@@ -8,6 +8,7 @@ package Vista;
 import Control.ControlTXT;
 import Modelo.CreadordeDocs;
 import Modelo.LectordeDocs;
+import java.awt.Frame;
 import java.io.File;
 import java.util.ArrayList;
 import org.w3c.dom.Document;
@@ -26,30 +27,37 @@ public class Ganadores extends javax.swing.JDialog {
      */
     CreadordeDocs doc;
     LectordeDocs ld;
-    String tiempo, puntaje,nickName="ALEJANDRA";
+    String tiempo, puntaje,nickName;
     File ganadores = new File("persistencia/Ganadores.xml");
     NodeList lista;
     Thread imagenes;
     
     ControlTXT txt = new ControlTXT();
+
     
-    public Ganadores(java.awt.Frame parent, boolean modal) throws Exception {
+    public Ganadores(java.awt.Frame parent, boolean modal) throws Exception {//Final de Juego
         super(parent, modal);
         initComponents();
+        nickName=txt.leerNickName();
         
         doc = new CreadordeDocs(ganadores, "ganadores");
-        ganadores();
+        if (!nickName.equals("")) {
+            System.out.println("NICK Name " + nickName);
+            ganadores();
+            obtenerContenido();
+        }else{
+            System.out.println("NICK Name " + null);
+            obtenerContenido();
+        }
         setVisible(true);
     }
     
     public void ganadores() throws Exception{
-        
         String[] dato=txt.leerTodo();
         tiempo=dato[0];
         puntaje=dato[2];
-//        nickName=dato[3];//Agregar al TXT(NickName)
 
-        generarContenido(doc.getDocumento(),doc.getElementoRaiz());///Añade al XML
+//        generarContenido(doc.getDocumento(),doc.getElementoRaiz());///Añade al XML
         obtenerContenido();
         
     }
@@ -86,7 +94,8 @@ public class Ganadores extends javax.swing.JDialog {
                 Element element = (Element) nodo;
                 datos[n]=element.getElementsByTagName("jugadores").item(0).getTextContent()
                         +"-"+element.getElementsByTagName("puntaje").item(0).getTextContent()
-                        +"-"+element.getElementsByTagName("timepo").item(0).getTextContent();         
+                        +"-"+element.getElementsByTagName("timepo").item(0).getTextContent();    
+               
             }
         }
         ordenarXML(datos);
@@ -102,7 +111,7 @@ public class Ganadores extends javax.swing.JDialog {
             temporal[i]=Integer.parseInt(aux[1]);
         }
         int[] posiciones=ordenamiento(puntaje, mayorMenos(temporal));
-        
+//            System.out.println("----- " +datos.length);
         for (int i = 0; i < datos.length; i++) {
             jTextArea1.append(""+(i+1)+"   ");
             String[] aux01=datos[posiciones[i]].split("-");

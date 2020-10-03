@@ -35,13 +35,14 @@ public class Mundo1 extends javax.swing.JDialog {
     String tiemp, puntaje,vida;
     Sonido s;
     controlJugabilidad jug;
+    String nombre;
     
     String[] infoVida_Puntaje;
     public Mundo1(java.awt.Frame parent, boolean modal, String nickNameJugador, String imgPeque)  {
         super(parent, modal);
         initComponents();
         String nombreMapa = decidirMapa();
-        Puntaje.setText("0");
+        
         if(imgPeque != null){
             jLAvatarMapa1.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));
             jLAvatarMapa2.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));
@@ -62,7 +63,7 @@ public class Mundo1 extends javax.swing.JDialog {
 //        avatarSprite.start();
 
 
-
+        txt.crearNickName(nickNameJugador);
         t= new Tiempo(null);
         t.start();
         jug= new controlJugabilidad(jlVida1, jlVida2, jlVida3, Puntaje);
@@ -1764,7 +1765,6 @@ public class Mundo1 extends javax.swing.JDialog {
 
     private void Mapa1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Mapa1KeyPressed
         mapa1 m1 = new mapa1();
-        System.out.println("tal");
         int desplazamiento=10,x=jLAvatarMapa1.getX(),y=jLAvatarMapa1.getY();
 //        System.out.println(Avatar.getLocation());//Ubicacion del la imagen en el panel
 
@@ -1774,7 +1774,7 @@ public class Mundo1 extends javax.swing.JDialog {
 
             if(m1.limites(x,y,"up")){
                 jLAvatarMapa1.setLocation(x, y-desplazamiento);
-                infoVida_Puntaje=jug.vida(2);//Colision
+                infoVida_Puntaje=jug.vida(4);//Colision
                 txt.puntaje_vida(infoVida_Puntaje);
             }
             break;
