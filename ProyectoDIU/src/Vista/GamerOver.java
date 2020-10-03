@@ -5,10 +5,8 @@
  */
 package Vista;
 
+import Control.ControlTXT;
 import java.awt.Frame;
-import java.util.concurrent.TimeUnit;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -16,9 +14,17 @@ import java.util.logging.Logger;
  */
 public class GamerOver extends javax.swing.JDialog { 
 
-    public GamerOver(Frame owner, boolean modal){
+    String nickname;
+    ControlTXT txt =new ControlTXT();
+    public GamerOver(Frame owner, boolean modal,String puntaje){
         super(owner, modal);
         initComponents();
+        
+        nickname=txt.leerNickName();
+        jlPuntaje.setText(puntaje);
+        jlNickName.setText(nickname);
+        
+        
         setVisible(true);
         
     }
@@ -52,19 +58,19 @@ public class GamerOver extends javax.swing.JDialog {
         gammerOver.setFont(new java.awt.Font("Times New Roman", 3, 90)); // NOI18N
         gammerOver.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         gammerOver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/gamerOver.jpg"))); // NOI18N
-        jPanel1.add(gammerOver, new org.netbeans.lib.awtextra.AbsoluteConstraints(-7, 0, 770, 460));
+        jPanel1.add(gammerOver, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 640, 460));
 
         nickName.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         nickName.setForeground(new java.awt.Color(255, 255, 255));
         nickName.setText("NICK NAME");
         jPanel1.add(nickName, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 470, 200, 40));
 
-        jlPuntaje.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jlPuntaje.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
         jlPuntaje.setForeground(new java.awt.Color(255, 255, 255));
         jlPuntaje.setText("------");
         jPanel1.add(jlPuntaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 510, 240, 40));
 
-        jlNickName.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jlNickName.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
         jlNickName.setForeground(new java.awt.Color(255, 255, 255));
         jlNickName.setText("-------");
         jPanel1.add(jlNickName, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 470, 240, 40));
@@ -74,13 +80,13 @@ public class GamerOver extends javax.swing.JDialog {
         Puntaje.setText("PUNTAJE");
         jPanel1.add(Puntaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 510, 200, 40));
 
-        flechaDerch1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/continuar.png"))); // NOI18N
+        flechaDerch1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/continuarDerecha.png"))); // NOI18N
         jPanel1.add(flechaDerch1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 580, 50, 50));
 
-        flechaDerch2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/continuar.png"))); // NOI18N
+        flechaDerch2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/continuarDerecha.png"))); // NOI18N
         jPanel1.add(flechaDerch2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 580, 50, 50));
 
-        flechaDerch3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/continuar.png"))); // NOI18N
+        flechaDerch3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/continuarDerecha.png"))); // NOI18N
         jPanel1.add(flechaDerch3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 580, 50, 50));
 
         flechaIzq1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/continuarIzquierda.png"))); // NOI18N
@@ -125,7 +131,7 @@ public class GamerOver extends javax.swing.JDialog {
 
     public static void main(String[] args) throws Exception {
         
-        new GamerOver(null, true);
+        new GamerOver(null, true,"");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

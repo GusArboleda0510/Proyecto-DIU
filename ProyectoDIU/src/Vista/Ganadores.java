@@ -8,6 +8,7 @@ package Vista;
 import Control.ControlTXT;
 import Modelo.CreadordeDocs;
 import Modelo.LectordeDocs;
+import java.awt.Frame;
 import java.io.File;
 import java.util.ArrayList;
 import org.w3c.dom.Document;
@@ -26,28 +27,34 @@ public class Ganadores extends javax.swing.JDialog {
      */
     CreadordeDocs doc;
     LectordeDocs ld;
-    String tiempo, puntaje,nickName="ALEJANDRA";
+    String tiempo, puntaje,nickName;
     File ganadores = new File("persistencia/Ganadores.xml");
     NodeList lista;
     Thread imagenes;
     
     ControlTXT txt = new ControlTXT();
+
     
     public Ganadores(java.awt.Frame parent, boolean modal) throws Exception {
         super(parent, modal);
         initComponents();
+        nickName=txt.leerNickName();
         
         doc = new CreadordeDocs(ganadores, "ganadores");
-        ganadores();
+        if (!nickName.equals("")) {
+            System.out.println("NICK Name " + nickName);
+            ganadores();
+        }else{
+            System.out.println("NICK Name " + null);
+            obtenerContenido();
+        }
         setVisible(true);
     }
     
     public void ganadores() throws Exception{
-        
         String[] dato=txt.leerTodo();
         tiempo=dato[0];
         puntaje=dato[2];
-//        nickName=dato[3];//Agregar al TXT(NickName)
 
         generarContenido(doc.getDocumento(),doc.getElementoRaiz());///Añade al XML
         obtenerContenido();
@@ -86,8 +93,13 @@ public class Ganadores extends javax.swing.JDialog {
                 Element element = (Element) nodo;
                 datos[n]=element.getElementsByTagName("jugadores").item(0).getTextContent()
                         +"-"+element.getElementsByTagName("puntaje").item(0).getTextContent()
-                        +"-"+element.getElementsByTagName("timepo").item(0).getTextContent();         
+                        +"-"+element.getElementsByTagName("timepo").item(0).getTextContent();    
+               
             }
+        }
+        for (int i = 0; i < datos.length; i++) {
+            System.out.println(datos[i]);
+            
         }
         ordenarXML(datos);
     }
@@ -101,12 +113,24 @@ public class Ganadores extends javax.swing.JDialog {
             puntaje[i]=Integer.parseInt(aux[1]);
             temporal[i]=Integer.parseInt(aux[1]);
         }
-        int[] posiciones=ordenamiento(puntaje, mayorMenos(temporal));
         
+        int[] posiciones=ordenamiento(puntaje, mayorMenos(temporal));
+        jTextArea1.append("\n");
         for (int i = 0; i < datos.length; i++) {
-            jTextArea1.append(""+(i+1)+"   ");
+            jTextArea1.append("\n    "+(i+1)+"   ");
             String[] aux01=datos[posiciones[i]].split("-");
+            
             for (int j = 0; j < aux01.length; j++) {
+            if(j==0){
+                jTextArea1.append("              ");
+            }
+            if(j==1){
+                jTextArea1.append("                  ");
+            }
+            if(j==2){
+                jTextArea1.append("            ");
+            }
+            
             
             jTextArea1.append(" "+aux01[j] +"   ");
                 
@@ -114,17 +138,19 @@ public class Ganadores extends javax.swing.JDialog {
             jTextArea1.append("\n");
         }
     }
-    public int[] ordenamiento (int[] p , int[]ordendado){
-        int[]posiciones = new int[p.length];
-                for (int i = 0; i < p.length; i++) {
+    
+    public int[] ordenamiento(int[] p, int[] ordendado) {
+        int[] posiciones = new int[p.length];
+        for (int i = 0; i < p.length; i++) {
             for (int j = 0; j < p.length; j++) {
-                if(ordendado[i] == p[j]){
-                    posiciones[i]=j;
+                if (ordendado[i] == p[j]) {
+                    posiciones[i] = j;
+                    p[j]=0;
                     break;
                 }
             }
         }
-                return posiciones;
+        return posiciones;
     }
     public int[] mayorMenos(int[] a) {  
     int[] aux=null;
@@ -164,9 +190,11 @@ public class Ganadores extends javax.swing.JDialog {
         jLabel1.setText("GANADORES");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 21, 980, 90));
 
+        jTextArea1.setEditable(false);
         jTextArea1.setColumns(5);
-        jTextArea1.setFont(new java.awt.Font("Tempus Sans ITC", 3, 18)); // NOI18N
+        jTextArea1.setFont(new java.awt.Font("Tempus Sans ITC", 3, 20)); // NOI18N
         jTextArea1.setRows(5);
+        jTextArea1.setText("Posicion       Nombre        Puntaje              Tiempo");
         jTextArea1.setBorder(new javax.swing.border.MatteBorder(null));
         jScrollPane1.setViewportView(jTextArea1);
 
@@ -179,7 +207,7 @@ public class Ganadores extends javax.swing.JDialog {
         jButton1.setContentAreaFilled(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                EscuchaSalir(evt);
             }
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 540, 500, 52));
@@ -209,9 +237,9 @@ public class Ganadores extends javax.swing.JDialog {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void EscuchaSalir(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EscuchaSalir
         dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_EscuchaSalir
 
     public static void main(String[] args) throws Exception {
         new Ganadores(null, true);

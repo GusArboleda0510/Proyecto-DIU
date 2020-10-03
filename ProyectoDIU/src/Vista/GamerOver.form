@@ -58,7 +58,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="-7" y="0" width="770" height="460"/>
+              <AbsoluteConstraints x="60" y="10" width="640" height="460"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -81,7 +81,7 @@
         <Component class="javax.swing.JLabel" name="jlPuntaje">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Times New Roman" size="24" style="1"/>
+              <Font name="Times New Roman" size="28" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -97,7 +97,7 @@
         <Component class="javax.swing.JLabel" name="jlNickName">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Times New Roman" size="24" style="1"/>
+              <Font name="Times New Roman" size="28" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -129,7 +129,7 @@
         <Component class="javax.swing.JLabel" name="flechaDerch1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/continuar.png"/>
+              <Image iconType="3" name="/Imagenes/continuarDerecha.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -141,7 +141,7 @@
         <Component class="javax.swing.JLabel" name="flechaDerch2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/continuar.png"/>
+              <Image iconType="3" name="/Imagenes/continuarDerecha.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -153,7 +153,7 @@
         <Component class="javax.swing.JLabel" name="flechaDerch3">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/continuar.png"/>
+              <Image iconType="3" name="/Imagenes/continuarDerecha.png"/>
             </Property>
           </Properties>
           <Constraints>

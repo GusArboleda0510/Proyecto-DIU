@@ -25,7 +25,6 @@ public class Mundo2 extends javax.swing.JDialog{
     String tiempo, puntaje,vida;
     String[] dato;
     Sonido s;
-    
     public Mundo2(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
@@ -2051,10 +2050,6 @@ public class Mundo2 extends javax.swing.JDialog{
         
     }
     
-    public static void main(String[] args) {
-        new Mundo2(null, true);
-    }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Avatar;
     private javax.swing.JLabel Avatar1;

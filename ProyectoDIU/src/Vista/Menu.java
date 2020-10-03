@@ -5,6 +5,7 @@
  */
 package Vista;
 
+import Control.ControlTXT;
 import Control.Sonido;
 
 /**
@@ -263,6 +264,8 @@ public class Menu extends javax.swing.JFrame {
     private void jbGanadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGanadoresActionPerformed
         try {
             s = new Sonido("click.wav");
+//            ControlTXT txt = new ControlTXT();
+//            txt.crearNickName("");
             new Ganadores(null, true);
         } catch (Exception ex) {
             System.out.println("Error abrir Ganadores "+ ex);

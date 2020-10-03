@@ -18,11 +18,17 @@ import java.io.FileWriter;
 public class ControlTXT {
     File tiempo = new File("persistencia/tiempo.txt");
     File vida_puntaje = new File("persistencia/vida_Puntaje.txt");
-   
+    File nombre = new File("persistencia/nickName.txt");
+    String NickName="";
+    
+    public String nombre(String nomb){
+        return this.NickName=nomb;
+    }
     public void puntaje_vida(String[] a){
         Vida_putnajeTXT(a[0], a[1]);
     }
     public void Vida_putnajeTXT(String v, String p){
+        
         try {
             if (!vida_puntaje.exists()) {
                 vida_puntaje.createNewFile();
@@ -56,7 +62,24 @@ public class ControlTXT {
             System.out.println("Error crear TXT -> "+ e );
         }
     }
-    
+    public void crearNickName(String name) {//,String vida, String puntaje
+        
+        try {
+            if (!this.nombre.exists()) {
+                this.nombre.createNewFile();
+            }
+            
+            FileWriter fw = new FileWriter(this.nombre,false);
+            BufferedWriter bw = new BufferedWriter(fw);
+            
+            
+            bw.write(name);
+            bw.close();
+            System.out.println("TXT== " +name);
+        } catch (Exception e) {
+            System.out.println("Error crear TXT -> "+ e );
+        }
+    }
     public String[] leerTiempo() {
             String[] dato = new String[1];
         try {
@@ -77,8 +100,29 @@ public class ControlTXT {
         
             return dato;
     }
+    public String leerNickName() {
+            String dato="" ;
+        try {
+            
+            FileReader f = new FileReader(nombre);
+            BufferedReader b = new BufferedReader(f);
+            
+            int aux=0;
+            String cadena;
+            while ((cadena = b.readLine()) != null) {
+                dato = cadena;
+                aux++;
+            }
+            b.close();
+
+        } catch (Exception e) {
+        }
+        
+            return dato;
+    }
     public String[] leerVidaPuntaje() {
-            String[] dato = new String[2];
+            String[] dato =  new String[2];
+            
         try {
             
             FileReader f = new FileReader(vida_puntaje);
@@ -99,20 +143,20 @@ public class ControlTXT {
     }
     public String[] leerTodo() {
             String[] dato = new String[3];
+            int aux=0;
         try {
             
             FileReader f = new FileReader(tiempo);
             BufferedReader b = new BufferedReader(f);
             
-            int aux=0;
+            
             String cadena;
             while ((cadena = b.readLine()) != null) {
                 dato[aux] = cadena;
-                aux++;
+                
             }
             b.close();
-            
-
+            aux++;
         } catch (Exception e) {
             System.out.println("ERROR DE LEER TODO tiempo " +e) ;
         }
@@ -121,7 +165,6 @@ public class ControlTXT {
             FileReader f = new FileReader(vida_puntaje);
             BufferedReader b = new BufferedReader(f);
             
-            int aux=0;
             String cadena;
             while ((cadena = b.readLine()) != null) {
                 dato[aux] = cadena;

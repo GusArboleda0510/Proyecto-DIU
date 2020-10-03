@@ -1945,6 +1945,7 @@ public class CrearAvatar extends javax.swing.JDialog {
 //            jLAvatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));  
              Sonido s = new Sonido("PacmanIniciar.wav");
              Thread.sleep(3100);
+
              new Mundo1(null, true, nickName, imgPeque);
          } catch (InterruptedException ex) {
              Logger.getLogger(CrearAvatar.class.getName()).log(Level.SEVERE, null, ex);

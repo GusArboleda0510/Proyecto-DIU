@@ -50,7 +50,8 @@ public class controlJugabilidad {
             
         }
         if(colisiones==4){
-            new GamerOver(null, true);
+            String punt =Integer.toString(puntaje);
+            new GamerOver(null, true,punt);
         }
         
         info[0]=Integer.toString(vida);

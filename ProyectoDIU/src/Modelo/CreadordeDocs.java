@@ -46,6 +46,7 @@ public class CreadordeDocs {
             documento.getDocumentElement().normalize();
             nodoRaiz = documento.getDocumentElement();
             elementoRaiz = (Element) nodoRaiz;
+             
         } else {
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = dbf.newDocumentBuilder();

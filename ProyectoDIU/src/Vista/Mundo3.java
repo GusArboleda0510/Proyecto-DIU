@@ -30,7 +30,6 @@ public class Mundo3 extends javax.swing.JDialog {
     public Mundo3(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        
         //Carga XML (Timepo,Vida,Puntaje)
         dato =txt.leerTiempo();
         JPanelInf();
@@ -679,7 +678,7 @@ public class Mundo3 extends javax.swing.JDialog {
                         t.interrupt();
                         s = new Sonido("cambioMundo.wav");
                         dispose();
-                        
+//                        new GamerOver(null, true, Puntaje.getText());
                         new Ganadores(null, true);
                         
                     } catch (Exception ex) {
