@@ -31,7 +31,6 @@ public class Mundo2 extends javax.swing.JDialog{
         initComponents();
         JPanelInf();
         dato =txt.leerTiempo();
-        Puntaje.setText(dato[2]);
         
          ////////////////////////PANELES////////////////////
         Mapa1.setFocusable(false);
@@ -49,7 +48,9 @@ public class Mundo2 extends javax.swing.JDialog{
     }
     public void JPanelInf(){
         String[] inf=txt.leerVidaPuntaje();
-        Puntaje.setText(""+(Integer.parseInt(inf[1])+100));//inf[1]==puntaje de las vidas del Mundo 1 y (100) equivale a pasar el mundo1
+        int puntaje=Integer.parseInt(inf[1]);
+        Puntaje.setText(""+(puntaje+100));//inf[1]==puntaje de las vidas del Mundo 1 y (100) equivale a pasar el mundo1
+        
         if(inf[0].equals("1")){
             vida3.setVisible(false);
             

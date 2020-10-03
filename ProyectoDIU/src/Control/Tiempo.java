@@ -50,12 +50,11 @@ import javax.swing.Timer;
                 }
                 tiempo=hora + ":" + minuto + ":" + segundo;
 //                txt.setTiempo(tiempo);
-                System.out.println(hora + ":" + minuto + ":" + segundo);
+//                System.out.println(hora + ":" + minuto + ":" + segundo);
                 TimeUnit.SECONDS.sleep(1);
             }
         }
         catch (InterruptedException es) {
-            System.out.println("TIEMPO= " + tiempo);
             
             txt.tiempoTXT(tiempo);
         }

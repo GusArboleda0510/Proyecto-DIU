@@ -33,7 +33,7 @@ public class Mundo3 extends javax.swing.JDialog {
         
         //Carga XML (Timepo,Vida,Puntaje)
         dato =txt.leerTiempo();
-        Puntaje.setText(dato[2]);
+        JPanelInf();
         ////////////////////////PANELES////////////////////
         Mapa1.setFocusable(true);
         Mapa1.setVisible(true);
@@ -43,6 +43,27 @@ public class Mundo3 extends javax.swing.JDialog {
         t = new Tiempo(aux);
         t.start();
         setVisible(true);
+    }
+    public void JPanelInf(){
+        String[] inf=txt.leerVidaPuntaje();
+        int puntaje=Integer.parseInt(inf[1]);
+        Puntaje.setText(""+(puntaje+200));//inf[1]==puntaje de las vidas del Mundo 1 y (100) equivale a pasar el mundo1
+        
+        if(inf[0].equals("1")){
+            vida3.setVisible(false);
+            
+        }
+        if(inf[0].equals("2")){
+            vida2.setVisible(false);
+            vida3.setVisible(false);
+            
+        }
+        if(inf[0].equals("3")){
+            vida1.setVisible(false);
+            vida2.setVisible(false);
+            vida3.setVisible(false);
+            
+        }
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -172,9 +193,9 @@ public class Mundo3 extends javax.swing.JDialog {
         Informacion = new javax.swing.JPanel();
         jtVida = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jlVida1 = new javax.swing.JLabel();
-        jlVida2 = new javax.swing.JLabel();
-        jlVida3 = new javax.swing.JLabel();
+        vida1 = new javax.swing.JLabel();
+        vida2 = new javax.swing.JLabel();
+        vida3 = new javax.swing.JLabel();
         jlVolver = new javax.swing.JLabel();
         jlControlGuia = new javax.swing.JLabel();
         jlPuntraje = new javax.swing.JLabel();
@@ -562,24 +583,24 @@ public class Mundo3 extends javax.swing.JDialog {
         jtVida.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jtVida.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jtVida.setText("Vida");
-        Informacion.add(jtVida, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 60, 90, 30));
+        Informacion.add(jtVida, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 60, 90, 30));
 
         jLabel10.setFont(new java.awt.Font("Tempus Sans ITC", 3, 36)); // NOI18N
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("NIVEL 3");
         Informacion.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 0, 240, 50));
 
-        jlVida1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
-        jlVida1.setText("jLabel2");
-        Informacion.add(jlVida1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 60, 40, 30));
+        vida1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
+        vida1.setText("jLabel2");
+        Informacion.add(vida1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 60, 40, 30));
 
-        jlVida2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
-        jlVida2.setText("jLabel2");
-        Informacion.add(jlVida2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 60, 40, 30));
+        vida2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
+        vida2.setText("jLabel2");
+        Informacion.add(vida2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 60, 40, 30));
 
-        jlVida3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
-        jlVida3.setText("jLabel2");
-        Informacion.add(jlVida3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 60, 40, 30));
+        vida3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
+        vida3.setText("jLabel2");
+        Informacion.add(vida3, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 60, 40, 30));
 
         jlVolver.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jlVolver.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -604,12 +625,12 @@ public class Mundo3 extends javax.swing.JDialog {
         jlPuntraje.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jlPuntraje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlPuntraje.setText("Puntaje");
-        Informacion.add(jlPuntraje, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 80, 40));
+        Informacion.add(jlPuntraje, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 80, 40));
 
         Puntaje.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         Puntaje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Puntaje.setText("----------");
-        Informacion.add(Puntaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 100, 20));
+        Informacion.add(Puntaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 60, 100, 20));
 
         getContentPane().add(Informacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 100));
 
@@ -656,10 +677,9 @@ public class Mundo3 extends javax.swing.JDialog {
                     try {
                         
                         t.interrupt();
-                        
                         s = new Sonido("cambioMundo.wav");
-                        t.interrupt();
                         dispose();
+                        
                         new Ganadores(null, true);
                         
                     } catch (Exception ex) {
@@ -699,10 +719,6 @@ public class Mundo3 extends javax.swing.JDialog {
                 if (x>= 950 && y>= 200) {
                     try {
                         
-
-                        vida="3";
-                        puntaje="200";
-
                         s = new Sonido("cambioMundo.wav");
                         t.interrupt();
                         dispose();
@@ -924,11 +940,11 @@ public class Mundo3 extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel99;
     private javax.swing.JLabel jlControlGuia;
     private javax.swing.JLabel jlPuntraje;
-    private javax.swing.JLabel jlVida1;
-    private javax.swing.JLabel jlVida2;
-    private javax.swing.JLabel jlVida3;
     private javax.swing.JLabel jlVolver;
     private javax.swing.JLabel jtVida;
+    private javax.swing.JLabel vida1;
+    private javax.swing.JLabel vida2;
+    private javax.swing.JLabel vida3;
     // End of variables declaration//GEN-END:variables
 
 }
