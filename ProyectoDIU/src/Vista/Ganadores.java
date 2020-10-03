@@ -164,6 +164,7 @@ public class Ganadores extends javax.swing.JDialog {
         jLabel1.setText("GANADORES");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 21, 980, 90));
 
+        jTextArea1.setEditable(false);
         jTextArea1.setColumns(5);
         jTextArea1.setFont(new java.awt.Font("Tempus Sans ITC", 3, 18)); // NOI18N
         jTextArea1.setRows(5);
@@ -179,7 +180,7 @@ public class Ganadores extends javax.swing.JDialog {
         jButton1.setContentAreaFilled(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                EscuchaSalir(evt);
             }
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 540, 500, 52));
@@ -209,9 +210,9 @@ public class Ganadores extends javax.swing.JDialog {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void EscuchaSalir(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EscuchaSalir
         dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_EscuchaSalir
 
     public static void main(String[] args) throws Exception {
         new Ganadores(null, true);

@@ -52,7 +52,7 @@ public class GamerOver extends javax.swing.JDialog {
         gammerOver.setFont(new java.awt.Font("Times New Roman", 3, 90)); // NOI18N
         gammerOver.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         gammerOver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/gamerOver.jpg"))); // NOI18N
-        jPanel1.add(gammerOver, new org.netbeans.lib.awtextra.AbsoluteConstraints(-7, 0, 770, 460));
+        jPanel1.add(gammerOver, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 640, 460));
 
         nickName.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         nickName.setForeground(new java.awt.Color(255, 255, 255));
