@@ -1940,12 +1940,10 @@ public class CrearAvatar extends javax.swing.JDialog {
             if(imgPeque == null){
                 imgPeque  = cca.getRutaImgPeque();
             }
-             System.out.println("img1 " +imgPeque);
-//            imgPeque = "/Imagenes/Avatars/Avatar4/1.jpg";
-//            jLAvatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));  
+            nickName = cca.getNickName();
+             System.out.println("tal " + nickName);
              Sonido s = new Sonido("PacmanIniciar.wav");
              Thread.sleep(3100);
-
              new Mundo1(null, true, nickName, imgPeque);
          } catch (InterruptedException ex) {
              Logger.getLogger(CrearAvatar.class.getName()).log(Level.SEVERE, null, ex);
