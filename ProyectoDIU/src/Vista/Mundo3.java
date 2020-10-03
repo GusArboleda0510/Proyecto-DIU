@@ -678,7 +678,7 @@ public class Mundo3 extends javax.swing.JDialog {
                         t.interrupt();
                         s = new Sonido("cambioMundo.wav");
                         dispose();
-                        
+//                        new GamerOver(null, true, Puntaje.getText());
                         new Ganadores(null, true);
                         
                     } catch (Exception ex) {

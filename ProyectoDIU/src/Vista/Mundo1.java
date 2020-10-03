@@ -12,13 +12,7 @@ import Control.Tiempo;
 import Control.controlJugabilidad;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JLabel;
-/**
- *
- * @author Alejandra Becerra
- */
+ 
 public class Mundo1 extends javax.swing.JDialog {
 
     /**
@@ -1774,7 +1768,7 @@ public class Mundo1 extends javax.swing.JDialog {
 
             if(m1.limites(x,y,"up")){
                 jLAvatarMapa1.setLocation(x, y-desplazamiento);
-                infoVida_Puntaje=jug.vida(4);//Colision
+                infoVida_Puntaje=jug.vida(2);//Colision
                 txt.puntaje_vida(infoVida_Puntaje);
             }
             break;
@@ -2336,9 +2330,4 @@ public class Mundo1 extends javax.swing.JDialog {
     private javax.swing.JLabel jtVida;
     // End of variables declaration//GEN-END:variables
 
-
-    
-    
-    
-    
 }

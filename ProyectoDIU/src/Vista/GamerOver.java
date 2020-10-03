@@ -7,9 +7,6 @@ package Vista;
 
 import Control.ControlTXT;
 import java.awt.Frame;
-import java.util.concurrent.TimeUnit;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -68,12 +65,12 @@ public class GamerOver extends javax.swing.JDialog {
         nickName.setText("NICK NAME");
         jPanel1.add(nickName, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 470, 200, 40));
 
-        jlPuntaje.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jlPuntaje.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
         jlPuntaje.setForeground(new java.awt.Color(255, 255, 255));
         jlPuntaje.setText("------");
         jPanel1.add(jlPuntaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 510, 240, 40));
 
-        jlNickName.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jlNickName.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
         jlNickName.setForeground(new java.awt.Color(255, 255, 255));
         jlNickName.setText("-------");
         jPanel1.add(jlNickName, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 470, 240, 40));

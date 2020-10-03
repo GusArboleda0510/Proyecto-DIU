@@ -35,7 +35,7 @@ public class Ganadores extends javax.swing.JDialog {
     ControlTXT txt = new ControlTXT();
 
     
-    public Ganadores(java.awt.Frame parent, boolean modal) throws Exception {//Final de Juego
+    public Ganadores(java.awt.Frame parent, boolean modal) throws Exception {
         super(parent, modal);
         initComponents();
         nickName=txt.leerNickName();
@@ -44,7 +44,6 @@ public class Ganadores extends javax.swing.JDialog {
         if (!nickName.equals("")) {
             System.out.println("NICK Name " + nickName);
             ganadores();
-            obtenerContenido();
         }else{
             System.out.println("NICK Name " + null);
             obtenerContenido();
@@ -57,7 +56,7 @@ public class Ganadores extends javax.swing.JDialog {
         tiempo=dato[0];
         puntaje=dato[2];
 
-//        generarContenido(doc.getDocumento(),doc.getElementoRaiz());///Añade al XML
+        generarContenido(doc.getDocumento(),doc.getElementoRaiz());///Añade al XML
         obtenerContenido();
         
     }
@@ -98,6 +97,10 @@ public class Ganadores extends javax.swing.JDialog {
                
             }
         }
+        for (int i = 0; i < datos.length; i++) {
+            System.out.println(datos[i]);
+            
+        }
         ordenarXML(datos);
     }
     public void ordenarXML(String[] datos){
@@ -110,12 +113,24 @@ public class Ganadores extends javax.swing.JDialog {
             puntaje[i]=Integer.parseInt(aux[1]);
             temporal[i]=Integer.parseInt(aux[1]);
         }
+        
         int[] posiciones=ordenamiento(puntaje, mayorMenos(temporal));
-//            System.out.println("----- " +datos.length);
+        jTextArea1.append("\n");
         for (int i = 0; i < datos.length; i++) {
-            jTextArea1.append(""+(i+1)+"   ");
+            jTextArea1.append("\n    "+(i+1)+"   ");
             String[] aux01=datos[posiciones[i]].split("-");
+            
             for (int j = 0; j < aux01.length; j++) {
+            if(j==0){
+                jTextArea1.append("              ");
+            }
+            if(j==1){
+                jTextArea1.append("                  ");
+            }
+            if(j==2){
+                jTextArea1.append("            ");
+            }
+            
             
             jTextArea1.append(" "+aux01[j] +"   ");
                 
@@ -123,17 +138,19 @@ public class Ganadores extends javax.swing.JDialog {
             jTextArea1.append("\n");
         }
     }
-    public int[] ordenamiento (int[] p , int[]ordendado){
-        int[]posiciones = new int[p.length];
-                for (int i = 0; i < p.length; i++) {
+    
+    public int[] ordenamiento(int[] p, int[] ordendado) {
+        int[] posiciones = new int[p.length];
+        for (int i = 0; i < p.length; i++) {
             for (int j = 0; j < p.length; j++) {
-                if(ordendado[i] == p[j]){
-                    posiciones[i]=j;
+                if (ordendado[i] == p[j]) {
+                    posiciones[i] = j;
+                    p[j]=0;
                     break;
                 }
             }
         }
-                return posiciones;
+        return posiciones;
     }
     public int[] mayorMenos(int[] a) {  
     int[] aux=null;
@@ -175,8 +192,9 @@ public class Ganadores extends javax.swing.JDialog {
 
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(5);
-        jTextArea1.setFont(new java.awt.Font("Tempus Sans ITC", 3, 18)); // NOI18N
+        jTextArea1.setFont(new java.awt.Font("Tempus Sans ITC", 3, 20)); // NOI18N
         jTextArea1.setRows(5);
+        jTextArea1.setText("Posicion       Nombre        Puntaje              Tiempo");
         jTextArea1.setBorder(new javax.swing.border.MatteBorder(null));
         jScrollPane1.setViewportView(jTextArea1);
 

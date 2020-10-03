@@ -73,9 +73,9 @@ public class ControlTXT {
             BufferedWriter bw = new BufferedWriter(fw);
             
             
-            bw.write(NickName);
+            bw.write(name);
             bw.close();
-            
+            System.out.println("TXT== " +name);
         } catch (Exception e) {
             System.out.println("Error crear TXT -> "+ e );
         }
@@ -104,7 +104,7 @@ public class ControlTXT {
             String dato="" ;
         try {
             
-            FileReader f = new FileReader(tiempo);
+            FileReader f = new FileReader(nombre);
             BufferedReader b = new BufferedReader(f);
             
             int aux=0;
@@ -121,7 +121,8 @@ public class ControlTXT {
             return dato;
     }
     public String[] leerVidaPuntaje() {
-            String[] dato = new String[2];
+            String[] dato =  new String[2];
+            
         try {
             
             FileReader f = new FileReader(vida_puntaje);
