@@ -253,8 +253,8 @@
                           <Connection code="&quot;&lt;html&gt;La vista previa puede mostrar&lt;p&gt;&quot;&#xd;&#xa;+ &quot;asi, de forma personalizada&lt;html&gt;&quot;" type="code"/>
                         </Property>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
-                            <BevelBorder/>
+                          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
                           </Border>
                         </Property>
                         <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -283,18 +283,6 @@
                         </Constraint>
                       </Constraints>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="JL9">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/Imagenes/GuiaControl/CargarAvatars3.png"/>
-                        </Property>
-                      </Properties>
-                      <Constraints>
-                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="420" y="310" width="300" height="290"/>
-                        </Constraint>
-                      </Constraints>
-                    </Component>
                     <Component class="javax.swing.JButton" name="jbImagPredeterminadas1">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -304,8 +292,8 @@
                           <Connection code="&quot;&lt;html&gt;La vista previa puede mostrar&lt;p&gt;&quot;&#xd;&#xa;+ &quot;asi, con una imagen predecterminada&lt;html&gt;&quot;" type="code"/>
                         </Property>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
-                            <BevelBorder/>
+                          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
                           </Border>
                         </Property>
                         <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -316,6 +304,18 @@
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                           <AbsoluteConstraints x="410" y="290" width="320" height="330"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="JL9">
+                      <Properties>
+                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                          <Image iconType="3" name="/Imagenes/GuiaControl/CargarAvatars3.png"/>
+                        </Property>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="420" y="310" width="300" height="290"/>
                         </Constraint>
                       </Constraints>
                     </Component>
@@ -540,8 +540,8 @@
                           <Connection code="&quot;&lt;html&gt;Se puede escoger una imagen predeterminada&lt;p&gt;&quot;&#xd;&#xa;+ &quot;tan solo seleccionado una de las imagenes&lt;html&gt;&quot;" type="code"/>
                         </Property>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
-                            <BevelBorder/>
+                          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
                           </Border>
                         </Property>
                         <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -609,8 +609,8 @@
                           <Connection code="&quot;&lt;html&gt;Si desea personalizar tu avatar, tan solo &lt;p&gt;&quot;&#xd;&#xa;        + &quot;debes seleccionar colores de la parte superior &lt;p&gt;&quot;&#xd;&#xa;        + &quot;y dejar volvar tu imaginaci&#xf3;n.&lt;html&gt;&quot;" type="code"/>
                         </Property>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
-                            <BevelBorder/>
+                          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
                           </Border>
                         </Property>
                         <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -671,8 +671,8 @@
                           <Connection code="&quot;&lt;html&gt;Luego de presionar el boton de cargar&lt;p&gt;&quot;&#xd;&#xa;+ &quot;Se abrira esta ventana para que darle el &lt;p&gt;&quot;&#xd;&#xa;+ &quot;nombre a su avatar, recien escogido &lt;html&gt;&quot;" type="code"/>
                         </Property>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
-                            <BevelBorder/>
+                          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
                           </Border>
                         </Property>
                         <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -761,8 +761,8 @@
                           <Connection code="&quot;&lt;html&gt;Luego de presionar el boton de cargar&lt;p&gt;&quot;&#xd;&#xa;+ &quot;Se abrira esta ventana para que darle el &lt;p&gt;&quot;&#xd;&#xa;+ &quot;nombre a su avatar, recien escogido &lt;html&gt;&quot;" type="code"/>
                         </Property>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
-                            <BevelBorder/>
+                          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
                           </Border>
                         </Property>
                         <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -1399,7 +1399,7 @@
                       </Properties>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="760" y="90" width="60" height="50"/>
+                          <AbsoluteConstraints x="740" y="90" width="80" height="80"/>
                         </Constraint>
                       </Constraints>
                     </Component>
@@ -1417,7 +1417,7 @@
                       </Properties>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="300" y="130" width="210" height="40"/>
+                          <AbsoluteConstraints x="490" y="130" width="210" height="40"/>
                         </Constraint>
                       </Constraints>
                     </Component>
@@ -1435,7 +1435,25 @@
                       </Properties>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="600" y="140" width="220" height="30"/>
+                          <AbsoluteConstraints x="130" y="130" width="160" height="40"/>
+                        </Constraint>
+                      </Constraints>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="jButton15">
+                      <Properties>
+                        <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="&quot;&lt;html&gt;Detalla el nivel de cada mundo&lt;html&gt;&quot;" type="code"/>
+                        </Property>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                            <BevelBorder/>
+                          </Border>
+                        </Property>
+                        <Property name="contentAreaFilled" type="boolean" value="false"/>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="320" y="90" width="160" height="40"/>
                         </Constraint>
                       </Constraints>
                     </Component>

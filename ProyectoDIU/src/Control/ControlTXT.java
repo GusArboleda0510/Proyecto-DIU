@@ -18,16 +18,9 @@ import java.io.FileWriter;
 public class ControlTXT {
     File tiempo = new File("persistencia/tiempo.txt");
     File vida_puntaje = new File("persistencia/vida_Puntaje.txt");
-    String p, v;
+   
     public void puntaje_vida(String[] a){
-        for (int i = 0; i < 2; i++) {
-            System.out.print( a[i]+"---");
-        }
-        v=a[0];
-        p=a[1];
-        System.out.println("v= " +v);
-        System.out.println("p= " +p);
-        Vida_putnajeTXT(v, p);
+        Vida_putnajeTXT(a[0], a[1]);
     }
     public void Vida_putnajeTXT(String v, String p){
         try {
@@ -38,7 +31,7 @@ public class ControlTXT {
             FileWriter fw = new FileWriter(vida_puntaje,false);
             BufferedWriter bw = new BufferedWriter(fw);
             
-            bw.write("\n"+v);
+            bw.write(v);
             bw.write("\n"+p);
             bw.close();
             
@@ -65,7 +58,7 @@ public class ControlTXT {
     }
     
     public String[] leerTiempo() {
-            String[] dato = new String[3];
+            String[] dato = new String[1];
         try {
             
             FileReader f = new FileReader(tiempo);
@@ -74,7 +67,6 @@ public class ControlTXT {
             int aux=0;
             String cadena;
             while ((cadena = b.readLine()) != null) {
-                System.out.println(cadena);
                 dato[aux] = cadena;
                 aux++;
             }
@@ -85,8 +77,8 @@ public class ControlTXT {
         
             return dato;
     }
-     public String[] leerVidaPuntaje() {
-            String[] dato = new String[3];
+    public String[] leerVidaPuntaje() {
+            String[] dato = new String[2];
         try {
             
             FileReader f = new FileReader(vida_puntaje);
@@ -95,19 +87,16 @@ public class ControlTXT {
             int aux=0;
             String cadena;
             while ((cadena = b.readLine()) != null) {
-                System.out.println(cadena);
                 dato[aux] = cadena;
                 aux++;
             }
             b.close();
 
         } catch (Exception e) {
+            System.out.println("Leer Vida_Puntaje " + e);
         }
-        
             return dato;
     }
-    
-    
     public String[] leerTodo() {
             String[] dato = new String[3];
         try {
@@ -118,7 +107,6 @@ public class ControlTXT {
             int aux=0;
             String cadena;
             while ((cadena = b.readLine()) != null) {
-                System.out.println(cadena);
                 dato[aux] = cadena;
                 aux++;
             }
@@ -136,7 +124,6 @@ public class ControlTXT {
             int aux=0;
             String cadena;
             while ((cadena = b.readLine()) != null) {
-                System.out.println(cadena);
                 dato[aux] = cadena;
                 aux++;
             }
@@ -146,9 +133,7 @@ public class ControlTXT {
         } catch (Exception e) {
             System.out.println("ERROR DE LEER TODO Puntaje y vida " +e);
         }
-        for (int i = 0; i < 3; i++) {
-            System.out.println(dato[i]);
-        }
+       
             return dato;
     }
 

@@ -61,8 +61,8 @@ public class GuiaControles extends javax.swing.JDialog {
         JL7 = new javax.swing.JLabel();
         jbMatrizAvatar2 = new javax.swing.JButton();
         JL8 = new javax.swing.JLabel();
-        JL9 = new javax.swing.JLabel();
         jbImagPredeterminadas1 = new javax.swing.JButton();
+        JL9 = new javax.swing.JLabel();
         jbCrear = new javax.swing.JButton();
         jbCargar = new javax.swing.JButton();
         jbCerrar = new javax.swing.JButton();
@@ -120,6 +120,7 @@ public class GuiaControles extends javax.swing.JDialog {
         jButton12 = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
         jButton14 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         jbVolver3 = new javax.swing.JButton();
         Contenido = new javax.swing.JPanel();
@@ -220,7 +221,7 @@ public class GuiaControles extends javax.swing.JDialog {
         jbMatrizAvatar2.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
         jbMatrizAvatar2.setToolTipText("<html>La vista previa puede mostrar<p>"
             + "asi, de forma personalizada<html>");
-        jbMatrizAvatar2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jbMatrizAvatar2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jbMatrizAvatar2.setContentAreaFilled(false);
         jbMatrizAvatar2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbMatrizAvatar2.addActionListener(new java.awt.event.ActionListener() {
@@ -233,16 +234,16 @@ public class GuiaControles extends javax.swing.JDialog {
         JL8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/GuiaControl/CargarAvatars2.png"))); // NOI18N
         CargarAvatars.add(JL8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 310, 310));
 
-        JL9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/GuiaControl/CargarAvatars3.png"))); // NOI18N
-        CargarAvatars.add(JL9, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 310, 300, 290));
-
         jbImagPredeterminadas1.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
         jbImagPredeterminadas1.setToolTipText("<html>La vista previa puede mostrar<p>"
             + "asi, con una imagen predecterminada<html>");
-        jbImagPredeterminadas1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jbImagPredeterminadas1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jbImagPredeterminadas1.setContentAreaFilled(false);
         jbImagPredeterminadas1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         CargarAvatars.add(jbImagPredeterminadas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, 320, 330));
+
+        JL9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/GuiaControl/CargarAvatars3.png"))); // NOI18N
+        CargarAvatars.add(JL9, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 310, 300, 290));
 
         jbCrear.setToolTipText("<html>Luego de escoger el avatar con el cual desea<p>"
             + "jugar, presiona el boton para iniciar el juego<html>");
@@ -320,7 +321,7 @@ public class GuiaControles extends javax.swing.JDialog {
         jbCargarImgPredeterm.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
         jbCargarImgPredeterm.setToolTipText("<html>Se puede escoger una imagen predeterminada<p>"
             + "tan solo seleccionado una de las imagenes<html>");
-        jbCargarImgPredeterm.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jbCargarImgPredeterm.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jbCargarImgPredeterm.setContentAreaFilled(false);
         jbCargarImgPredeterm.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbCargarImgPredeterm.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -347,7 +348,7 @@ public class GuiaControles extends javax.swing.JDialog {
         jbMatrizAvatar1.setToolTipText("<html>Si desea personalizar tu avatar, tan solo <p>"
             + "debes seleccionar colores de la parte superior <p>"
             + "y dejar volvar tu imaginación.<html>");
-        jbMatrizAvatar1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jbMatrizAvatar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jbMatrizAvatar1.setContentAreaFilled(false);
         jbMatrizAvatar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jlPersonalizarAvatar.add(jbMatrizAvatar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 350, 340));
@@ -365,7 +366,7 @@ public class GuiaControles extends javax.swing.JDialog {
         jButton1.setToolTipText("<html>Luego de presionar el boton de cargar<p>"
             + "Se abrira esta ventana para que darle el <p>"
             + "nombre a su avatar, recien escogido <html>");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton1.setContentAreaFilled(false);
         jlPersonalizarAvatar.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 800, 370, 340));
 
@@ -396,7 +397,7 @@ public class GuiaControles extends javax.swing.JDialog {
         jButton4.setToolTipText("<html>Luego de presionar el boton de cargar<p>"
             + "Se abrira esta ventana para que darle el <p>"
             + "nombre a su avatar, recien escogido <html>");
-        jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton4.setContentAreaFilled(false);
         jlPersonalizarAvatar.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 800, 360, 340));
 
@@ -637,19 +638,24 @@ public class GuiaControles extends javax.swing.JDialog {
             + "la ventna de la guia del juego<html>");
         jButton12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton12.setContentAreaFilled(false);
-        jPanel3.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 90, 60, 50));
+        jPanel3.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 90, 80, 80));
 
         jButton13.setToolTipText("<html>Cada jugador comenzara el juego con 3 vidas, si<p>"
             + "ocurre una colision con un enemigo ira perdiendo vidas<html>");
         jButton13.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton13.setContentAreaFilled(false);
-        jPanel3.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, 210, 40));
+        jPanel3.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, 210, 40));
 
         jButton14.setToolTipText("<html>Por cada mundo que culmine, se sumara 100 <p>"
             + " puntos y 50 por cada vida<html>");
         jButton14.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton14.setContentAreaFilled(false);
-        jPanel3.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 140, 220, 30));
+        jPanel3.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 160, 40));
+
+        jButton15.setToolTipText("<html>Detalla el nivel de cada mundo<html>");
+        jButton15.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton15.setContentAreaFilled(false);
+        jPanel3.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, 160, 40));
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/GuiaControl/informacion.png"))); // NOI18N
         jLabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -750,12 +756,12 @@ public class GuiaControles extends javax.swing.JDialog {
         CrearAvat.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         CrearAvat.setText("¿COMO CREAR UN AVATAR?");
         CrearAvat.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 CrearAvatAncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
         });
         CrearAvat.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -988,6 +994,7 @@ public class GuiaControles extends javax.swing.JDialog {
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;

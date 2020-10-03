@@ -5,6 +5,7 @@
  */
 package Control;
 
+import Vista.GamerOver;
 import javax.swing.JLabel;
 
 /**
@@ -15,6 +16,7 @@ public class controlJugabilidad {
     JLabel vida1,vida2,vida3,puntaj;
     int vida=3, puntaje=150;
     String[] info= new String[2];
+    
     public controlJugabilidad() {
     }
     
@@ -48,22 +50,13 @@ public class controlJugabilidad {
             
         }
         if(colisiones==4){
-            //GAMER OVER
+            new GamerOver(null, true);
         }
         
         info[0]=Integer.toString(vida);
         info[1]=Integer.toString(puntaje);
         
         return info;
-    }
-
-    public int getVida() {
-        return vida;
-    }
-
-    public int getPuntaje() {
-        
-        return puntaje;
     }
     
 }
