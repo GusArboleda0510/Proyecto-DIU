@@ -8,13 +8,16 @@ package Vista;
 import Control.ControlTXT;
 import Modelo.CreadordeDocs;
 import Modelo.LectordeDocs;
-import java.awt.Frame;
 import java.io.File;
-import java.util.ArrayList;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.xml.parsers.ParserConfigurationException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
 /**
  *
@@ -79,29 +82,37 @@ public class Ganadores extends javax.swing.JDialog {
         puestos.appendChild(timepo);
         doc.generarXML(ganadores, documento);
     }
-    public void obtenerContenido() throws Exception {
-        
-        ld = new LectordeDocs(ganadores);
-        Document documento = ld.getDocumento();
-        lista = documento.getElementsByTagName("puestos");
-        
-        String[] datos= new String[lista.getLength()];
-        
-        for (int n = 0; n < lista.getLength(); n++) {
-            Node nodo = lista.item(n);
-            if (nodo.getNodeType() == Node.ELEMENT_NODE) {
-                Element element = (Element) nodo;
-                datos[n]=element.getElementsByTagName("jugadores").item(0).getTextContent()
-                        +"-"+element.getElementsByTagName("puntaje").item(0).getTextContent()
-                        +"-"+element.getElementsByTagName("timepo").item(0).getTextContent();    
-               
+    public void obtenerContenido() {
+        try {
+            ld = new LectordeDocs(ganadores);
+            Document documento = ld.getDocumento();
+            lista = documento.getElementsByTagName("puestos");
+            String[] datos= new String[lista.getLength()];
+            
+            for (int n = 0; n < lista.getLength(); n++) {
+                Node nodo = lista.item(n);
+                if (nodo.getNodeType() == Node.ELEMENT_NODE) {
+                    Element element = (Element) nodo;
+                    datos[n]=element.getElementsByTagName("jugadores").item(0).getTextContent()
+                            +"-"+element.getElementsByTagName("puntaje").item(0).getTextContent()
+                            +"-"+element.getElementsByTagName("timepo").item(0).getTextContent();
+                    
+                }
             }
-        }
-        for (int i = 0; i < datos.length; i++) {
-            System.out.println(datos[i]);
+            
+            ordenarXML(datos);
+        } catch(java.io.FileNotFoundException f ){
+            mensaje.setText("No hay datos registrados");
+//            setVisible(true);
             
         }
-        ordenarXML(datos);
+        catch (ParserConfigurationException ex) {
+            Logger.getLogger(Ganadores.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SAXException ex) {
+            Logger.getLogger(Ganadores.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Ganadores.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     public void ordenarXML(String[] datos){
         String[] aux=null;
@@ -176,6 +187,7 @@ public class Ganadores extends javax.swing.JDialog {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
+        mensaje = new javax.swing.JLabel();
         Trofeo = new javax.swing.JLabel();
         Trofeo1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -210,7 +222,13 @@ public class Ganadores extends javax.swing.JDialog {
                 EscuchaSalir(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 540, 500, 52));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 570, 500, 52));
+
+        mensaje.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        mensaje.setForeground(new java.awt.Color(255, 102, 102));
+        mensaje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        mensaje.setText("Mensaje");
+        jPanel1.add(mensaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 520, 500, -1));
 
         Trofeo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/trofeo-girando-16777.gif"))); // NOI18N
         jPanel1.add(Trofeo, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 254, 160, 160));
@@ -254,5 +272,6 @@ public class Ganadores extends javax.swing.JDialog {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel mensaje;
     // End of variables declaration//GEN-END:variables
 }

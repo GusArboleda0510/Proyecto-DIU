@@ -41,70 +41,49 @@ public class MensajeSeleccion extends javax.swing.JDialog {
         jBNo = new javax.swing.JButton();
         jmsj1 = new javax.swing.JLabel();
         jBSi = new javax.swing.JButton();
+        Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jmsj2.setFont(new java.awt.Font("Tempus Sans ITC", 1, 26)); // NOI18N
         jmsj2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jmsj2.setText("msj2");
+        getContentPane().add(jmsj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 431, 72));
 
-        jBNo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jBNo.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jBNo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cerrar.png"))); // NOI18N
         jBNo.setText("No");
+        jBNo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jBNo.setContentAreaFilled(false);
         jBNo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBNoActionPerformed(evt);
             }
         });
+        getContentPane().add(jBNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 210, 160, 50));
 
         jmsj1.setFont(new java.awt.Font("Tempus Sans ITC", 1, 26)); // NOI18N
         jmsj1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jmsj1.setText("msj1");
+        getContentPane().add(jmsj1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 431, 72));
 
-        jBSi.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jBSi.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jBSi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/si.png"))); // NOI18N
         jBSi.setText("Si");
+        jBSi.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jBSi.setContentAreaFilled(false);
         jBSi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBSiActionPerformed(evt);
             }
         });
+        getContentPane().add(jBSi, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 150, 50));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jmsj2, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jBSi, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(64, 64, 64)
-                        .addComponent(jBNo, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(67, 67, 67))))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jmsj1, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(71, Short.MAX_VALUE)
-                .addComponent(jmsj2, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBSi, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBNo, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(69, 69, 69))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jmsj1, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(210, Short.MAX_VALUE)))
-        );
+        Fondo.setFont(new java.awt.Font("Tempus Sans ITC", 3, 26)); // NOI18N
+        Fondo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondoBlanco.jpg"))); // NOI18N
+        getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 470, 350));
 
         setSize(new java.awt.Dimension(483, 347));
         setLocationRelativeTo(null);
@@ -132,6 +111,7 @@ public class MensajeSeleccion extends javax.swing.JDialog {
         jmsj2.setVisible(true);
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Fondo;
     private javax.swing.JButton jBNo;
     private javax.swing.JButton jBSi;
     private javax.swing.JLabel jmsj1;
