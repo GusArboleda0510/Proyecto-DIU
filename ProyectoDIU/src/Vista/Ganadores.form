@@ -116,7 +116,7 @@
         <Component class="javax.swing.JLabel" name="Trofeo">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\Alejandra\Documentos\NetBeansProjects1\DIU\Proyecto-DIU\ProyectoDIU\src\Imagenes\trofeo-girando-16777.gif"/>
+              <Image iconType="3" name="/Imagenes/trofeo-girando-16777.gif"/>
             </Property>
           </Properties>
           <Constraints>
@@ -128,7 +128,7 @@
         <Component class="javax.swing.JLabel" name="Trofeo1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\Alejandra\Documentos\NetBeansProjects1\DIU\Proyecto-DIU\ProyectoDIU\src\Imagenes\trofeo-girando-16777.gif"/>
+              <Image iconType="3" name="/Imagenes/trofeo-girando-16777.gif"/>
             </Property>
           </Properties>
           <Constraints>

@@ -184,10 +184,10 @@ public class Ganadores extends javax.swing.JDialog {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(237, 540, 500, 52));
 
-        Trofeo.setIcon(new javax.swing.ImageIcon("D:\\Alejandra\\Documentos\\NetBeansProjects1\\DIU\\Proyecto-DIU\\ProyectoDIU\\src\\Imagenes\\trofeo-girando-16777.gif")); // NOI18N
+        Trofeo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/trofeo-girando-16777.gif"))); // NOI18N
         jPanel1.add(Trofeo, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 254, 160, 160));
 
-        Trofeo1.setIcon(new javax.swing.ImageIcon("D:\\Alejandra\\Documentos\\NetBeansProjects1\\DIU\\Proyecto-DIU\\ProyectoDIU\\src\\Imagenes\\trofeo-girando-16777.gif")); // NOI18N
+        Trofeo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/trofeo-girando-16777.gif"))); // NOI18N
         jPanel1.add(Trofeo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(786, 237, 160, 160));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondoBlanco.jpg"))); // NOI18N
