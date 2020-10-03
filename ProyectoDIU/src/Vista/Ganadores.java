@@ -31,6 +31,8 @@ public class Ganadores extends javax.swing.JDialog {
     NodeList lista;
     Thread imagenes;
     
+    ControlTXT txt = new ControlTXT();
+    
     public Ganadores(java.awt.Frame parent, boolean modal) throws Exception {
         super(parent, modal);
         initComponents();
@@ -41,13 +43,13 @@ public class Ganadores extends javax.swing.JDialog {
     }
     
     public void ganadores() throws Exception{
-        ControlTXT txt = new ControlTXT();
-        String[] dato=txt.leerTXT();
+        
+        String[] dato=txt.leerTodo();
         tiempo=dato[0];
         puntaje=dato[2];
 //        nickName=dato[3];//Agregar al TXT(NickName)
 
-//        generarContenido(doc.getDocumento(),doc.getElementoRaiz());&//Añade al XML
+        generarContenido(doc.getDocumento(),doc.getElementoRaiz());///Añade al XML
         obtenerContenido();
         
     }

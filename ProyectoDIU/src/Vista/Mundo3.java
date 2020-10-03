@@ -32,7 +32,7 @@ public class Mundo3 extends javax.swing.JDialog {
         initComponents();
         
         //Carga XML (Timepo,Vida,Puntaje)
-        dato =txt.leerTXT();
+        dato =txt.leerTiempo();
         Puntaje.setText(dato[2]);
         ////////////////////////PANELES////////////////////
         Mapa1.setFocusable(true);
@@ -656,8 +656,6 @@ public class Mundo3 extends javax.swing.JDialog {
                     try {
                         
                         t.interrupt();
-                        vida="3";
-                        puntaje="200";
                         
                         s = new Sonido("cambioMundo.wav");
                         t.interrupt();

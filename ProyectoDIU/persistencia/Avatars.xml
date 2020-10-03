@@ -114,4 +114,82 @@
         <imgjuego> </imgjuego>
         <imgVista> </imgVista>
     </avatar>
+<avatar>
+        <nickname>asd</nickname>
+        <colores> </colores>
+        <imgjuego>/Imagenes/Avatars/Avatar4/1.jpg</imgjuego>
+        <imgVista>/Imagenes/Avatars/ImagenesOriginales/3.jpg</imgVista>
+    </avatar>
+<avatar>
+        <nickname>dfg</nickname>
+        <colores> </colores>
+        <imgjuego>/Imagenes/Avatars/Avatar5/1.jpg</imgjuego>
+        <imgVista>/Imagenes/Avatars/ImagenesOriginales/4.jpg</imgVista>
+    </avatar>
+<avatar>
+        <nickname>zdf</nickname>
+        <colores> </colores>
+        <imgjuego>/Imagenes/Avatars/Avatar4/1.jpg</imgjuego>
+        <imgVista>/Imagenes/Avatars/ImagenesOriginales/3.jpg</imgVista>
+    </avatar>
+<avatar>
+        <nickname>sdfaf</nickname>
+        <colores> </colores>
+        <imgjuego>/Imagenes/Avatars/Avatar3/1.jpg</imgjuego>
+        <imgVista>/Imagenes/Avatars/ImagenesOriginales/2.jpg</imgVista>
+    </avatar>
+<avatar>
+        <nickname>asdfasd</nickname>
+        <colores> </colores>
+        <imgjuego>/Imagenes/Avatars/Avatar4/1.jpg</imgjuego>
+        <imgVista>/Imagenes/Avatars/ImagenesOriginales/3.jpg</imgVista>
+    </avatar>
+<avatar>
+        <nickname>dfs</nickname>
+        <colores> </colores>
+        <imgjuego>/Imagenes/Avatars/Avatar3/1.jpg</imgjuego>
+        <imgVista>/Imagenes/Avatars/ImagenesOriginales/2.jpg</imgVista>
+    </avatar>
+<avatar>
+        <nickname>asdas</nickname>
+        <colores> </colores>
+        <imgjuego>/Imagenes/Avatars/Avatar3/1.jpg</imgjuego>
+        <imgVista>/Imagenes/Avatars/ImagenesOriginales/2.jpg</imgVista>
+    </avatar>
+<avatar>
+        <nickname>azdf</nickname>
+        <colores> </colores>
+        <imgjuego>/Imagenes/Avatars/Avatar5/1.jpg</imgjuego>
+        <imgVista>/Imagenes/Avatars/ImagenesOriginales/4.jpg</imgVista>
+    </avatar>
+<avatar>
+        <nickname>fsdf</nickname>
+        <colores> </colores>
+        <imgjuego>/Imagenes/Avatars/Avatar4/1.jpg</imgjuego>
+        <imgVista>/Imagenes/Avatars/ImagenesOriginales/3.jpg</imgVista>
+    </avatar>
+<avatar>
+        <nickname>fghjk</nickname>
+        <colores> </colores>
+        <imgjuego>/Imagenes/Avatars/Avatar4/1.jpg</imgjuego>
+        <imgVista>/Imagenes/Avatars/ImagenesOriginales/3.jpg</imgVista>
+    </avatar>
+<avatar>
+        <nickname>das</nickname>
+        <colores> </colores>
+        <imgjuego>/Imagenes/Avatars/Avatar4/1.jpg</imgjuego>
+        <imgVista>/Imagenes/Avatars/ImagenesOriginales/3.jpg</imgVista>
+    </avatar>
+<avatar>
+        <nickname>sdfs</nickname>
+        <colores> </colores>
+        <imgjuego>/Imagenes/Avatars/Avatar4/1.jpg</imgjuego>
+        <imgVista>/Imagenes/Avatars/ImagenesOriginales/3.jpg</imgVista>
+    </avatar>
+<avatar>
+        <nickname>dfgs</nickname>
+        <colores> </colores>
+        <imgjuego>/Imagenes/Avatars/Avatar2/1.jpg</imgjuego>
+        <imgVista>/Imagenes/Avatars/ImagenesOriginales/1.jpg</imgVista>
+    </avatar>
 </jugadores>

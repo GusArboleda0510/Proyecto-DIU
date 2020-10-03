@@ -57,9 +57,7 @@ import javax.swing.Timer;
         catch (InterruptedException es) {
             System.out.println("TIEMPO= " + tiempo);
             
-            System.out.println("RETORNA PUNTAJE: " + jug.getPuntaje());
-            System.out.println("RETORNA VIDA: " + jug.getVida());
-            txt.crearTXT(tiempo,Integer.toString(jug.getVida()),Integer.toString(jug.getPuntaje()));
+            txt.tiempoTXT(tiempo);
         }
         catch (Exception e) {
             System.out.println("Error RUN: " + e);

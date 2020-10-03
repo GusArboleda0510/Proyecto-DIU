@@ -35,6 +35,8 @@ public class Mundo1 extends javax.swing.JDialog {
     String tiemp, puntaje,vida;
     Sonido s;
     controlJugabilidad jug;
+    
+    String[] infoVida_Puntaje;
     public Mundo1(java.awt.Frame parent, boolean modal, JLabel jLAvatar)  {
         super(parent, modal);
         initComponents();
@@ -1684,7 +1686,9 @@ public class Mundo1 extends javax.swing.JDialog {
             if(m2.limites(x,y,"up")){
                 jLAvatarMapa2.setLocation(x, y-desplazamiento);
                     
-                    jug.vida(2);//Colision
+                    infoVida_Puntaje=jug.vida(2);//Colision
+                    txt.puntaje_vida(infoVida_Puntaje);
+                    
             }
             break;
             
@@ -1698,8 +1702,6 @@ public class Mundo1 extends javax.swing.JDialog {
             if(m2.limites(x,y,"down")){
                 jLAvatarMapa2.setLocation(x, y+desplazamiento);
                 if (x >= 600 && y >=570) {
-                    vida="3";
-                    puntaje="100";
                     
                     t.interrupt();
                     
@@ -1715,9 +1717,6 @@ public class Mundo1 extends javax.swing.JDialog {
             if(m2.limites(x,y,"down")){
                 jLAvatarMapa2.setLocation(x, y+desplazamiento);
                 if (x >= 600 && y >=570) {
-                    
-                    vida="3";
-                    puntaje="100";
                     
                     t.interrupt();
                     
@@ -1766,7 +1765,8 @@ public class Mundo1 extends javax.swing.JDialog {
 
             if(m1.limites(x,y,"up")){
                 jLAvatarMapa1.setLocation(x, y-desplazamiento);
-                jug.vida(2);//Colision
+                infoVida_Puntaje=jug.vida(2);//Colision
+                txt.puntaje_vida(infoVida_Puntaje);
             }
             break;
             case KeyEvent.VK_DOWN:
@@ -1785,11 +1785,7 @@ public class Mundo1 extends javax.swing.JDialog {
                 jLAvatarMapa1.setLocation(x+desplazamiento, y);
                 if (x>= 900 && y >= 500) {
                     
-                    vida="3";
-                    puntaje="100";
-                   
                     t.interrupt();
-//                    txt.crearTXT(tiemp, vida, puntaje);
                     
                     Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
