@@ -227,6 +227,7 @@ public class Mundo1 extends javax.swing.JDialog {
         enemigo1 = new javax.swing.JLabel();
         enemigo2 = new javax.swing.JLabel();
         jLAvatarMapa1 = new javax.swing.JLabel();
+        jlPuntraje1 = new javax.swing.JLabel();
         fondo = new javax.swing.JLabel();
         Mapa2 = new javax.swing.JPanel();
         j17 = new javax.swing.JLabel();
@@ -349,6 +350,7 @@ public class Mundo1 extends javax.swing.JDialog {
         j286 = new javax.swing.JLabel();
         j24 = new javax.swing.JLabel();
         jLAvatarMapa2 = new javax.swing.JLabel();
+        jlPuntraje2 = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
         Informacion = new javax.swing.JPanel();
         jtVida = new javax.swing.JLabel();
@@ -1062,6 +1064,11 @@ public class Mundo1 extends javax.swing.JDialog {
         jLAvatarMapa1.setOpaque(true);
         Mapa1.add(jLAvatarMapa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 500, 40, 40));
 
+        jlPuntraje1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jlPuntraje1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlPuntraje1.setText("Puntaje");
+        Mapa1.add(jlPuntraje1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 200, 80, 40));
+
         fondo.setBackground(new java.awt.Color(255, 204, 204));
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoVerde.png"))); // NOI18N
         Mapa1.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 600));
@@ -1594,6 +1601,11 @@ public class Mundo1 extends javax.swing.JDialog {
         jLAvatarMapa2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
         jLAvatarMapa2.setOpaque(true);
         Mapa2.add(jLAvatarMapa2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 510, 40, 40));
+
+        jlPuntraje2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jlPuntraje2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlPuntraje2.setText("Puntaje");
+        Mapa2.add(jlPuntraje2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 80, 40));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoTierra.jpg"))); // NOI18N
         Mapa2.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 600));
@@ -2329,6 +2341,8 @@ public class Mundo1 extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jlControlGuia;
     private javax.swing.JLabel jlPuntraje;
+    private javax.swing.JLabel jlPuntraje1;
+    private javax.swing.JLabel jlPuntraje2;
     private javax.swing.JLabel jlVida1;
     private javax.swing.JLabel jlVida2;
     private javax.swing.JLabel jlVida3;
