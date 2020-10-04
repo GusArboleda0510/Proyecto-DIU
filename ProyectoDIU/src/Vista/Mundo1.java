@@ -27,7 +27,7 @@ public class Mundo1 extends javax.swing.JDialog {
     ControlTXT txt = new ControlTXT();
      Tiempo t; 
     String tiemp, puntaje,vida;
-    Sonido s;
+//    Sonido s;
     controlJugabilidad jug;
     String nombre;
     
@@ -1847,13 +1847,13 @@ public class Mundo1 extends javax.swing.JDialog {
     }//GEN-LAST:event_Mapa1KeyPressed
 
     private void VolverMenu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VolverMenu
-        s = new Sonido("click.wav");
+//        s = new Sonido("click.wav");
         t.interrupt();
         dispose();
     }//GEN-LAST:event_VolverMenu
 
     private void ControlGuia(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ControlGuia
-        s = new Sonido("click.wav");
+//        s = new Sonido("click.wav");
         new GuiaControles(null, true);
     }//GEN-LAST:event_ControlGuia
 

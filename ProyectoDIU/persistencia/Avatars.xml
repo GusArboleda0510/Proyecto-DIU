@@ -258,4 +258,10 @@
         <imgjuego>/Imagenes/Avatars/Avatar4/1.jpg</imgjuego>
         <imgVista>/Imagenes/Avatars/ImagenesOriginales/3.jpg</imgVista>
     </avatar>
+<avatar>
+        <nickname>z</nickname>
+        <colores> </colores>
+        <imgjuego>/Imagenes/Avatars/Avatar5/1.jpg</imgjuego>
+        <imgVista>/Imagenes/Avatars/ImagenesOriginales/4.jpg</imgVista>
+    </avatar>
 </jugadores>
