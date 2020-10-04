@@ -45,7 +45,6 @@ public class ControlCrearAvatar {
         if(predPequenia == null){
            predPequenia = "/Imagenes/Avatars/Usuarios/"+nickNameJugador+".png"; 
         }
-//        rutaImgPeque = "/Imagenes/Avatars/Usuarios/"+nickNameJugador+".png"; 
         predGrande = imagenGrande;
         initImagen();
         if(predGrande == null){

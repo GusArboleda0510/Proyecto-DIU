@@ -75,7 +75,7 @@ public class ControlTXT {
             
             bw.write(name);
             bw.close();
-            System.out.println("TXT== " +name);
+//            System.out.println("TXT== " +name);
         } catch (Exception e) {
             System.out.println("Error crear TXT -> "+ e );
         }

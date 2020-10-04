@@ -19,7 +19,6 @@ public class ControlEnemigos extends Thread{
     Mundo1 mundo= new Mundo1("nada");
     Mundo1.mapa1 mapa;
     int contador=0;
-//    Mundo1.mapa2 mapa2;
     int posAnterior[] = new int [2];//x,y
     String rutaCarpeta;
     public ControlEnemigos(JLabel avatar, String mapa, String rutaCarpeta){
@@ -27,7 +26,6 @@ public class ControlEnemigos extends Thread{
         this.mapa = mundo.getMapa1();
         this.rutaCarpeta = rutaCarpeta;
 
-//        mapa2 = mundo.getMapa2();
     }
     
     public void run() {
@@ -108,7 +106,7 @@ public class ControlEnemigos extends Thread{
             try {
                 TimeUnit.MILLISECONDS.sleep(200);
             } catch (InterruptedException ex) {
-                System.out.println("ERRor");
+                System.out.println("Error en Hilo " + ex);
             }
         }
 

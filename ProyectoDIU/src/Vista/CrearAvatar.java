@@ -1101,7 +1101,7 @@ public class CrearAvatar extends javax.swing.JDialog {
         jPColores.add(jBMas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 20, 40, 40));
 
         jLAvatar5.setBackground(new java.awt.Color(255, 255, 255));
-        jLAvatar5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Avatars/Avatar5/1.jpg"))); // NOI18N
+        jLAvatar5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Avatars/Avatar5/der1.jpg"))); // NOI18N
         jLAvatar5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
         jLAvatar5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLAvatar5.setOpaque(true);
@@ -1113,7 +1113,7 @@ public class CrearAvatar extends javax.swing.JDialog {
         jPColores.add(jLAvatar5, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 80, 40, 40));
 
         jLAvatar4.setBackground(new java.awt.Color(255, 255, 255));
-        jLAvatar4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Avatars/Avatar4/1.jpg"))); // NOI18N
+        jLAvatar4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Avatars/Avatar4/der1.jpg"))); // NOI18N
         jLAvatar4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
         jLAvatar4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLAvatar4.setOpaque(true);
@@ -1125,7 +1125,7 @@ public class CrearAvatar extends javax.swing.JDialog {
         jPColores.add(jLAvatar4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 80, 40, 40));
 
         jLAvatar3.setBackground(new java.awt.Color(255, 255, 255));
-        jLAvatar3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Avatars/Avatar3/1.jpg"))); // NOI18N
+        jLAvatar3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Avatars/Avatar3/der1.jpg"))); // NOI18N
         jLAvatar3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
         jLAvatar3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLAvatar3.setOpaque(true);
@@ -1149,7 +1149,7 @@ public class CrearAvatar extends javax.swing.JDialog {
         jPColores.add(jLAvatar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, 40, 40));
 
         jLAvatar1.setBackground(new java.awt.Color(255, 255, 255));
-        jLAvatar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Avatars/Avatar1/1.jpg"))); // NOI18N
+        jLAvatar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Avatars/Avatar1/der1.jpg"))); // NOI18N
         jLAvatar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
         jLAvatar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLAvatar1.setOpaque(true);
@@ -1711,7 +1711,7 @@ public class CrearAvatar extends javax.swing.JDialog {
         jPCuadricula.setVisible(false);
         jPImgPredeterminada.setVisible(true);
         jLVistaPrevia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Avatars/ImagenesOriginales/3.jpg")));
-        imgPeque = "/Imagenes/Avatars/Avatar4/1.jpg";
+        imgPeque = "/Imagenes/Avatars/Avatar4/der1.jpg";
         rutaImg = "/Imagenes/Avatars/Avatar4";
         imgGrande = "/Imagenes/Avatars/ImagenesOriginales/3.jpg";
 
@@ -1721,7 +1721,7 @@ public class CrearAvatar extends javax.swing.JDialog {
         jPCuadricula.setVisible(false);
         jPImgPredeterminada.setVisible(true);
         jLVistaPrevia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Avatars/ImagenesOriginales/4.jpg")));
-        imgPeque = "/Imagenes/Avatars/Avatar5/1.jpg";
+        imgPeque = "/Imagenes/Avatars/Avatar5/der1.jpg";
         rutaImg = "/Imagenes/Avatars/Avatar5";
         imgGrande = "/Imagenes/Avatars/ImagenesOriginales/4.jpg";
 
@@ -1913,18 +1913,18 @@ public class CrearAvatar extends javax.swing.JDialog {
     }//GEN-LAST:event_jbJugar1MouseEntered
 
     private void jbJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbJugarActionPerformed
-         try {
+//         try {
             cca.hacerImgAgain();
             if(imgPeque == null){
                 imgPeque  = cca.getRutaImgPeque();
             }
             nickName = cca.getNickName();
-             Sonido s = new Sonido("PacmanIniciar.wav");
-             Thread.sleep(3100);
+//             Sonido s = new Sonido("PacmanIniciar.wav");
+//             Thread.sleep(3100);
              new Mundo1(null, true, nickName, imgPeque, rutaImg);
-         } catch (InterruptedException ex) {
-             Logger.getLogger(CrearAvatar.class.getName()).log(Level.SEVERE, null, ex);
-         }
+//         } catch (InterruptedException ex) {
+//             Logger.getLogger(CrearAvatar.class.getName()).log(Level.SEVERE, null, ex);
+//         }
     }//GEN-LAST:event_jbJugarActionPerformed
 
     private void jBCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCrearActionPerformed
@@ -2157,12 +2157,13 @@ public class CrearAvatar extends javax.swing.JDialog {
             Color[][] mat = cca.getColores();
             asignarColores(cca.getColores());  
             nickName = cca.getNickName();
-
         }else{
             if(buscar.equals("rutas")){
                 jPCuadricula.setVisible(false);
                 jPCargarAv.setVisible(true);
                 jLVistaPrevia.setIcon(new javax.swing.ImageIcon(getClass().getResource(cca.getPredGrande())));
+                String temp = cca.getPredPequenia();
+                rutaImg = temp.substring(0, temp.length()-9);
             }
             
         }
