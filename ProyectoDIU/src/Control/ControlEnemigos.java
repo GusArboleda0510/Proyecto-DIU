@@ -25,7 +25,6 @@ public class ControlEnemigos extends Thread{
         this.avatar = avatar;
         this.mapa = mundo.getMapa1();
         this.rutaCarpeta = rutaCarpeta;
-
     }
     
     public void run() {

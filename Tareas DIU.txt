@@ -1,6 +1,3 @@
-		FASE 1 {funcionalidad del proyecto}
----------------------------------------------------------------
-
 HECHO	- con el evento de jugar abro crearAvatar y 
 	desde alli cargar avatar de XML
 HECHO -- ALE implementar en crearAvatar cargar imagen del XML (vista) (implementar el panel)
@@ -13,42 +10,45 @@ HECHO -- GUS implementar en crearAvatar cargar imagen del XML (Control)(leer mat
 
 HECHO -- GUS - ALE (SIN DEFINIR) PARA EL PASO DE INFORMACION ENTRE MUNDOS (xml O txt):tiempo-vidas-puntaje
 
-EN PROGRESO -- ALE tiempo de juego (total de mundos recorridos) 
+HECHO -- EN PROGRESO -- ALE hacer sprites para los botones y agregar sonido  y puntero
 
-EN PROGRESO -- (IDEA GUS) implementar colisiones para los enemigos con el avatar
+HECHO ALE terminar limites
 
-EN PROGRESO -- AL - GUS implementar sonidos en el juego
+HECHO -- ALE (SIN DEFINIR) XML de Score donde se guarde el historial de ganadores
+donde se almacene el nickName, el tiempo jugado, 
+el puntaje de cada jugador 
 
-EN PROGRESO -- ALE hacer sprites para los botones y agregar sonido  y puntero
+HECHO -- modificar las vistas 
+	- acomodar fondos 
+	- establecer tamanio de las ventanas
+	- label, botones, textfield... misma fuente (Tipo y tamanio)
+	TODO UNIFORME
+
+HECHO -- ALE tiempo de juego (total de mundos recorridos) 
+
+HECHO -- cargar Label de avatar en los mundos 
+
+HECHO -- implementar sprites para los avatars 
+
+HECHO -- GUS - ALE (SIN DEFINIR)  vidas (3; dependiente de 
+las colisiones; hacer que se vuelva al inicio del mapa;
+cuando son 3 --> GAME OVER)
+
+HECHO -- ALE - GUS (SIN DEFINIR) puntaje (dependiente de colisiones y cambio de mundos)
+	- sumariamos 100 por pasar un mundo
+	- al pasar un mundo --> bonus de 50 x cada vida 
+------------------------------------------------------------------------------------------
+
+EN PROGRESO - GUS - ALE implementar sonidos en el juego
+
+EN PROGRESO - ALE - GUS (para el final) guia de controles para el usuario
+
+EN PROGRESO -- implementar colisiones para los enemigos con el avatar
 
 GUS para la solucion de la lectura de XML para los mundos
 volver los limites de los mapas, metodos de la clase mundo
 
-HECHO ALE terminar limites
+FALTA Cuando den las colisiones implementar las colisiones con las vidas y el puntaje 
 
-ALE cargar Label de avatar en los mundos 
-
-		FASE 2 {logica de jugabilidad}
----------------------------------------------------------------
- 
-GUS - ALE (SIN DEFINIR)  vidas (3; dependiente de 
-las colisiones; hacer que se vuelva al inicio del mapa;
-cuando son 3 --> GAME OVER)
-
-ALE - GUS (SIN DEFINIR) puntaje (dependiente de colisiones y cambio de mundos)
-	- sumariamos 100 por pasar un mundo
-	- al pasar un mundo --> bonus de 50 x cada vida 
-
-HECHO GUS - ALE (SIN DEFINIR) XML de Score donde se guarde el historial de ganadores
-donde se almacene el nickName, el tiempo jugado, 
-el puntaje de cada jugador 
-
-
-modificar las vistas 
-	- acomodar fondos 
-	- establecer tamanio de las ventanas
-	- label, botones, textfield... misma fuente (Tipo y tamanio)
-TODO UNIFORME
-
-ALE - GUS (para el final) guia de controles para el usuario
+FALTA CREAR XML DE LOS MUNDOS e implementarlo para la creacion de los mundos 
 
