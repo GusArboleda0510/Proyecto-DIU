@@ -26,8 +26,8 @@ public class controlJugabilidad {
         this.vida3=vida3;
         this.puntaj=puntaj;
     }
-    public String[]  vida(boolean colsion){
-        if(!colsion){
+    public String[]  vida(boolean colision){
+        if(!colision){
             info[0]=Integer.toString(vida);
             info[1]=Integer.toString(puntaje);
                 

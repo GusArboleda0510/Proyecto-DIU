@@ -17,13 +17,13 @@ public class ControlEnemigos extends Thread{
     int cambio = 1;
     JLabel avatar = null;
     Mundo1 mundo= new Mundo1("nada");
-    Mundo1.mapa1 mapa;
+    String nombMapa;
     int contador=0;
     int posAnterior[] = new int [2];//x,y
     String rutaCarpeta;
     public ControlEnemigos(JLabel avatar, String mapa, String rutaCarpeta){
         this.avatar = avatar;
-        this.mapa = mundo.getMapa1();
+        this.nombMapa = mapa;
         this.rutaCarpeta = rutaCarpeta;
     }
     
@@ -46,7 +46,8 @@ public class ControlEnemigos extends Thread{
                 x = avatar.getX();
                 y = avatar.getY();
                 y -= 10;
-                if (mapa.limites(x, y, getDireccion(x, y))) {
+                
+                if (consultarMapa(x, y, getDireccion(x, y))) {
                     avatar.setLocation(x, y);
                     posAnterior[0] = x;
                     posAnterior[1] = y;
@@ -62,7 +63,7 @@ public class ControlEnemigos extends Thread{
                 x = avatar.getX();
                 y = avatar.getY();
                 x += 10;
-                if (mapa.limites(x, y, getDireccion(x, y))) {
+                if (consultarMapa(x, y, getDireccion(x, y))) {
                     avatar.setLocation(x, y);
                     posAnterior[0] = x;
                     posAnterior[1] = y;
@@ -78,7 +79,7 @@ public class ControlEnemigos extends Thread{
                 x = avatar.getX();
                 y = avatar.getY();
                 y += 10;
-                if (mapa.limites(x, y, getDireccion(x, y))) {
+                if (consultarMapa(x, y, getDireccion(x, y))) {
                     avatar.setLocation(x, y);
                     posAnterior[0] = x;
                     posAnterior[1] = y;
@@ -94,7 +95,7 @@ public class ControlEnemigos extends Thread{
                 x = avatar.getX();
                 y = avatar.getY();
                 x -= 10;
-                if (mapa.limites(x, y, getDireccion(x, y))) {
+                if (consultarMapa(x, y, getDireccion(x, y))) {
                     avatar.setLocation(x, y);
                     posAnterior[0] = x;
                     posAnterior[1] = y;
@@ -102,8 +103,9 @@ public class ControlEnemigos extends Thread{
                     run();
                 }
             }
+            mandarPosEnemigo();
             try {
-                TimeUnit.MILLISECONDS.sleep(200);
+                TimeUnit.MILLISECONDS.sleep(100);
             } catch (InterruptedException ex) {
                 System.out.println("Error en Hilo " + ex);
             }
@@ -176,5 +178,32 @@ public class ControlEnemigos extends Thread{
         }
     }
 
+    private boolean consultarMapa(int x, int y, String direccion) {
+        if(nombMapa.equals("mapa1")){
+            return mundo.limitesM1(x, y, direccion);
+        }else{
+            if(nombMapa.equals("mapa2")){
+                return mundo.limitesM2(x, y, direccion);
+            } 
+        }
+        return false;
+    }
+
+    private void mandarPosEnemigo() {
+        int [] coord = new int [4];
+        coord[0] = avatar.getX();
+        coord[1] = avatar.getY();
+        coord[2] = avatar.getX() + 40;
+        coord[3] = avatar.getY() + 40;
+        if(avatar.getName().equals("enemigo1")){
+            mundo.setPosEnemigo1(coord);
+        }
+        if(avatar.getName().equals("enemigo2")){
+            mundo.setPosEnemigo2(coord);
+        }
+        if(avatar.getName().equals("enemigo3")){
+            mundo.setPosEnemigo3(coord);
+        }
+    }
 }
 

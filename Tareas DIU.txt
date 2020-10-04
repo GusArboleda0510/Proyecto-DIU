@@ -37,18 +37,25 @@ cuando son 3 --> GAME OVER)
 HECHO -- ALE - GUS (SIN DEFINIR) puntaje (dependiente de colisiones y cambio de mundos)
 	- sumariamos 100 por pasar un mundo
 	- al pasar un mundo --> bonus de 50 x cada vida 
+
+HECHO -- GUS para la solucion de la lectura de XML para los mundos
+volver los limites de los mas, metodos de la clase mundo
+
+HECHO -- FALTA CREAR XML DE LOS MUNDOS e implementarlo para la creacion de los mundos 
+
 ------------------------------------------------------------------------------------------
 
-EN PROGRESO - GUS - ALE implementar sonidos en el juego
-
+EN PROGRESO -- QUEDA POR ESCOGER  - GUS - ALE implementar sonidos en el juego
+			- IDEA HACER UNA CANCION EN UN BUCLE EN EL MENU 
+			
 EN PROGRESO - ALE - GUS (para el final) guia de controles para el usuario
 
 EN PROGRESO -- implementar colisiones para los enemigos con el avatar
 
-GUS para la solucion de la lectura de XML para los mundos
-volver los limites de los mapas, metodos de la clase mundo
-
 FALTA Cuando den las colisiones implementar las colisiones con las vidas y el puntaje 
 
-FALTA CREAR XML DE LOS MUNDOS e implementarlo para la creacion de los mundos 
-
+FALTA IMPLEMENTAR TODOS LOS CAMBIOS DE MUNDO 1 EN LOS OTROS MUNDOS
+	- HACER QUE EL LABEL PASE DE MUNDO EN MUNDO
+	- la escogencia de mapas aleatortio 
+	- llamado a los limites en metodos no en clases
+	- recibir variables en el constructor
