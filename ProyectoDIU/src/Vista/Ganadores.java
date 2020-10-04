@@ -36,7 +36,6 @@ public class Ganadores extends javax.swing.JDialog {
     Thread imagenes;
     
     ControlTXT txt = new ControlTXT();
-
     
     public Ganadores(java.awt.Frame parent, boolean modal) throws Exception {
         super(parent, modal);
@@ -103,7 +102,7 @@ public class Ganadores extends javax.swing.JDialog {
             ordenarXML(datos);
         } catch(java.io.FileNotFoundException f ){
             mensaje.setText("No hay datos registrados");
-//            setVisible(true);
+            mensaje.setVisible(true);
             
         }
         catch (ParserConfigurationException ex) {
@@ -142,7 +141,6 @@ public class Ganadores extends javax.swing.JDialog {
                 if(j==1){
                     espacioPred=20;   
                     a=aux01[j];
-                    System.out.println(espacioPred+"-"+aux01[j-1].length()+"-"+a);
                     jTextArea1.append(espacios(espacioPred,aux01[j-1].length(),a));
                 }
                 if(j==2){
@@ -284,9 +282,9 @@ public class Ganadores extends javax.swing.JDialog {
         dispose();
     }//GEN-LAST:event_EscuchaSalir
 
-//    public static void main(String[] args) throws Exception {
-//        new Ganadores(null, true);
-//    }
+    public static void main(String[] args) throws Exception {
+        new Ganadores(null, true);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Trofeo;

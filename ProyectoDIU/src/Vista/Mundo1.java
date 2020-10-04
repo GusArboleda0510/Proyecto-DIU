@@ -56,7 +56,11 @@ public class Mundo1 extends javax.swing.JDialog {
         txt.crearNickName(nickNameJugador);
         t = new Tiempo(null);
         t.start();
+        
         jug = new controlJugabilidad(jlVida1, jlVida2, jlVida3, Puntaje);
+        infoVida_Puntaje = jug.vida(false);
+        txt.puntaje_vida(infoVida_Puntaje);
+        
         setVisible(true);
     }
 
@@ -1699,7 +1703,7 @@ public class Mundo1 extends javax.swing.JDialog {
                 if (m2.limites(x, y, "up")) {
                     jLAvatarMapa2.setLocation(x, y - desplazamiento);
 
-                    infoVida_Puntaje = jug.vida();//Colision
+                    infoVida_Puntaje = jug.vida(true);//Colision
                     txt.puntaje_vida(infoVida_Puntaje);
 
                 }
@@ -1778,20 +1782,10 @@ public class Mundo1 extends javax.swing.JDialog {
                     }
                     jLAvatarMapa1.setLocation(x, y - desplazamiento);
                     
-                    infoVida_Puntaje = jug.vida();//Colision
+                    infoVida_Puntaje = jug.vida(true);//Colision
                     txt.puntaje_vida(infoVida_Puntaje);
                     
-                    /*
-                    int num=1;
                     
-                    variable1==varible2(
-                    
-                    infoVida_Puntaje = jug.vida(2);//Colision
-                    txt.puntaje_vida(infoVida_Puntaje);
-                    
-                    )
-                    
-                    */
                 }
                 break;
             case KeyEvent.VK_DOWN:
