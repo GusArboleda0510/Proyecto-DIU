@@ -6,7 +6,6 @@
         <mapa NombreMapa="mapa1">
     		<cantidadEmemigos>1</cantidadEmemigos>
     		<skinEnemigo>aleatorio</skinEnemigo>
-    		<skinEnemigo>aleatorio</skinEnemigo>
 		</mapa>
         <mapa NombreMapa="mapa2">
     		<cantidadEmemigos>2</cantidadEmemigos>

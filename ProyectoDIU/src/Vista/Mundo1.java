@@ -34,7 +34,8 @@ public class Mundo1 extends javax.swing.JDialog {
     int [] posEnemigo1= new int[4];
     int [] posEnemigo2= new int[4];
     int [] posEnemigo3= new int[4];
-    
+    int[] posAvatar = new int [4];
+
     boolean marcharHilo = true;
     controlXMLMundos leerMundos;
     
@@ -44,7 +45,6 @@ public class Mundo1 extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         this.rutaCarpeta = rutaCarpeta;
-        
         try {
             decidirMapa();
         } catch (Exception ex) {
@@ -143,6 +143,7 @@ public class Mundo1 extends javax.swing.JDialog {
             nombreMapa = "mapa2";
         }
         mapaAct = nombreMapa;
+        System.out.println("elMApa "  + mapaAct);
         leerMundos.consultarXML("mundo1", nombreMapa);
         initEnemigos(nombreMapa);
         
@@ -150,21 +151,26 @@ public class Mundo1 extends javax.swing.JDialog {
     }
     
     private boolean colision() {
-        int[] posAvatar = null;
-        if (mapaAct.equals("mapa1")) {
+        if ("mapa1".equals(mapaAct)) {
             posAvatar = obtenerposAvatar(jLAvatarMapa1);
         } else {
-            if (mapaAct.equals("mapa2")) {
+            if ("mapa2".equals(mapaAct)) {
                 posAvatar = obtenerposAvatar(jLAvatarMapa2);
             }
         }
+        
+            System.out.print("Enemigo ");  
             System.out.print(posEnemigo1[0]+", ");
             System.out.print(posEnemigo1[1]+", ");
             System.out.print(posEnemigo1[2]+", ");
-            System.out.print(posEnemigo1[3]+", ");
+            System.out.println(posEnemigo1[3]+", ");
+            System.out.print("Avatar ");  
+            System.out.print(posAvatar[0]+", ");
+            System.out.print(posAvatar[1]+", ");
+            System.out.print(posAvatar[2]+", ");
+            System.out.print(posAvatar[3]+", ");
             System.out.println();  
-        
-        
+
         return true;
     }
     
@@ -253,7 +259,8 @@ public class Mundo1 extends javax.swing.JDialog {
 
     public void setPosEnemigo1(int[] posEnemigo1) {
         this.posEnemigo1 = posEnemigo1;
-//        System.out.println("tal2 " + this.posEnemigo1[0]+", "+this.posEnemigo1[1]+", "+this.posEnemigo1[2]+", "+this.posEnemigo1[3]);
+        colision();
+
     }
 
     public void setPosEnemigo2(int[] posEnemigo2) {
@@ -262,12 +269,7 @@ public class Mundo1 extends javax.swing.JDialog {
 
     public void setPosEnemigo3(int[] posEnemigo3) {
         this.posEnemigo3 = posEnemigo3;
-    }
-    
-    public boolean isMarcharHilo() {
-        return marcharHilo;
-    }
-    
+    } 
     
     public static void main(String[] args) {
         new Mundo1(null, true, "a", "/Imagenes/Avatars/Avatar2/der1.jpg", "/Imagenes/Avatars/Avatar2");
@@ -1252,12 +1254,12 @@ public class Mundo1 extends javax.swing.JDialog {
 
         M1E3.setBackground(new java.awt.Color(0, 102, 102));
         M1E3.setOpaque(true);
-        Mapa1.add(M1E3, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 60, 40, 40));
+        Mapa1.add(M1E3, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 70, 40, 40));
 
         jLAvatarMapa1.setBackground(new java.awt.Color(153, 255, 204));
         jLAvatarMapa1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
         jLAvatarMapa1.setOpaque(true);
-        Mapa1.add(jLAvatarMapa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 510, 40, 40));
+        Mapa1.add(jLAvatarMapa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 40, 40));
 
         fondo.setBackground(new java.awt.Color(255, 204, 204));
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoVerde.png"))); // NOI18N
@@ -2065,9 +2067,6 @@ public class Mundo1 extends javax.swing.JDialog {
                 }
                 break;
         }
-//        System.out.println("tal3 " + this.posEnemigo1[0]+", "+this.posEnemigo1[1]+", "+this.posEnemigo1[2]+", "+this.posEnemigo1[3]);
-        colision();
-
     }//GEN-LAST:event_Mapa1KeyPressed
 
     private void VolverMenu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VolverMenu
