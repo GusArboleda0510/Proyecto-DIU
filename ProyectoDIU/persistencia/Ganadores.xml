@@ -1,8 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ganadores>
     <puestos>
-        <jugadores>Ale</jugadores>
-        <puntaje>50</puntaje>
-        <timepo>0:0:53</timepo>
+        <jugadores>asd</jugadores>
+        <puntaje>200</puntaje>
+        <timepo>0:0:23</timepo>
+    </puestos>
+<puestos>
+        <jugadores>asd</jugadores>
+        <puntaje>100</puntaje>
+        <timepo>0:0:22</timepo>
+    </puestos>
+<puestos>
+        <jugadores>asd</jugadores>
+        <puntaje>300</puntaje>
+        <timepo>0:0:17</timepo>
+    </puestos>
+<puestos>
+        <jugadores>asd</jugadores>
+        <puntaje>300</puntaje>
+        <timepo>0:0:25</timepo>
+    </puestos>
+<puestos>
+        <jugadores>asd</jugadores>
+        <puntaje>200</puntaje>
+        <timepo>0:0:11</timepo>
+    </puestos>
+<puestos>
+        <jugadores>asd</jugadores>
+        <puntaje>200</puntaje>
+        <timepo>0:0:9</timepo>
+    </puestos>
+<puestos>
+        <jugadores>asd</jugadores>
+        <puntaje>150</puntaje>
+        <timepo>0:0:30</timepo>
+    </puestos>
+<puestos>
+        <jugadores>asd</jugadores>
+        <puntaje>350</puntaje>
+        <timepo>0:0:6</timepo>
     </puestos>
 </ganadores>

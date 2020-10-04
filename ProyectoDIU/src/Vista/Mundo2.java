@@ -8,6 +8,7 @@ package Vista;
 import Control.ControlTXT;
 import Control.Sonido;
 import Control.Tiempo;
+import Control.controlJugabilidad;
 import java.awt.event.KeyEvent;
 
 /**
@@ -22,9 +23,12 @@ public class Mundo2 extends javax.swing.JDialog{
     ControlTXT txt = new ControlTXT();
     Thread t ;
     int hora,minuto,segundo;
-    String tiempo, puntaje,vida;
+    String punt,vida;
     String[] dato;
     Sonido s;
+    Boolean colision=false;
+    controlJugabilidad jug;
+    String[] infoVida_Puntaje= new String[2];
     public Mundo2(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
@@ -42,29 +46,50 @@ public class Mundo2 extends javax.swing.JDialog{
         String[] aux = dato[0].split(":");
         t = new Tiempo(aux);
         t.start();
+        jug = new controlJugabilidad(jlvida1, jlvida2, jlvida3, Puntaje);
         
         setVisible(true);
     }
     public void JPanelInf(){
         String[] inf=txt.leerVidaPuntaje();
-        int puntaje=Integer.parseInt(inf[1]);
-        Puntaje.setText(""+(puntaje+100));//inf[1]==puntaje de las vidas del Mundo 1 y (100) equivale a pasar el mundo1
+        inf[1]=""+(Integer.parseInt(inf[1])+100);
+        Puntaje.setText(""+inf[1]);//inf[1]==puntaje de las vidas del Mundo 1 y (100) equivale a pasar el mundo1
+        vidaJLabel(inf);
+       
         
-        if(inf[0].equals("1")){
-            vida3.setVisible(false);
+
+    }
+    public void vidaJLabel(String[] inf){
+        if(inf[0].equals("-1")){
+            dispose();
+            new GamerOver(null, true, Puntaje.getText());
+        }
+        if(inf[0].equals("0")){
+            jlvida1.setVisible(false);
+            jlvida2.setVisible(false);
+            jlvida3.setVisible(false);
+            
+        }
+         if(inf[0].equals("1")){
+            jlvida1.setVisible(true);
+            jlvida2.setVisible(false);
+            jlvida3.setVisible(false);
             
         }
         if(inf[0].equals("2")){
-            vida2.setVisible(false);
-            vida3.setVisible(false);
+            jlvida1.setVisible(true);
+            jlvida2.setVisible(true);
+            jlvida3.setVisible(false);
             
         }
         if(inf[0].equals("3")){
-            vida1.setVisible(false);
-            vida2.setVisible(false);
-            vida3.setVisible(false);
+            jlvida1.setVisible(true);
+            jlvida2.setVisible(true);
+            jlvida3.setVisible(true);
             
         }
+        vida=inf[0];
+        this.punt=inf[1];
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -330,9 +355,9 @@ public class Mundo2 extends javax.swing.JDialog{
         Informacion1 = new javax.swing.JPanel();
         jtVida1 = new javax.swing.JLabel();
         jLabel239 = new javax.swing.JLabel();
-        vida1 = new javax.swing.JLabel();
-        vida2 = new javax.swing.JLabel();
-        vida3 = new javax.swing.JLabel();
+        jlvida1 = new javax.swing.JLabel();
+        jlvida2 = new javax.swing.JLabel();
+        jlvida3 = new javax.swing.JLabel();
         jlVolver = new javax.swing.JLabel();
         jlControlGuia = new javax.swing.JLabel();
         jlPuntraje = new javax.swing.JLabel();
@@ -1649,17 +1674,17 @@ public class Mundo2 extends javax.swing.JDialog{
         jLabel239.setText("NIVEL 2");
         Informacion1.add(jLabel239, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 0, 240, 50));
 
-        vida1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
-        vida1.setText("jLabel2");
-        Informacion1.add(vida1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 60, 40, 30));
+        jlvida1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
+        jlvida1.setText("jLabel2");
+        Informacion1.add(jlvida1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 60, 40, 30));
 
-        vida2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
-        vida2.setText("jLabel2");
-        Informacion1.add(vida2, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 60, 40, 30));
+        jlvida2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
+        jlvida2.setText("jLabel2");
+        Informacion1.add(jlvida2, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 60, 40, 30));
 
-        vida3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
-        vida3.setText("jLabel2");
-        Informacion1.add(vida3, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 60, 40, 30));
+        jlvida3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vida.png"))); // NOI18N
+        jlvida3.setText("jLabel2");
+        Informacion1.add(jlvida3, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 60, 40, 30));
 
         jlVolver.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jlVolver.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1709,6 +1734,7 @@ public class Mundo2 extends javax.swing.JDialog{
 
             if(m1.limites(x,y,"up")){
                 Avatar.setLocation(x, y-desplazamiento);
+                
             }
             break;
             case KeyEvent.VK_DOWN:
@@ -1720,10 +1746,14 @@ public class Mundo2 extends javax.swing.JDialog{
             if(m1.limites(x,y,"left")){
                 Avatar.setLocation(x-desplazamiento, y);
                 if ((x>= 440 && y >= 228)&& (x<=510  && y<=290 )) {
+                    if(!colision){
+                    infoVida_Puntaje[0]=vida;
+                    infoVida_Puntaje[1]=punt;
                     
+                    txt.puntaje_vida(infoVida_Puntaje);
+                        
+                    }
                     t.interrupt();
-                    vida="3";
-                    puntaje="100";
                     
                     Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
@@ -1736,10 +1766,17 @@ public class Mundo2 extends javax.swing.JDialog{
                 Avatar.setLocation(x+desplazamiento, y);
                 if ((x>= 440 && y >= 228)&& (x<=510  && y<=290 )) {
                     
-                    //Guardar XML (Puntaje,Vida,Tiempo)
+                    if(!colision){
+                        
+                    infoVida_Puntaje[0]=vida;
+                    infoVida_Puntaje[1]=punt;
+                    
+                    txt.puntaje_vida(infoVida_Puntaje);
+                        
+                    }
                     t.interrupt();
                     vida="3";
-                    puntaje="100";
+                    punt="100";
                     
                     Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
@@ -1763,9 +1800,16 @@ public class Mundo2 extends javax.swing.JDialog{
                 Avatar.setLocation(x-desplazamiento, y);
                 if ((x>= 440 && y >= 228)&& (x<=510  && y<=290 )) {
                     
+                    if(!colision){
+                    infoVida_Puntaje[0]=vida;
+                    infoVida_Puntaje[1]=punt;
+                    
+                    txt.puntaje_vida(infoVida_Puntaje);
+                        
+                    }
                     t.interrupt();
                     vida="3";
-                    puntaje="100";
+                    punt="100";
                     
                     Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
@@ -1777,10 +1821,16 @@ public class Mundo2 extends javax.swing.JDialog{
             if(m1.limites(x,y,"right")){
                 Avatar.setLocation(x+desplazamiento, y);
                 if ((x>= 440 && y >= 228)&& (x<=510  && y<=290 )) {
+                    if(!colision){
+                    infoVida_Puntaje[0]=vida;
+                    infoVida_Puntaje[1]=punt;
                     
+                    txt.puntaje_vida(infoVida_Puntaje);
+                        
+                    }
                     t.interrupt();
                     vida="3";
-                    puntaje="100";
+                    punt="100";
                     
                     Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
@@ -1801,6 +1851,15 @@ public class Mundo2 extends javax.swing.JDialog{
             case KeyEvent.VK_UP:
             if(m2.limites(x,y,"up")){
                 Avatar1.setLocation(x, y-desplazamiento);
+                ///////////////////////////////COLISION MUNDO 2////////////////////////////////////
+                colision=true;
+                infoVida_Puntaje[0]=""+(Integer.parseInt(vida)-1);
+                infoVida_Puntaje[1]=""+(Integer.parseInt(punt)-50);
+                vidaJLabel(infoVida_Puntaje);
+                Puntaje.setText(infoVida_Puntaje[1]);
+                txt.puntaje_vida(infoVida_Puntaje);
+                ///////////////////////////////////////////////////////////////////////////////////
+                
             }
             break;
 
@@ -1808,10 +1867,14 @@ public class Mundo2 extends javax.swing.JDialog{
             if(m2.limites(x,y,"down")){
                 Avatar1.setLocation(x, y+desplazamiento);
                 if ((x>= 350 && y >= 200)&&(x<= 350 && y <= 360)) {
+                    if(!colision){
+                    infoVida_Puntaje[0]=vida;
+                    infoVida_Puntaje[1]=punt;
                     
+                    txt.puntaje_vida(infoVida_Puntaje);
+                        
+                    }
                     t.interrupt();
-                    vida="3";
-                    puntaje="100";
                     
                     Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
@@ -1824,9 +1887,14 @@ public class Mundo2 extends javax.swing.JDialog{
                 Avatar1.setLocation(x-desplazamiento, y);
                 if ((x>= 350 && y >= 360)&&(x<= 390 && y <= 360)) {
                     
+                    if(!colision){
+                    infoVida_Puntaje[0]=vida;
+                    infoVida_Puntaje[1]=punt;
+                    
+                    txt.puntaje_vida(infoVida_Puntaje);
+                        
+                    }
                     t.interrupt();
-                    vida="3";
-                    puntaje="100";
                     
                     Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
@@ -1850,9 +1918,13 @@ public class Mundo2 extends javax.swing.JDialog{
                 Avatar1.setLocation(x, y+desplazamiento);
                 if ((x>= 350 && y >= 200)&&(x<= 350 && y <= 360)) {
                     
-                    t.interrupt();
-                    vida="3";
-                    puntaje="100";
+                    if(!colision){
+                    infoVida_Puntaje[0]=vida;
+                    infoVida_Puntaje[1]=punt;
+                    
+                    txt.puntaje_vida(infoVida_Puntaje);
+                        
+                    }
                     
                     Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
@@ -1864,11 +1936,14 @@ public class Mundo2 extends javax.swing.JDialog{
             if(m2.limites(x,y,"left")){
                 Avatar1.setLocation(x-desplazamiento, y);
                 if ((x>= 350 && y >= 360)&&(x<= 390 && y <= 360)) {
+                    if(!colision){
+                    infoVida_Puntaje[0]=vida;
+                    infoVida_Puntaje[1]=punt;
                     
-                    t.interrupt();
-                    vida="3";
-                    puntaje="100";
-                    
+                    txt.puntaje_vida(infoVida_Puntaje);
+                        
+                    }
+                    t.interrupt();                    
                     Sonido s = new Sonido("cambioMundo.wav");
                     dispose();
                     new Mundo3(null, true);
@@ -2314,10 +2389,10 @@ public class Mundo2 extends javax.swing.JDialog{
     private javax.swing.JLabel jlControlGuia;
     private javax.swing.JLabel jlPuntraje;
     private javax.swing.JLabel jlVolver;
+    private javax.swing.JLabel jlvida1;
+    private javax.swing.JLabel jlvida2;
+    private javax.swing.JLabel jlvida3;
     private javax.swing.JLabel jtVida1;
-    private javax.swing.JLabel vida1;
-    private javax.swing.JLabel vida2;
-    private javax.swing.JLabel vida3;
     // End of variables declaration//GEN-END:variables
 
 }

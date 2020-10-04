@@ -26,38 +26,54 @@ public class controlJugabilidad {
         this.vida3=vida3;
         this.puntaj=puntaj;
     }
-    public String[]  vida(){
-        if(colisiones==1){
-            vida3.setVisible(false);
-            vida-=1;
-            puntaje-=50;
-            puntaj.setText(""+puntaje);
-        }
-        if(colisiones==2){
-            vida3.setVisible(false);
-            vida2.setVisible(false);
-            vida-=1;
-            puntaje-=50;
-            puntaj.setText(""+puntaje);
-        }
-        if(colisiones==3){
-            vida1.setVisible(false);
-            vida3.setVisible(false);
-            vida2.setVisible(false);
-            vida-=1;
-            puntaje-=50;
-            puntaj.setText(""+puntaje);
+    public String[]  vida(boolean colsion){
+        if(!colsion){
+            info[0]=Integer.toString(vida);
+            info[1]=Integer.toString(puntaje);
+                
+//            if(mundo.equals("mundo2")){
+//                info[0]=Integer.toString(vida);
+//                info[1]=Integer.toString(puntaje+200);
+//            }
+//            if(mundo.equals("mundo3")){
+//                info[0]=Integer.toString(vida);
+//                info[1]=Integer.toString(puntaje+300);
+//            }
+        } else {
             
+            System.out.println("colisiones == " +colisiones);
+            if (colisiones == 1) {
+                vida3.setVisible(false);
+                vida -= 1;
+                puntaje -= 50;
+                puntaj.setText("" + puntaje);
+            }
+            if (colisiones == 2) {
+                vida3.setVisible(false);
+                vida2.setVisible(false);
+                vida -= 1;
+                puntaje -= 50;
+                puntaj.setText("" + puntaje);
+            }
+            if (colisiones == 3) {
+                vida1.setVisible(false);
+                vida3.setVisible(false);
+                vida2.setVisible(false);
+                vida -= 1;
+                puntaje -= 50;
+                puntaj.setText("" + puntaje);
+
+            }
+            if (colisiones == 4) {
+                String punt = Integer.toString(puntaje);
+                new GamerOver(null, true, punt);
+            }
+
+            colisiones++;
+            info[0] = Integer.toString(vida);
+            info[1] = Integer.toString(puntaje);
         }
-        if(colisiones==4){
-            String punt =Integer.toString(puntaje);
-            new GamerOver(null, true,punt);
-        }
-        
-        info[0]=Integer.toString(vida);
-        info[1]=Integer.toString(puntaje);
-        colisiones++;
-        return info;
+            return info;
     }
     
 }
