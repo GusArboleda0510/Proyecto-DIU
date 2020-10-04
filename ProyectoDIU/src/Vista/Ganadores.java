@@ -42,7 +42,7 @@ public class Ganadores extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         nickName=txt.leerNickName();
-        
+        mensaje.setVisible(false);
         doc = new CreadordeDocs(ganadores, "ganadores");
         if (!nickName.equals("")) {
             System.out.println("NICK Name " + nickName);
@@ -118,7 +118,8 @@ public class Ganadores extends javax.swing.JDialog {
         String[] aux=null;
         int[] puntaje=new int[datos.length];
         int[] temporal=new int[datos.length];
-        
+        int espacioPred=0;
+        String a;
         for (int i = 0; i < datos.length; i++) {
             aux=datos[i].split("-");
             puntaje[i]=Integer.parseInt(aux[1]);
@@ -126,25 +127,29 @@ public class Ganadores extends javax.swing.JDialog {
         }
         
         int[] posiciones=ordenamiento(puntaje, mayorMenos(temporal));
-        jTextArea1.append("\n");
+        jTextArea1.append("\n\n");
         for (int i = 0; i < datos.length; i++) {
-            jTextArea1.append("\n    "+(i+1)+"   ");
+            jTextArea1.append("     "+(i+1));
             String[] aux01=datos[posiciones[i]].split("-");
             
             for (int j = 0; j < aux01.length; j++) {
-            if(j==0){
-                jTextArea1.append("              ");
-            }
-            if(j==1){
-                jTextArea1.append("                  ");
-            }
-            if(j==2){
-                jTextArea1.append("            ");
-            }
-            
-            
-            jTextArea1.append(" "+aux01[j] +"   ");
-                
+                if(j==0){
+                    espacioPred=14;    
+                    a=aux01[j];
+                    jTextArea1.append(espacios(espacioPred, 0, a));
+
+                }
+                if(j==1){
+                    espacioPred=20;   
+                    a=aux01[j];
+                    System.out.println(espacioPred+"-"+aux01[j-1].length()+"-"+a);
+                    jTextArea1.append(espacios(espacioPred,aux01[j-1].length(),a));
+                }
+                if(j==2){
+                    espacioPred=20;
+                    a=aux01[j];
+                    jTextArea1.append(espacios(espacioPred, aux01[j].length(),a));
+                }
             }
             jTextArea1.append("\n");
         }
@@ -178,6 +183,25 @@ public class Ganadores extends javax.swing.JDialog {
     return aux=a;
 }
     
+    public String espacios(int espacio,int nomb,String a){
+        String esp="";
+        int tam;
+        if(espacio>nomb){
+            tam=espacio-nomb;
+        }else{
+            tam=nomb-espacio;
+        }
+        String[] aux=new String[espacio-nomb];
+        for (int i = 0; i < aux.length; i++) {
+            aux[i]=" ";
+            
+        }
+        for (int i = 0; i < aux.length; i++) {
+            esp+=aux[i];
+        }
+        return esp+a;
+    }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -193,6 +217,7 @@ public class Ganadores extends javax.swing.JDialog {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -206,7 +231,7 @@ public class Ganadores extends javax.swing.JDialog {
         jTextArea1.setColumns(5);
         jTextArea1.setFont(new java.awt.Font("Tempus Sans ITC", 3, 20)); // NOI18N
         jTextArea1.setRows(5);
-        jTextArea1.setText("Posicion       Nombre        Puntaje              Tiempo");
+        jTextArea1.setText("Posicion       Nombre        Puntaje        Tiempo");
         jTextArea1.setBorder(new javax.swing.border.MatteBorder(null));
         jScrollPane1.setViewportView(jTextArea1);
 
@@ -259,9 +284,9 @@ public class Ganadores extends javax.swing.JDialog {
         dispose();
     }//GEN-LAST:event_EscuchaSalir
 
-    public static void main(String[] args) throws Exception {
-        new Ganadores(null, true);
-    }
+//    public static void main(String[] args) throws Exception {
+//        new Ganadores(null, true);
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Trofeo;
