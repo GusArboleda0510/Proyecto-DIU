@@ -20,7 +20,6 @@ public class Mundo1 extends javax.swing.JDialog {
      * Creates new form Mundo_1
      */
     Thread contEnemigos;
-    Thread avatarSprite;
     Mundo1.mapa1 jPMapa1 = new Mundo1.mapa1();
     Mundo1.mapa2 jPMapa2 = new Mundo1.mapa2();
     Color colorea = new Color(240, 240, 240);
@@ -34,7 +33,11 @@ public class Mundo1 extends javax.swing.JDialog {
     int cambio = 1;
     String[] infoVida_Puntaje;
     String rutaCarpeta;
+    boolean marcharHilo = true;
 
+    public boolean isMarcharHilo() {
+        return marcharHilo;
+    }
     public Mundo1(java.awt.Frame parent, boolean modal, String nickNameJugador, String imgPeque, String rutaCarpeta) {
         super(parent, modal);
         initComponents();
@@ -49,13 +52,7 @@ public class Mundo1 extends javax.swing.JDialog {
                 jLAvatarMapa1.setIcon(new javax.swing.ImageIcon(getClass().getResource(predPequenia)));
                 jLAvatarMapa2.setIcon(new javax.swing.ImageIcon(getClass().getResource(predPequenia)));
             }
-
         }
-        contEnemigos = new ControlEnemigos(M1E1, "mapa1", "/Imagenes/Avatars/Avatar2");
-        contEnemigos.start();
-        contEnemigos = new ControlEnemigos(M1E2, "mapa1", "/Imagenes/Avatars/Avatar2");
-        contEnemigos.start();
-
         txt.crearNickName(nickNameJugador);
         t = new Tiempo(null);
         t.start();
@@ -1059,7 +1056,7 @@ public class Mundo1 extends javax.swing.JDialog {
         jLAvatarMapa1.setBackground(new java.awt.Color(153, 255, 204));
         jLAvatarMapa1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
         jLAvatarMapa1.setOpaque(true);
-        Mapa1.add(jLAvatarMapa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 500, 40, 40));
+        Mapa1.add(jLAvatarMapa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 510, 40, 40));
 
         fondo.setBackground(new java.awt.Color(255, 204, 204));
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoVerde.png"))); // NOI18N
@@ -1775,8 +1772,10 @@ public class Mundo1 extends javax.swing.JDialog {
         switch (evt.getExtendedKeyCode()) {//getExtendedKeyCode->Captura lo q hace el teclado y lo pasa a la variable X y Y
 
             case KeyEvent.VK_UP:
-//                alternarImg(1);
                 if (m1.limites(x, y, "up")) {
+                    if(rutaCarpeta != null){
+                        alternarImg(1, jLAvatarMapa1);
+                    }
                     jLAvatarMapa1.setLocation(x, y - desplazamiento);
                     
                     infoVida_Puntaje = jug.vida();//Colision
@@ -1796,19 +1795,26 @@ public class Mundo1 extends javax.swing.JDialog {
                 }
                 break;
             case KeyEvent.VK_DOWN:
-//                alternarImg(3);
                 if (m1.limites(x, y, "down")) {
+                    if(rutaCarpeta != null){
+                        alternarImg(3, jLAvatarMapa1);
+                    }
                     jLAvatarMapa1.setLocation(x, y + desplazamiento);
                 }
                 break;
             case KeyEvent.VK_LEFT:
-//                alternarImg(4);
                 if (m1.limites(x, y, "left")) {
+                    if(rutaCarpeta != null){
+                        alternarImg(4, jLAvatarMapa1);
+                    }
                     jLAvatarMapa1.setLocation(x - desplazamiento, y);
                 }
                 break;
             case KeyEvent.VK_RIGHT:
                 if (m1.limites(x, y, "right")) {
+                    if(rutaCarpeta != null){
+                        alternarImg(2, jLAvatarMapa1);
+                    }
                     jLAvatarMapa1.setLocation(x + desplazamiento, y);
                     if (x >= 900 && y >= 500) {
 
@@ -1921,6 +1927,8 @@ public class Mundo1 extends javax.swing.JDialog {
     private void VolverMenu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VolverMenu
         s = new Sonido("click.wav");
         t.interrupt();
+        contEnemigos.interrupt();
+//        marcharHilo = false;
         dispose();
     }//GEN-LAST:event_VolverMenu
 
@@ -1933,6 +1941,7 @@ public class Mundo1 extends javax.swing.JDialog {
         int mapa = (int) (Math.random() * 2 + 1);
         mapa = 1;
         if (mapa == 1) {
+            initEnemigos(1);
             Mapa1.setFocusable(true);
             Mapa1.setVisible(true);
             Mapa2.setFocusable(false);
@@ -1940,6 +1949,7 @@ public class Mundo1 extends javax.swing.JDialog {
             return "mapa1";
         }
         if (mapa == 2) {
+            initEnemigos(2);
             Mapa1.setFocusable(false);
             Mapa1.setVisible(false);
             Mapa2.setFocusable(true);
@@ -1950,24 +1960,40 @@ public class Mundo1 extends javax.swing.JDialog {
         return null;
     }
 
-//    private void llamarEnemigos(String nombreMapa) {
-//        int cantEnemigos = buscarCantEnemigos();
-//        if(nombreMapa.equals("mapa1")){
-//            for (int n = 1; n <= cantEnemigos; n++) {
-//                contEnemigos = new ControlEnemigos(enemigo1,"mapa1"); 
-//                contEnemigos.start();
-//            }
-//        if(nombreMapa.equals("mapa2")){
-//            for (int n = 1; n <= cantEnemigos; n++) {
-//                contEnemigos = new ControlEnemigos(enemigo1,"mapa2"); 
-//                contEnemigos.start();
-//            }
-//        }
-//        
-//        }
-//    }
-    private int buscarCantEnemigos() {
-        return 2;
+    private void initEnemigos(int numMapa) {
+        if(numMapa == 1){
+            contEnemigos = new ControlEnemigos(M1E1, "mapa1", elegirEnemigo());
+            contEnemigos.start();
+//            contEnemigos = new ControlEnemigos(M1E2, "mapa1", elegirEnemigo());
+//            contEnemigos.start();                
+        }
+        if(numMapa == 2){
+            contEnemigos = new ControlEnemigos(M2E1, "mapa2", elegirEnemigo());
+            contEnemigos.start();
+            contEnemigos = new ControlEnemigos(M2E2, "mapa2", elegirEnemigo());
+            contEnemigos.start();                  
+        }
+    }
+
+    private String elegirEnemigo() {
+        String ruta = null;
+        int num = (int) (Math.random() * 5 + 1);
+        if(num == 1){
+           ruta = "/Imagenes/Avatars/Avatar1"; 
+        }
+        if(num == 2){
+           ruta = "/Imagenes/Avatars/Avatar2"; 
+        }
+        if(num == 3){
+           ruta = "/Imagenes/Avatars/Avatar3"; 
+        }
+        if(num == 4){
+           ruta = "/Imagenes/Avatars/Avatar4"; 
+        }
+        if(num == 5){
+           ruta = "/Imagenes/Avatars/Avatar5"; 
+        }       
+        return ruta;
     }
 
     public class mapa1 {
