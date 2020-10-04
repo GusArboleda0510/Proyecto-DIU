@@ -51,10 +51,8 @@ public class ControlCrearAvatar {
         if(predGrande == null){
             dibujarImagen();       
         }else{
-            System.out.println("t1 " + predGrande);
             insertarImagen();
         }
-        
         crearImagen();
 
         cd = new CreadordeDocs(avatars, "jugadores");
