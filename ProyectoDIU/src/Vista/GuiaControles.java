@@ -96,6 +96,11 @@ public class GuiaControles extends javax.swing.JDialog {
         JL12 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        JL15 = new javax.swing.JLabel();
+        jButton16 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
         jbVolver1 = new javax.swing.JButton();
         InfGeneral = new javax.swing.JScrollPane();
         JPanel2 = new javax.swing.JPanel();
@@ -397,7 +402,7 @@ public class GuiaControles extends javax.swing.JDialog {
         JL14.setText("PASO 2");
         CargarAvatars.add(JL14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 600, 30));
 
-        PersonalizarAvatar.add(CargarAvatars, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 1370, 860, 850));
+        PersonalizarAvatar.add(CargarAvatars, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 1790, 860, 850));
 
         jlPersonalizarAvatar.setBackground(new java.awt.Color(255, 255, 255));
         jlPersonalizarAvatar.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Personalizar Avatar", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 2, 36))); // NOI18N
@@ -428,7 +433,7 @@ public class GuiaControles extends javax.swing.JDialog {
                 jbImagPredeterminadasMouseMoved(evt);
             }
         });
-        jlPersonalizarAvatar.add(jbImagPredeterminadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 150, 320, 40));
+        jlPersonalizarAvatar.add(jbImagPredeterminadas, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 330, 50));
 
         JL1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/GuiaControl/CrearAvatar.png"))); // NOI18N
         JL1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -462,7 +467,8 @@ public class GuiaControles extends javax.swing.JDialog {
         jbCargar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jlPersonalizarAvatar.add(jbCargar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 650, 150, 50));
 
-        jbCerrar1.setToolTipText("<html>Se devuelve a la ventana menú principal<html>");
+        jbCerrar1.setToolTipText("<html>Saldra una ventana de advertencia. Y Se devolvera a <p>"
+            + "la ventana de menú principal<html>");
         jbCerrar1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jbCerrar1.setContentAreaFilled(false);
         jbCerrar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -488,11 +494,11 @@ public class GuiaControles extends javax.swing.JDialog {
         jlPersonalizarAvatar.add(JL4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 630, 430, 90));
 
         jButton1.setToolTipText("<html>Luego de presionar el boton de cargar<p>"
-            + "Se abrira esta ventana para que darle el <p>"
-            + "nombre a su avatar, recien escogido <html>");
+            + "Se abrira esta ventana para darle el <p>"
+            + "nombre a su avatar, recien escogido o creado <html>");
         jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton1.setContentAreaFilled(false);
-        jlPersonalizarAvatar.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 800, 370, 340));
+        jlPersonalizarAvatar.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 800, 380, 340));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/GuiaControl/CrearAvatar3.png"))); // NOI18N
         jlPersonalizarAvatar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 810, 340, 300));
@@ -501,8 +507,8 @@ public class GuiaControles extends javax.swing.JDialog {
         JL10.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         JL10.setForeground(new java.awt.Color(0, 102, 102));
         JL10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        JL10.setText("PASO 3");
-        jlPersonalizarAvatar.add(JL10, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 750, 670, 30));
+        JL10.setText("PASO 4");
+        jlPersonalizarAvatar.add(JL10, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 1160, 670, 30));
 
         JL11.setBackground(new java.awt.Color(204, 204, 204));
         JL11.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
@@ -518,9 +524,8 @@ public class GuiaControles extends javax.swing.JDialog {
         JL12.setText("PASO 2");
         jlPersonalizarAvatar.add(JL12, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 600, 670, 30));
 
-        jButton4.setToolTipText("<html>Luego de presionar el boton de cargar<p>"
-            + "Se abrira esta ventana para que darle el <p>"
-            + "nombre a su avatar, recien escogido <html>");
+        jButton4.setToolTipText("<html>Luego de presionar el boton de cerrar<p>"
+            + "Se abrira esta ventana de advertencia<html>");
         jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton4.setContentAreaFilled(false);
         jlPersonalizarAvatar.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 800, 360, 340));
@@ -528,7 +533,33 @@ public class GuiaControles extends javax.swing.JDialog {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/GuiaControl/CrearAvatar4.png"))); // NOI18N
         jlPersonalizarAvatar.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 810, 320, 300));
 
-        PersonalizarAvatar.add(jlPersonalizarAvatar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 860, 1190));
+        JL15.setBackground(new java.awt.Color(204, 204, 204));
+        JL15.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        JL15.setForeground(new java.awt.Color(0, 102, 102));
+        JL15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JL15.setText("PASO 3");
+        jlPersonalizarAvatar.add(JL15, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 750, 670, 30));
+
+        jButton16.setToolTipText("<html>Si al crear un avatar, el nombre ingresado<p>"
+            + "ya existe te dira si desea reescribirlo o no <html>");
+        jButton16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jButton16.setContentAreaFilled(false);
+        jlPersonalizarAvatar.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 1240, 380, 120));
+
+        jButton17.setToolTipText("<html>Se reescribira la imagen y comenzara el juego<html>");
+        jButton17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jButton17.setContentAreaFilled(false);
+        jlPersonalizarAvatar.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 1400, 160, 70));
+
+        jButton18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jButton18.setContentAreaFilled(false);
+        jlPersonalizarAvatar.add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 1400, 170, 70));
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/GuiaControl/CrearAvatar5.png"))); // NOI18N
+        jLabel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jlPersonalizarAvatar.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 1220, 420, 270));
+
+        PersonalizarAvatar.add(jlPersonalizarAvatar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 860, 1570));
 
         jbVolver1.setFont(new java.awt.Font("Times New Roman", 3, 36)); // NOI18N
         jbVolver1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Atras.png"))); // NOI18N
@@ -540,9 +571,9 @@ public class GuiaControles extends javax.swing.JDialog {
                 jbVolver1volverCrearAvatar(evt);
             }
         });
-        PersonalizarAvatar.add(jbVolver1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 2270, 830, -1));
+        PersonalizarAvatar.add(jbVolver1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 2650, 830, -1));
 
-        JPanel1.add(PersonalizarAvatar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 2350));
+        JPanel1.add(PersonalizarAvatar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 2500));
 
         CrearAvatar.setViewportView(JPanel1);
 
@@ -814,7 +845,7 @@ public class GuiaControles extends javax.swing.JDialog {
 
         getContentPane().add(ControlAvatar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 650));
 
-        setSize(new java.awt.Dimension(967, 687));
+        setSize(new java.awt.Dimension(967, 739));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -983,6 +1014,7 @@ public class GuiaControles extends javax.swing.JDialog {
     private javax.swing.JLabel JL12;
     private javax.swing.JLabel JL13;
     private javax.swing.JLabel JL14;
+    private javax.swing.JLabel JL15;
     private javax.swing.JLabel JL2;
     private javax.swing.JLabel JL3;
     private javax.swing.JLabel JL4;
@@ -1006,6 +1038,9 @@ public class GuiaControles extends javax.swing.JDialog {
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1017,6 +1052,7 @@ public class GuiaControles extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

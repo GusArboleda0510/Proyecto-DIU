@@ -1699,7 +1699,7 @@ public class Mundo1 extends javax.swing.JDialog {
                 if (m2.limites(x, y, "up")) {
                     jLAvatarMapa2.setLocation(x, y - desplazamiento);
 
-                    infoVida_Puntaje = jug.vida(2);//Colision
+                    infoVida_Puntaje = jug.vida();//Colision
                     txt.puntaje_vida(infoVida_Puntaje);
 
                 }
@@ -1777,8 +1777,21 @@ public class Mundo1 extends javax.swing.JDialog {
                         alternarImg(1, jLAvatarMapa1);
                     }
                     jLAvatarMapa1.setLocation(x, y - desplazamiento);
+                    
+                    infoVida_Puntaje = jug.vida();//Colision
+                    txt.puntaje_vida(infoVida_Puntaje);
+                    
+                    /*
+                    int num=1;
+                    
+                    variable1==varible2(
+                    
                     infoVida_Puntaje = jug.vida(2);//Colision
                     txt.puntaje_vida(infoVida_Puntaje);
+                    
+                    )
+                    
+                    */
                 }
                 break;
             case KeyEvent.VK_DOWN:

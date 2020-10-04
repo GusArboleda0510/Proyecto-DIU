@@ -16,7 +16,7 @@ public class controlJugabilidad {
     JLabel vida1,vida2,vida3,puntaj;
     int vida=3, puntaje=150;
     String[] info= new String[2];
-    
+    int colisiones=1;
     public controlJugabilidad() {
     }
     
@@ -26,7 +26,7 @@ public class controlJugabilidad {
         this.vida3=vida3;
         this.puntaj=puntaj;
     }
-    public String[]  vida(int colisiones){
+    public String[]  vida(){
         if(colisiones==1){
             vida3.setVisible(false);
             vida-=1;
@@ -37,7 +37,7 @@ public class controlJugabilidad {
             vida3.setVisible(false);
             vida2.setVisible(false);
             vida-=1;
-            puntaje-=100;
+            puntaje-=50;
             puntaj.setText(""+puntaje);
         }
         if(colisiones==3){
@@ -45,7 +45,7 @@ public class controlJugabilidad {
             vida3.setVisible(false);
             vida2.setVisible(false);
             vida-=1;
-            puntaje-=150;
+            puntaje-=50;
             puntaj.setText(""+puntaje);
             
         }
@@ -56,7 +56,7 @@ public class controlJugabilidad {
         
         info[0]=Integer.toString(vida);
         info[1]=Integer.toString(puntaje);
-        
+        colisiones++;
         return info;
     }
     
