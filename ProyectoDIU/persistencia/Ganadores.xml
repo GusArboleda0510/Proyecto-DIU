@@ -45,4 +45,9 @@
         <puntaje>200</puntaje>
         <timepo>0:2:1</timepo>
     </puestos>
+<puestos>
+        <jugadores>a</jugadores>
+        <puntaje>100</puntaje>
+        <timepo>0:0:39</timepo>
+    </puestos>
 </ganadores>

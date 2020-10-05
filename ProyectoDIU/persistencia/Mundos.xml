@@ -29,4 +29,14 @@
     		<skinEnemigo>aleatorio</skinEnemigo>
 		</mapa>
     </mundo>
+    <mundo>
+        <nombreMundo>mundo3</nombreMundo>
+        <cantidadMapas>1</cantidadMapas>
+        <mapa NombreMapa="mapa1">
+    		<cantidadEmemigos>3</cantidadEmemigos>
+    		<skinEnemigo>aleatorio</skinEnemigo>
+    		<skinEnemigo>aleatorio</skinEnemigo>
+    		<skinEnemigo>aleatorio</skinEnemigo>
+		</mapa>
+    </mundo>
 </mundos>
