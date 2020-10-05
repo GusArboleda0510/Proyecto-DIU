@@ -556,7 +556,7 @@ public class GuiaControles extends javax.swing.JDialog {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 983, Short.MAX_VALUE)
+            .addGap(0, 987, Short.MAX_VALUE)
             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -790,7 +790,7 @@ public class GuiaControles extends javax.swing.JDialog {
 
         getContentPane().add(InfGeneral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 970, 650));
 
-        setSize(new java.awt.Dimension(960, 709));
+        setSize(new java.awt.Dimension(974, 709));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
