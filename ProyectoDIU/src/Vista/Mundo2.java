@@ -81,71 +81,71 @@ public class Mundo2 extends javax.swing.JDialog {
         String[] inf = txt.leerVidaPuntaje();
         inf[1] = "" + (Integer.parseInt(inf[1]) + 100);
         Puntaje.setText("" + inf[1]);//inf[1]==puntaje de las vidas del Mundo 1 y (100) equivale a pasar el mundo1
-        if (inf[0].equals("0")) {
-            jlvida1.setVisible(false);
-            jlvida2.setVisible(false);
-            jlvida3.setVisible(false);
-
-        }
-        if (inf[0].equals("1")) {
-            jlvida1.setVisible(true);
-            jlvida2.setVisible(false);
-            jlvida3.setVisible(false);
-
-        }
-        if (inf[0].equals("2")) {
-            jlvida1.setVisible(true);
-            jlvida2.setVisible(true);
-            jlvida3.setVisible(false);
-
-        }
-        if (inf[0].equals("3")) {
-            jlvida1.setVisible(true);
-            jlvida2.setVisible(true);
-            jlvida3.setVisible(true);
-
-        }
+        vidaJLabel(inf);
 
     }
 
-    public void vidaJLabel(String[] inf) {
-        boolean tal = colision();
-        System.out.println("TTT " + tal);
-        if (tal) {
-            if (inf[0].equals("-1")) {
-                dispose();
-                new GamerOver(null, true, Puntaje.getText());
+    public void vidaJLabel(String[] inf){
+        if(colision()){
+            if(inf[0].equals("-1")){
+            dispose();
+            new GamerOver(null, true, Puntaje.getText());
             }
-            if (inf[0].equals("0")) {
+            if(inf[0].equals("0")){
                 jlvida1.setVisible(false);
                 jlvida2.setVisible(false);
                 jlvida3.setVisible(false);
 
             }
-            if (inf[0].equals("1")) {
+             if(inf[0].equals("1")){
                 jlvida1.setVisible(true);
                 jlvida2.setVisible(false);
                 jlvida3.setVisible(false);
 
             }
-            if (inf[0].equals("2")) {
+            if(inf[0].equals("2")){
                 jlvida1.setVisible(true);
                 jlvida2.setVisible(true);
                 jlvida3.setVisible(false);
 
             }
-            if (inf[0].equals("3")) {
+            if(inf[0].equals("3")){
+                jlvida1.setVisible(true);
+                jlvida2.setVisible(true);
+                jlvida3.setVisible(true);
+
+            }
+        }else{
+            if(inf[0].equals("0")){
+                jlvida1.setVisible(false);
+                jlvida2.setVisible(false);
+                jlvida3.setVisible(false);
+
+            }
+             if(inf[0].equals("1")){
+                jlvida1.setVisible(true);
+                jlvida2.setVisible(false);
+                jlvida3.setVisible(false);
+
+            }
+            if(inf[0].equals("2")){
+                jlvida1.setVisible(true);
+                jlvida2.setVisible(true);
+                jlvida3.setVisible(false);
+
+            }
+            if(inf[0].equals("3")){
                 jlvida1.setVisible(true);
                 jlvida2.setVisible(true);
                 jlvida3.setVisible(true);
 
             }
         }
-
-        vida = inf[0];
-        this.punt = inf[1];
+        
+        vida=inf[0];
+        this.punt=inf[1];
     }
-
+    
     private void decidirMapa() throws Exception {
         leerMundos = new controlXMLMundos();
         String nombreMapa = null;
@@ -2216,11 +2216,14 @@ public class Mundo2 extends javax.swing.JDialog {
                 }
                 break;
         }
-        infoVida_Puntaje[0] = "" + (Integer.parseInt(vida) - 1);
-        infoVida_Puntaje[1] = "" + (Integer.parseInt(punt) - 50);
-        vidaJLabel(infoVida_Puntaje);
-        Puntaje.setText(infoVida_Puntaje[1]);
-        txt.puntaje_vida(infoVida_Puntaje);
+        if(colision()){
+            infoVida_Puntaje[0] = "" + (Integer.parseInt(vida) - 1);
+            infoVida_Puntaje[1] = "" + (Integer.parseInt(punt) - 50);
+            vidaJLabel(infoVida_Puntaje);
+            Puntaje.setText(infoVida_Puntaje[1]);
+            txt.puntaje_vida(infoVida_Puntaje);
+        }
+        
     }//GEN-LAST:event_Mapa1KeyPressed
 
     private void Mapa2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Mapa2KeyPressed
@@ -2351,11 +2354,13 @@ public class Mundo2 extends javax.swing.JDialog {
                 }
                 break;
         }
-        infoVida_Puntaje[0] = "" + (Integer.parseInt(vida) - 1);
-        infoVida_Puntaje[1] = "" + (Integer.parseInt(punt) - 50);
-        vidaJLabel(infoVida_Puntaje);
-        Puntaje.setText(infoVida_Puntaje[1]);
-        txt.puntaje_vida(infoVida_Puntaje);
+        if(colision()){
+            infoVida_Puntaje[0] = "" + (Integer.parseInt(vida) - 1);
+            infoVida_Puntaje[1] = "" + (Integer.parseInt(punt) - 50);
+            vidaJLabel(infoVida_Puntaje);
+            Puntaje.setText(infoVida_Puntaje[1]);
+            txt.puntaje_vida(infoVida_Puntaje);
+        }
 
     }//GEN-LAST:event_Mapa2KeyPressed
 
