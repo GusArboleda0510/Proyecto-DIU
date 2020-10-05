@@ -43,10 +43,11 @@ volver los limites de los mas, metodos de la clase mundo
 
 HECHO -- FALTA CREAR XML DE LOS MUNDOS e implementarlo para la creacion de los mundos 
 
-------------------------------------------------------------------------------------------
 
-EN PROGRESO -- QUEDA POR ESCOGER  - GUS - ALE implementar sonidos en el juego
+HECHO -- EN PROGRESO -- QUEDA POR ESCOGER  - GUS - ALE implementar sonidos en el juego
 			- IDEA HACER UNA CANCION EN UN BUCLE EN EL MENU 
+			
+------------------------------------------------------------------------------------------
 			
 EN PROGRESO - ALE - GUS (para el final) guia de controles para el usuario
 
