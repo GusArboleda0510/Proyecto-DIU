@@ -41,7 +41,6 @@ public class controlJugabilidad {
 //            }
         } else {
             
-            System.out.println("colisiones == " +colisiones);
             if (colisiones == 1) {
                 vida3.setVisible(false);
                 vida -= 1;

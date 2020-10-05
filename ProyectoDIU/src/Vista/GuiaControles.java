@@ -25,7 +25,6 @@ public class GuiaControles extends javax.swing.JDialog {
         llamarContenido();
         
         CrearAvat.setVisible(false);
-        InfoGeneral.setVisible(false);
         ControlJueg.setVisible(false);
         setVisible(true);
     }
@@ -37,17 +36,14 @@ public class GuiaControles extends javax.swing.JDialog {
     public void llamarContenido(){
         CrearAvatar.setVisible(false);
         InfGeneral.setVisible(false);
-        ControlAvatar.setVisible(false);
         Contenido.setVisible(true);
     }
-    private void llamarPaneles(boolean crearAvat,boolean controlJuego,boolean infGeneal){
+    private void llamarPaneles(boolean crearAvat,boolean controlJuego){
         Contenido.setVisible(false);
         CrearAvatar.setVisible(crearAvat);
         InfGeneral.setVisible(controlJuego);
-        ControlAvatar.setVisible(infGeneal);
         PersonalizarAvatar.setVisible(crearAvat);
         ControlJuego.setVisible(controlJuego);
-        InformacionGeneral.setVisible(infGeneal);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -57,8 +53,6 @@ public class GuiaControles extends javax.swing.JDialog {
         Titulo = new javax.swing.JLabel();
         ControlJueg = new javax.swing.JLabel();
         ControlJueg1 = new javax.swing.JLabel();
-        InfoGeneral = new javax.swing.JLabel();
-        InfoGeneral1 = new javax.swing.JLabel();
         CrearAvat = new javax.swing.JLabel();
         CrearAvat1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -127,22 +121,16 @@ public class GuiaControles extends javax.swing.JDialog {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        jButton20 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        jButton21 = new javax.swing.JButton();
+        jButton22 = new javax.swing.JButton();
+        jButton23 = new javax.swing.JButton();
+        jButton29 = new javax.swing.JButton();
+        jButton30 = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
         jbVolver2 = new javax.swing.JButton();
-        ControlAvatar = new javax.swing.JScrollPane();
-        JPanel3 = new javax.swing.JPanel();
-        InformacionGeneral = new javax.swing.JPanel();
-        Titulo3 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jLabel11 = new javax.swing.JLabel();
-        jbVolver3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -171,7 +159,7 @@ public class GuiaControles extends javax.swing.JDialog {
                 EscuchaPanelControlJuego(evt);
             }
         });
-        Contenido.add(ControlJueg, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 920, 90));
+        Contenido.add(ControlJueg, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 890, 90));
 
         ControlJueg1.setBackground(new java.awt.Color(255, 255, 255));
         ControlJueg1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
@@ -183,37 +171,7 @@ public class GuiaControles extends javax.swing.JDialog {
                 ControlJueg1MouseEntered(evt);
             }
         });
-        Contenido.add(ControlJueg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 460, 951, 90));
-
-        InfoGeneral.setBackground(new java.awt.Color(255, 255, 255));
-        InfoGeneral.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
-        InfoGeneral.setForeground(new java.awt.Color(0, 153, 153));
-        InfoGeneral.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        InfoGeneral.setText("¿INFORMACION GENERAL?");
-        InfoGeneral.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                InfoGeneralMouseEntered(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                EscuchaPanelInfGeneral(evt);
-            }
-        });
-        Contenido.add(InfoGeneral, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 920, 90));
-
-        InfoGeneral1.setBackground(new java.awt.Color(255, 255, 255));
-        InfoGeneral1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        InfoGeneral1.setForeground(new java.awt.Color(0, 153, 153));
-        InfoGeneral1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        InfoGeneral1.setText("¿INFORMACION GENERAL?");
-        InfoGeneral1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                InfoGeneral1MouseEntered(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                InfoGeneral1EscuchaPanelInfGeneral(evt);
-            }
-        });
-        Contenido.add(InfoGeneral1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 951, 90));
+        Contenido.add(ControlJueg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 951, 90));
 
         CrearAvat.setBackground(new java.awt.Color(255, 255, 255));
         CrearAvat.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
@@ -237,7 +195,7 @@ public class GuiaControles extends javax.swing.JDialog {
                 EscuchaPanelAvatar(evt);
             }
         });
-        Contenido.add(CrearAvat, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 920, 90));
+        Contenido.add(CrearAvat, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 890, 90));
 
         CrearAvat1.setBackground(new java.awt.Color(255, 255, 255));
         CrearAvat1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
@@ -252,7 +210,7 @@ public class GuiaControles extends javax.swing.JDialog {
                 CrearAvat1EscuchaPanelAvatar(evt);
             }
         });
-        Contenido.add(CrearAvat1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 930, 108));
+        Contenido.add(CrearAvat1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 900, 108));
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 3, 60)); // NOI18N
         jButton1.setText("SALIR");
@@ -263,7 +221,7 @@ public class GuiaControles extends javax.swing.JDialog {
                 jButton1ActionPerformed(evt);
             }
         });
-        Contenido.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 570, 410, 70));
+        Contenido.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 540, 410, 70));
 
         Fondo.setBackground(new java.awt.Color(255, 255, 255));
         Fondo.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
@@ -598,21 +556,21 @@ public class GuiaControles extends javax.swing.JDialog {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 941, Short.MAX_VALUE)
+            .addGap(0, 983, Short.MAX_VALUE)
             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel4Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(PersonalizarAvatar, javax.swing.GroupLayout.PREFERRED_SIZE, 941, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PersonalizarAvatar, javax.swing.GroupLayout.PREFERRED_SIZE, 963, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap()))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 2701, Short.MAX_VALUE)
+            .addGap(0, 2723, Short.MAX_VALUE)
             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel4Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(PersonalizarAvatar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         CrearAvatar.setViewportView(jPanel4);
@@ -620,7 +578,7 @@ public class GuiaControles extends javax.swing.JDialog {
         getContentPane().add(CrearAvatar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 650));
 
         JPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        JPanel2.setPreferredSize(new java.awt.Dimension(1195, 1190));
+        JPanel2.setPreferredSize(new java.awt.Dimension(1195, 2200));
         JPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         ControlJuego.setBackground(new java.awt.Color(255, 255, 255));
@@ -756,46 +714,65 @@ public class GuiaControles extends javax.swing.JDialog {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Enemigos", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 1, 36))); // NOI18N
         jPanel2.setOpaque(false);
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton20.setToolTipText("<html>Cada vez que un avatar se encuentre con un enemigo<p>"
+            + "entonces hara una colision, el cual devolvera al avatar al<p>"
+            + "punto inicial<html>");
+        jButton20.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton20.setContentAreaFilled(false);
+        jPanel2.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, 90, 40));
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 3, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 102, 102));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Colision entre el enemigo y el avatar");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 44, 730, 60));
 
-        jLabel10.setText("avatar");
-        jLabel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jLabel9.setText("avatar");
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/GuiaControl/Colision.png"))); // NOI18N
         jLabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(106, 115, 666, 481));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 730, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(205, 205, 205)
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(110, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 80, Short.MAX_VALUE))
-        );
+        jButton21.setToolTipText("<html>Vuelve al inicio<html>");
+        jButton21.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton21.setContentAreaFilled(false);
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton21ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 660, 40, 40));
 
-        ControlJuego.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 720, 860, 360));
+        jButton22.setToolTipText("<html>Si presiona el boton, se abrira<p>"
+            + "la venta de la guia del juego<html>");
+        jButton22.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton22.setContentAreaFilled(false);
+        jPanel2.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 670, 70, 60));
+
+        jButton23.setToolTipText("<html>Cada jugador comenzara el juego con 3 vidas, si<p>"
+            + "ocurre una colision con un enemigo ira perdiendo vidas<html>");
+        jButton23.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton23.setContentAreaFilled(false);
+        jPanel2.add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 700, 190, 40));
+
+        jButton29.setToolTipText("<html>Por cada mundo que culmine, se sumara 100 <p>"
+            + " puntos y 50 por cada vida<html>");
+        jButton29.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton29.setContentAreaFilled(false);
+        jPanel2.add(jButton29, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 700, 160, 40));
+
+        jButton30.setToolTipText("<html>Detalla el nivel de cada mundo<html>");
+        jButton30.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton30.setContentAreaFilled(false);
+        jPanel2.add(jButton30, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 660, 140, 40));
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/GuiaControl/informacion.png"))); // NOI18N
+        jLabel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 640, 760, 123));
+
+        ControlJuego.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 720, 830, 840));
+
+        JPanel2.add(ControlJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 1570));
 
         jbVolver2.setFont(new java.awt.Font("Times New Roman", 3, 36)); // NOI18N
         jbVolver2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Atras.png"))); // NOI18N
@@ -807,85 +784,11 @@ public class GuiaControles extends javax.swing.JDialog {
                 jbVolver2volverCrearAvatar(evt);
             }
         });
-        ControlJuego.add(jbVolver2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 1100, 830, -1));
-
-        JPanel2.add(ControlJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 930, 1190));
+        JPanel2.add(jbVolver2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 1580, 830, -1));
 
         InfGeneral.setViewportView(JPanel2);
 
         getContentPane().add(InfGeneral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 970, 650));
-
-        ControlAvatar.setPreferredSize(new java.awt.Dimension(952, 1000));
-
-        JPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        JPanel3.setPreferredSize(new java.awt.Dimension(950, 1000));
-        JPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        InformacionGeneral.setBackground(new java.awt.Color(255, 255, 255));
-        InformacionGeneral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        Titulo3.setFont(new java.awt.Font("Tempus Sans ITC", 1, 65)); // NOI18N
-        Titulo3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Titulo3.setText("INFORMACION GENERAL");
-        InformacionGeneral.add(Titulo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 870, 110));
-
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "---", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 1, 36))); // NOI18N
-        jPanel3.setOpaque(false);
-        jPanel3.setPreferredSize(new java.awt.Dimension(850, 500));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton2.setToolTipText("<html>Vuelve al inicio<html>");
-        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton2.setContentAreaFilled(false);
-        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 60, 40));
-
-        jButton12.setToolTipText("<html>Si presiona el boton, se abrira<p>"
-            + "la ventna de la guia del juego<html>");
-        jButton12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton12.setContentAreaFilled(false);
-        jPanel3.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 90, 80, 80));
-
-        jButton13.setToolTipText("<html>Cada jugador comenzara el juego con 3 vidas, si<p>"
-            + "ocurre una colision con un enemigo ira perdiendo vidas<html>");
-        jButton13.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton13.setContentAreaFilled(false);
-        jPanel3.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, 210, 40));
-
-        jButton14.setToolTipText("<html>Por cada mundo que culmine, se sumara 100 <p>"
-            + " puntos y 50 por cada vida<html>");
-        jButton14.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton14.setContentAreaFilled(false);
-        jPanel3.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 160, 40));
-
-        jButton15.setToolTipText("<html>Detalla el nivel de cada mundo<html>");
-        jButton15.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton15.setContentAreaFilled(false);
-        jPanel3.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, 160, 40));
-
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/GuiaControl/informacion.png"))); // NOI18N
-        jLabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 70, 820, 123));
-
-        InformacionGeneral.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 860, 790));
-
-        jbVolver3.setFont(new java.awt.Font("Times New Roman", 3, 36)); // NOI18N
-        jbVolver3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Atras.png"))); // NOI18N
-        jbVolver3.setText("Volver");
-        jbVolver3.setBorderPainted(false);
-        jbVolver3.setContentAreaFilled(false);
-        jbVolver3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jbVolver3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbVolver3volverCrearAvatar(evt);
-            }
-        });
-        InformacionGeneral.add(jbVolver3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 990, 830, -1));
-
-        JPanel3.add(InformacionGeneral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 930, 1080));
-
-        ControlAvatar.setViewportView(JPanel3);
-
-        getContentPane().add(ControlAvatar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 965, 650));
 
         setSize(new java.awt.Dimension(960, 709));
         setLocationRelativeTo(null);
@@ -893,17 +796,12 @@ public class GuiaControles extends javax.swing.JDialog {
 
     private void EscuchaPanelAvatar(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EscuchaPanelAvatar
         s = new Sonido("click.wav");
-        llamarPaneles(true, false, false);
+        llamarPaneles(true, false);
     }//GEN-LAST:event_EscuchaPanelAvatar
-
-    private void EscuchaPanelInfGeneral(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EscuchaPanelInfGeneral
-        s = new Sonido("click.wav");
-        llamarPaneles(false, false, true);
-    }//GEN-LAST:event_EscuchaPanelInfGeneral
 
     private void EscuchaPanelControlJuego(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EscuchaPanelControlJuego
         s = new Sonido("click.wav");
-        llamarPaneles(false, true, false);
+        llamarPaneles(false, true);
     }//GEN-LAST:event_EscuchaPanelControlJuego
 
     private void CrearAvat1EscuchaPanelAvatar(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearAvat1EscuchaPanelAvatar
@@ -920,25 +818,11 @@ public class GuiaControles extends javax.swing.JDialog {
         CrearAvat.setVisible(true);
     }//GEN-LAST:event_CrearAvat1MouseEntered
 
-    private void InfoGeneral1EscuchaPanelInfGeneral(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InfoGeneral1EscuchaPanelInfGeneral
-       
-    }//GEN-LAST:event_InfoGeneral1EscuchaPanelInfGeneral
-
     private void ControlJuegMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ControlJuegMouseExited
         ControlJueg.setVisible(false);
         ControlJueg1.setVisible(true);
         CrearAvatar.setVisible(false);
     }//GEN-LAST:event_ControlJuegMouseExited
-
-    private void InfoGeneralMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InfoGeneralMouseEntered
-        InfoGeneral.setVisible(false);
-        InfoGeneral1.setVisible(true);
-    }//GEN-LAST:event_InfoGeneralMouseEntered
-
-    private void InfoGeneral1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InfoGeneral1MouseEntered
-        InfoGeneral1.setVisible(false);
-         InfoGeneral.setVisible(true);
-    }//GEN-LAST:event_InfoGeneral1MouseEntered
 
     private void ControlJueg1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ControlJueg1MouseEntered
         ControlJueg1.setVisible(false);
@@ -990,11 +874,6 @@ public class GuiaControles extends javax.swing.JDialog {
         s = new Sonido("click.wav");
     }//GEN-LAST:event_jbVolver2volverCrearAvatar
 
-    private void jbVolver3volverCrearAvatar(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbVolver3volverCrearAvatar
-        s = new Sonido("click.wav");
-        llamarContenido();
-    }//GEN-LAST:event_jbVolver3volverCrearAvatar
-
     private void jbMas3MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbMas3MouseMoved
         // TODO add your handling code here:
     }//GEN-LAST:event_jbMas3MouseMoved
@@ -1041,6 +920,10 @@ public class GuiaControles extends javax.swing.JDialog {
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton21ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1051,7 +934,6 @@ public class GuiaControles extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel CargarAvatars2;
     private javax.swing.JPanel Contenido;
-    private javax.swing.JScrollPane ControlAvatar;
     private javax.swing.JLabel ControlJueg;
     private javax.swing.JLabel ControlJueg1;
     private javax.swing.JPanel ControlJuego;
@@ -1060,9 +942,6 @@ public class GuiaControles extends javax.swing.JDialog {
     private javax.swing.JScrollPane CrearAvatar;
     private javax.swing.JLabel Fondo;
     private javax.swing.JScrollPane InfGeneral;
-    private javax.swing.JLabel InfoGeneral;
-    private javax.swing.JLabel InfoGeneral1;
-    private javax.swing.JPanel InformacionGeneral;
     private javax.swing.JLabel JL31;
     private javax.swing.JLabel JL32;
     private javax.swing.JLabel JL33;
@@ -1079,33 +958,31 @@ public class GuiaControles extends javax.swing.JDialog {
     private javax.swing.JLabel JL44;
     private javax.swing.JLabel JL45;
     private javax.swing.JPanel JPanel2;
-    private javax.swing.JPanel JPanel3;
     private javax.swing.JPanel PersonalizarAvatar;
     private javax.swing.JLabel Titulo;
     private javax.swing.JLabel Titulo2;
-    private javax.swing.JLabel Titulo3;
     private javax.swing.JLabel Titulo5;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
+    private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton24;
     private javax.swing.JButton jButton25;
     private javax.swing.JButton jButton26;
     private javax.swing.JButton jButton27;
     private javax.swing.JButton jButton28;
+    private javax.swing.JButton jButton29;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton30;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
@@ -1118,7 +995,6 @@ public class GuiaControles extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JButton jbCargar4;
     private javax.swing.JButton jbCargar5;
@@ -1136,7 +1012,6 @@ public class GuiaControles extends javax.swing.JDialog {
     private javax.swing.JButton jbVista4;
     private javax.swing.JButton jbVista5;
     private javax.swing.JButton jbVolver2;
-    private javax.swing.JButton jbVolver3;
     private javax.swing.JButton jbVolver4;
     private javax.swing.JPanel jlPersonalizarAvatar2;
     // End of variables declaration//GEN-END:variables

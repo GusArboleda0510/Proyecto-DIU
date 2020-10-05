@@ -124,11 +124,13 @@ public class GuardarNombre extends javax.swing.JDialog {
             nickName = jTextField1.getText();
             setVisible(false);
         }
+        
     }//GEN-LAST:event_jBGuardarActionPerformed
 
     private void jBCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCerrarActionPerformed
         s = new Sonido("click.wav");
         dispose();
+        new Menu();
     }//GEN-LAST:event_jBCerrarActionPerformed
 
     public String getNickName() {

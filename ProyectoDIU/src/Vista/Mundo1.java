@@ -2083,8 +2083,6 @@ public class Mundo1 extends javax.swing.JDialog {
     private void VolverMenu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VolverMenu
         s = new Sonido("click.wav");
         t.interrupt();
-        contEnemigos.interrupt();
-//        marcharHilo = false;
         dispose();
     }//GEN-LAST:event_VolverMenu
 
