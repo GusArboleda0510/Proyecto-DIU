@@ -45,8 +45,7 @@ public class Mundo1 extends javax.swing.JDialog {
         initComponents();
         this.nickName = nickNameJugador;
         this.rutaCarpeta = rutaCarpeta;
-        this.imgpeque = imgPeque;
-        
+        this.imgpeque = imgPeque;     
         try {
             decidirMapa();
         } catch (Exception ex) {

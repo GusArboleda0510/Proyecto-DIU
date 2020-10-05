@@ -1,37 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <jugadores>
     <avatar>
-        <nickname>Alejandra</nickname>
-        <colores> </colores>
-        <imgjuego>/Imagenes/Avatars/Avatar3/der1.jpg</imgjuego>
-        <imgVista>/Imagenes/Avatars/ImagenesOriginales/2.jpg</imgVista>
-    </avatar>
-<avatar>
-        <nickname>a</nickname>
-        <colores> </colores>
-        <imgjuego>/Imagenes/Avatars/Avatar2/der1.jpg</imgjuego>
-        <imgVista>/Imagenes/Avatars/ImagenesOriginales/1.jpg</imgVista>
-    </avatar>
-<avatar>
-        <nickname>asd</nickname>
+        <nickname>aleja</nickname>
         <colores> 
 			233 233 233
 			233 233 233
+			000 153 000
+			000 153 000
+			000 153 000
+			000 153 000
 			233 233 233
 			233 233 233
-			233 233 233
-			233 233 233
-			000 000 000
-			000 000 000
 			
 			233 233 233
 			233 233 233
 			233 233 233
+			000 153 000
+			000 153 000
 			233 233 233
 			233 233 233
 			233 233 233
-			000 000 000
-			000 000 000
 			
 			233 233 233
 			233 233 233
@@ -91,15 +79,81 @@
         <imgVista> </imgVista>
     </avatar>
 <avatar>
-        <nickname>tal</nickname>
-        <colores> </colores>
-        <imgjuego>/Imagenes/Avatars/Avatar2/der1.jpg</imgjuego>
-        <imgVista>/Imagenes/Avatars/ImagenesOriginales/1.jpg</imgVista>
-    </avatar>
-<avatar>
-        <nickname>tal2</nickname>
-        <colores> </colores>
-        <imgjuego>/Imagenes/Avatars/Avatar4/der1.jpg</imgjuego>
-        <imgVista>/Imagenes/Avatars/ImagenesOriginales/3.jpg</imgVista>
+        <nickname>a</nickname>
+        <colores> 
+			233 233 233
+			233 233 233
+			255 255 000
+			255 255 000
+			255 255 000
+			255 255 000
+			233 233 233
+			233 233 233
+			
+			233 233 233
+			233 233 233
+			233 233 233
+			255 255 000
+			255 255 000
+			233 233 233
+			233 233 233
+			233 233 233
+			
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			233 233 233
+			</colores>
+        <imgjuego> </imgjuego>
+        <imgVista> </imgVista>
     </avatar>
 </jugadores>

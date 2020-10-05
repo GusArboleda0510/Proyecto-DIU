@@ -479,7 +479,7 @@ public class ControlCrearAvatar {
     }
 
     public String getRutaImgPeque() {
-        if(predPequenia != null){
+        if(predPequenia != null && predPequenia != " "){
             return predPequenia;
         }else{
             return "/Imagenes/Avatars/Usuarios/"+nickNameJugador+".png";
