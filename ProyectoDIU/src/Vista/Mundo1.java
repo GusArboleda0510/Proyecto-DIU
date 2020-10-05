@@ -26,24 +26,25 @@ public class Mundo1 extends javax.swing.JDialog {
     Color colorea = new Color(240, 240, 240);
     ControlTXT txt = new ControlTXT();
     Tiempo t;
-    String tiemp, puntaje, vida, rutaCarpeta, mapaAct, nombre;
     Sonido s;
     controlJugabilidad jug;
     int cambio = 1;
     String[] infoVida_Puntaje;
     int[] posEnemigo = new int[4];
     int[] posAvatar = new int[4];
+    controlXMLMundos leerMundos;
+    String puntaje, vida, rutaCarpeta, mapaAct, nombre, nickName, imgpeque;
     JLabel tempEnemigo1 = new JLabel();
     JLabel tempEnemigo2 = new JLabel();
     JLabel tempEnemigo3 = new JLabel();
-    boolean marcharHilo = true;
-    controlXMLMundos leerMundos;
 
     public Mundo1(java.awt.Frame parent, boolean modal, String nickNameJugador, String imgPeque, String rutaCarpeta) {
         super(parent, modal);
         initComponents();
+        this.nickName = nickNameJugador;
+        this.imgpeque = imgPeque;
         this.rutaCarpeta = rutaCarpeta;
-
+        
         try {
             decidirMapa();
         } catch (Exception ex) {
@@ -78,7 +79,6 @@ public class Mundo1 extends javax.swing.JDialog {
         leerMundos = new controlXMLMundos();
         String nombreMapa = null;
         int mapa = (int) (Math.random() * 2 + 1);
-//        mapa = 1;
         if (mapa == 1) {
             Mapa1.setFocusable(true);
             Mapa1.setVisible(true);
@@ -99,19 +99,18 @@ public class Mundo1 extends javax.swing.JDialog {
         initEnemigos(nombreMapa);
 
     }
-    
+
     private void initEnemigos(String nombMapa) {
         int cantEnemigos = leerMundos.getCantEnemigos();
         String[] skins = leerMundos.getSkinEnemigos();
-        
+
         M1E1.setVisible(false);
         M1E2.setVisible(false);
         M1E3.setVisible(false);
-        
+
         M2E1.setVisible(false);
         M2E2.setVisible(false);
         M2E3.setVisible(false);
-        
 
         if (nombMapa.equals("mapa1")) {
             tempEnemigo1 = M1E1;
@@ -145,20 +144,20 @@ public class Mundo1 extends javax.swing.JDialog {
         if (cantEnemigos >= 1) {
             tempEnemigo1.setName("enemigo1");
             tempEnemigo1.setVisible(true);
-            contEnemigos = new ControlEnemigos(tempEnemigo1, nombMapa, SkinEnemigo1);
+            contEnemigos = new ControlEnemigos(tempEnemigo1, "mundo1", nombMapa, SkinEnemigo1);
             contEnemigos.start();
         }
         if (cantEnemigos >= 2) {
             tempEnemigo2.setName("enemigo2");
             tempEnemigo2.setVisible(true);
 
-            contEnemigos = new ControlEnemigos(tempEnemigo2, nombMapa, SkinEnemigo2);
+            contEnemigos = new ControlEnemigos(tempEnemigo2, "mundo1", nombMapa, SkinEnemigo2);
             contEnemigos.start();
         }
         if (cantEnemigos >= 3) {
             tempEnemigo3.setName("enemigo3");
             tempEnemigo3.setVisible(true);
-            contEnemigos = new ControlEnemigos(tempEnemigo3, nombMapa, SkinEnemigo3);
+            contEnemigos = new ControlEnemigos(tempEnemigo3, "mundo1", nombMapa, SkinEnemigo3);
             contEnemigos.start();
         }
 
@@ -193,27 +192,27 @@ public class Mundo1 extends javax.swing.JDialog {
             if ("mapa2".equals(mapaAct)) {
                 posAvatar = obtenerposAvatar(jLAvatarMapa2);
             }
-        }  
-        if(tempEnemigo1.isVisible()){
+        }
+        if (tempEnemigo1.isVisible()) {
             posEnemigo = obtenerposAvatar(tempEnemigo1);
-            coli = validarPosiciones(posEnemigo); 
-            if(coli){
+            coli = validarPosiciones(posEnemigo);
+            if (coli) {
                 return coli;
             }
         }
-        if(tempEnemigo2.isVisible()){
+        if (tempEnemigo2.isVisible()) {
             posEnemigo = obtenerposAvatar(tempEnemigo2);
-            coli = validarPosiciones(posEnemigo); 
-            if(coli){
+            coli = validarPosiciones(posEnemigo);
+            if (coli) {
                 return coli;
             }
         }
-        if(tempEnemigo3.isVisible()){
+        if (tempEnemigo3.isVisible()) {
             posEnemigo = obtenerposAvatar(tempEnemigo3);
-            coli = validarPosiciones(posEnemigo); 
-            if(coli){
+            coli = validarPosiciones(posEnemigo);
+            if (coli) {
                 return coli;
-            } 
+            }
         }
         return false;
     }
@@ -237,7 +236,7 @@ public class Mundo1 extends javax.swing.JDialog {
                     } else {
                         if (posAvatar[1] <= posEnemigo[3]) {
                             if (posAvatar[0] >= posEnemigo[2]) {
-//                                nada
+                               //nada
                             } else {
                                 return true;
                             }
@@ -250,7 +249,7 @@ public class Mundo1 extends javax.swing.JDialog {
                     } else {
                         if (posAvatar[3] >= posEnemigo[1]) {
                             if (posAvatar[0] >= posEnemigo[2]) {
-//                                nada
+                              //nada
                             } else {
                                 return true;
                             }
@@ -352,7 +351,7 @@ public class Mundo1 extends javax.swing.JDialog {
             }
         }
     }
-  
+
     public static void main(String[] args) {
         new Mundo1(null, true, "a", "/Imagenes/Avatars/Avatar2/der1.jpg", "/Imagenes/Avatars/Avatar2");
     }
@@ -1328,7 +1327,7 @@ public class Mundo1 extends javax.swing.JDialog {
 
         M1E1.setBackground(new java.awt.Color(204, 204, 204));
         M1E1.setOpaque(true);
-        Mapa1.add(M1E1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 40, 40));
+        Mapa1.add(M1E1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 310, 40, 40));
 
         M1E2.setBackground(new java.awt.Color(255, 0, 0));
         M1E2.setOpaque(true);
@@ -1336,7 +1335,7 @@ public class Mundo1 extends javax.swing.JDialog {
 
         M1E3.setBackground(new java.awt.Color(0, 102, 102));
         M1E3.setOpaque(true);
-        Mapa1.add(M1E3, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 60, 40, 40));
+        Mapa1.add(M1E3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 310, 40, 40));
 
         jLAvatarMapa1.setBackground(new java.awt.Color(153, 255, 204));
         jLAvatarMapa1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
@@ -1874,15 +1873,15 @@ public class Mundo1 extends javax.swing.JDialog {
         jLAvatarMapa2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLAvatarMapa2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
         jLAvatarMapa2.setOpaque(true);
-        Mapa2.add(jLAvatarMapa2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 500, 40, 40));
+        Mapa2.add(jLAvatarMapa2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 40, 40));
 
         M2E1.setBackground(new java.awt.Color(255, 0, 0));
         M2E1.setOpaque(true);
-        Mapa2.add(M2E1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 40, 40));
+        Mapa2.add(M2E1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 260, 40, 40));
 
         M2E2.setBackground(new java.awt.Color(204, 204, 204));
         M2E2.setOpaque(true);
-        Mapa2.add(M2E2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 40, 40));
+        Mapa2.add(M2E2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, 40, 40));
 
         M2E3.setBackground(new java.awt.Color(0, 102, 102));
         M2E3.setOpaque(true);
@@ -1979,9 +1978,7 @@ public class Mundo1 extends javax.swing.JDialog {
 
     private void Mapa2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Mapa2KeyPressed
         int desplazamiento = 10, x = jLAvatarMapa2.getX(), y = jLAvatarMapa2.getY();
-//        System.out.println(Avatar1.getLocation());//Ubicacion del la imagen en el panel
-
-        switch (evt.getExtendedKeyCode()) {//getExtendedKeyCode->Captura lo q hace el teclado y lo pasa a la variable X y Y
+        switch (evt.getExtendedKeyCode()) {
 
             case KeyEvent.VK_UP:
                 if (limitesM2(x, y, "up")) {
@@ -2004,7 +2001,7 @@ public class Mundo1 extends javax.swing.JDialog {
 
                         Sonido s = new Sonido("cambioMundo.wav");
                         dispose();
-                        new Mundo2(null, true);
+                        new Mundo2(null, true, nickName, imgpeque, rutaCarpeta);
                     }
                 }
                 break;
@@ -2018,7 +2015,7 @@ public class Mundo1 extends javax.swing.JDialog {
 
                         s = new Sonido("juego.wav");
                         dispose();
-                        new Mundo2(null, true);
+                        new Mundo2(null, true, nickName, imgpeque, rutaCarpeta);
                     }
                 }
                 break;
@@ -2048,18 +2045,16 @@ public class Mundo1 extends javax.swing.JDialog {
         }
         boolean colision = colision();
         infoVida_Puntaje = jug.vida(colision);
-        if(colision){
-            s = new Sonido("upsSonido.wav");    
+        if (colision) {
+            s = new Sonido("upsSonido.wav");
         }
         txt.puntaje_vida(infoVida_Puntaje);
-        
+
     }//GEN-LAST:event_Mapa2KeyPressed
 
     private void Mapa1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Mapa1KeyPressed
         int desplazamiento = 10, x = jLAvatarMapa1.getX(), y = jLAvatarMapa1.getY();
-//        System.out.println(Avatar.getLocation());//Ubicacion del la imagen en el panel
-        switch (evt.getExtendedKeyCode()) {//getExtendedKeyCode->Captura lo q hace el teclado y lo pasa a la variable X y Y
-//            system.out.println();
+        switch (evt.getExtendedKeyCode()) {
 
             case KeyEvent.VK_UP:
                 if (limitesM1(x, y, "up")) {
@@ -2067,10 +2062,6 @@ public class Mundo1 extends javax.swing.JDialog {
                         alternarImg(1, jLAvatarMapa1);
                     }
                     jLAvatarMapa1.setLocation(x, y - desplazamiento);
-
-                    infoVida_Puntaje = jug.vida(true);//Colision
-                    txt.puntaje_vida(infoVida_Puntaje);
-
                 }
                 break;
             case KeyEvent.VK_DOWN:
@@ -2101,7 +2092,7 @@ public class Mundo1 extends javax.swing.JDialog {
 
                         Sonido s = new Sonido("cambioMundo.wav");
                         dispose();
-                        new Mundo2(null, true);
+                        new Mundo2(null, true, nickName, imgpeque, rutaCarpeta);
                     }
                 }
                 break;
@@ -2143,34 +2134,22 @@ public class Mundo1 extends javax.swing.JDialog {
                         puntaje = "100";
 
                         t.interrupt();
-//                    txt.crearTXT(tiemp, vida, puntaje);
 
                         s = new Sonido("cambioMundo.wav");
                         dispose();
-                        new Mundo2(null, true);
+                        new Mundo2(null, true, nickName, imgpeque, rutaCarpeta);
                     }
                 }
                 break;
-                
+
         }
         boolean colision = colision();
         infoVida_Puntaje = jug.vida(colision);
-        if(colision){
-            s = new Sonido("upsSonido.wav");    
+        if (colision) {
+            s = new Sonido("upsSonido.wav");
         }
         txt.puntaje_vida(infoVida_Puntaje);
     }//GEN-LAST:event_Mapa1KeyPressed
-
-    private void VolverMenu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VolverMenu
-        s = new Sonido("click.wav");
-        t.interrupt();
-        dispose();
-    }//GEN-LAST:event_VolverMenu
-
-    private void ControlGuia(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ControlGuia
-        s = new Sonido("click.wav");
-        new GuiaControles(null, true, "");
-    }//GEN-LAST:event_ControlGuia
 
     public boolean limitesM1(int x, int y, String direccion) {
         boolean limite = true;
@@ -2221,7 +2200,7 @@ public class Mundo1 extends javax.swing.JDialog {
         ///////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////IZQUIERDA//////////////////////////////////////////
         if (direccion.equals("left")) {
-            if ((y >= 50 && y <= 490) && (x <= 50 && x >=0)
+            if ((y >= 50 && y <= 490) && (x <= 50 && x >= 0)
                     || y >= 0 && x == 0
                     || (y >= 420 && y <= 490) && (x > 800 && x <= 850)
                     || (y >= 150 && (x > 450 && x <= 500))
@@ -2235,7 +2214,6 @@ public class Mundo1 extends javax.swing.JDialog {
             }
 
         }
-        ///////////////////////////////////////////////////////////////////////////////////////////
         return limite;
     }
 
@@ -2294,6 +2272,17 @@ public class Mundo1 extends javax.swing.JDialog {
         }
         return limite;
     }
+
+    private void VolverMenu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VolverMenu
+        s = new Sonido("click.wav");
+        t.interrupt();
+        dispose();
+    }//GEN-LAST:event_VolverMenu
+
+    private void ControlGuia(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ControlGuia
+        s = new Sonido("click.wav");
+        new GuiaControles(null, true, "");
+    }//GEN-LAST:event_ControlGuia
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

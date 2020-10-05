@@ -51,6 +51,10 @@ public class Mundo3 extends javax.swing.JDialog {
         t.start();
         setVisible(true);
     }
+
+    public Mundo3(String nada) {
+        // NO BORRAR ESTE CONSTRUCTOR
+    }
     public void JPanelInf(){
         String[] inf=txt.leerVidaPuntaje();
         inf[1]=""+(Integer.parseInt(inf[1])+100);

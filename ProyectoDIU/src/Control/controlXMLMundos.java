@@ -42,7 +42,6 @@ public class controlXMLMundos {
                 Element mundos = (Element) nodo;
                 if (mundos.getElementsByTagName("nombreMundo").item(0).getTextContent().equalsIgnoreCase(nombreMundo)) {  
                     int cantMapas = Integer.parseInt(mundos.getElementsByTagName("cantidadMapas").item(0).getTextContent());
-//                    System.out.println("cantMapas "  + cantMapas);
                     String nombMapaXML = null;
                     Element mapa = null;
                     for (int i = 0; i < cantMapas; i++) {
@@ -52,11 +51,8 @@ public class controlXMLMundos {
                             break;
                         }
                     }
-//                    System.out.println("nombreMapa: " + nombMapaXML);
                     CantEnemigos = Integer.parseInt(mapa.getElementsByTagName("cantidadEmemigos").item(0).getTextContent());
-//                    System.out.println("CantEnemigos: " + CantEnemigos);
                     for (int m = 0; m < CantEnemigos; m++) {
-//                        System.out.println("skinEnemigos: " + mapa.getElementsByTagName("skinEnemigo").item(m).getTextContent());
                         skinEnemigos[m] =  mapa.getElementsByTagName("skinEnemigo").item(m).getTextContent();
                     }
                 }
