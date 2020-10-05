@@ -60,34 +60,62 @@ public class Mundo2 extends javax.swing.JDialog{
 
     }
     public void vidaJLabel(String[] inf){
-        if(inf[0].equals("-1")){
+        if(colision==true){
+            if(inf[0].equals("-1")){
             dispose();
             new GamerOver(null, true, Puntaje.getText());
+            }
+            if(inf[0].equals("0")){
+                jlvida1.setVisible(false);
+                jlvida2.setVisible(false);
+                jlvida3.setVisible(false);
+
+            }
+             if(inf[0].equals("1")){
+                jlvida1.setVisible(true);
+                jlvida2.setVisible(false);
+                jlvida3.setVisible(false);
+
+            }
+            if(inf[0].equals("2")){
+                jlvida1.setVisible(true);
+                jlvida2.setVisible(true);
+                jlvida3.setVisible(false);
+
+            }
+            if(inf[0].equals("3")){
+                jlvida1.setVisible(true);
+                jlvida2.setVisible(true);
+                jlvida3.setVisible(true);
+
+            }
+        }else{
+            if(inf[0].equals("0")){
+                jlvida1.setVisible(false);
+                jlvida2.setVisible(false);
+                jlvida3.setVisible(false);
+
+            }
+             if(inf[0].equals("1")){
+                jlvida1.setVisible(true);
+                jlvida2.setVisible(false);
+                jlvida3.setVisible(false);
+
+            }
+            if(inf[0].equals("2")){
+                jlvida1.setVisible(true);
+                jlvida2.setVisible(true);
+                jlvida3.setVisible(false);
+
+            }
+            if(inf[0].equals("3")){
+                jlvida1.setVisible(true);
+                jlvida2.setVisible(true);
+                jlvida3.setVisible(true);
+
+            }
         }
-        if(inf[0].equals("0")){
-            jlvida1.setVisible(false);
-            jlvida2.setVisible(false);
-            jlvida3.setVisible(false);
-            
-        }
-         if(inf[0].equals("1")){
-            jlvida1.setVisible(true);
-            jlvida2.setVisible(false);
-            jlvida3.setVisible(false);
-            
-        }
-        if(inf[0].equals("2")){
-            jlvida1.setVisible(true);
-            jlvida2.setVisible(true);
-            jlvida3.setVisible(false);
-            
-        }
-        if(inf[0].equals("3")){
-            jlvida1.setVisible(true);
-            jlvida2.setVisible(true);
-            jlvida3.setVisible(true);
-            
-        }
+        
         vida=inf[0];
         this.punt=inf[1];
     }
