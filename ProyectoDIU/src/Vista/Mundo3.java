@@ -55,47 +55,73 @@ public class Mundo3 extends javax.swing.JDialog {
     public Mundo3(String nada) {
         // NO BORRAR ESTE CONSTRUCTOR
     }
-    public void JPanelInf(){
-        String[] inf=txt.leerVidaPuntaje();
-        inf[1]=""+(Integer.parseInt(inf[1])+100);
-        Puntaje.setText(""+inf[1]);//inf[1]==puntaje de las vidas del Mundo 1 y (100) equivale a pasar el mundo1
+    public void JPanelInf() {
+        String[] inf = txt.leerVidaPuntaje();
+        inf[1] = "" + (Integer.parseInt(inf[1]) + 100);
+        Puntaje.setText("" + inf[1]);//inf[1]==puntaje de las vidas del Mundo 1 y (100) equivale a pasar el mundo1
         vidaJLabel(inf);
-       
-        
 
     }
+
     public void vidaJLabel(String[] inf){
-        if(inf[0].equals("-1")){
+        if(colision()){
+            if(inf[0].equals("-1")){
             dispose();
             new GamerOver(null, true, Puntaje.getText());
+            }
+            if(inf[0].equals("0")){
+                jlvida1.setVisible(false);
+                jlvida2.setVisible(false);
+                jlvida3.setVisible(false);
+
+            }
+             if(inf[0].equals("1")){
+                jlvida1.setVisible(true);
+                jlvida2.setVisible(false);
+                jlvida3.setVisible(false);
+
+            }
+            if(inf[0].equals("2")){
+                jlvida1.setVisible(true);
+                jlvida2.setVisible(true);
+                jlvida3.setVisible(false);
+
+            }
+            if(inf[0].equals("3")){
+                jlvida1.setVisible(true);
+                jlvida2.setVisible(true);
+                jlvida3.setVisible(true);
+
+            }
+        }else{
+            if(inf[0].equals("0")){
+                jlvida1.setVisible(false);
+                jlvida2.setVisible(false);
+                jlvida3.setVisible(false);
+
+            }
+             if(inf[0].equals("1")){
+                jlvida1.setVisible(true);
+                jlvida2.setVisible(false);
+                jlvida3.setVisible(false);
+
+            }
+            if(inf[0].equals("2")){
+                jlvida1.setVisible(true);
+                jlvida2.setVisible(true);
+                jlvida3.setVisible(false);
+
+            }
+            if(inf[0].equals("3")){
+                jlvida1.setVisible(true);
+                jlvida2.setVisible(true);
+                jlvida3.setVisible(true);
+
+            }
         }
-        if(inf[0].equals("0")){
-            jlvida1.setVisible(false);
-            jlvida2.setVisible(false);
-            jlvida3.setVisible(false);
-            
-        }
-         if(inf[0].equals("1")){
-            jlvida1.setVisible(true);
-            jlvida2.setVisible(false);
-            jlvida3.setVisible(false);
-            
-        }
-        if(inf[0].equals("2")){
-            jlvida1.setVisible(true);
-            jlvida2.setVisible(true);
-            jlvida3.setVisible(false);
-            
-        }
-        if(inf[0].equals("3")){
-            jlvida1.setVisible(true);
-            jlvida2.setVisible(true);
-            jlvida3.setVisible(true);
-            
-        }
+        
         vida=inf[0];
         this.punt=inf[1];
-        
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
