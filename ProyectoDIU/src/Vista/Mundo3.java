@@ -1119,6 +1119,10 @@ public class Mundo3 extends javax.swing.JDialog {
                     }
                 }
                 break;
+            case KeyEvent.VK_ESCAPE:
+                this.dispose();
+                new Mundo3(null, true, nickName, imgpeque, rutaCarpeta);
+            break;
         }
         if(colision()){
             s = new Sonido("upsSonido.wav");
