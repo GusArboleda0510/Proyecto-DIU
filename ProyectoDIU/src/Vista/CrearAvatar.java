@@ -1845,7 +1845,7 @@ public class CrearAvatar extends javax.swing.JDialog {
             if(imgPeque == null){
                 imgPeque  = cca.getRutaImgPeque();
             }  
-            System.out.println("t " + nickName +  imgPeque + rutaImg);
+            System.out.println("t " + nickName +" "+  imgPeque +" "+ rutaImg);
             new Mundo1(null, true, nickName, imgPeque, rutaImg);
             dispose();
         } catch (Exception ex) {
