@@ -45,6 +45,7 @@ public class Mundo1 extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         this.rutaCarpeta = rutaCarpeta;
+        
         try {
             decidirMapa();
         } catch (Exception ex) {
@@ -127,7 +128,7 @@ public class Mundo1 extends javax.swing.JDialog {
         leerMundos = new controlXMLMundos();
         String nombreMapa = null;
         int mapa = (int) (Math.random() * 2 + 1);
-        mapa = 1;
+//        mapa = 1;
         if (mapa == 1) {
             Mapa1.setFocusable(true);
             Mapa1.setVisible(true);
@@ -143,7 +144,7 @@ public class Mundo1 extends javax.swing.JDialog {
             nombreMapa = "mapa2";
         }
         mapaAct = nombreMapa;
-        System.out.println("elMApa "  + mapaAct);
+
         leerMundos.consultarXML("mundo1", nombreMapa);
         initEnemigos(nombreMapa);
         
@@ -158,18 +159,18 @@ public class Mundo1 extends javax.swing.JDialog {
                 posAvatar = obtenerposAvatar(jLAvatarMapa2);
             }
         }
-        
-            System.out.print("Enemigo ");  
-            System.out.print(posEnemigo1[0]+", ");
-            System.out.print(posEnemigo1[1]+", ");
-            System.out.print(posEnemigo1[2]+", ");
-            System.out.println(posEnemigo1[3]+", ");
-            System.out.print("Avatar ");  
-            System.out.print(posAvatar[0]+", ");
-            System.out.print(posAvatar[1]+", ");
-            System.out.print(posAvatar[2]+", ");
-            System.out.print(posAvatar[3]+", ");
-            System.out.println();  
+//        
+//            System.out.print("Enemigo ");  
+//            System.out.print(posEnemigo1[0]+", ");
+//            System.out.print(posEnemigo1[1]+", ");
+//            System.out.print(posEnemigo1[2]+", ");
+//            System.out.println(posEnemigo1[3]+", ");
+//            System.out.print("Avatar ");  
+//            System.out.print(posAvatar[0]+", ");
+//            System.out.print(posAvatar[1]+", ");
+//            System.out.print(posAvatar[2]+", ");
+//            System.out.print(posAvatar[3]+", ");
+//            System.out.println();  
 
         return true;
     }
@@ -184,6 +185,12 @@ public class Mundo1 extends javax.swing.JDialog {
     }
  
     private void initEnemigos(String nombMapa) {
+        M1E1.setVisible(false);
+        M1E2.setVisible(false);
+        M1E3.setVisible(false);
+        M2E1.setVisible(false);
+        M2E2.setVisible(false);
+        M2E3.setVisible(false);
         int cantEnemigos= leerMundos.getCantEnemigos();
         String [] skins = leerMundos.getSkinEnemigos();
         JLabel enem1 = new JLabel();
@@ -220,16 +227,20 @@ public class Mundo1 extends javax.swing.JDialog {
         }
         if(cantEnemigos >= 1){
             enem1.setName("enemigo1");
+            enem1.setVisible(true);
             contEnemigos = new ControlEnemigos(enem1, nombMapa, SkinEnemigo1);
             contEnemigos.start();      
         }
         if(cantEnemigos >= 2){
             enem2.setName("enemigo2");
+            enem2.setVisible(true);
+
             contEnemigos = new ControlEnemigos(enem2, nombMapa, SkinEnemigo2);
             contEnemigos.start();      
         }
         if(cantEnemigos >= 3){
             enem3.setName("enemigo3");
+            enem3.setVisible(true);
             contEnemigos = new ControlEnemigos(enem3, nombMapa, SkinEnemigo3);
             contEnemigos.start();      
         }
