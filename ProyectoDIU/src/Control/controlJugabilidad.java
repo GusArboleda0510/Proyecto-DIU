@@ -6,6 +6,7 @@
 package Control;
 
 import Vista.GamerOver;
+import Vista.Mundo1;
 import javax.swing.JLabel;
 
 /**
@@ -66,6 +67,7 @@ public class controlJugabilidad {
             if (colisiones == 4) {
                 String punt = Integer.toString(puntaje);
                 new GamerOver(null, true, punt);
+                
             }
 
             colisiones++;

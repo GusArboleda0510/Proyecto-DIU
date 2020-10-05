@@ -89,6 +89,7 @@ public class Menu extends javax.swing.JFrame {
         jBJugar1.setFont(new java.awt.Font("Times New Roman", 1, 60)); // NOI18N
         jBJugar1.setForeground(new java.awt.Color(153, 204, 255));
         jBJugar1.setText("Jugar");
+        jBJugar1.setBorderPainted(false);
         jBJugar1.setContentAreaFilled(false);
         jBJugar1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -122,6 +123,7 @@ public class Menu extends javax.swing.JFrame {
         jbGanadores1.setFont(new java.awt.Font("Times New Roman", 1, 60)); // NOI18N
         jbGanadores1.setForeground(new java.awt.Color(153, 204, 255));
         jbGanadores1.setText("Ganadores");
+        jbGanadores1.setBorderPainted(false);
         jbGanadores1.setContentAreaFilled(false);
         jbGanadores1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -184,6 +186,7 @@ public class Menu extends javax.swing.JFrame {
         jBCerrar1.setFont(new java.awt.Font("Times New Roman", 1, 60)); // NOI18N
         jBCerrar1.setForeground(new java.awt.Color(153, 204, 255));
         jBCerrar1.setText("Cerrar");
+        jBCerrar1.setBorderPainted(false);
         jBCerrar1.setContentAreaFilled(false);
         jBCerrar1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
