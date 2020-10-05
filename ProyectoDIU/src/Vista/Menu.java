@@ -72,6 +72,7 @@ public class Menu extends javax.swing.JFrame {
         jBJugar.setFont(new java.awt.Font("Times New Roman", 1, 100)); // NOI18N
         jBJugar.setForeground(new java.awt.Color(153, 204, 255));
         jBJugar.setText("Jugar");
+        jBJugar.setBorderPainted(false);
         jBJugar.setContentAreaFilled(false);
         jBJugar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
@@ -99,6 +100,7 @@ public class Menu extends javax.swing.JFrame {
         jBCerrar.setFont(new java.awt.Font("Times New Roman", 1, 100)); // NOI18N
         jBCerrar.setForeground(new java.awt.Color(153, 204, 255));
         jBCerrar.setText("Cerrar");
+        jBCerrar.setBorderPainted(false);
         jBCerrar.setContentAreaFilled(false);
         jBCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
@@ -136,6 +138,7 @@ public class Menu extends javax.swing.JFrame {
         jbGanadores.setFont(new java.awt.Font("Times New Roman", 1, 90)); // NOI18N
         jbGanadores.setForeground(new java.awt.Color(153, 204, 255));
         jbGanadores.setText("Ganadores");
+        jbGanadores.setBorderPainted(false);
         jbGanadores.setContentAreaFilled(false);
         jbGanadores.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
@@ -150,6 +153,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel2.add(jbGanadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 490, 80));
 
         jbAyuda1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ayuda1.png"))); // NOI18N
+        jbAyuda1.setBorderPainted(false);
         jbAyuda1.setContentAreaFilled(false);
         jbAyuda1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {

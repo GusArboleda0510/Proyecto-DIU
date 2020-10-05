@@ -909,7 +909,7 @@ public class Mundo3 extends javax.swing.JDialog {
         Mapa1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 50, 50));
 
         jLAvatarMapa1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
-        Mapa1.add(jLAvatarMapa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 410, 40, 40));
+        Mapa1.add(jLAvatarMapa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 40, 40));
 
         TransladorEntrada.setBackground(new java.awt.Color(0, 0, 0));
         TransladorEntrada.setOpaque(true);
@@ -1165,8 +1165,8 @@ public class Mundo3 extends javax.swing.JDialog {
         ////////////////////////////////////DERECHO//////////////////////////////////////////
         if (direccion.equals("right")) {
             if (((y > 30 && y < 200) || y > 360) && (x >= 910 && x < 960)
-                    || ((y > 110 && y < 210) || (y >= 420 && y <= 510)) && ((x > 150 && x < 210) || (x >= 560 && x < 610))
-                    || ((y > 30 && y < 150) || ((y >= 350 && y < 450))) && ((x >= 350 && x < 410) || (x >= 760 && x < 800))) {
+            || ((y > 110 && y <= 220) || (y >= 420 && y <= 510)) && ((x > 150 && x < 210) || (x >= 560 && x < 610))
+            || ((y > 30 && y < 150) || ((y >= 350 && y < 450))) && ((x >= 360 && x < 410) || (x >= 760 && x < 800))) {
                 return limite = false;
             }
         }
@@ -1175,10 +1175,11 @@ public class Mundo3 extends javax.swing.JDialog {
         ////////////////////////////////////IZQUIERDA//////////////////////////////////////////
         if (direccion.equals("left")) {
             if ((y >= 0 && y < 500) && x <= 50
-                    || y > 410 && ((x > 200 && x <= 250) || (x > 600 && x <= 650))
-                    || (y > 340 && y < 450) && ((x > 400 && x <= 450) || (x > 800 && x <= 850))
-                    || (y > 110 && y < 260) && ((x > 200 && x <= 250) || (x > 600 && x <= 650))
-                    || ((y > 40 && y < 150)) && ((x > 400 && x <= 450) || (x > 800 && x <= 850))) {
+                || x == 0
+                || y > 410 && ((x > 200 && x <= 250) || (x > 600 && x <= 650))
+                || (y > 340 && y < 450) && ((x > 400 && x <= 450) || (x > 800 && x <= 850))
+                || (y > 110 && y < 260) && ((x > 200 && x <= 250) || (x > 600 && x <= 650))
+                || ((y > 40 && y < 150)) && ((x > 400 && x <= 450) || (x > 800 && x <= 850))) {
                 return limite = false;
             }
 
