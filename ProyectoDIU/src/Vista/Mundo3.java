@@ -909,7 +909,11 @@ public class Mundo3 extends javax.swing.JDialog {
         Mapa1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 50, 50));
 
         jLAvatarMapa1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
+<<<<<<< HEAD
         Mapa1.add(jLAvatarMapa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 40, 40));
+=======
+        Mapa1.add(jLAvatarMapa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 40, 40));
+>>>>>>> d20f1e39d4ffb8f74e23763179b83dbc7b35aaba
 
         TransladorEntrada.setBackground(new java.awt.Color(0, 0, 0));
         TransladorEntrada.setOpaque(true);

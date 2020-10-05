@@ -1373,7 +1373,7 @@ public class Mundo2 extends javax.swing.JDialog {
         jLAvatarMapa1.setBackground(new java.awt.Color(255, 153, 153));
         jLAvatarMapa1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
         jLAvatarMapa1.setOpaque(true);
-        Mapa1.add(jLAvatarMapa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 500, 40, 40));
+        Mapa1.add(jLAvatarMapa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 510, 40, 40));
 
         M1E1.setBackground(new java.awt.Color(204, 204, 204));
         M1E1.setOpaque(true);
