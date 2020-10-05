@@ -12,4 +12,10 @@
         <imgjuego>/Imagenes/Avatars/Avatar2/der1.jpg</imgjuego>
         <imgVista>/Imagenes/Avatars/ImagenesOriginales/1.jpg</imgVista>
     </avatar>
+<avatar>
+        <nickname>aa</nickname>
+        <colores> </colores>
+        <imgjuego>/Imagenes/Avatars/Avatar2/der1.jpg</imgjuego>
+        <imgVista>/Imagenes/Avatars/ImagenesOriginales/1.jpg</imgVista>
+    </avatar>
 </jugadores>
