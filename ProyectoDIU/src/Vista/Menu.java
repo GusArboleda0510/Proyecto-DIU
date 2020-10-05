@@ -59,6 +59,7 @@ public class Menu extends javax.swing.JFrame {
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAlwaysOnTop(true);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -278,6 +279,7 @@ public class Menu extends javax.swing.JFrame {
             
             ControlTXT txt = new ControlTXT();
             txt.crearNickName("");
+            setAlwaysOnTop(false);
             new Ganadores(null, true);
         } catch (Exception ex) {
             System.out.println("Error abrir Ganadores "+ ex);
@@ -286,6 +288,9 @@ public class Menu extends javax.swing.JFrame {
 
     private void jBJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBJugarActionPerformed
         s = new Sonido("click.wav");
+         setAlwaysOnTop(false);
+         sonidoJuego.interrupt();
+        dispose();
         new CrearAvatar(null, true);
     }//GEN-LAST:event_jBJugarActionPerformed
 
