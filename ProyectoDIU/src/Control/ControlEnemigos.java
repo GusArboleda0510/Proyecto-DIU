@@ -110,7 +110,7 @@ public class ControlEnemigos extends Thread{
                 }
             }
             try {
-                TimeUnit.MILLISECONDS.sleep(200);
+                TimeUnit.MILLISECONDS.sleep(100);
             } catch (InterruptedException ex) {
                 System.out.println("Error en Hilo " + ex);
             }
@@ -202,15 +202,11 @@ public class ControlEnemigos extends Thread{
                 } 
             }  
         }
-//        if(nombMundo.equals("mundo1")){
-//            if(nombMapa.equals("mapa1")){
-//                return mundo3.limitesM1(x, y, direccion);
-//            }else{
-//                if(nombMapa.equals("mapa2")){
-//                    return mundo3.limitesM2(x, y, direccion);
-//                } 
-//            }  
-//        } 
+        if(nombMundo.equals("mundo3")){
+            if(nombMapa.equals("mapa1")){
+                return mundo3.limitesM1(x, y, direccion);
+            } 
+        } 
         return false;
     }
 }

@@ -2128,7 +2128,7 @@ public class Mundo2 extends javax.swing.JDialog {
 
                         Sonido s = new Sonido("cambioMundo.wav");
                         dispose();
-                        new Mundo3(null, true);
+                        new Mundo3(null, true, nickName, imgpeque, rutaCarpeta);
                     }
                 }
                 break;
@@ -2151,7 +2151,7 @@ public class Mundo2 extends javax.swing.JDialog {
                         t.interrupt();
                         Sonido s = new Sonido("cambioMundo.wav");
                         dispose();
-                        new Mundo3(null, true);
+                        new Mundo3(null, true, nickName, imgpeque, rutaCarpeta);
                     }
                 }
                 break;
@@ -2190,7 +2190,7 @@ public class Mundo2 extends javax.swing.JDialog {
                         t.interrupt();
                         Sonido s = new Sonido("cambioMundo.wav");
                         dispose();
-                        new Mundo3(null, true);
+                        new Mundo3(null, true, nickName, imgpeque, rutaCarpeta);
                     }
                 }
                 break;
@@ -2211,7 +2211,7 @@ public class Mundo2 extends javax.swing.JDialog {
                         t.interrupt();
                         Sonido s = new Sonido("cambioMundo.wav");
                         dispose();
-                        new Mundo3(null, true);
+                        new Mundo3(null, true, nickName, imgpeque, rutaCarpeta);
                     }
                 }
                 break;
@@ -2258,7 +2258,7 @@ public class Mundo2 extends javax.swing.JDialog {
 
                         Sonido s = new Sonido("cambioMundo.wav");
                         dispose();
-                        new Mundo3(null, true);
+                        new Mundo3(null, true, nickName, imgpeque, rutaCarpeta);
                     }
                 }
                 break;
@@ -2281,7 +2281,7 @@ public class Mundo2 extends javax.swing.JDialog {
 
                         Sonido s = new Sonido("cambioMundo.wav");
                         dispose();
-                        new Mundo3(null, true);
+                        new Mundo3(null, true, nickName, imgpeque, rutaCarpeta);
                     }
                 }
                 break;
@@ -2320,7 +2320,7 @@ public class Mundo2 extends javax.swing.JDialog {
 
                         Sonido s = new Sonido("cambioMundo.wav");
                         dispose();
-                        new Mundo3(null, true);
+                        new Mundo3(null, true, nickName, imgpeque, rutaCarpeta);
                     }
                 }
                 break;
@@ -2341,7 +2341,7 @@ public class Mundo2 extends javax.swing.JDialog {
                         t.interrupt();
                         Sonido s = new Sonido("cambioMundo.wav");
                         dispose();
-                        new Mundo3(null, true);
+                        new Mundo3(null, true, nickName, imgpeque, rutaCarpeta);
                     }
                 }
                 break;
