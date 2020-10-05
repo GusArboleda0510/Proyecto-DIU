@@ -5,6 +5,8 @@
  */
 package Vista;
 
+import Control.Sonido;
+
 /**
  *
  * @author Alejandra Becerra
@@ -14,8 +16,11 @@ public class GuiaControles extends javax.swing.JDialog {
     /**
      * Creates new form GuiaControles
      */
-    public GuiaControles(java.awt.Frame parent, boolean modal) {
+    String menu;
+    Sonido s;
+    public GuiaControles(java.awt.Frame parent, boolean modal,String menu) {
         super(parent, modal);
+        this.menu=menu;
         initComponents();
         llamarContenido();
         
@@ -56,8 +61,10 @@ public class GuiaControles extends javax.swing.JDialog {
         InfoGeneral1 = new javax.swing.JLabel();
         CrearAvat = new javax.swing.JLabel();
         CrearAvat1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         Fondo = new javax.swing.JLabel();
         CrearAvatar = new javax.swing.JScrollPane();
+        jPanel4 = new javax.swing.JPanel();
         PersonalizarAvatar = new javax.swing.JPanel();
         Titulo5 = new javax.swing.JLabel();
         jlPersonalizarAvatar2 = new javax.swing.JPanel();
@@ -149,7 +156,7 @@ public class GuiaControles extends javax.swing.JDialog {
         Titulo.setForeground(new java.awt.Color(0, 153, 153));
         Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Titulo.setText("GUIA DEL JUEGO");
-        Contenido.add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 910, 190));
+        Contenido.add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 910, 190));
 
         ControlJueg.setBackground(new java.awt.Color(255, 255, 255));
         ControlJueg.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
@@ -164,7 +171,7 @@ public class GuiaControles extends javax.swing.JDialog {
                 EscuchaPanelControlJuego(evt);
             }
         });
-        Contenido.add(ControlJueg, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 920, 90));
+        Contenido.add(ControlJueg, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 920, 90));
 
         ControlJueg1.setBackground(new java.awt.Color(255, 255, 255));
         ControlJueg1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
@@ -176,7 +183,7 @@ public class GuiaControles extends javax.swing.JDialog {
                 ControlJueg1MouseEntered(evt);
             }
         });
-        Contenido.add(ControlJueg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 520, 951, 90));
+        Contenido.add(ControlJueg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 460, 951, 90));
 
         InfoGeneral.setBackground(new java.awt.Color(255, 255, 255));
         InfoGeneral.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
@@ -191,7 +198,7 @@ public class GuiaControles extends javax.swing.JDialog {
                 EscuchaPanelInfGeneral(evt);
             }
         });
-        Contenido.add(InfoGeneral, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 920, 90));
+        Contenido.add(InfoGeneral, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 920, 90));
 
         InfoGeneral1.setBackground(new java.awt.Color(255, 255, 255));
         InfoGeneral1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
@@ -206,7 +213,7 @@ public class GuiaControles extends javax.swing.JDialog {
                 InfoGeneral1EscuchaPanelInfGeneral(evt);
             }
         });
-        Contenido.add(InfoGeneral1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, 951, 90));
+        Contenido.add(InfoGeneral1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 951, 90));
 
         CrearAvat.setBackground(new java.awt.Color(255, 255, 255));
         CrearAvat.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
@@ -230,7 +237,7 @@ public class GuiaControles extends javax.swing.JDialog {
                 EscuchaPanelAvatar(evt);
             }
         });
-        Contenido.add(CrearAvat, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 920, 90));
+        Contenido.add(CrearAvat, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 920, 90));
 
         CrearAvat1.setBackground(new java.awt.Color(255, 255, 255));
         CrearAvat1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
@@ -245,7 +252,18 @@ public class GuiaControles extends javax.swing.JDialog {
                 CrearAvat1EscuchaPanelAvatar(evt);
             }
         });
-        Contenido.add(CrearAvat1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 930, 108));
+        Contenido.add(CrearAvat1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 930, 108));
+
+        jButton1.setFont(new java.awt.Font("Times New Roman", 3, 60)); // NOI18N
+        jButton1.setText("SALIR");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.setContentAreaFilled(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        Contenido.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 570, 410, 70));
 
         Fondo.setBackground(new java.awt.Color(255, 255, 255));
         Fondo.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
@@ -260,11 +278,13 @@ public class GuiaControles extends javax.swing.JDialog {
                 FondoEscuchaPanelAvatar(evt);
             }
         });
-        Contenido.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 660));
+        Contenido.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 670));
 
-        getContentPane().add(Contenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 650));
+        getContentPane().add(Contenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 680));
 
         CrearAvatar.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
         PersonalizarAvatar.setBackground(new java.awt.Color(255, 255, 255));
         PersonalizarAvatar.setOpaque(false);
@@ -572,9 +592,30 @@ public class GuiaControles extends javax.swing.JDialog {
                 jbVolver4volverCrearAvatar(evt);
             }
         });
-        PersonalizarAvatar.add(jbVolver4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 2670, 830, -1));
+        PersonalizarAvatar.add(jbVolver4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 2650, 830, -1));
 
-        CrearAvatar.setViewportView(PersonalizarAvatar);
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 941, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel4Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(PersonalizarAvatar, javax.swing.GroupLayout.PREFERRED_SIZE, 941, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 2701, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel4Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(PersonalizarAvatar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        CrearAvatar.setViewportView(jPanel4);
 
         getContentPane().add(CrearAvatar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 650));
 
@@ -846,19 +887,22 @@ public class GuiaControles extends javax.swing.JDialog {
 
         getContentPane().add(ControlAvatar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 965, 650));
 
-        setSize(new java.awt.Dimension(960, 690));
+        setSize(new java.awt.Dimension(960, 709));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void EscuchaPanelAvatar(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EscuchaPanelAvatar
+        s = new Sonido("click.wav");
         llamarPaneles(true, false, false);
     }//GEN-LAST:event_EscuchaPanelAvatar
 
     private void EscuchaPanelInfGeneral(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EscuchaPanelInfGeneral
+        s = new Sonido("click.wav");
         llamarPaneles(false, false, true);
     }//GEN-LAST:event_EscuchaPanelInfGeneral
 
     private void EscuchaPanelControlJuego(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EscuchaPanelControlJuego
+        s = new Sonido("click.wav");
         llamarPaneles(false, true, false);
     }//GEN-LAST:event_EscuchaPanelControlJuego
 
@@ -943,9 +987,11 @@ public class GuiaControles extends javax.swing.JDialog {
 
     private void jbVolver2volverCrearAvatar(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbVolver2volverCrearAvatar
         llamarContenido();
+        s = new Sonido("click.wav");
     }//GEN-LAST:event_jbVolver2volverCrearAvatar
 
     private void jbVolver3volverCrearAvatar(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbVolver3volverCrearAvatar
+        s = new Sonido("click.wav");
         llamarContenido();
     }//GEN-LAST:event_jbVolver3volverCrearAvatar
 
@@ -982,14 +1028,24 @@ public class GuiaControles extends javax.swing.JDialog {
     }//GEN-LAST:event_jbMatrizAvatar6ActionPerformed
 
     private void jbVolver4volverCrearAvatar(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbVolver4volverCrearAvatar
+        s = new Sonido("click.wav");
         llamarContenido();
     }//GEN-LAST:event_jbVolver4volverCrearAvatar
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    s = new Sonido("click.wav");
+        if(!menu.equals("")){
+            new Menu();
+            dispose();
+        }
+        dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-      new GuiaControles(null, true);
+      new GuiaControles(null, true,"");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1029,6 +1085,7 @@ public class GuiaControles extends javax.swing.JDialog {
     private javax.swing.JLabel Titulo2;
     private javax.swing.JLabel Titulo3;
     private javax.swing.JLabel Titulo5;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
@@ -1062,6 +1119,7 @@ public class GuiaControles extends javax.swing.JDialog {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JButton jbCargar4;
     private javax.swing.JButton jbCargar5;
     private javax.swing.JButton jbCargarImgPredeterm2;

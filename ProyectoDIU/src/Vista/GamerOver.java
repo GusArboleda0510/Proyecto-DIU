@@ -6,6 +6,7 @@
 package Vista;
 
 import Control.ControlTXT;
+import Control.Sonido;
 import java.awt.Frame;
 
 /**
@@ -16,22 +17,17 @@ public class GamerOver extends javax.swing.JDialog {
 
     String nickname;
     ControlTXT txt =new ControlTXT();
+    Sonido s;
     public GamerOver(Frame owner, boolean modal,String puntaje){
         super(owner, modal);
         initComponents();
-        
+        s = new Sonido("GameOver.wav");
         nickname=txt.leerNickName();
         jlPuntaje.setText(puntaje);
         jlNickName.setText(nickname);
         
-        
         setVisible(true);
-        
-    }
-
-    
-
-    
+    }    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -125,6 +121,7 @@ public class GamerOver extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        s = new Sonido("click.wav");
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 

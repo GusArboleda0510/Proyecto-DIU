@@ -6,6 +6,7 @@
 package Vista;
 
 import Control.ControlTXT;
+import Control.Sonido;
 import Modelo.CreadordeDocs;
 import Modelo.LectordeDocs;
 import java.io.File;
@@ -34,12 +35,13 @@ public class Ganadores extends javax.swing.JDialog {
     File ganadores = new File("persistencia/Ganadores.xml");
     NodeList lista;
     Thread imagenes;
-    
+    Sonido s;
     ControlTXT txt = new ControlTXT();
     
     public Ganadores(java.awt.Frame parent, boolean modal) throws Exception {
         super(parent, modal);
         initComponents();
+        s = new Sonido("Ganar.wav");
         nickName=txt.leerNickName();
         mensaje.setVisible(false);
         doc = new CreadordeDocs(ganadores, "ganadores");
@@ -279,6 +281,7 @@ public class Ganadores extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void EscuchaSalir(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EscuchaSalir
+        s = new Sonido("Click.wav");
         dispose();
     }//GEN-LAST:event_EscuchaSalir
 

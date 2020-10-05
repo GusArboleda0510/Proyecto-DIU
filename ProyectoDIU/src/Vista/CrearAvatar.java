@@ -1307,7 +1307,7 @@ public class CrearAvatar extends javax.swing.JDialog {
                 jBCrear1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jBCrear1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 630, 200, 80));
+        jPanel1.add(jBCrear1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 640, 200, 80));
 
         jBCrear.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jBCrear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/pluma.png"))); // NOI18N
@@ -1365,7 +1365,7 @@ public class CrearAvatar extends javax.swing.JDialog {
 
         jScrollPane1.setViewportView(jPanel1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 670));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 750));
 
         pack();
         setLocationRelativeTo(null);
@@ -1632,6 +1632,7 @@ public class CrearAvatar extends javax.swing.JDialog {
     }//GEN-LAST:event_jbCargarActionPerformed
 
     private void jbVistaPreviaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbVistaPreviaActionPerformed
+        s = new Sonido("click.wav");
         jbJugar1.setVisible(true);
         jBCrear.setVisible(false);
         jBCrear1.setVisible(false);
@@ -1671,6 +1672,7 @@ public class CrearAvatar extends javax.swing.JDialog {
     }//GEN-LAST:event_jbCargar2MouseExited
 
     private void jLVolverVolverMenu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLVolverVolverMenu
+        s = new Sonido("click.wav");
         jPColores.setVisible(true);
         jPCargarAv.setVisible(false);
         jbJugar.setVisible(false);
@@ -1811,6 +1813,7 @@ public class CrearAvatar extends javax.swing.JDialog {
     }//GEN-LAST:event_jLAzulMouseReleased
 
     private void jBCerrar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCerrar1ActionPerformed
+        s = new Sonido("click.wav");
         String palabra = "Si no asigna nickName -se perderan los cambios";
         GuardarNombre gn = new GuardarNombre(null, true, palabra);
         
@@ -1828,6 +1831,7 @@ public class CrearAvatar extends javax.swing.JDialog {
     }//GEN-LAST:event_jBCerrarMouseEntered
 
     private void jBCrear1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCrear1ActionPerformed
+        s = new Sonido("click.wav");
         llenarMatriz();
         preLlenarMatriz();
         GuardarNombre nick = new GuardarNombre(null, true, " - ");

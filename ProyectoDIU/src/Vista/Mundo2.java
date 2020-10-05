@@ -1965,7 +1965,7 @@ public class Mundo2 extends javax.swing.JDialog{
 
     private void jlPuntrajeControlGuia(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlPuntrajeControlGuia
         s = new Sonido("click.wav");
-        new GuiaControles(null, true);
+        new GuiaControles(null, true,"");
     }//GEN-LAST:event_jlPuntrajeControlGuia
 
     private void jlVolverVolverMenu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlVolverVolverMenu
@@ -1975,7 +1975,7 @@ public class Mundo2 extends javax.swing.JDialog{
 
     private void jlControlGuiaControlGuia(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlControlGuiaControlGuia
         s = new Sonido("click.wav");
-        new GuiaControles(null, true);
+        new GuiaControles(null, true,"");
     }//GEN-LAST:event_jlControlGuiaControlGuia
 
     

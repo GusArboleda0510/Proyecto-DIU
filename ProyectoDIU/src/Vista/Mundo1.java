@@ -1949,7 +1949,7 @@ public class Mundo1 extends javax.swing.JDialog {
 
                         t.interrupt();
 
-                        Sonido s = new Sonido("cambioMundo.wav");
+                        s = new Sonido("juego.wav");
                         dispose();
                         new Mundo2(null, true);
                     }
@@ -2090,7 +2090,7 @@ public class Mundo1 extends javax.swing.JDialog {
 
     private void ControlGuia(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ControlGuia
         s = new Sonido("click.wav");
-        new GuiaControles(null, true);
+        new GuiaControles(null, true,"");
     }//GEN-LAST:event_ControlGuia
 
     public boolean limitesM1(int x, int y, String direccion) {
