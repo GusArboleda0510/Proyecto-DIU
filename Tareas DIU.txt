@@ -46,14 +46,14 @@ HECHO -- FALTA CREAR XML DE LOS MUNDOS e implementarlo para la creacion de los m
 
 HECHO -- EN PROGRESO -- QUEDA POR ESCOGER  - GUS - ALE implementar sonidos en el juego
 			- IDEA HACER UNA CANCION EN UN BUCLE EN EL MENU 
-			
+
+HECHO -- EN PROGRESO -- implementar colisiones para los enemigos con el avatar
+
+HECHO -- Cuando den las colisiones implementar las colisiones con las vidas y el puntaje 
+
 ------------------------------------------------------------------------------------------
 			
-EN PROGRESO - ALE - GUS (para el final) guia de controles para el usuario
-
-EN PROGRESO -- implementar colisiones para los enemigos con el avatar
-
-FALTA Cuando den las colisiones implementar las colisiones con las vidas y el puntaje 
+HECHO -- PERE LA MIRO PUES (EH ESTA CHINA SI JODE) EN PROGRESO - ALE - GUS (para el final) guia de controles para el usuario
 
 FALTA IMPLEMENTAR TODOS LOS CAMBIOS DE MUNDO 1 EN LOS OTROS MUNDOS
 	- HACER QUE EL LABEL PASE DE MUNDO EN MUNDO

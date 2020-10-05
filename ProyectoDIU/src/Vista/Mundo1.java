@@ -31,21 +31,19 @@ public class Mundo1 extends javax.swing.JDialog {
     controlJugabilidad jug;
     int cambio = 1;
     String[] infoVida_Puntaje;
-    int [] posEnemigo1= new int[4];
-    int [] posEnemigo2= new int[4];
-    int [] posEnemigo3= new int[4];
-    int[] posAvatar = new int [4];
-
+    int[] posEnemigo = new int[4];
+    int[] posAvatar = new int[4];
+    JLabel tempEnemigo1 = new JLabel();
+    JLabel tempEnemigo2 = new JLabel();
+    JLabel tempEnemigo3 = new JLabel();
     boolean marcharHilo = true;
     controlXMLMundos leerMundos;
-    
-    
 
     public Mundo1(java.awt.Frame parent, boolean modal, String nickNameJugador, String imgPeque, String rutaCarpeta) {
         super(parent, modal);
         initComponents();
         this.rutaCarpeta = rutaCarpeta;
-        
+
         try {
             decidirMapa();
         } catch (Exception ex) {
@@ -74,6 +72,237 @@ public class Mundo1 extends javax.swing.JDialog {
 
     public Mundo1(String nada) {
         // NO BORRAR ESTE CONSTRUCTOR
+    }
+
+    private void decidirMapa() throws Exception {
+        leerMundos = new controlXMLMundos();
+        String nombreMapa = null;
+        int mapa = (int) (Math.random() * 2 + 1);
+        mapa = 1;
+        if (mapa == 1) {
+            Mapa1.setFocusable(true);
+            Mapa1.setVisible(true);
+            Mapa2.setFocusable(false);
+            Mapa2.setVisible(false);
+            nombreMapa = "mapa1";
+        }
+        if (mapa == 2) {
+            Mapa1.setFocusable(false);
+            Mapa1.setVisible(false);
+            Mapa2.setFocusable(true);
+            Mapa2.setVisible(true);
+            nombreMapa = "mapa2";
+        }
+        mapaAct = nombreMapa;
+
+        leerMundos.consultarXML("mundo1", nombreMapa);
+        initEnemigos(nombreMapa);
+
+    }
+    
+    private void initEnemigos(String nombMapa) {
+        int cantEnemigos = leerMundos.getCantEnemigos();
+        String[] skins = leerMundos.getSkinEnemigos();
+        
+        M1E1.setVisible(false);
+        M1E2.setVisible(false);
+        M1E3.setVisible(false);
+        
+        M2E1.setVisible(false);
+        M2E2.setVisible(false);
+        M2E3.setVisible(false);
+        
+
+        if (nombMapa.equals("mapa1")) {
+            tempEnemigo1 = M1E1;
+            tempEnemigo2 = M1E2;
+            tempEnemigo3 = M1E3;
+        }
+        if (nombMapa.equals("mapa2")) {
+            tempEnemigo1 = M2E1;
+            tempEnemigo2 = M2E2;
+            tempEnemigo3 = M2E3;
+        }
+        String SkinEnemigo1;
+        String SkinEnemigo2;
+        String SkinEnemigo3;
+
+        if (!"aleatorio".equals(skins[0])) {
+            SkinEnemigo1 = skins[0];
+        } else {
+            SkinEnemigo1 = elegirEnemigo();
+        }
+        if (!"aleatorio".equals(skins[1])) {
+            SkinEnemigo2 = skins[0];
+        } else {
+            SkinEnemigo2 = elegirEnemigo();
+        }
+        if (!"aleatorio".equals(skins[2])) {
+            SkinEnemigo3 = skins[0];
+        } else {
+            SkinEnemigo3 = elegirEnemigo();
+        }
+        if (cantEnemigos >= 1) {
+            tempEnemigo1.setName("enemigo1");
+            tempEnemigo1.setVisible(true);
+            contEnemigos = new ControlEnemigos(tempEnemigo1, nombMapa, SkinEnemigo1);
+            contEnemigos.start();
+        }
+        if (cantEnemigos >= 2) {
+            tempEnemigo2.setName("enemigo2");
+            tempEnemigo2.setVisible(true);
+
+            contEnemigos = new ControlEnemigos(tempEnemigo2, nombMapa, SkinEnemigo2);
+            contEnemigos.start();
+        }
+        if (cantEnemigos >= 3) {
+            tempEnemigo3.setName("enemigo3");
+            tempEnemigo3.setVisible(true);
+            contEnemigos = new ControlEnemigos(tempEnemigo3, nombMapa, SkinEnemigo3);
+            contEnemigos.start();
+        }
+
+    }
+
+    private String elegirEnemigo() {
+        String ruta = null;
+        int num = (int) (Math.random() * 5 + 1);
+        if (num == 1) {
+            ruta = "/Imagenes/Avatars/Avatar1";
+        }
+        if (num == 2) {
+            ruta = "/Imagenes/Avatars/Avatar2";
+        }
+        if (num == 3) {
+            ruta = "/Imagenes/Avatars/Avatar3";
+        }
+        if (num == 4) {
+            ruta = "/Imagenes/Avatars/Avatar4";
+        }
+        if (num == 5) {
+            ruta = "/Imagenes/Avatars/Avatar5";
+        }
+        return ruta;
+    }
+
+    private boolean colision() {
+        boolean coli = false;
+        if ("mapa1".equals(mapaAct)) {
+            posAvatar = obtenerposAvatar(jLAvatarMapa1);
+        } else {
+            if ("mapa2".equals(mapaAct)) {
+                posAvatar = obtenerposAvatar(jLAvatarMapa2);
+            }
+        }  
+        if(tempEnemigo1.isVisible()){
+            posEnemigo = obtenerposAvatar(tempEnemigo1);
+            coli = validarPosiciones(posEnemigo); 
+            if(coli){
+                return coli;
+            }
+        }
+        if(tempEnemigo2.isVisible()){
+            posEnemigo = obtenerposAvatar(tempEnemigo2);
+            coli = validarPosiciones(posEnemigo); 
+            if(coli){
+                return coli;
+            }
+        }
+        if(tempEnemigo3.isVisible()){
+            posEnemigo = obtenerposAvatar(tempEnemigo3);
+            coli = validarPosiciones(posEnemigo); 
+            if(coli){
+                return coli;
+            } 
+        }
+        return false;
+    }
+
+    private int[] obtenerposAvatar(JLabel label) {
+        int[] tal = new int[4];
+        tal[0] = label.getX();
+        tal[1] = label.getY();
+        tal[2] = label.getX() + 40;
+        tal[3] = label.getY() + 40;
+        return tal;
+    }
+
+    private boolean validarPosiciones(int[] posEnemigo) {
+        if (posAvatar[0] >= posEnemigo[0]) {
+            if (posAvatar[0] >= posEnemigo[2]) {
+                //nada X
+                if (posAvatar[1] >= posEnemigo[1]) {
+                    if (posAvatar[1] >= posEnemigo[3]) {
+                        //nada Y
+                    } else {
+                        if (posAvatar[1] <= posEnemigo[3]) {
+                            if (posAvatar[0] >= posEnemigo[2]) {
+//                                nada
+                            } else {
+                                return true;
+                            }
+
+                        }
+                    }
+                } else {
+                    if (posAvatar[3] <= posEnemigo[1]) {
+                        //nada
+                    } else {
+                        if (posAvatar[3] >= posEnemigo[1]) {
+                            if (posAvatar[0] >= posEnemigo[2]) {
+//                                nada
+                            } else {
+                                return true;
+                            }
+                        }
+                    }
+                }
+            } else {
+                if (posAvatar[0] <= posEnemigo[2]) {
+                    if (posAvatar[1] >= posEnemigo[1]) {
+                        if (posAvatar[1] >= posEnemigo[3]) {
+                            //nada
+                        } else {
+                            if (posAvatar[1] <= posEnemigo[3]) {
+                                return true;
+                            }
+
+                        }
+                    } else {
+                        if (posAvatar[1] <= posEnemigo[1]) {
+                            if (posAvatar[3] <= posEnemigo[1]) {
+                                //nada
+                            } else {
+                                return true;
+                            }
+                        }
+
+                    }
+                }
+
+            }
+        } else {
+            if (posAvatar[2] <= posEnemigo[0]) {
+                //nada     
+            } else {
+                if (posAvatar[1] >= posEnemigo[1]) {
+                    if (posAvatar[1] >= posEnemigo[3]) {
+                        //nadaY
+                    } else {
+                        if (posAvatar[1] <= posEnemigo[3]) {
+                            return true;
+                        }
+                    }
+                } else {
+                    if (posAvatar[3] <= posEnemigo[1]) {
+                        //nada
+                    } else {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
     }
 
     private void alternarImg(int dir, JLabel avatar) {
@@ -123,165 +352,7 @@ public class Mundo1 extends javax.swing.JDialog {
             }
         }
     }
-
-    private void decidirMapa() throws Exception {
-        leerMundos = new controlXMLMundos();
-        String nombreMapa = null;
-        int mapa = (int) (Math.random() * 2 + 1);
-//        mapa = 1;
-        if (mapa == 1) {
-            Mapa1.setFocusable(true);
-            Mapa1.setVisible(true);
-            Mapa2.setFocusable(false);
-            Mapa2.setVisible(false);
-            nombreMapa = "mapa1";
-        }
-        if (mapa == 2) {
-            Mapa1.setFocusable(false);
-            Mapa1.setVisible(false);
-            Mapa2.setFocusable(true);
-            Mapa2.setVisible(true);
-            nombreMapa = "mapa2";
-        }
-        mapaAct = nombreMapa;
-
-        leerMundos.consultarXML("mundo1", nombreMapa);
-        initEnemigos(nombreMapa);
-        
-
-    }
-    
-    private boolean colision() {
-        if ("mapa1".equals(mapaAct)) {
-            posAvatar = obtenerposAvatar(jLAvatarMapa1);
-        } else {
-            if ("mapa2".equals(mapaAct)) {
-                posAvatar = obtenerposAvatar(jLAvatarMapa2);
-            }
-        }
-//        
-//            System.out.print("Enemigo ");  
-//            System.out.print(posEnemigo1[0]+", ");
-//            System.out.print(posEnemigo1[1]+", ");
-//            System.out.print(posEnemigo1[2]+", ");
-//            System.out.println(posEnemigo1[3]+", ");
-//            System.out.print("Avatar ");  
-//            System.out.print(posAvatar[0]+", ");
-//            System.out.print(posAvatar[1]+", ");
-//            System.out.print(posAvatar[2]+", ");
-//            System.out.print(posAvatar[3]+", ");
-//            System.out.println();  
-
-        return true;
-    }
-    
-    private int [] obtenerposAvatar(JLabel avatar) {
-        int [] coord = new int [4];
-        coord[0] = avatar.getX();
-        coord[1] = avatar.getY();
-        coord[2] = avatar.getX() + 40;
-        coord[3] = avatar.getY() + 40;
-        return coord;     
-    }
- 
-    private void initEnemigos(String nombMapa) {
-        M1E1.setVisible(false);
-        M1E2.setVisible(false);
-        M1E3.setVisible(false);
-        M2E1.setVisible(false);
-        M2E2.setVisible(false);
-        M2E3.setVisible(false);
-        int cantEnemigos= leerMundos.getCantEnemigos();
-        String [] skins = leerMundos.getSkinEnemigos();
-        JLabel enem1 = new JLabel();
-        JLabel enem2 = new JLabel();
-        JLabel enem3 = new JLabel(); 
-        if (nombMapa.equals("mapa1")) {
-            enem1 = M1E1;
-            enem2 = M1E2;
-            enem3 = M1E3;
-        }
-        if (nombMapa.equals("mapa2")) {
-            enem1 = M2E1;
-            enem2 = M2E2;
-            enem3 = M2E3;
-        }
-        String SkinEnemigo1;
-        String SkinEnemigo2;
-        String SkinEnemigo3;
-
-        if(!"aleatorio".equals(skins[0])){
-            SkinEnemigo1 = skins[0];
-        }else{
-            SkinEnemigo1 = elegirEnemigo();
-        }
-        if(!"aleatorio".equals(skins[1])){
-            SkinEnemigo2 = skins[0];
-        }else{
-            SkinEnemigo2 = elegirEnemigo();
-        }
-        if(!"aleatorio".equals(skins[2])){
-            SkinEnemigo3 = skins[0];
-        }else{
-            SkinEnemigo3 = elegirEnemigo();
-        }
-        if(cantEnemigos >= 1){
-            enem1.setName("enemigo1");
-            enem1.setVisible(true);
-            contEnemigos = new ControlEnemigos(enem1, nombMapa, SkinEnemigo1);
-            contEnemigos.start();      
-        }
-        if(cantEnemigos >= 2){
-            enem2.setName("enemigo2");
-            enem2.setVisible(true);
-
-            contEnemigos = new ControlEnemigos(enem2, nombMapa, SkinEnemigo2);
-            contEnemigos.start();      
-        }
-        if(cantEnemigos >= 3){
-            enem3.setName("enemigo3");
-            enem3.setVisible(true);
-            contEnemigos = new ControlEnemigos(enem3, nombMapa, SkinEnemigo3);
-            contEnemigos.start();      
-        }
-
-    }
-
-    private String elegirEnemigo() {
-        String ruta = null;
-        int num = (int) (Math.random() * 5 + 1);
-        if (num == 1) {
-            ruta = "/Imagenes/Avatars/Avatar1";
-        }
-        if (num == 2) {
-            ruta = "/Imagenes/Avatars/Avatar2";
-        }
-        if (num == 3) {
-            ruta = "/Imagenes/Avatars/Avatar3";
-        }
-        if (num == 4) {
-            ruta = "/Imagenes/Avatars/Avatar4";
-        }
-        if (num == 5) {
-            ruta = "/Imagenes/Avatars/Avatar5";
-        }
-        return ruta;
-    }
-
-    public void setPosEnemigo1(int[] posEnemigo1) {
-        this.posEnemigo1 = posEnemigo1;
-        colision();
-
-    }
-
-    public void setPosEnemigo2(int[] posEnemigo2) {
-        this.posEnemigo2 = posEnemigo2;
-    }
-
-    public void setPosEnemigo3(int[] posEnemigo3) {
-        this.posEnemigo3 = posEnemigo3;
-    } 
-    
+  
     public static void main(String[] args) {
         new Mundo1(null, true, "a", "/Imagenes/Avatars/Avatar2/der1.jpg", "/Imagenes/Avatars/Avatar2");
     }
@@ -1257,7 +1328,7 @@ public class Mundo1 extends javax.swing.JDialog {
 
         M1E1.setBackground(new java.awt.Color(204, 204, 204));
         M1E1.setOpaque(true);
-        Mapa1.add(M1E1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 40, 40));
+        Mapa1.add(M1E1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 40, 40));
 
         M1E2.setBackground(new java.awt.Color(255, 0, 0));
         M1E2.setOpaque(true);
@@ -1265,12 +1336,12 @@ public class Mundo1 extends javax.swing.JDialog {
 
         M1E3.setBackground(new java.awt.Color(0, 102, 102));
         M1E3.setOpaque(true);
-        Mapa1.add(M1E3, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 70, 40, 40));
+        Mapa1.add(M1E3, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 60, 40, 40));
 
         jLAvatarMapa1.setBackground(new java.awt.Color(153, 255, 204));
         jLAvatarMapa1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
         jLAvatarMapa1.setOpaque(true);
-        Mapa1.add(jLAvatarMapa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 40, 40));
+        Mapa1.add(jLAvatarMapa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 510, 40, 40));
 
         fondo.setBackground(new java.awt.Color(255, 204, 204));
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoVerde.png"))); // NOI18N
@@ -1803,7 +1874,7 @@ public class Mundo1 extends javax.swing.JDialog {
         jLAvatarMapa2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLAvatarMapa2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
         jLAvatarMapa2.setOpaque(true);
-        Mapa2.add(jLAvatarMapa2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 510, 40, 40));
+        Mapa2.add(jLAvatarMapa2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 500, 40, 40));
 
         M2E1.setBackground(new java.awt.Color(255, 0, 0));
         M2E1.setOpaque(true);
@@ -1915,10 +1986,6 @@ public class Mundo1 extends javax.swing.JDialog {
             case KeyEvent.VK_UP:
                 if (limitesM2(x, y, "up")) {
                     jLAvatarMapa2.setLocation(x, y - desplazamiento);
-
-                    infoVida_Puntaje = jug.vida(true);//Colision
-                    txt.puntaje_vida(infoVida_Puntaje);
-
                 }
                 break;
 
@@ -1979,6 +2046,13 @@ public class Mundo1 extends javax.swing.JDialog {
                 }
                 break;
         }
+        boolean colision = colision();
+        infoVida_Puntaje = jug.vida(colision);
+        if(colision){
+            s = new Sonido("upsSonido.wav");    
+        }
+        txt.puntaje_vida(infoVida_Puntaje);
+        
     }//GEN-LAST:event_Mapa2KeyPressed
 
     private void Mapa1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Mapa1KeyPressed
@@ -1986,7 +2060,7 @@ public class Mundo1 extends javax.swing.JDialog {
 //        System.out.println(Avatar.getLocation());//Ubicacion del la imagen en el panel
         switch (evt.getExtendedKeyCode()) {//getExtendedKeyCode->Captura lo q hace el teclado y lo pasa a la variable X y Y
 //            system.out.println();
-            
+
             case KeyEvent.VK_UP:
                 if (limitesM1(x, y, "up")) {
                     if (rutaCarpeta != null) {
@@ -2071,26 +2145,31 @@ public class Mundo1 extends javax.swing.JDialog {
                         t.interrupt();
 //                    txt.crearTXT(tiemp, vida, puntaje);
 
-                        Sonido s = new Sonido("cambioMundo.wav");
+                        s = new Sonido("cambioMundo.wav");
                         dispose();
                         new Mundo2(null, true);
                     }
                 }
                 break;
+                
         }
+        boolean colision = colision();
+        infoVida_Puntaje = jug.vida(colision);
+        if(colision){
+            s = new Sonido("upsSonido.wav");    
+        }
+        txt.puntaje_vida(infoVida_Puntaje);
     }//GEN-LAST:event_Mapa1KeyPressed
 
     private void VolverMenu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VolverMenu
         s = new Sonido("click.wav");
         t.interrupt();
-        contEnemigos.interrupt();
-//        marcharHilo = false;
         dispose();
     }//GEN-LAST:event_VolverMenu
 
     private void ControlGuia(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ControlGuia
         s = new Sonido("click.wav");
-        new GuiaControles(null, true,"");
+        new GuiaControles(null, true, "");
     }//GEN-LAST:event_ControlGuia
 
     public boolean limitesM1(int x, int y, String direccion) {
@@ -2142,7 +2221,7 @@ public class Mundo1 extends javax.swing.JDialog {
         ///////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////IZQUIERDA//////////////////////////////////////////
         if (direccion.equals("left")) {
-            if ((y >= 50 && y <= 490) && x <= 50
+            if ((y >= 50 && y <= 490) && (x <= 50 && x >=0)
                     || y >= 0 && x == 0
                     || (y >= 420 && y <= 490) && (x > 800 && x <= 850)
                     || (y >= 150 && (x > 450 && x <= 500))
@@ -2495,6 +2574,4 @@ public class Mundo1 extends javax.swing.JDialog {
     private javax.swing.JLabel jlVolver;
     private javax.swing.JLabel jtVida;
     // End of variables declaration//GEN-END:variables
-
-
 }

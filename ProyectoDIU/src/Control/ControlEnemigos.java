@@ -30,6 +30,7 @@ public class ControlEnemigos extends Thread{
     public void run() {
         int x, y, n = 0;
         int dir = (int) (Math.random() * 4 + 1);//arriba, derecha, abajo, izquierda
+//        dir = 4;
         while (true) {
             if (n > 10) {
                 int aux = dir;
@@ -103,7 +104,6 @@ public class ControlEnemigos extends Thread{
                     run();
                 }
             }
-            mandarPosEnemigo();
             try {
                 TimeUnit.MILLISECONDS.sleep(200);
             } catch (InterruptedException ex) {
@@ -187,23 +187,6 @@ public class ControlEnemigos extends Thread{
             } 
         }
         return false;
-    }
-
-    private void mandarPosEnemigo() {
-        int [] coord = new int [4];
-        coord[0] = avatar.getX();
-        coord[1] = avatar.getY();
-        coord[2] = avatar.getX() + 40;
-        coord[3] = avatar.getY() + 40;
-        if(avatar.getName().equals("enemigo1")){
-            mundo.setPosEnemigo1(coord);
-        }
-        if(avatar.getName().equals("enemigo2")){
-            mundo.setPosEnemigo2(coord);
-        }
-        if(avatar.getName().equals("enemigo3")){
-            mundo.setPosEnemigo3(coord);
-        }
     }
 }
 
