@@ -5,120 +5,427 @@
  */
 package Vista;
 
+import Control.ControlEnemigos;
 import Control.ControlTXT;
 import Control.Sonido;
 import Control.Tiempo;
 import Control.controlJugabilidad;
+import Control.controlXMLMundos;
 import java.awt.event.KeyEvent;
+import javax.swing.JLabel;
 
 /**
  *
  * @author Alejandra Becerra
  */
-public class Mundo2 extends javax.swing.JDialog{
+public class Mundo2 extends javax.swing.JDialog {
 
     /**
      * Creates new form Mundo_2
      */
     ControlTXT txt = new ControlTXT();
-    Thread t ;
-    int hora,minuto,segundo;
-    String punt,vida;
+    Thread t;
+    int hora, minuto, segundo;
+    int cambio = 1;
     String[] dato;
     Sonido s;
-    Boolean colision=false;
-    controlJugabilidad jug;
-    String[] infoVida_Puntaje= new String[2];
-    public Mundo2(java.awt.Frame parent, boolean modal) {
+    Boolean colision = false;
+    String[] infoVida_Puntaje = new String[2];
+    int[] posEnemigo = new int[4];
+    int[] posAvatar = new int[4];
+    String punt, vida, rutaCarpeta, mapaAct, nombre, nickName, imgpeque;
+    JLabel tempEnemigo1 = new JLabel();
+    JLabel tempEnemigo2 = new JLabel();
+    JLabel tempEnemigo3 = new JLabel();
+    controlXMLMundos leerMundos;
+    Thread contEnemigos;
+
+    public Mundo2(java.awt.Frame parent, boolean modal, String nickNameJugador, String imgPeque, String rutaCarpeta) {
         super(parent, modal);
         initComponents();
+        initVidaPuntaje();
+        this.nickName = nickNameJugador;
+        this.imgpeque = imgPeque;
+        this.rutaCarpeta = rutaCarpeta;
+        try {
+            decidirMapa();
+        } catch (Exception ex) {
+            System.out.println("error en decidirmapa " + ex);
+        }
+        if (imgPeque != null) {
+            jLAvatarMapa1.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));
+            jLAvatarMapa2.setIcon(new javax.swing.ImageIcon(getClass().getResource(imgPeque)));
+        } else {
+            if (nickNameJugador != null) {
+                String predPequenia = "/Imagenes/Avatars/Usuarios/" + nickNameJugador + ".png";
+                jLAvatarMapa1.setIcon(new javax.swing.ImageIcon(getClass().getResource(predPequenia)));
+                jLAvatarMapa2.setIcon(new javax.swing.ImageIcon(getClass().getResource(predPequenia)));
+            }
+        }
+        setVisible(true);
+    }
+
+    public Mundo2(String nada) {
+        // NO BORRAR ESTE CONSTRUCTOR
+    }
+
+    private void initVidaPuntaje() {
         JPanelInf();
-        dato =txt.leerTiempo();
-        
-         ////////////////////////PANELES////////////////////
-        Mapa1.setFocusable(false);
-        Mapa1.setVisible(false);
-        
-        Mapa2.setFocusable(true);
-        Mapa2.setVisible(true);
-        //////////////////////////////////////////////////////}
-        System.out.println("\nMUNDO2\n");
+        dato = txt.leerTiempo();
         String[] aux = dato[0].split(":");
         t = new Tiempo(aux);
         t.start();
-        jug = new controlJugabilidad(jlvida1, jlvida2, jlvida3, Puntaje);
-        
-        setVisible(true);
     }
-    public void JPanelInf(){
-        String[] inf=txt.leerVidaPuntaje();
-        inf[1]=""+(Integer.parseInt(inf[1])+100);
-        Puntaje.setText(""+inf[1]);//inf[1]==puntaje de las vidas del Mundo 1 y (100) equivale a pasar el mundo1
-        vidaJLabel(inf);
-       
-        
+
+    public void JPanelInf() {
+        String[] inf = txt.leerVidaPuntaje();
+        inf[1] = "" + (Integer.parseInt(inf[1]) + 100);
+        Puntaje.setText("" + inf[1]);//inf[1]==puntaje de las vidas del Mundo 1 y (100) equivale a pasar el mundo1
+        if (inf[0].equals("0")) {
+            jlvida1.setVisible(false);
+            jlvida2.setVisible(false);
+            jlvida3.setVisible(false);
+
+        }
+        if (inf[0].equals("1")) {
+            jlvida1.setVisible(true);
+            jlvida2.setVisible(false);
+            jlvida3.setVisible(false);
+
+        }
+        if (inf[0].equals("2")) {
+            jlvida1.setVisible(true);
+            jlvida2.setVisible(true);
+            jlvida3.setVisible(false);
+
+        }
+        if (inf[0].equals("3")) {
+            jlvida1.setVisible(true);
+            jlvida2.setVisible(true);
+            jlvida3.setVisible(true);
+
+        }
 
     }
-    public void vidaJLabel(String[] inf){
-        if(colision==true){
-            if(inf[0].equals("-1")){
-            dispose();
-            new GamerOver(null, true, Puntaje.getText());
+
+    public void vidaJLabel(String[] inf) {
+        boolean tal = colision();
+        System.out.println("TTT " + tal);
+        if (tal) {
+            if (inf[0].equals("-1")) {
+                dispose();
+                new GamerOver(null, true, Puntaje.getText());
             }
-            if(inf[0].equals("0")){
+            if (inf[0].equals("0")) {
                 jlvida1.setVisible(false);
                 jlvida2.setVisible(false);
                 jlvida3.setVisible(false);
 
             }
-             if(inf[0].equals("1")){
+            if (inf[0].equals("1")) {
                 jlvida1.setVisible(true);
                 jlvida2.setVisible(false);
                 jlvida3.setVisible(false);
 
             }
-            if(inf[0].equals("2")){
+            if (inf[0].equals("2")) {
                 jlvida1.setVisible(true);
                 jlvida2.setVisible(true);
                 jlvida3.setVisible(false);
 
             }
-            if(inf[0].equals("3")){
-                jlvida1.setVisible(true);
-                jlvida2.setVisible(true);
-                jlvida3.setVisible(true);
-
-            }
-        }else{
-            if(inf[0].equals("0")){
-                jlvida1.setVisible(false);
-                jlvida2.setVisible(false);
-                jlvida3.setVisible(false);
-
-            }
-             if(inf[0].equals("1")){
-                jlvida1.setVisible(true);
-                jlvida2.setVisible(false);
-                jlvida3.setVisible(false);
-
-            }
-            if(inf[0].equals("2")){
-                jlvida1.setVisible(true);
-                jlvida2.setVisible(true);
-                jlvida3.setVisible(false);
-
-            }
-            if(inf[0].equals("3")){
+            if (inf[0].equals("3")) {
                 jlvida1.setVisible(true);
                 jlvida2.setVisible(true);
                 jlvida3.setVisible(true);
 
             }
         }
-        
-        vida=inf[0];
-        this.punt=inf[1];
+
+        vida = inf[0];
+        this.punt = inf[1];
     }
+
+    private void decidirMapa() throws Exception {
+        leerMundos = new controlXMLMundos();
+        String nombreMapa = null;
+        int mapa = (int) (Math.random() * 2 + 1);
+        if (mapa == 1) {
+            Mapa1.setFocusable(true);
+            Mapa1.setVisible(true);
+            Mapa2.setFocusable(false);
+            Mapa2.setVisible(false);
+            nombreMapa = "mapa1";
+        }
+        if (mapa == 2) {
+            Mapa1.setFocusable(false);
+            Mapa1.setVisible(false);
+            Mapa2.setFocusable(true);
+            Mapa2.setVisible(true);
+            nombreMapa = "mapa2";
+        }
+        mapaAct = nombreMapa;
+        leerMundos.consultarXML("mundo2", nombreMapa);
+        initEnemigos(nombreMapa);
+
+    }
+
+    private void initEnemigos(String nombMapa) {
+        int cantEnemigos = leerMundos.getCantEnemigos();
+        String[] skins = leerMundos.getSkinEnemigos();
+
+        M1E1.setVisible(false);
+        M1E2.setVisible(false);
+        M1E3.setVisible(false);
+
+        M2E1.setVisible(false);
+        M2E2.setVisible(false);
+        M2E3.setVisible(false);
+
+        if (nombMapa.equals("mapa1")) {
+            tempEnemigo1 = M1E1;
+            tempEnemigo2 = M1E2;
+            tempEnemigo3 = M1E3;
+        }
+        if (nombMapa.equals("mapa2")) {
+            tempEnemigo1 = M2E1;
+            tempEnemigo2 = M2E2;
+            tempEnemigo3 = M2E3;
+        }
+        String SkinEnemigo1;
+        String SkinEnemigo2;
+        String SkinEnemigo3;
+
+        if (!"aleatorio".equals(skins[0])) {
+            SkinEnemigo1 = skins[0];
+        } else {
+            SkinEnemigo1 = elegirEnemigo();
+        }
+        if (!"aleatorio".equals(skins[1])) {
+            SkinEnemigo2 = skins[0];
+        } else {
+            SkinEnemigo2 = elegirEnemigo();
+        }
+        if (!"aleatorio".equals(skins[2])) {
+            SkinEnemigo3 = skins[0];
+        } else {
+            SkinEnemigo3 = elegirEnemigo();
+        }
+        if (cantEnemigos >= 1) {
+            tempEnemigo1.setName("enemigo1");
+            tempEnemigo1.setVisible(true);
+            contEnemigos = new ControlEnemigos(tempEnemigo1, "mundo2", nombMapa, SkinEnemigo1);
+            contEnemigos.start();
+        }
+        if (cantEnemigos >= 2) {
+            tempEnemigo2.setName("enemigo2");
+            tempEnemigo2.setVisible(true);
+
+            contEnemigos = new ControlEnemigos(tempEnemigo2, "mundo2", nombMapa, SkinEnemigo2);
+            contEnemigos.start();
+        }
+        if (cantEnemigos >= 3) {
+            tempEnemigo3.setName("enemigo3");
+            tempEnemigo3.setVisible(true);
+            contEnemigos = new ControlEnemigos(tempEnemigo3, "mundo2", nombMapa, SkinEnemigo3);
+            contEnemigos.start();
+        }
+
+    }
+
+    private String elegirEnemigo() {
+        String ruta = null;
+        int num = (int) (Math.random() * 5 + 1);
+        if (num == 1) {
+            ruta = "/Imagenes/Avatars/Avatar1";
+        }
+        if (num == 2) {
+            ruta = "/Imagenes/Avatars/Avatar2";
+        }
+        if (num == 3) {
+            ruta = "/Imagenes/Avatars/Avatar3";
+        }
+        if (num == 4) {
+            ruta = "/Imagenes/Avatars/Avatar4";
+        }
+        if (num == 5) {
+            ruta = "/Imagenes/Avatars/Avatar5";
+        }
+        return ruta;
+    }
+
+    private boolean colision() {
+        boolean coli = false;
+        if ("mapa1".equals(mapaAct)) {
+            posAvatar = obtenerposAvatar(jLAvatarMapa1);
+        } else {
+            if ("mapa2".equals(mapaAct)) {
+                posAvatar = obtenerposAvatar(jLAvatarMapa2);
+            }
+        }
+        if (tempEnemigo1.isVisible()) {
+            posEnemigo = obtenerposAvatar(tempEnemigo1);
+            coli = validarPosiciones(posEnemigo);
+            if (coli) {
+                return coli;
+            }
+        }
+        if (tempEnemigo2.isVisible()) {
+            posEnemigo = obtenerposAvatar(tempEnemigo2);
+            coli = validarPosiciones(posEnemigo);
+            if (coli) {
+                return coli;
+            }
+        }
+        if (tempEnemigo3.isVisible()) {
+            posEnemigo = obtenerposAvatar(tempEnemigo3);
+            coli = validarPosiciones(posEnemigo);
+            if (coli) {
+                return coli;
+            }
+        }
+        return false;
+    }
+
+    private int[] obtenerposAvatar(JLabel label) {
+        int[] tal = new int[4];
+        tal[0] = label.getX();
+        tal[1] = label.getY();
+        tal[2] = label.getX() + 40;
+        tal[3] = label.getY() + 40;
+        return tal;
+    }
+
+    private boolean validarPosiciones(int[] posEnemigo) {
+        if (posAvatar[0] >= posEnemigo[0]) {
+            if (posAvatar[0] >= posEnemigo[2]) {
+                //nada X
+                if (posAvatar[1] >= posEnemigo[1]) {
+                    if (posAvatar[1] >= posEnemigo[3]) {
+                        //nada Y
+                    } else {
+                        if (posAvatar[1] <= posEnemigo[3]) {
+                            if (posAvatar[0] >= posEnemigo[2]) {
+                                //nada
+                            } else {
+                                return true;
+                            }
+
+                        }
+                    }
+                } else {
+                    if (posAvatar[3] <= posEnemigo[1]) {
+                        //nada
+                    } else {
+                        if (posAvatar[3] >= posEnemigo[1]) {
+                            if (posAvatar[0] >= posEnemigo[2]) {
+                                //nada
+                            } else {
+                                return true;
+                            }
+                        }
+                    }
+                }
+            } else {
+                if (posAvatar[0] <= posEnemigo[2]) {
+                    if (posAvatar[1] >= posEnemigo[1]) {
+                        if (posAvatar[1] >= posEnemigo[3]) {
+                            //nada
+                        } else {
+                            if (posAvatar[1] <= posEnemigo[3]) {
+                                return true;
+                            }
+
+                        }
+                    } else {
+                        if (posAvatar[1] <= posEnemigo[1]) {
+                            if (posAvatar[3] <= posEnemigo[1]) {
+                                //nada
+                            } else {
+                                return true;
+                            }
+                        }
+
+                    }
+                }
+
+            }
+        } else {
+            if (posAvatar[2] <= posEnemigo[0]) {
+                //nada     
+            } else {
+                if (posAvatar[1] >= posEnemigo[1]) {
+                    if (posAvatar[1] >= posEnemigo[3]) {
+                        //nadaY
+                    } else {
+                        if (posAvatar[1] <= posEnemigo[3]) {
+                            return true;
+                        }
+                    }
+                } else {
+                    if (posAvatar[3] <= posEnemigo[1]) {
+                        //nada
+                    } else {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    private void alternarImg(int dir, JLabel avatar) {
+        if (dir == 1) {
+            if (cambio == 1) {
+                avatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(rutaCarpeta + "/arr1.jpg")));
+                cambio = 2;
+            } else {
+                if (cambio == 2) {
+                    avatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(rutaCarpeta + "/arr2.jpg")));
+                    cambio = 1;
+                }
+            }
+        }
+        if (dir == 2) {
+            if (cambio == 1) {
+                avatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(rutaCarpeta + "/der1.jpg")));
+                cambio = 2;
+            } else {
+                if (cambio == 2) {
+                    avatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(rutaCarpeta + "/der2.jpg")));
+                    cambio = 1;
+                }
+            }
+        }
+
+        if (dir == 3) {
+            if (cambio == 1) {
+                avatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(rutaCarpeta + "/abj1.jpg")));
+                cambio = 2;
+            } else {
+                if (cambio == 2) {
+                    avatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(rutaCarpeta + "/abj2.jpg")));
+                    cambio = 1;
+                }
+            }
+        }
+        if (dir == 4) {
+            if (cambio == 1) {
+                avatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(rutaCarpeta + "/izq1.jpg")));
+                cambio = 2;
+            } else {
+                if (cambio == 2) {
+                    avatar.setIcon(new javax.swing.ImageIcon(getClass().getResource(rutaCarpeta + "/izq2.jpg")));
+                    cambio = 1;
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        new Mundo2(null, true, "a", "/Imagenes/Avatars/Avatar2/der1.jpg", "/Imagenes/Avatars/Avatar2");
+    }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -255,7 +562,10 @@ public class Mundo2 extends javax.swing.JDialog{
         jLabel137 = new javax.swing.JLabel();
         jLabel138 = new javax.swing.JLabel();
         Salida = new javax.swing.JLabel();
-        Avatar = new javax.swing.JLabel();
+        jLAvatarMapa1 = new javax.swing.JLabel();
+        M1E1 = new javax.swing.JLabel();
+        M1E2 = new javax.swing.JLabel();
+        M1E3 = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
         Mapa2 = new javax.swing.JPanel();
         jLabel92 = new javax.swing.JLabel();
@@ -378,7 +688,10 @@ public class Mundo2 extends javax.swing.JDialog{
         jLabel259 = new javax.swing.JLabel();
         jLabel261 = new javax.swing.JLabel();
         jLabel262 = new javax.swing.JLabel();
-        Avatar1 = new javax.swing.JLabel();
+        jLAvatarMapa2 = new javax.swing.JLabel();
+        M2E1 = new javax.swing.JLabel();
+        M2E3 = new javax.swing.JLabel();
+        M2E2 = new javax.swing.JLabel();
         Fondo1 = new javax.swing.JLabel();
         Informacion1 = new javax.swing.JPanel();
         jtVida1 = new javax.swing.JLabel();
@@ -1057,10 +1370,22 @@ public class Mundo2 extends javax.swing.JDialog{
         Salida.setOpaque(true);
         Mapa1.add(Salida, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 280, 50, 50));
 
-        Avatar.setBackground(new java.awt.Color(255, 153, 153));
-        Avatar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
-        Avatar.setOpaque(true);
-        Mapa1.add(Avatar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 270, 40, 40));
+        jLAvatarMapa1.setBackground(new java.awt.Color(255, 153, 153));
+        jLAvatarMapa1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
+        jLAvatarMapa1.setOpaque(true);
+        Mapa1.add(jLAvatarMapa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 500, 40, 40));
+
+        M1E1.setBackground(new java.awt.Color(204, 204, 204));
+        M1E1.setOpaque(true);
+        Mapa1.add(M1E1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 60, 40, 40));
+
+        M1E2.setBackground(new java.awt.Color(255, 0, 0));
+        M1E2.setOpaque(true);
+        Mapa1.add(M1E2, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 400, 40, 40));
+
+        M1E3.setBackground(new java.awt.Color(0, 102, 102));
+        M1E3.setOpaque(true);
+        Mapa1.add(M1E3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, 40, 40));
 
         Fondo.setBackground(new java.awt.Color(255, 51, 51));
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoVerde.png"))); // NOI18N
@@ -1676,10 +2001,22 @@ public class Mundo2 extends javax.swing.JDialog{
         jLabel262.setOpaque(true);
         Mapa2.add(jLabel262, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 250, 50, 50));
 
-        Avatar1.setBackground(new java.awt.Color(204, 51, 255));
-        Avatar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
-        Avatar1.setOpaque(true);
-        Mapa2.add(Avatar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 330, 40, 40));
+        jLAvatarMapa2.setBackground(new java.awt.Color(204, 51, 255));
+        jLAvatarMapa2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
+        jLAvatarMapa2.setOpaque(true);
+        Mapa2.add(jLAvatarMapa2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 40, 40));
+
+        M2E1.setBackground(new java.awt.Color(255, 0, 0));
+        M2E1.setOpaque(true);
+        Mapa2.add(M2E1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 70, 40, 40));
+
+        M2E3.setBackground(new java.awt.Color(0, 102, 102));
+        M2E3.setOpaque(true);
+        Mapa2.add(M2E3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 40, 40));
+
+        M2E2.setBackground(new java.awt.Color(204, 204, 204));
+        M2E2.setOpaque(true);
+        Mapa2.add(M2E2, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 450, 40, 40));
 
         Fondo1.setBackground(new java.awt.Color(204, 51, 255));
         Fondo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoTierra.jpg"))); // NOI18N
@@ -1752,239 +2089,386 @@ public class Mundo2 extends javax.swing.JDialog{
     }// </editor-fold>//GEN-END:initComponents
 
     private void Mapa1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Mapa1KeyPressed
-        Mundo2.mapa1 m1 = new Mundo2.mapa1();
-        int desplazamiento=10,x=Avatar.getX(),y=Avatar.getY();
-//        System.out.println(Avatar.getLocation());//Ubicacion del la imagen en el panel
-
-        switch(evt.getExtendedKeyCode()){//getExtendedKeyCode->Captura lo q hace el teclado y lo pasa a la variable X y Y
+        int desplazamiento = 10, x = jLAvatarMapa1.getX(), y = jLAvatarMapa1.getY();
+        switch (evt.getExtendedKeyCode()) {
 
             case KeyEvent.VK_UP:
 
-            if(m1.limites(x,y,"up")){
-                Avatar.setLocation(x, y-desplazamiento);
-                
-            }
-            break;
+                if (limitesM1(x, y, "up")) {
+                    if (rutaCarpeta != null) {
+                        alternarImg(1, jLAvatarMapa1);
+                    }
+                    jLAvatarMapa1.setLocation(x, y - desplazamiento);
+
+                }
+                break;
             case KeyEvent.VK_DOWN:
-            if(m1.limites(x,y,"down")){
-                Avatar.setLocation(x, y+desplazamiento);
-            }
-            break;
+                if (limitesM1(x, y, "down")) {
+                    if (rutaCarpeta != null) {
+                        alternarImg(3, jLAvatarMapa1);
+                    }
+                    jLAvatarMapa1.setLocation(x, y + desplazamiento);
+                }
+                break;
             case KeyEvent.VK_LEFT:
-            if(m1.limites(x,y,"left")){
-                Avatar.setLocation(x-desplazamiento, y);
-                if ((x>= 440 && y >= 228)&& (x<=510  && y<=290 )) {
-                    if(!colision){
-                    infoVida_Puntaje[0]=vida;
-                    infoVida_Puntaje[1]=punt;
-                    
-                    txt.puntaje_vida(infoVida_Puntaje);
-                        
+                if (limitesM1(x, y, "left")) {
+                    if (rutaCarpeta != null) {
+                        alternarImg(4, jLAvatarMapa1);
                     }
-                    t.interrupt();
-                    
-                    Sonido s = new Sonido("cambioMundo.wav");
-                    dispose();
-                    new Mundo3(null, true);
+                    jLAvatarMapa1.setLocation(x - desplazamiento, y);
+                    if ((x >= 440 && y >= 228) && (x <= 510 && y <= 290)) {
+                        if (!colision) {
+                            infoVida_Puntaje[0] = vida;
+                            infoVida_Puntaje[1] = punt;
+
+                            txt.puntaje_vida(infoVida_Puntaje);
+
+                        }
+                        t.interrupt();
+
+                        Sonido s = new Sonido("cambioMundo.wav");
+                        dispose();
+                        new Mundo3(null, true);
+                    }
                 }
-            }
-            break;
+                break;
             case KeyEvent.VK_RIGHT:
-            if(m1.limites(x,y,"right")){
-                Avatar.setLocation(x+desplazamiento, y);
-                if ((x>= 440 && y >= 228)&& (x<=510  && y<=290 )) {
-                    
-                    if(!colision){
-                        
-                    infoVida_Puntaje[0]=vida;
-                    infoVida_Puntaje[1]=punt;
-                    
-                    txt.puntaje_vida(infoVida_Puntaje);
-                        
+                if (limitesM1(x, y, "right")) {
+                    if (rutaCarpeta != null) {
+                        alternarImg(2, jLAvatarMapa1);
                     }
-                    t.interrupt();
-                    vida="3";
-                    punt="100";
-                    
-                    Sonido s = new Sonido("cambioMundo.wav");
-                    dispose();
-                    new Mundo3(null, true);
+                    jLAvatarMapa1.setLocation(x + desplazamiento, y);
+                    if ((x >= 440 && y >= 228) && (x <= 510 && y <= 290)) {
+
+                        if (!colision) {
+
+                            infoVida_Puntaje[0] = vida;
+                            infoVida_Puntaje[1] = punt;
+
+                            txt.puntaje_vida(infoVida_Puntaje);
+
+                        }
+                        t.interrupt();
+                        Sonido s = new Sonido("cambioMundo.wav");
+                        dispose();
+                        new Mundo3(null, true);
+                    }
                 }
-            }
-            break;
+                break;
             case KeyEvent.VK_W:
 
-            if(m1.limites(x,y,"up")){
-                Avatar.setLocation(x, y-desplazamiento);
-            }
-            break;
+                if (limitesM1(x, y, "up")) {
+                    if (rutaCarpeta != null) {
+                        alternarImg(1, jLAvatarMapa1);
+                    }
+                    jLAvatarMapa1.setLocation(x, y - desplazamiento);
+                }
+                break;
             case KeyEvent.VK_S:
-            if(m1.limites(x,y,"down")){
-                Avatar.setLocation(x, y+desplazamiento);
-            }
-            break;
+                if (limitesM1(x, y, "down")) {
+                    if (rutaCarpeta != null) {
+                        alternarImg(3, jLAvatarMapa1);
+                    }
+                    jLAvatarMapa1.setLocation(x, y + desplazamiento);
+                }
+                break;
             case KeyEvent.VK_A:
-            if(m1.limites(x,y,"left")){
-                Avatar.setLocation(x-desplazamiento, y);
-                if ((x>= 440 && y >= 228)&& (x<=510  && y<=290 )) {
-                    
-                    if(!colision){
-                    infoVida_Puntaje[0]=vida;
-                    infoVida_Puntaje[1]=punt;
-                    
-                    txt.puntaje_vida(infoVida_Puntaje);
-                        
+                if (limitesM1(x, y, "left")) {
+                    if (rutaCarpeta != null) {
+                        alternarImg(4, jLAvatarMapa1);
                     }
-                    t.interrupt();
-                    vida="3";
-                    punt="100";
-                    
-                    Sonido s = new Sonido("cambioMundo.wav");
-                    dispose();
-                    new Mundo3(null, true);
+                    jLAvatarMapa1.setLocation(x - desplazamiento, y);
+                    if ((x >= 440 && y >= 228) && (x <= 510 && y <= 290)) {
+
+                        if (!colision) {
+                            infoVida_Puntaje[0] = vida;
+                            infoVida_Puntaje[1] = punt;
+
+                            txt.puntaje_vida(infoVida_Puntaje);
+
+                        }
+                        t.interrupt();
+                        Sonido s = new Sonido("cambioMundo.wav");
+                        dispose();
+                        new Mundo3(null, true);
+                    }
                 }
-            }
-            break;
+                break;
             case KeyEvent.VK_D:
-            if(m1.limites(x,y,"right")){
-                Avatar.setLocation(x+desplazamiento, y);
-                if ((x>= 440 && y >= 228)&& (x<=510  && y<=290 )) {
-                    if(!colision){
-                    infoVida_Puntaje[0]=vida;
-                    infoVida_Puntaje[1]=punt;
-                    
-                    txt.puntaje_vida(infoVida_Puntaje);
-                        
+                if (limitesM1(x, y, "right")) {
+                    if (rutaCarpeta != null) {
+                        alternarImg(2, jLAvatarMapa1);
                     }
-                    t.interrupt();
-                    vida="3";
-                    punt="100";
-                    
-                    Sonido s = new Sonido("cambioMundo.wav");
-                    dispose();
-                    new Mundo3(null, true);
+                    jLAvatarMapa1.setLocation(x + desplazamiento, y);
+                    if ((x >= 440 && y >= 228) && (x <= 510 && y <= 290)) {
+                        if (!colision) {
+                            infoVida_Puntaje[0] = vida;
+                            infoVida_Puntaje[1] = punt;
+
+                            txt.puntaje_vida(infoVida_Puntaje);
+
+                        }
+                        t.interrupt();
+                        Sonido s = new Sonido("cambioMundo.wav");
+                        dispose();
+                        new Mundo3(null, true);
+                    }
                 }
-            }
-            break;
+                break;
         }
+        infoVida_Puntaje[0] = "" + (Integer.parseInt(vida) - 1);
+        infoVida_Puntaje[1] = "" + (Integer.parseInt(punt) - 50);
+        vidaJLabel(infoVida_Puntaje);
+        Puntaje.setText(infoVida_Puntaje[1]);
+        txt.puntaje_vida(infoVida_Puntaje);
     }//GEN-LAST:event_Mapa1KeyPressed
 
     private void Mapa2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Mapa2KeyPressed
-        Mundo2.mapa2 m2 = new Mundo2.mapa2();
-        int desplazamiento=10,x=Avatar1.getX(),y=Avatar1.getY();
-//        System.out.println(Avatar1.getLocation());//Ubicacion del la imagen en el panel
+        int desplazamiento = 10, x = jLAvatarMapa2.getX(), y = jLAvatarMapa2.getY();
 
-        switch(evt.getExtendedKeyCode()){//getExtendedKeyCode->Captura lo q hace el teclado y lo pasa a la variable X y Y
+        switch (evt.getExtendedKeyCode()) {
 
             case KeyEvent.VK_UP:
-            if(m2.limites(x,y,"up")){
-                Avatar1.setLocation(x, y-desplazamiento);
-                ///////////////////////////////COLISION MUNDO 2////////////////////////////////////
-                colision=true;
-                infoVida_Puntaje[0]=""+(Integer.parseInt(vida)-1);
-                infoVida_Puntaje[1]=""+(Integer.parseInt(punt)-50);
-                vidaJLabel(infoVida_Puntaje);
-                Puntaje.setText(infoVida_Puntaje[1]);
-                txt.puntaje_vida(infoVida_Puntaje);
-                ///////////////////////////////////////////////////////////////////////////////////
-                
-            }
-            break;
+                if (limitesM2(x, y, "up")) {
+                    if (rutaCarpeta != null) {
+                        alternarImg(1, jLAvatarMapa2);
+                    }
+                    jLAvatarMapa2.setLocation(x, y - desplazamiento);
+                }
+                break;
 
             case KeyEvent.VK_DOWN:
-            if(m2.limites(x,y,"down")){
-                Avatar1.setLocation(x, y+desplazamiento);
-                if ((x>= 350 && y >= 200)&&(x<= 350 && y <= 360)) {
-                    if(!colision){
-                    infoVida_Puntaje[0]=vida;
-                    infoVida_Puntaje[1]=punt;
-                    
-                    txt.puntaje_vida(infoVida_Puntaje);
-                        
+                if (limitesM2(x, y, "down")) {
+                    if (rutaCarpeta != null) {
+                        alternarImg(3, jLAvatarMapa2);
                     }
-                    t.interrupt();
-                    
-                    Sonido s = new Sonido("cambioMundo.wav");
-                    dispose();
-                    new Mundo3(null, true);
+                    jLAvatarMapa2.setLocation(x, y + desplazamiento);
+                    if ((x >= 350 && y >= 200) && (x <= 350 && y <= 360)) {
+                        if (!colision) {
+                            infoVida_Puntaje[0] = vida;
+                            infoVida_Puntaje[1] = punt;
+
+                            txt.puntaje_vida(infoVida_Puntaje);
+
+                        }
+                        t.interrupt();
+
+                        Sonido s = new Sonido("cambioMundo.wav");
+                        dispose();
+                        new Mundo3(null, true);
+                    }
                 }
-            }
-            break;
+                break;
             case KeyEvent.VK_LEFT:
-            if(m2.limites(x,y,"left")){
-                Avatar1.setLocation(x-desplazamiento, y);
-                if ((x>= 350 && y >= 360)&&(x<= 390 && y <= 360)) {
-                    
-                    if(!colision){
-                    infoVida_Puntaje[0]=vida;
-                    infoVida_Puntaje[1]=punt;
-                    
-                    txt.puntaje_vida(infoVida_Puntaje);
-                        
+                if (limitesM2(x, y, "left")) {
+                    if (rutaCarpeta != null) {
+                        alternarImg(4, jLAvatarMapa2);
                     }
-                    t.interrupt();
-                    
-                    Sonido s = new Sonido("cambioMundo.wav");
-                    dispose();
-                    new Mundo3(null, true);
+                    jLAvatarMapa2.setLocation(x - desplazamiento, y);
+                    if ((x >= 350 && y >= 360) && (x <= 390 && y <= 360)) {
+
+                        if (!colision) {
+                            infoVida_Puntaje[0] = vida;
+                            infoVida_Puntaje[1] = punt;
+
+                            txt.puntaje_vida(infoVida_Puntaje);
+
+                        }
+                        t.interrupt();
+
+                        Sonido s = new Sonido("cambioMundo.wav");
+                        dispose();
+                        new Mundo3(null, true);
+                    }
                 }
-            }
-            break;
+                break;
             case KeyEvent.VK_RIGHT:
-            if(m2.limites(x,y,"right")){
-                Avatar1.setLocation(x+desplazamiento, y);
-            }
-            break;
+                if (limitesM2(x, y, "right")) {
+                    if (rutaCarpeta != null) {
+                        alternarImg(2, jLAvatarMapa2);
+                    }
+                    jLAvatarMapa2.setLocation(x + desplazamiento, y);
+                }
+                break;
             case KeyEvent.VK_W:
-            if(m2.limites(x,y,"up")){
-                Avatar1.setLocation(x, y-desplazamiento);
-            }
-            break;
+                if (limitesM2(x, y, "up")) {
+                    if (rutaCarpeta != null) {
+                        alternarImg(1, jLAvatarMapa2);
+                    }
+                    jLAvatarMapa2.setLocation(x, y - desplazamiento);
+                }
+                break;
 
             case KeyEvent.VK_S:
-            if(m2.limites(x,y,"down")){
-                Avatar1.setLocation(x, y+desplazamiento);
-                if ((x>= 350 && y >= 200)&&(x<= 350 && y <= 360)) {
-                    
-                    if(!colision){
-                    infoVida_Puntaje[0]=vida;
-                    infoVida_Puntaje[1]=punt;
-                    
-                    txt.puntaje_vida(infoVida_Puntaje);
-                        
+                if (limitesM2(x, y, "down")) {
+                    if (rutaCarpeta != null) {
+                        alternarImg(3, jLAvatarMapa2);
                     }
-                    
-                    Sonido s = new Sonido("cambioMundo.wav");
-                    dispose();
-                    new Mundo3(null, true);
+                    jLAvatarMapa2.setLocation(x, y + desplazamiento);
+                    if ((x >= 350 && y >= 200) && (x <= 350 && y <= 360)) {
+
+                        if (!colision) {
+                            infoVida_Puntaje[0] = vida;
+                            infoVida_Puntaje[1] = punt;
+
+                            txt.puntaje_vida(infoVida_Puntaje);
+
+                        }
+
+                        Sonido s = new Sonido("cambioMundo.wav");
+                        dispose();
+                        new Mundo3(null, true);
+                    }
                 }
-            }
-            break;
+                break;
             case KeyEvent.VK_A:
-            if(m2.limites(x,y,"left")){
-                Avatar1.setLocation(x-desplazamiento, y);
-                if ((x>= 350 && y >= 360)&&(x<= 390 && y <= 360)) {
-                    if(!colision){
-                    infoVida_Puntaje[0]=vida;
-                    infoVida_Puntaje[1]=punt;
-                    
-                    txt.puntaje_vida(infoVida_Puntaje);
-                        
+                if (limitesM2(x, y, "left")) {
+                    if (rutaCarpeta != null) {
+                        alternarImg(4, jLAvatarMapa2);
                     }
-                    t.interrupt();                    
-                    Sonido s = new Sonido("cambioMundo.wav");
-                    dispose();
-                    new Mundo3(null, true);
+                    jLAvatarMapa2.setLocation(x - desplazamiento, y);
+                    if ((x >= 350 && y >= 360) && (x <= 390 && y <= 360)) {
+                        if (!colision) {
+                            infoVida_Puntaje[0] = vida;
+                            infoVida_Puntaje[1] = punt;
+
+                            txt.puntaje_vida(infoVida_Puntaje);
+
+                        }
+                        t.interrupt();
+                        Sonido s = new Sonido("cambioMundo.wav");
+                        dispose();
+                        new Mundo3(null, true);
+                    }
                 }
-            }
-            break;
+                break;
             case KeyEvent.VK_D:
-            if(m2.limites(x,y,"right")){
-                Avatar1.setLocation(x+desplazamiento, y);
-            }
-            break;
+                if (limitesM2(x, y, "right")) {
+                    if (rutaCarpeta != null) {
+                        alternarImg(2, jLAvatarMapa2);
+                    }
+                    jLAvatarMapa2.setLocation(x + desplazamiento, y);
+                }
+                break;
         }
+        infoVida_Puntaje[0] = "" + (Integer.parseInt(vida) - 1);
+        infoVida_Puntaje[1] = "" + (Integer.parseInt(punt) - 50);
+        vidaJLabel(infoVida_Puntaje);
+        Puntaje.setText(infoVida_Puntaje[1]);
+        txt.puntaje_vida(infoVida_Puntaje);
+
     }//GEN-LAST:event_Mapa2KeyPressed
+
+    public boolean limitesM1(int x, int y, String direccion) {
+        boolean limite = true;
+        if (direccion.equals("up")) {
+            if ((x <= 920 && (y > 0 && y <= 50))
+                    || ((x <= 40)) && (y > 450 && y <= 500)
+                    || (x > 60 && x < 900) && (y > 450 && y <= 500)
+                    || ((x >= 170 && x <= 240) || (x >= 270 && x <= 390) || (x >= 420 && x <= 540) || (x >= 570 && x <= 690) || (x >= 720 && x <= 790)) && (y > 350 && y <= 400)
+                    || ((x >= 240 && x <= 310) || (x >= 400 && x <= 560) || (x >= 650 && x <= 710)) && (y > 200 && y <= 250)
+                    || ((x >= 150 && x <= 690) || (x >= 720 && x <= 810)) && (y > 100 && y <= 150)) {
+                return limite = false;
+            }
+        }
+        if (direccion.equals("down")) {
+            if (x >= 0 && (y >= 510 && y < 560)
+                    || ((x >= 130 && x <= 810)) && (y >= 410 && y < 460)
+                    || ((x >= 270 && x <= 320) || (x >= 420 && x <= 540) || (x >= 640 && x <= 690)) && (y >= 310 && y < 360)
+                    || ((x >= 170 && x <= 790)) && (y >= 160 && y < 210)
+                    || ((x >= 70 && x <= 690) || (x >= 720 && x <= 890)) && (y >= 60 && y < 110)) {
+                return limite = false;
+            }
+        }
+        if (direccion.equals("right")) {
+            if ((y >= 70 && y <= 490) && (x >= 60 && x < 110)
+                    || (y >= 170 && y <= 390) && (x >= 160 && y < 210)
+                    || (((y >= 70 && y <= 140) || (y >= 250 && y <= 390)) && (x >= 710 && x < 760))
+                    || ((y >= 250 && y <= 390) && (x >= 560 && x < 600))
+                    || ((y >= 200 && y <= 390) && (x >= 160 && x < 210))
+                    || ((y >= 150 && y <= 410) && (x >= 810 && x < 850))
+                    || ((y >= 250 && y <= 310) && (x >= 310 && x < 360))
+                    || ((y >= 320 && y <= 390) && ((x >= 410 && x < 460) || (x >= 260 && x < 310)))
+                    || (y >= 50 && (x >= 910 && x < 960))) {
+                return limite = false;
+            }
+        }
+        if (direccion.equals("left")) {
+            if ((y >= 0 && y <= 490) && x <= 50
+                    || (y >= 0 && y <= 520) && x == 0
+                    || (y >= 150 && y <= 410) && (x > 100 && x <= 150)
+                    || (y >= 250 && y <= 390) && ((x > 200 && x <= 250) || (x > 350 && x <= 400))
+                    || (y >= 250 && y <= 310) && (x > 600 && x <= 650)
+                    || (y >= 320 && y <= 390) && ((x > 500 && x <= 550) || (x > 650 && x <= 700))
+                    || (y >= 70 && y <= 140) && (x > 650 && x <= 700)
+                    || (y >= 170 && y <= 390) && (x > 750 && x <= 800)
+                    || (y >= 70 && y <= 490) && (x > 850 && x <= 900)) {
+                return limite = false;
+            }
+        }
+        return limite;
+    }
+
+    public boolean limitesM2(int x, int y, String direccion) {
+        boolean limite = true;
+        if (direccion.equals("up")) {
+            if (((x >= 40 && x <= 920) && y <= 50)
+                    || (((x >= 170 && x <= 240) || (x >= 570 && x <= 640)) && y <= 100)
+                    || ((x <= 90 || (x >= 200 && x <= 760) || x >= 870) && (y >= 140 && y <= 200))
+                    || (((x >= 350 && x <= 690) || (x >= 850 && x <= 890)) && (y >= 250 && y < 310))
+                    || (x >= 70 && x <= 120) && (y >= 310 && y <= 350)
+                    || (x >= 870 && (y >= 350 && y <= 400))
+                    || ((x >= 270 && x <= 840) && (y > 400 && y <= 450))
+                    || ((x <= 90 || (x >= 200 && x <= 240) || (x >= 570 && x <= 640)) && (y >= 460 && y <= 500))) {
+                return limite = false;
+            }
+        }
+        if (direccion.equals("down")) {
+
+            if (((x <= 90 || (x >= 120 && x <= 760) || (x > 860 && x < 920)) && (y >= 110 && y < 140))
+                    || ((x >= 370 && x < 450) && (y >= 60 && y < 100))
+                    || (((x >= 270 && x <= 690) || (x >= 850 && x <= 890)) && (y >= 210 && y < 300))
+                    || ((x >= 350 && x < 770) && (y >= 360 && y < 400))
+                    || ((x >= 70 && x < 120) && (y >= 260 && y < 300))
+                    || (((x >= 50 && x < 90) || (x >= 200 && x < 250)) && (y >= 410 && y < 460))
+                    || (((x >= 370 && x < 450) || (x >= 770 && x < 850)) && (y >= 460 && y < 500))
+                    || ((x >= 10 && x <= 910) && y >= 510)
+                    || ((x >= 870 && x <= 910) && (y >= 310 && y < 350))
+                    || ((x >= 770 && x <= 840) && (y >= 60 && y < 110))) {
+                return limite = false;
+            }
+        }
+        if (direccion.equals("right")) {
+            if ((y <= 90 && (x >= 160 && x < 210))
+                    || ((y >= 120 && y <= 510) && (x >= 110 && x < 150))
+                    || ((y >= 270 && y <= 340) && (x >= 60 && x < 100))
+                    || ((y >= 220 && y <= 440) && (x >= 260 && x < 300))
+                    || (((y >= 70 && y <= 110) || (y >= 470 && y <= 510)) && (x >= 360 && x < 410))
+                    || (((y >= 50 && y <= 90) || (y >= 450 && y <= 490)) && (x >= 560 && x < 610))
+                    || (((y >= 70 && y <= 110) || (y >= 470 && y <= 510) || (y >= 200 && y <= 360)) && (x >= 760 && x < 810))
+                    || (((y >= 120 && y <= 190) || (y >= 320 && y <= 390)) && x >= 860)
+                    || ((y >= 50 && y <= 510) && x >= 910)) {
+                return limite = false;
+            }
+        }
+        if (direccion.equals("left")) {
+            if ((y >= 50 && y <= 410) && x <= 50
+                    || ((y >= 120 && y <= 190) || (y >= 420 && y <= 490)) && (x > 50 && x <= 100)
+                    || ((y >= 50 && y <= 90) || (y >= 420 && y <= 490)) && (x > 210 && x <= 250)
+                    || (y >= 200 && y <= 510) && (x > 180 && x <= 200)
+                    || ((y >= 70 && y <= 110) || (y >= 470 && y <= 510)) && (x > 400 && x <= 450)
+                    || ((y >= 50 && y <= 90) || (y >= 450 && y <= 490)) && (x > 600 && x <= 650)
+                    || (y >= 300 && y <= 360) && (x > 300 && x <= 350)
+                    || (y >= 220 && y <= 290) && (x > 590 && x <= 700)
+                    || (y >= 70 && y <= 440) && (x > 800 && x <= 850)
+                    || ((y >= 70 && y <= 440) || (y >= 470 && y <= 510)) && (x > 800 && x <= 850)
+                    || (y >= 220 && y <= 300) && (x > 860 && x <= 900)) {
+                return limite = false;
+            }
+        }
+        return limite;
+    }
+
 
     private void jlTiempovolverMenu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlTiempovolverMenu
         s = new Sonido("click.wav");
@@ -1993,7 +2477,7 @@ public class Mundo2 extends javax.swing.JDialog{
 
     private void jlPuntrajeControlGuia(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlPuntrajeControlGuia
         s = new Sonido("click.wav");
-        new GuiaControles(null, true,"");
+        new GuiaControles(null, true, "");
     }//GEN-LAST:event_jlPuntrajeControlGuia
 
     private void jlVolverVolverMenu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlVolverVolverMenu
@@ -2003,166 +2487,26 @@ public class Mundo2 extends javax.swing.JDialog{
 
     private void jlControlGuiaControlGuia(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlControlGuiaControlGuia
         s = new Sonido("click.wav");
-        new GuiaControles(null, true,"");
+        new GuiaControles(null, true, "");
     }//GEN-LAST:event_jlControlGuiaControlGuia
 
-    
 
-    
-    public class mapa1{
-        int desplazamiento=10;
-        
-        public mapa1(){
-        }
-        public boolean limites(int x, int y, String direccion){
-            boolean limite=true;
-            if(direccion.equals("up")){
-                    if ((x<= 920 && (y>0 && y<=50))
-                    ||((x<= 40)) &&  (y> 450&&y<=500)
-                    ||(x>60 && x<900)&& (y>450 && y<=500)
-                    ||((x>=170 && x<= 240)||(x>=270 && x<=390)||(x>=420 && x<=540)||(x>=570 && x<=690)||(x>=720 && x<=790)) && (y>350&&y<=400)
-                    ||((x>=240 && x<= 310)||(x>=400 && x<=560)||(x>=650 && x<=710)) && (y>200&&y<=250)
-                    ||((x>=150 && x<= 690)||(x>=720 && x<=810)) && (y>100&&y<=150)
-                    ) 
-                    {
-                        return limite = false;
-                    }
-                }
-            if(direccion.equals("down")){
-                if(x>=0  && (y>=510&& y<560)
-                || ((x>=130 && x<=810)) && (y>=410 && y<460)
-                || ((x>=270 && x<=320)||(x>=420 && x<=540)||(x>=640 && x<=690)) && (y>=310 && y<360)
-                || ((x>=170 && x<=790)) && (y>=160 && y<210)
-                || ((x>=70 && x<=690)||(x>=720 && x<=890)) && (y>=60 && y<110)
-                    )
-                    {
-                        return limite = false;
-                    }
-            }
-            if(direccion.equals("right")){
-                if((y>=70 && y<=490) && (x>=60 && x<110)
-                || (y>=170 && y<=390) && (x>=160 && y<210)
-                ||(((y>=70 && y<=140) || (y>=250 && y<=390))&& (x>=710 && x<760))
-                ||((y>=250 && y<=390)&&(x>= 560 && x<600))
-                ||((y>=200 && y<=390)&& (x>= 160 && x<210))
-                ||((y>= 150 && y<=410)&& (x>= 810 && x<850))
-                ||((y>=250 && y<= 310)&& (x>= 310 && x<360))
-                ||((y>=320 && y<= 390)&& ((x>= 410 && x<460) || (x>=260 && x<310)))
-                ||(y>= 50&& (x>= 910 && x<960))
-                    )
-                    {
-                        return limite = false;
-                    }
-            }
-            if(direccion.equals("left")){
-                if((y>=0 && y<=490) && x<=50
-                ||(y>=0 && y<=520) && x==0
-                ||(y>=150 && y<=410) && (x>100&&x<=150)
-                ||(y>=250 && y<=390) && ((x>200&&x<=250) || (x>350&&x<=400))
-                ||(y>=250 && y<=310) && (x>600 && x<=650)
-                ||(y>=320 && y<=390) && ((x>500&&x<=550) || (x>650&&x<=700))
-                ||(y>=70 && y<=140)&& (x>650&&x<=700)
-                ||(y>=170 && y<=390) && (x>750&&x<=800)
-                ||(y>=70 && y<=490) && (x>850&&x<=900)
-                )
-                    
-                    {
-                        return limite = false;
-                    }
-            }
-            return limite;
-        }
-        
-    }
-    public class mapa2{
-        int desplazamiento=10;
-        
-        public mapa2(){
-        }
-        public boolean limites(int x, int y, String direccion){
-            boolean limite=true;
-            if(direccion.equals("up")){
-                    if (((x>=40 && x<= 920) && y <= 50)
-                    ||(((x>=170 && x<= 240)||(x>=570 && x<= 640))&&y<= 100)
-                    ||((x<=90 || (x>=200 && x<=760)||x>=870)&&(y>=140 && y<=200))
-                    ||(((x>=350 && x<=690)||(x>=850  && x<=890 ))&&(y>=250 && y<310))
-                    ||(x>=70 && x<=120)&&(y>=310 && y<=350)
-                    ||(x>=870&&(y>=350 && y<=400))
-                    ||((x>=270 && x<=840)&& (y>400 && y<=450))
-                    ||((x<=90 ||(x>=200 && x<=240)||(x>=570 && x<=640)) && (y>=460 && y<=500))   
-                    ) 
-                    {
-                        return limite = false;
-                    }
-                }
-            if(direccion.equals("down")){
-                
-                if(((x<=90 || (x>=120 && x<=760) || (x> 860 && x<920)) && (y>=110 && y<140))
-                || ((x>=370 && x< 450)&&(y>=60 && y<100))
-                || (((x>=270 && x<= 690)||(x>=850 && x<= 890))&&(y>=210 && y<300))
-                || ((x>=350 && x< 770)&&(y>=360 && y<400))
-                || ((x>=70 && x< 120)&&(y>=260 && y<300))
-                || (((x>=50 && x< 90) || (x>=200 && x< 250))&&(y>=410 && y<460))
-                || (((x>=370 && x< 450) || (x>=770 && x< 850))&&(y>=460 && y<500))
-                || ((x>=10 && x<=910 )&& y>=510)
-                || ((x>=870 && x<=910 )&& (y>=310 && y<350))
-                || ((x>=770 && x<=840 )&& (y>=60 && y< 110))
-                    )
-                    {
-                        return limite = false;
-                    }
-            }
-            if(direccion.equals("right")){
-                if((y <= 90 && (x >=160 && x <210))
-                ||((y>=120 &&y <= 510) && (x >=110 && x <150))
-                ||((y>=270 &&y <= 340) && (x >=60 && x <100))
-                ||((y>=220 &&y <= 440) && (x >=260 && x <300))
-                ||(((y>=70 &&y <= 110)||(y>=470 &&y <= 510)) && (x >=360 && x <410))
-                ||(((y>=50 &&y <= 90)||(y>=450 &&y <= 490)) && (x >=560 && x <610))
-                ||(((y>=70 &&y <= 110)||(y>=470 &&y <= 510)|| (y>=200 &&y <= 360)) && (x >=760 && x <810))
-                        
-                ||(((y>=120 &&y <= 190)||(y>=320 &&y <= 390)) && x>=860)
-                ||((y>=50 &&y <= 510) && x>=910)
-                
-                
-                    )
-                    {
-                        return limite = false;
-                    }
-            }
-            if(direccion.equals("left")){
-                if((y>=50 && y<=410) && x<=50
-                ||((y>=120 && y<=190)||(y>=420 && y<=490)) && (x>50 && x<=100)
-                ||((y>=50 && y<=90)||(y>=420 && y<=490)) && (x>210 && x<=250)
-                ||(y>=200 && y<=510) && (x>180 && x<=200)
-                ||((y>=70 && y<=110)||(y>=470 && y<=510)) && (x>400 && x<=450)
-                ||((y>=50 && y<=90)||(y>=450 && y<=490)) && (x>600 && x<=650)
-                ||(y>=300 && y<=360) && (x>300 && x<=350)
-                ||(y>=220 && y<=290) && (x>590 && x<=700)
-                ||(y>=70 && y<=440) && (x>800 && x<=850)
-                ||((y>=70 && y<=440)||(y>=470 && y<=510)) && (x>800 && x<=850)
-                ||(y>=220 && y<=300) && (x>860 && x<=900)
-                )
-                    
-                    {
-                        return limite = false;
-                    }
-            }
-            return limite;
-        }
-        
-    }
-    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Avatar;
-    private javax.swing.JLabel Avatar1;
     private javax.swing.JLabel Fondo;
     private javax.swing.JLabel Fondo1;
     private javax.swing.JPanel Informacion1;
+    private javax.swing.JLabel M1E1;
+    private javax.swing.JLabel M1E2;
+    private javax.swing.JLabel M1E3;
+    private javax.swing.JLabel M2E1;
+    private javax.swing.JLabel M2E2;
+    private javax.swing.JLabel M2E3;
     private javax.swing.JPanel Mapa1;
     private javax.swing.JPanel Mapa2;
     private javax.swing.JLabel Puntaje;
     private javax.swing.JLabel Salida;
+    private javax.swing.JLabel jLAvatarMapa1;
+    private javax.swing.JLabel jLAvatarMapa2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;

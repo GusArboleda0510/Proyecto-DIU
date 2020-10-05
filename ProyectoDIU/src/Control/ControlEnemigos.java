@@ -6,6 +6,8 @@
 package Control;
 
 import Vista.Mundo1;
+import Vista.Mundo2;
+import Vista.Mundo3;
 import java.util.concurrent.TimeUnit;
 import javax.swing.JLabel;
 
@@ -16,14 +18,17 @@ import javax.swing.JLabel;
 public class ControlEnemigos extends Thread{
     int cambio = 1;
     JLabel avatar = null;
-    Mundo1 mundo= new Mundo1("nada");
-    String nombMapa;
+    Mundo1 mundo1= new Mundo1("nada");
+    Mundo2 mundo2= new Mundo2("nada");
+    Mundo3 mundo3= new Mundo3("nada");
+    String nombMundo, nombMapa;
     int contador=0;
     int posAnterior[] = new int [2];//x,y
     String rutaCarpeta;
-    public ControlEnemigos(JLabel avatar, String mapa, String rutaCarpeta){
+    public ControlEnemigos(JLabel avatar, String mundo, String mapa, String rutaCarpeta){
         this.avatar = avatar;
         this.nombMapa = mapa;
+        this.nombMundo = mundo;
         this.rutaCarpeta = rutaCarpeta;
     }
     
@@ -179,13 +184,33 @@ public class ControlEnemigos extends Thread{
     }
 
     private boolean consultarMapa(int x, int y, String direccion) {
-        if(nombMapa.equals("mapa1")){
-            return mundo.limitesM1(x, y, direccion);
-        }else{
-            if(nombMapa.equals("mapa2")){
-                return mundo.limitesM2(x, y, direccion);
-            } 
+        if(nombMundo.equals("mundo1")){
+            if(nombMapa.equals("mapa1")){
+                return mundo1.limitesM1(x, y, direccion);
+            }else{
+                if(nombMapa.equals("mapa2")){
+                    return mundo1.limitesM2(x, y, direccion);
+                } 
+            }  
         }
+        if(nombMundo.equals("mundo2")){
+            if(nombMapa.equals("mapa1")){
+                return mundo2.limitesM1(x, y, direccion);
+            }else{
+                if(nombMapa.equals("mapa2")){
+                    return mundo2.limitesM2(x, y, direccion);
+                } 
+            }  
+        }
+//        if(nombMundo.equals("mundo1")){
+//            if(nombMapa.equals("mapa1")){
+//                return mundo3.limitesM1(x, y, direccion);
+//            }else{
+//                if(nombMapa.equals("mapa2")){
+//                    return mundo3.limitesM2(x, y, direccion);
+//                } 
+//            }  
+//        } 
         return false;
     }
 }
