@@ -699,9 +699,8 @@ public class Mundo3 extends javax.swing.JDialog {
     private void Mapa1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Mapa1KeyPressed
         Mundo3.mapa1 m1 = new Mundo3.mapa1();
         int desplazamiento=10,x=Avatar.getX(),y=Avatar.getY();
-//        System.out.println(Avatar.getLocation());//Ubicacion del la imagen en el panel
 
-        switch(evt.getExtendedKeyCode()){//getExtendedKeyCode->Captura lo q hace el teclado y lo pasa a la variable X y Y
+        switch(evt.getExtendedKeyCode()){
 
             case KeyEvent.VK_UP:
 
@@ -714,14 +713,6 @@ public class Mundo3 extends javax.swing.JDialog {
                 if ((x > 0 && x <= 50)&&(y>=50 && y<=90)) {
                     Avatar.setLocation(910, 370);
                 }
-                ///////////////////////////////COLISION MUNDO 3////////////////////////////////////
-                colision=true;
-                infoVida_Puntaje[0]=""+(Integer.parseInt(vida)-1);
-                infoVida_Puntaje[1]=""+(Integer.parseInt(punt)-50);
-                vidaJLabel(infoVida_Puntaje);
-                Puntaje.setText(infoVida_Puntaje[1]);
-                txt.puntaje_vida(infoVida_Puntaje);
-                ///////////////////////////////////////////////////////////////////////////////////
             }
             break;
             case KeyEvent.VK_DOWN:
@@ -803,6 +794,13 @@ public class Mundo3 extends javax.swing.JDialog {
                 }
             }
             break;
+        }
+         if(colision()){
+            infoVida_Puntaje[0] = "" + (Integer.parseInt(vida) - 1);
+            infoVida_Puntaje[1] = "" + (Integer.parseInt(punt) - 50);
+            vidaJLabel(infoVida_Puntaje);
+            Puntaje.setText(infoVida_Puntaje[1]);
+            txt.puntaje_vida(infoVida_Puntaje);
         }
     }//GEN-LAST:event_Mapa1KeyPressed
 
