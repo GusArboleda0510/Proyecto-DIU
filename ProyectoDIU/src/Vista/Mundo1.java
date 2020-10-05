@@ -45,7 +45,10 @@ public class Mundo1 extends javax.swing.JDialog {
         initComponents();
         this.nickName = nickNameJugador;
         this.rutaCarpeta = rutaCarpeta;
-        this.imgpeque = imgPeque;     
+        this.imgpeque = imgPeque;   
+//        System.out.println("nickName " + nickName);
+//        System.out.println("rutaCarpeta " + rutaCarpeta);
+//        System.out.println("imgpeque " + imgpeque);
         try {
             decidirMapa();
         } catch (Exception ex) {
@@ -1341,7 +1344,7 @@ public class Mundo1 extends javax.swing.JDialog {
         jLAvatarMapa1.setBackground(new java.awt.Color(153, 255, 204));
         jLAvatarMapa1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
         jLAvatarMapa1.setOpaque(true);
-        Mapa1.add(jLAvatarMapa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 380, 40, 40));
+        Mapa1.add(jLAvatarMapa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 40, 40));
 
         fondo.setBackground(new java.awt.Color(255, 204, 204));
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoVerde.png"))); // NOI18N
