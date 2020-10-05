@@ -5,11 +5,7 @@
  */
 package Control;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.concurrent.TimeUnit;
-import javax.swing.JLabel;
-import javax.swing.Timer;
 
 /**
  *
@@ -24,10 +20,9 @@ import javax.swing.Timer;
     controlJugabilidad jug = new controlJugabilidad();
     public Tiempo(String dato[]) {
         this.dato=dato;
-        
-    }
-    
+     }
     public void run() {
+        
         if(dato!=null){
             hora=Integer.parseInt(dato[0]);
             minuto=Integer.parseInt(dato[1]);
@@ -38,6 +33,7 @@ import javax.swing.Timer;
             
         try {
             for (;;) {
+                
                 segundo++;
                 if (segundo > 59) {
                     segundo = 0;
@@ -52,12 +48,16 @@ import javax.swing.Timer;
 //                txt.setTiempo(tiempo);
 //                System.out.println(hora + ":" + minuto + ":" + segundo);
                 TimeUnit.SECONDS.sleep(1);
+                
             }
+            
         }
         catch (InterruptedException es) {
             
             txt.tiempoTXT(tiempo);
         }
+        
+        
         catch (Exception e) {
             System.out.println("Error RUN: " + e);
         }

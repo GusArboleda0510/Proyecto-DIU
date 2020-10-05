@@ -784,7 +784,7 @@ public class Mundo3 extends javax.swing.JDialog {
     private void jlControlGuiaControlGuia(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlControlGuiaControlGuia
          s = new Sonido("click.wav");
         t.interrupt();
-        new GuiaControles(null, true);
+        new GuiaControles(null, true,"");
     }//GEN-LAST:event_jlControlGuiaControlGuia
 
      public class mapa1{
