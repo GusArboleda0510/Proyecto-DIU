@@ -1273,7 +1273,7 @@ public class CrearAvatar extends javax.swing.JDialog {
                 jbCargar2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jbCargar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 630, 230, 80));
+        jPanel1.add(jbCargar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 640, 230, 80));
 
         jbCargar.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jbCargar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cargarAvatar.png"))); // NOI18N
@@ -1817,6 +1817,7 @@ public class CrearAvatar extends javax.swing.JDialog {
         String palabra = "Si no asigna nickName -se perderan los cambios";
         GuardarNombre gn = new GuardarNombre(null, true, palabra);
         
+        new Menu();
         dispose();
     }//GEN-LAST:event_jBCerrar1ActionPerformed
 
@@ -1846,8 +1847,8 @@ public class CrearAvatar extends javax.swing.JDialog {
                 imgPeque  = cca.getRutaImgPeque();
             }  
             System.out.println("t " + nickName +  imgPeque + rutaImg);
-            new Mundo1(null, true, nickName, imgPeque, rutaImg);
             dispose();
+            new Mundo1(null, true, nickName, imgPeque, rutaImg);
         } catch (Exception ex) {
             if("TAL".equals(ex.getMessage())){
                 //nada
@@ -1926,6 +1927,7 @@ public class CrearAvatar extends javax.swing.JDialog {
             nickName = cca.getNickName();
 //             Sonido s = new Sonido("PacmanIniciar.wav");
 //             Thread.sleep(3100);
+             dispose();
              new Mundo1(null, true, nickName, imgPeque, rutaImg);
 //         } catch (InterruptedException ex) {
 //             Logger.getLogger(CrearAvatar.class.getName()).log(Level.SEVERE, null, ex);

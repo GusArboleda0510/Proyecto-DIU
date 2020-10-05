@@ -2265,6 +2265,14 @@ public class Mundo1 extends javax.swing.JDialog {
                     || (y >= 140 && (x > 450 && x <= 500))
                     || ((y >= 220 && y <= 290) || y >= 520) && (x > 550 && x <= 600)
                     || ((y >= 70 && y <= 120) || (y >= 420 && y <= 490)) && (x > 600 && x <= 650)
+            
+                    
+                    
+              
+                    
+                    
+                    
+                    
                     || ((y >= 70 && y <= 120) || (y >= 200 && y <= 290) || (y >= 420 && y <= 490)) && (x > 700 && x <= 750)
                     || ((y >= 70 && y <= 190) || (y >= 320 && y <= 390)) && (x > 800 && x <= 850)) {
                 return limite = false;
@@ -2277,6 +2285,7 @@ public class Mundo1 extends javax.swing.JDialog {
         s = new Sonido("click.wav");
         t.interrupt();
         dispose();
+        new CrearAvatar(null, true);
     }//GEN-LAST:event_VolverMenu
 
     private void ControlGuia(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ControlGuia

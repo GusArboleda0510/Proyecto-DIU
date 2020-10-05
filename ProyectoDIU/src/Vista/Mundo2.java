@@ -2217,6 +2217,7 @@ public class Mundo2 extends javax.swing.JDialog {
                 break;
         }
         if(colision()){
+            s = new Sonido("upsSonido.wav");
             infoVida_Puntaje[0] = "" + (Integer.parseInt(vida) - 1);
             infoVida_Puntaje[1] = "" + (Integer.parseInt(punt) - 50);
             vidaJLabel(infoVida_Puntaje);
@@ -2355,6 +2356,7 @@ public class Mundo2 extends javax.swing.JDialog {
                 break;
         }
         if(colision()){
+            s = new Sonido("upsSonido.wav");
             infoVida_Puntaje[0] = "" + (Integer.parseInt(vida) - 1);
             infoVida_Puntaje[1] = "" + (Integer.parseInt(punt) - 50);
             vidaJLabel(infoVida_Puntaje);
@@ -2488,6 +2490,7 @@ public class Mundo2 extends javax.swing.JDialog {
     private void jlVolverVolverMenu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlVolverVolverMenu
         s = new Sonido("click.wav");
         dispose();
+        new CrearAvatar(null, true);
     }//GEN-LAST:event_jlVolverVolverMenu
 
     private void jlControlGuiaControlGuia(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlControlGuiaControlGuia

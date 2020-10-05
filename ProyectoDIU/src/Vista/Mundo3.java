@@ -980,7 +980,7 @@ public class Mundo3 extends javax.swing.JDialog {
                 jlControlGuiaControlGuia(evt);
             }
         });
-        Informacion.add(jlControlGuia, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 0, 70, 50));
+        Informacion.add(jlControlGuia, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 0, 70, 70));
 
         jlPuntraje.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jlPuntraje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1017,14 +1017,6 @@ public class Mundo3 extends javax.swing.JDialog {
                     if ((x > 0 && x <= 50) && (y >= 50 && y <= 90)) {
                         jLAvatarMapa1.setLocation(910, 370);
                     }
-//                    ///////////////////////////////COLISION MUNDO 3////////////////////////////////////
-//                    colision = true;
-//                    infoVida_Puntaje[0] = "" + (Integer.parseInt(vida) - 1);
-//                    infoVida_Puntaje[1] = "" + (Integer.parseInt(punt) - 50);
-//                    vidaJLabel(infoVida_Puntaje);
-//                    Puntaje.setText(infoVida_Puntaje[1]);
-//                    txt.puntaje_vida(infoVida_Puntaje);
-//                    ///////////////////////////////////////////////////////////////////////////////////
                 }
                 break;
             case KeyEvent.VK_DOWN:
@@ -1129,6 +1121,7 @@ public class Mundo3 extends javax.swing.JDialog {
                 break;
         }
         if(colision()){
+            s = new Sonido("upsSonido.wav");
             infoVida_Puntaje[0] = "" + (Integer.parseInt(vida) - 1);
             infoVida_Puntaje[1] = "" + (Integer.parseInt(punt) - 50);
             vidaJLabel(infoVida_Puntaje);
@@ -1192,6 +1185,7 @@ public class Mundo3 extends javax.swing.JDialog {
     private void jlVolverVolverMenu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlVolverVolverMenu
         s = new Sonido("click.wav");
         dispose();
+        new CrearAvatar(null, true);
     }//GEN-LAST:event_jlVolverVolverMenu
 
     private void jlControlGuiaControlGuia(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlControlGuiaControlGuia
