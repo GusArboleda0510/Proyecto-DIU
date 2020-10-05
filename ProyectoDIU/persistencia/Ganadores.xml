@@ -5,4 +5,9 @@
         <puntaje>200</puntaje>
         <timepo>0:0:23</timepo>
     </puestos>
+<puestos>
+        <jugadores>tal</jugadores>
+        <puntaje>200</puntaje>
+        <timepo>0:5:14</timepo>
+    </puestos>
 </ganadores>

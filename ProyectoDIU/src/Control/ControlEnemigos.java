@@ -35,7 +35,7 @@ public class ControlEnemigos extends Thread{
     public void run() {
         int x, y, n = 0;
         int dir = (int) (Math.random() * 4 + 1);//arriba, derecha, abajo, izquierda
-//        dir = 4;
+//        dir = 2;
         while (true) {
             if (n > 10) {
                 int aux = dir;
@@ -110,7 +110,7 @@ public class ControlEnemigos extends Thread{
                 }
             }
             try {
-                TimeUnit.MILLISECONDS.sleep(100);
+                TimeUnit.MILLISECONDS.sleep(200);
             } catch (InterruptedException ex) {
                 System.out.println("Error en Hilo " + ex);
             }

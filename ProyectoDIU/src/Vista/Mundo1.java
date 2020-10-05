@@ -13,6 +13,7 @@ import Control.controlJugabilidad;
 import Control.controlXMLMundos;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JLabel;
@@ -42,8 +43,8 @@ public class Mundo1 extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         this.nickName = nickNameJugador;
-        this.imgpeque = imgPeque;
         this.rutaCarpeta = rutaCarpeta;
+        this.imgpeque = imgPeque;
         
         try {
             decidirMapa();
@@ -79,6 +80,7 @@ public class Mundo1 extends javax.swing.JDialog {
         leerMundos = new controlXMLMundos();
         String nombreMapa = null;
         int mapa = (int) (Math.random() * 2 + 1);
+//        mapa = 1;
         if (mapa == 1) {
             Mapa1.setFocusable(true);
             Mapa1.setVisible(true);
@@ -150,11 +152,10 @@ public class Mundo1 extends javax.swing.JDialog {
         if (cantEnemigos >= 2) {
             tempEnemigo2.setName("enemigo2");
             tempEnemigo2.setVisible(true);
-
             contEnemigos = new ControlEnemigos(tempEnemigo2, "mundo1", nombMapa, SkinEnemigo2);
             contEnemigos.start();
         }
-        if (cantEnemigos >= 3) {
+        if (cantEnemigos >= 3) { 
             tempEnemigo3.setName("enemigo3");
             tempEnemigo3.setVisible(true);
             contEnemigos = new ControlEnemigos(tempEnemigo3, "mundo1", nombMapa, SkinEnemigo3);
@@ -1327,7 +1328,7 @@ public class Mundo1 extends javax.swing.JDialog {
 
         M1E1.setBackground(new java.awt.Color(204, 204, 204));
         M1E1.setOpaque(true);
-        Mapa1.add(M1E1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 310, 40, 40));
+        Mapa1.add(M1E1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, 40, 40));
 
         M1E2.setBackground(new java.awt.Color(255, 0, 0));
         M1E2.setOpaque(true);
@@ -1335,7 +1336,7 @@ public class Mundo1 extends javax.swing.JDialog {
 
         M1E3.setBackground(new java.awt.Color(0, 102, 102));
         M1E3.setOpaque(true);
-        Mapa1.add(M1E3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 310, 40, 40));
+        Mapa1.add(M1E3, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 310, 40, 40));
 
         jLAvatarMapa1.setBackground(new java.awt.Color(153, 255, 204));
         jLAvatarMapa1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
@@ -1982,18 +1983,27 @@ public class Mundo1 extends javax.swing.JDialog {
 
             case KeyEvent.VK_UP:
                 if (limitesM2(x, y, "up")) {
+                    if (rutaCarpeta != null) {
+                        alternarImg(1, jLAvatarMapa2);
+                    }
                     jLAvatarMapa2.setLocation(x, y - desplazamiento);
                 }
                 break;
 
             case KeyEvent.VK_W:
                 if (limitesM2(x, y, "up")) {
+                    if (rutaCarpeta != null) {
+                        alternarImg(1, jLAvatarMapa2);
+                    }
                     jLAvatarMapa2.setLocation(x, y - desplazamiento);
                 }
                 break;
 
             case KeyEvent.VK_DOWN:
                 if (limitesM2(x, y, "down")) {
+                    if (rutaCarpeta != null) {
+                        alternarImg(3, jLAvatarMapa2);
+                    }
                     jLAvatarMapa2.setLocation(x, y + desplazamiento);
                     if (x >= 600 && y >= 570) {
 
@@ -2008,6 +2018,9 @@ public class Mundo1 extends javax.swing.JDialog {
 
             case KeyEvent.VK_S:
                 if (limitesM2(x, y, "down")) {
+                    if (rutaCarpeta != null) {
+                        alternarImg(3, jLAvatarMapa2);
+                    }
                     jLAvatarMapa2.setLocation(x, y + desplazamiento);
                     if (x >= 600 && y >= 570) {
 
@@ -2022,26 +2035,42 @@ public class Mundo1 extends javax.swing.JDialog {
 
             case KeyEvent.VK_LEFT:
                 if (limitesM2(x, y, "left")) {
+                    if (rutaCarpeta != null) {
+                        alternarImg(4, jLAvatarMapa2);
+                    }
                     jLAvatarMapa2.setLocation(x - desplazamiento, y);
                 }
                 break;
             case KeyEvent.VK_A:
                 if (limitesM2(x, y, "left")) {
+                    if (rutaCarpeta != null) {
+                        alternarImg(4, jLAvatarMapa2);
+                    }
                     jLAvatarMapa2.setLocation(x - desplazamiento, y);
                 }
                 break;
 
             case KeyEvent.VK_RIGHT:
                 if (limitesM2(x, y, "right")) {
+                    if (rutaCarpeta != null) {
+                        alternarImg(2, jLAvatarMapa2);
+                    }
                     jLAvatarMapa2.setLocation(x + desplazamiento, y);
                 }
                 break;
 
             case KeyEvent.VK_D:
                 if (limitesM2(x, y, "right")) {
+                    if (rutaCarpeta != null) {
+                        alternarImg(2, jLAvatarMapa2);
+                    }
                     jLAvatarMapa2.setLocation(x + desplazamiento, y);
                 }
                 break;
+            case KeyEvent.VK_ESCAPE:
+                this.dispose();
+                new Mundo1(null, true, nickName, imgpeque, rutaCarpeta);
+            break;
         }
         boolean colision = colision();
         infoVida_Puntaje = jug.vida(colision);
@@ -2141,6 +2170,11 @@ public class Mundo1 extends javax.swing.JDialog {
                     }
                 }
                 break;
+            case KeyEvent.VK_ESCAPE:
+                this.dispose();
+                new Mundo1(null, true, nickName, imgpeque, rutaCarpeta);
+            break;    
+                
 
         }
         boolean colision = colision();
@@ -2284,6 +2318,7 @@ public class Mundo1 extends javax.swing.JDialog {
     private void VolverMenu(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VolverMenu
         s = new Sonido("click.wav");
         t.interrupt();
+        contEnemigos.interrupt();
         dispose();
         new CrearAvatar(null, true);
     }//GEN-LAST:event_VolverMenu

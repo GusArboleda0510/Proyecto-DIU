@@ -2215,6 +2215,10 @@ public class Mundo2 extends javax.swing.JDialog {
                     }
                 }
                 break;
+            case KeyEvent.VK_ESCAPE:
+                this.dispose();
+                new Mundo2(null, true, nickName, imgpeque, rutaCarpeta);
+            break;
         }
         if(colision()){
             s = new Sonido("upsSonido.wav");
@@ -2354,6 +2358,10 @@ public class Mundo2 extends javax.swing.JDialog {
                     jLAvatarMapa2.setLocation(x + desplazamiento, y);
                 }
                 break;
+            case KeyEvent.VK_ESCAPE:
+                this.dispose();
+                new Mundo2(null, true, nickName, imgpeque, rutaCarpeta);
+            break;
         }
         if(colision()){
             s = new Sonido("upsSonido.wav");

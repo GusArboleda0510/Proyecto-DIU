@@ -46,10 +46,8 @@ public class Ganadores extends javax.swing.JDialog {
         mensaje.setVisible(false);
         doc = new CreadordeDocs(ganadores, "ganadores");
         if (!nickName.equals("")) {
-            System.out.println("NICK Name " + nickName);
             ganadores();
         }else{
-            System.out.println("NICK Name " + null);
             obtenerContenido();
         }
         setVisible(true);
