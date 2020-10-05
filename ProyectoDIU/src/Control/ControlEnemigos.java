@@ -105,7 +105,7 @@ public class ControlEnemigos extends Thread{
             }
             mandarPosEnemigo();
             try {
-                TimeUnit.MILLISECONDS.sleep(3000);
+                TimeUnit.MILLISECONDS.sleep(200);
             } catch (InterruptedException ex) {
                 System.out.println("Error en Hilo " + ex);
             }
