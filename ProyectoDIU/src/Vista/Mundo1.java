@@ -78,7 +78,7 @@ public class Mundo1 extends javax.swing.JDialog {
         leerMundos = new controlXMLMundos();
         String nombreMapa = null;
         int mapa = (int) (Math.random() * 2 + 1);
-        mapa = 1;
+//        mapa = 1;
         if (mapa == 1) {
             Mapa1.setFocusable(true);
             Mapa1.setVisible(true);
