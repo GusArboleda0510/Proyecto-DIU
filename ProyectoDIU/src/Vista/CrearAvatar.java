@@ -1848,6 +1848,8 @@ public class CrearAvatar extends javax.swing.JDialog {
             }  
 //            System.out.println("t " + nickName + " "+ imgPeque +" "+ rutaImg);
             setVisible(false);
+            Sonido s = new Sonido("PacmanIniciar.wav");
+            Thread.sleep(3100);
             new Mundo1(null, true, nickName, imgPeque, rutaImg);
             dispose();
         } catch (Exception ex) {
@@ -1920,19 +1922,19 @@ public class CrearAvatar extends javax.swing.JDialog {
     }//GEN-LAST:event_jbJugar1MouseEntered
 
     private void jbJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbJugarActionPerformed
-//         try {
+         try {
             cca.hacerImgAgain();
             if(imgPeque == null){
                 imgPeque  = cca.getRutaImgPeque();
             }
             nickName = cca.getNickName();
-//             Sonido s = new Sonido("PacmanIniciar.wav");
-//             Thread.sleep(3100);
+             Sonido s = new Sonido("PacmanIniciar.wav");
+             Thread.sleep(3100);
              dispose();
              new Mundo1(null, true, nickName, imgPeque, rutaImg);
-//         } catch (InterruptedException ex) {
-//             Logger.getLogger(CrearAvatar.class.getName()).log(Level.SEVERE, null, ex);
-//         }
+         } catch (InterruptedException ex) {
+             Logger.getLogger(CrearAvatar.class.getName()).log(Level.SEVERE, null, ex);
+         }
     }//GEN-LAST:event_jbJugarActionPerformed
 
     private void jBCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCrearActionPerformed
