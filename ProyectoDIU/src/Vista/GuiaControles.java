@@ -133,6 +133,7 @@ public class GuiaControles extends javax.swing.JDialog {
         jbVolver2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Contenido.setBackground(new java.awt.Color(255, 255, 255));
@@ -236,11 +237,12 @@ public class GuiaControles extends javax.swing.JDialog {
                 FondoEscuchaPanelAvatar(evt);
             }
         });
-        Contenido.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 670));
+        Contenido.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 670));
 
         getContentPane().add(Contenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 680));
 
         CrearAvatar.setBackground(new java.awt.Color(255, 255, 255));
+        CrearAvatar.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -565,7 +567,7 @@ public class GuiaControles extends javax.swing.JDialog {
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 2723, Short.MAX_VALUE)
+            .addGap(0, 2727, Short.MAX_VALUE)
             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -575,7 +577,9 @@ public class GuiaControles extends javax.swing.JDialog {
 
         CrearAvatar.setViewportView(jPanel4);
 
-        getContentPane().add(CrearAvatar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 650));
+        getContentPane().add(CrearAvatar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 660));
+
+        InfGeneral.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         JPanel2.setBackground(new java.awt.Color(255, 255, 255));
         JPanel2.setPreferredSize(new java.awt.Dimension(1195, 2200));
@@ -788,9 +792,9 @@ public class GuiaControles extends javax.swing.JDialog {
 
         InfGeneral.setViewportView(JPanel2);
 
-        getContentPane().add(InfGeneral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 970, 650));
+        getContentPane().add(InfGeneral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 660));
 
-        setSize(new java.awt.Dimension(974, 709));
+        setSize(new java.awt.Dimension(963, 695));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
