@@ -123,6 +123,7 @@ public class GamerOver extends javax.swing.JDialog {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         s = new Sonido("click.wav");
         dispose();
+        new Menu();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     public static void main(String[] args) throws Exception {
