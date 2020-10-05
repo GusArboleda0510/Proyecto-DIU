@@ -38,6 +38,7 @@ public class Mundo1 extends javax.swing.JDialog {
     JLabel tempEnemigo1 = new JLabel();
     JLabel tempEnemigo2 = new JLabel();
     JLabel tempEnemigo3 = new JLabel();
+    int var = 0;
 
     public Mundo1(java.awt.Frame parent, boolean modal, String nickNameJugador, String imgPeque, String rutaCarpeta) {
         super(parent, modal);
@@ -1341,7 +1342,7 @@ public class Mundo1 extends javax.swing.JDialog {
         jLAvatarMapa1.setBackground(new java.awt.Color(153, 255, 204));
         jLAvatarMapa1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar.png"))); // NOI18N
         jLAvatarMapa1.setOpaque(true);
-        Mapa1.add(jLAvatarMapa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 510, 40, 40));
+        Mapa1.add(jLAvatarMapa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 380, 40, 40));
 
         fondo.setBackground(new java.awt.Color(255, 204, 204));
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoVerde.png"))); // NOI18N
@@ -2181,6 +2182,10 @@ public class Mundo1 extends javax.swing.JDialog {
         infoVida_Puntaje = jug.vida(colision);
         if (colision) {
             s = new Sonido("upsSonido.wav");
+            if(var == 3){
+               dispose();
+            }
+            var++;
         }
         txt.puntaje_vida(infoVida_Puntaje);
     }//GEN-LAST:event_Mapa1KeyPressed
