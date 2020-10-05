@@ -53,10 +53,15 @@ HECHO -- Cuando den las colisiones implementar las colisiones con las vidas y el
 
 HECHO -- EN PROGRESO - ALE - GUS (para el final) guia de controles para el usuario
 
-------------------------------------------------------------------------------------------
-
-FALTA IMPLEMENTAR TODOS LOS CAMBIOS DE MUNDO 1 EN LOS OTROS MUNDOS
+HECHO -- FALTA IMPLEMENTAR TODOS LOS CAMBIOS DE MUNDO 1 EN LOS OTROS MUNDOS
 	- HACER QUE EL LABEL PASE DE MUNDO EN MUNDO
 	- la escogencia de mapas aleatortio 
 	- llamado a los limites en metodos no en clases
 	- recibir variables en el constructor
+
+------------------------------------------------------------------------------------------
+
+falta verificar todo el juego completo
+		- VER QUE EL LABEL PASE DE MUNDO EN MUNDO
+		VERIFICAR PUNTAJE
+		- VERIFICAR QUE EN LA TABLA DE GANADORES QUEDE LA INFORMACION CORRECTA
