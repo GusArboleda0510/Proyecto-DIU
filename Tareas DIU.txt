@@ -51,9 +51,9 @@ HECHO -- EN PROGRESO -- implementar colisiones para los enemigos con el avatar
 
 HECHO -- Cuando den las colisiones implementar las colisiones con las vidas y el puntaje 
 
+HECHO -- EN PROGRESO - ALE - GUS (para el final) guia de controles para el usuario
+
 ------------------------------------------------------------------------------------------
-			
-HECHO -- PERE LA MIRO PUES (EH ESTA CHINA SI JODE) EN PROGRESO - ALE - GUS (para el final) guia de controles para el usuario
 
 FALTA IMPLEMENTAR TODOS LOS CAMBIOS DE MUNDO 1 EN LOS OTROS MUNDOS
 	- HACER QUE EL LABEL PASE DE MUNDO EN MUNDO
