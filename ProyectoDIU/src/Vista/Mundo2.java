@@ -2468,6 +2468,7 @@ public class Mundo2 extends javax.swing.JDialog {
         }
         if (direccion.equals("left")) {
             if ((y >= 50 && y <= 410) && x <= 50
+                    ||x <= 0
                     || ((y >= 120 && y <= 190) || (y >= 420 && y <= 490)) && (x > 50 && x <= 100)
                     || ((y >= 50 && y <= 90) || (y >= 420 && y <= 490)) && (x > 210 && x <= 250)
                     || (y >= 200 && y <= 510) && (x > 180 && x <= 200)
