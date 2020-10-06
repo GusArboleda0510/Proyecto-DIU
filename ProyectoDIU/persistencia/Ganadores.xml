@@ -10,4 +10,14 @@
         <puntaje>200</puntaje>
         <timepo>0:5:14</timepo>
     </puestos>
+<puestos>
+        <jugadores>gus</jugadores>
+        <puntaje>100</puntaje>
+        <timepo>0:0:39</timepo>
+    </puestos>
+<puestos>
+        <jugadores>Cerquera</jugadores>
+        <puntaje>250</puntaje>
+        <timepo>0:2:33</timepo>
+    </puestos>
 </ganadores>

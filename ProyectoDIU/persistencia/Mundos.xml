@@ -4,7 +4,7 @@
         <nombreMundo>mundo1</nombreMundo>
         <cantidadMapas>2</cantidadMapas>
         <mapa NombreMapa="mapa1">
-    		<cantidadEmemigos>3</cantidadEmemigos>
+    		<cantidadEmemigos>2</cantidadEmemigos>
     		<skinEnemigo>aleatorio</skinEnemigo>
     		<skinEnemigo>aleatorio</skinEnemigo>
     		<skinEnemigo>aleatorio</skinEnemigo>
